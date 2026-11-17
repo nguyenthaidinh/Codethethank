@@ -1,0 +1,704 @@
+{
+  "result": "PASS",
+  "errors": [],
+  "requests": [
+    "http://127.0.0.1:4220/voice/vi-namminh/8a5e58a6.mp3",
+    "http://127.0.0.1:4220/voice/vi-namminh/5cfc21a5.mp3",
+    "http://127.0.0.1:4220/voice/vi-namminh/d1556f7c.mp3",
+    "http://127.0.0.1:4220/voice/vi-namminh/5a05af21.mp3",
+    "http://127.0.0.1:4220/voice/vi-namminh/06ee22c7.mp3",
+    "http://127.0.0.1:4220/voice/vi-namminh/3e3918f2.mp3",
+    "http://127.0.0.1:4220/voice/vi-namminh/8815e952.mp3"
+  ],
+  "frames": {
+    "count": 1495,
+    "medianMs": 16.700000000000728,
+    "p95Ms": 133.29999999999563,
+    "maxMs": 300,
+    "note": "Headless desktop, includes screenshot capture overhead; not a physical device benchmark."
+  },
+  "samples": [
+    {
+      "beat": "OPENING_CINEMATIC",
+      "time": 15.916100000000013,
+      "evidence": [],
+      "verdict": null,
+      "stayed": null,
+      "ripple": null,
+      "finale": null,
+      "followedDoor": false,
+      "world": {
+        "renderer": "aion-future-webgl",
+        "place": "headquarters",
+        "landmark": "aion-citadel-v2",
+        "historicalAnalysis": null,
+        "nexusLeaves": 144,
+        "atriumLevels": 5,
+        "view": "core",
+        "camera": [
+          9.20562317469016,
+          13.026034617133755,
+          95.25473082161949
+        ],
+        "signal": {
+          "x": 622.4183027981411,
+          "y": 421.66862287836284,
+          "focused": false
+        },
+        "drawCalls": 47,
+        "triangles": 559058,
+        "antialias": true,
+        "output": "direct-aces-srgb",
+        "lighting": "gpu-pbr-ibl",
+        "resources": {
+          "geometries": 42,
+          "textures": 15
+        },
+        "quality": 0.75,
+        "qualitySettled": true,
+        "assets": [
+          "floor_tiles_06",
+          "building-skyscraper-b",
+          "building-skyscraper-a",
+          "building-skyscraper-c",
+          "building-b",
+          "building-a",
+          "studio_small_09"
+        ],
+        "assetErrors": [],
+        "investigated": [],
+        "selected": null,
+        "ready": true,
+        "assetsComplete": true,
+        "beat": "OPENING_CINEMATIC"
+      },
+      "voice": {
+        "status": "speaking",
+        "clip": "d1556f7c",
+        "started": 3,
+        "completed": 2,
+        "busy": true
+      },
+      "audio": {
+        "context": "running",
+        "events": [
+          {
+            "cue": "aion.space.city",
+            "time": 0.021333333333333333
+          },
+          {
+            "cue": "aion.space.headquarters",
+            "time": 18.232
+          }
+        ],
+        "mix": {
+          "rain": 0,
+          "fan": 0,
+          "ambience": 1,
+          "music": 0.075
+        },
+        "buses": {
+          "music": 0.01244307216256857,
+          "effects": 0.6499999761581421,
+          "ambience": 0.6499999761581421
+        }
+      }
+    },
+    {
+      "beat": "OPENING_CINEMATIC",
+      "time": 21.7825,
+      "evidence": [],
+      "verdict": null,
+      "stayed": null,
+      "ripple": null,
+      "finale": null,
+      "followedDoor": false,
+      "world": {
+        "renderer": "aion-future-webgl",
+        "place": "headquarters",
+        "landmark": "aion-citadel-v2",
+        "historicalAnalysis": null,
+        "nexusLeaves": 144,
+        "atriumLevels": 5,
+        "view": "core",
+        "camera": [
+          1.9898674320991367,
+          5.65095809513989,
+          42.98782954242337
+        ],
+        "signal": {
+          "x": 628.2947150203632,
+          "y": 408.51657513252843,
+          "focused": false
+        },
+        "drawCalls": 46,
+        "triangles": 559056,
+        "antialias": true,
+        "output": "direct-aces-srgb",
+        "lighting": "gpu-pbr-ibl",
+        "resources": {
+          "geometries": 42,
+          "textures": 15
+        },
+        "quality": 0.75,
+        "qualitySettled": true,
+        "assets": [
+          "floor_tiles_06",
+          "building-skyscraper-b",
+          "building-skyscraper-a",
+          "building-skyscraper-c",
+          "building-b",
+          "building-a",
+          "studio_small_09"
+        ],
+        "assetErrors": [],
+        "investigated": [],
+        "selected": null,
+        "ready": true,
+        "assetsComplete": true,
+        "beat": "OPENING_CINEMATIC"
+      },
+      "voice": {
+        "status": "idle",
+        "clip": "d1556f7c",
+        "started": 3,
+        "completed": 3,
+        "busy": false
+      },
+      "audio": {
+        "context": "running",
+        "events": [
+          {
+            "cue": "aion.space.city",
+            "time": 0.021333333333333333
+          },
+          {
+            "cue": "aion.space.headquarters",
+            "time": 18.232
+          }
+        ],
+        "mix": {
+          "rain": 0,
+          "fan": 0,
+          "ambience": 1,
+          "music": 0.075
+        },
+        "buses": {
+          "music": 0.026290619745850563,
+          "effects": 0.6499999761581421,
+          "ambience": 0.6499999761581421
+        }
+      }
+    },
+    {
+      "beat": "OPENING_CINEMATIC",
+      "time": 25.565699999999946,
+      "evidence": [],
+      "verdict": null,
+      "stayed": null,
+      "ripple": null,
+      "finale": null,
+      "followedDoor": false,
+      "world": {
+        "renderer": "aion-future-webgl",
+        "place": "headquarters",
+        "landmark": "aion-citadel-v2",
+        "historicalAnalysis": null,
+        "nexusLeaves": 144,
+        "atriumLevels": 5,
+        "view": "core",
+        "camera": [
+          1.2223625849003734,
+          5.6,
+          21.35152964022901
+        ],
+        "signal": {
+          "x": 625.0658512121389,
+          "y": 462.43266876501303,
+          "focused": false
+        },
+        "drawCalls": 28,
+        "triangles": 40832,
+        "antialias": true,
+        "output": "direct-aces-srgb",
+        "lighting": "gpu-pbr-ibl",
+        "resources": {
+          "geometries": 42,
+          "textures": 15
+        },
+        "quality": 0.75,
+        "qualitySettled": true,
+        "assets": [
+          "floor_tiles_06",
+          "building-skyscraper-b",
+          "building-skyscraper-a",
+          "building-skyscraper-c",
+          "building-b",
+          "building-a",
+          "studio_small_09"
+        ],
+        "assetErrors": [],
+        "investigated": [],
+        "selected": null,
+        "ready": true,
+        "assetsComplete": true,
+        "beat": "OPENING_CINEMATIC"
+      },
+      "voice": {
+        "status": "speaking",
+        "clip": "5a05af21",
+        "started": 4,
+        "completed": 3,
+        "busy": true
+      },
+      "audio": {
+        "context": "running",
+        "events": [
+          {
+            "cue": "aion.space.city",
+            "time": 0.021333333333333333
+          },
+          {
+            "cue": "aion.space.headquarters",
+            "time": 18.232
+          }
+        ],
+        "mix": {
+          "rain": 0,
+          "fan": 0,
+          "ambience": 1,
+          "music": 0.075
+        },
+        "buses": {
+          "music": 0.014243882149457932,
+          "effects": 0.6499999761581421,
+          "ambience": 0.6499999761581421
+        }
+      }
+    },
+    {
+      "beat": "OPENING_CINEMATIC",
+      "time": 30.548799999999872,
+      "evidence": [],
+      "verdict": null,
+      "stayed": null,
+      "ripple": null,
+      "finale": null,
+      "followedDoor": false,
+      "world": {
+        "renderer": "aion-future-webgl",
+        "place": "headquarters",
+        "landmark": "aion-citadel-v2",
+        "historicalAnalysis": null,
+        "nexusLeaves": 144,
+        "atriumLevels": 5,
+        "view": "core",
+        "camera": [
+          -2.2888968846568956,
+          6.190881377237204,
+          -6.439447342679757
+        ],
+        "signal": {
+          "x": 824.5231586940608,
+          "y": 825.4614116854177,
+          "focused": false
+        },
+        "drawCalls": 24,
+        "triangles": 40556,
+        "antialias": true,
+        "output": "direct-aces-srgb",
+        "lighting": "gpu-pbr-ibl",
+        "resources": {
+          "geometries": 42,
+          "textures": 15
+        },
+        "quality": 0.75,
+        "qualitySettled": true,
+        "assets": [
+          "floor_tiles_06",
+          "building-skyscraper-b",
+          "building-skyscraper-a",
+          "building-skyscraper-c",
+          "building-b",
+          "building-a",
+          "studio_small_09"
+        ],
+        "assetErrors": [],
+        "investigated": [],
+        "selected": null,
+        "ready": true,
+        "assetsComplete": true,
+        "beat": "OPENING_CINEMATIC"
+      },
+      "voice": {
+        "status": "idle",
+        "clip": "5a05af21",
+        "started": 4,
+        "completed": 4,
+        "busy": false
+      },
+      "audio": {
+        "context": "running",
+        "events": [
+          {
+            "cue": "aion.space.city",
+            "time": 0.021333333333333333
+          },
+          {
+            "cue": "aion.space.headquarters",
+            "time": 18.232
+          }
+        ],
+        "mix": {
+          "rain": 0,
+          "fan": 0,
+          "ambience": 1,
+          "music": 0.075
+        },
+        "buses": {
+          "music": 0.04115569218993187,
+          "effects": 0.6499999761581421,
+          "ambience": 0.6499999761581421
+        }
+      }
+    },
+    {
+      "beat": "OPENING_CINEMATIC",
+      "time": 40.415100000000066,
+      "evidence": [],
+      "verdict": null,
+      "stayed": null,
+      "ripple": null,
+      "finale": null,
+      "followedDoor": false,
+      "world": {
+        "renderer": "aion-future-webgl",
+        "place": "core",
+        "landmark": "aion-citadel-v2",
+        "historicalAnalysis": null,
+        "nexusLeaves": 144,
+        "atriumLevels": 5,
+        "view": "core",
+        "camera": [
+          23.916215518650528,
+          19.993823103062862,
+          -26.47977568347394
+        ],
+        "signal": {
+          "x": -4929.827742960713,
+          "y": 4016.982584286241,
+          "focused": false
+        },
+        "drawCalls": 21,
+        "triangles": 38328,
+        "antialias": true,
+        "output": "direct-aces-srgb",
+        "lighting": "gpu-pbr-ibl",
+        "resources": {
+          "geometries": 47,
+          "textures": 15
+        },
+        "quality": 0.75,
+        "qualitySettled": true,
+        "assets": [
+          "floor_tiles_06",
+          "building-skyscraper-b",
+          "building-skyscraper-a",
+          "building-skyscraper-c",
+          "building-b",
+          "building-a",
+          "studio_small_09"
+        ],
+        "assetErrors": [],
+        "investigated": [],
+        "selected": null,
+        "ready": true,
+        "assetsComplete": true,
+        "beat": "OPENING_CINEMATIC"
+      },
+      "voice": {
+        "status": "speaking",
+        "clip": "3e3918f2",
+        "started": 6,
+        "completed": 5,
+        "busy": true
+      },
+      "audio": {
+        "context": "running",
+        "events": [
+          {
+            "cue": "aion.space.city",
+            "time": 0.021333333333333333
+          },
+          {
+            "cue": "aion.space.headquarters",
+            "time": 18.232
+          },
+          {
+            "cue": "aion-motif",
+            "time": 35.28
+          },
+          {
+            "cue": "aion-overtone",
+            "time": 35.28
+          },
+          {
+            "cue": "aion.space.core",
+            "time": 35.28
+          }
+        ],
+        "mix": {
+          "rain": 0,
+          "fan": 0,
+          "ambience": 1,
+          "music": 0.16
+        },
+        "buses": {
+          "music": 0.026409342885017395,
+          "effects": 0.6499999761581421,
+          "ambience": 0.6499999761581421
+        }
+      }
+    },
+    {
+      "beat": "OPENING_CINEMATIC",
+      "time": 55.76450000000055,
+      "evidence": [],
+      "verdict": null,
+      "stayed": null,
+      "ripple": null,
+      "finale": null,
+      "followedDoor": false,
+      "world": {
+        "renderer": "aion-future-webgl",
+        "place": "anomaly",
+        "landmark": "aion-citadel-v2",
+        "historicalAnalysis": {
+          "heading": "AION / ARCHITECTURE AUDIT / 2046",
+          "title": "HUMAN REVIEW",
+          "status": "ORIGIN UNKNOWN",
+          "lines": [
+            "CORE PRINCIPLE: HUMAN REVIEW",
+            "FUNCTION: VERIFIED",
+            "DESIGN ORIGIN: INCOMPLETE",
+            "HISTORICAL TRACE: 2026"
+          ],
+          "principle": "HUMAN REVIEW",
+          "function": "VERIFIED",
+          "origin": "INCOMPLETE",
+          "year": 2026
+        },
+        "nexusLeaves": 144,
+        "atriumLevels": 5,
+        "view": "core",
+        "camera": [
+          2.996039325978046,
+          3.2012440161880633,
+          -10.003788470803606
+        ],
+        "signal": {
+          "x": 633.4019152535105,
+          "y": 355.1339094536601,
+          "focused": false
+        },
+        "drawCalls": 32,
+        "triangles": 41000,
+        "antialias": true,
+        "output": "direct-aces-srgb",
+        "lighting": "gpu-pbr-ibl",
+        "resources": {
+          "geometries": 49,
+          "textures": 15
+        },
+        "quality": 0.75,
+        "qualitySettled": true,
+        "assets": [
+          "floor_tiles_06",
+          "building-skyscraper-b",
+          "building-skyscraper-a",
+          "building-skyscraper-c",
+          "building-b",
+          "building-a",
+          "studio_small_09"
+        ],
+        "assetErrors": [],
+        "investigated": [],
+        "selected": null,
+        "ready": true,
+        "assetsComplete": true,
+        "beat": "OPENING_CINEMATIC"
+      },
+      "voice": {
+        "status": "off",
+        "clip": null,
+        "started": 7,
+        "completed": 7,
+        "busy": false
+      },
+      "audio": {
+        "context": "running",
+        "events": [
+          {
+            "cue": "aion.space.city",
+            "time": 0.021333333333333333
+          },
+          {
+            "cue": "aion.space.headquarters",
+            "time": 18.232
+          },
+          {
+            "cue": "aion-motif",
+            "time": 35.28
+          },
+          {
+            "cue": "aion-overtone",
+            "time": 35.28
+          },
+          {
+            "cue": "aion.space.core",
+            "time": 35.28
+          },
+          {
+            "cue": "signal",
+            "time": 50.28
+          },
+          {
+            "cue": "aion.space.anomaly",
+            "time": 50.28
+          }
+        ],
+        "mix": {
+          "rain": 0,
+          "fan": 0,
+          "ambience": 1,
+          "music": 0
+        },
+        "buses": {
+          "music": 0,
+          "effects": 0.6499999761581421,
+          "ambience": 0.6499999761581421
+        }
+      }
+    }
+  ],
+  "final": {
+    "beat": "PLAYER_CONTROL_ENABLED",
+    "time": 0,
+    "evidence": [],
+    "verdict": null,
+    "stayed": null,
+    "ripple": null,
+    "finale": null,
+    "followedDoor": false,
+    "world": {
+      "renderer": "aion-future-webgl",
+      "place": "anomaly",
+      "landmark": "aion-citadel-v2",
+      "historicalAnalysis": {
+        "heading": "AION / ARCHITECTURE AUDIT / 2046",
+        "title": "HUMAN REVIEW",
+        "status": "ORIGIN UNKNOWN",
+        "lines": [
+          "CORE PRINCIPLE: HUMAN REVIEW",
+          "FUNCTION: VERIFIED",
+          "DESIGN ORIGIN: INCOMPLETE",
+          "HISTORICAL TRACE: 2026"
+        ],
+        "principle": "HUMAN REVIEW",
+        "function": "VERIFIED",
+        "origin": "INCOMPLETE",
+        "year": 2026
+      },
+      "nexusLeaves": 144,
+      "atriumLevels": 5,
+      "view": "core",
+      "camera": [
+        3,
+        3.2,
+        -10
+      ],
+      "signal": {
+        "x": 633.9328608510208,
+        "y": 354.76205078211325,
+        "focused": false
+      },
+      "drawCalls": 32,
+      "triangles": 41000,
+      "antialias": true,
+      "output": "direct-aces-srgb",
+      "lighting": "gpu-pbr-ibl",
+      "resources": {
+        "geometries": 49,
+        "textures": 15
+      },
+      "quality": 0.75,
+      "qualitySettled": true,
+      "assets": [
+        "floor_tiles_06",
+        "building-skyscraper-b",
+        "building-skyscraper-a",
+        "building-skyscraper-c",
+        "building-b",
+        "building-a",
+        "studio_small_09"
+      ],
+      "assetErrors": [],
+      "investigated": [],
+      "selected": null,
+      "ready": true,
+      "assetsComplete": true,
+      "beat": "OPENING_CINEMATIC"
+    },
+    "voice": {
+      "status": "off",
+      "clip": null,
+      "started": 7,
+      "completed": 7,
+      "busy": false
+    },
+    "audio": {
+      "context": "running",
+      "events": [
+        {
+          "cue": "aion.space.city",
+          "time": 0.021333333333333333
+        },
+        {
+          "cue": "aion.space.headquarters",
+          "time": 18.232
+        },
+        {
+          "cue": "aion-motif",
+          "time": 35.28
+        },
+        {
+          "cue": "aion-overtone",
+          "time": 35.28
+        },
+        {
+          "cue": "aion.space.core",
+          "time": 35.28
+        },
+        {
+          "cue": "signal",
+          "time": 50.28
+        },
+        {
+          "cue": "aion.space.anomaly",
+          "time": 50.28
+        }
+      ],
+      "mix": {
+        "rain": 0,
+        "fan": 0,
+        "ambience": 1,
+        "music": 0
+      },
+      "buses": {
+        "music": 0,
+        "effects": 0.6499999761581421,
+        "ambience": 0.6499999761581421
+      }
+    }
+  }
+}

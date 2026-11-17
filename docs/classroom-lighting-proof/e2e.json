@@ -1,0 +1,344 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\Dự Án NTD\\Codethethank\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config=playwright.lighting-review.config.ts",
+      "cinematic-chair.spec.ts",
+      "cinematic-stayed.spec.ts",
+      "cinematic-laptop-first.spec.ts",
+      "--grep",
+      "Chair:|mobile silent reduced resume|Laptop first.*desktop",
+      "--reporter=list,json"
+    ],
+    "configFile": "F:\\Dự Án NTD\\Codethethank\\playwright.lighting-review.config.ts",
+    "rootDir": "F:/Dự Án NTD/Codethethank/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "F:/Dự Án NTD/Codethethank/docs/classroom-lighting-proof/runner-traces",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "F:/Dự Án NTD/Codethethank/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "cinematic*.spec.ts"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "F:\\Dự Án NTD\\Codethethank\\docs\\classroom-lighting-proof\\runner-traces",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e",
+        "snapshotDir": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "cinematic*.spec.ts",
+        "timeout": 90000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4192",
+          "headless": true,
+          "trace": "retain-on-failure",
+          "launchOptions": {
+            "args": [
+              "--use-angle=d3d11"
+            ]
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.1",
+    "workers": 1,
+    "webServer": {
+      "command": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4192 --strictPort --outDir dist-lighting-review",
+      "url": "http://127.0.0.1:4192",
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "cinematic-chair.spec.ts",
+      "file": "cinematic-chair.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Chair: insert, visible sit and quiet two-shot desktop",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 31167,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T09:38:03.565Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "690f76986346603fad4e-2b086a8f8122572be062",
+          "file": "cinematic-chair.spec.ts",
+          "line": 45,
+          "column": 3
+        },
+        {
+          "title": "Chair: insert, visible sit and quiet two-shot mobile",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 24178,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T09:38:35.867Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "690f76986346603fad4e-e9c16509902bda427e10",
+          "file": "cinematic-chair.spec.ts",
+          "line": 45,
+          "column": 3
+        },
+        {
+          "title": "Chair: insert, visible sit and quiet two-shot canvas",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 17866,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.subtitle-speaker')\nExpected: \u001b[32m\"\u001b[7mA\u001b[27mn\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7mCô Vâ\u001b[27mn\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.subtitle-speaker') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.subtitle-speaker')\u001b[22m\n\u001b[2m    14 × locator resolved to <small class=\"subtitle-speaker future-speaker\">Cô Vân</small>\u001b[22m\n\u001b[2m       - unexpected value \"Cô Vân\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.subtitle-speaker')\nExpected: \u001b[32m\"\u001b[7mA\u001b[27mn\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7mCô Vâ\u001b[27mn\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.subtitle-speaker') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.subtitle-speaker')\u001b[22m\n\u001b[2m    14 × locator resolved to <small class=\"subtitle-speaker future-speaker\">Cô Vân</small>\u001b[22m\n\u001b[2m       - unexpected value \"Cô Vân\"\u001b[22m\n\n    at F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-chair.spec.ts:188:53",
+                    "location": {
+                      "file": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-chair.spec.ts",
+                      "column": 53,
+                      "line": 188
+                    },
+                    "snippet": " \u001b[90m 186 |\u001b[39m     } \u001b[36melse\u001b[39m\n \u001b[90m 187 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"button\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m\"Tiếp lời\"\u001b[39m\u001b[33m,\u001b[39m exact\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m })\u001b[33m.\u001b[39mtap()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 188 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\".subtitle-speaker\"\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(\u001b[32m\"An\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 189 |\u001b[39m     \u001b[36mconst\u001b[39m final \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m state()\u001b[33m;\u001b[39m\n \u001b[90m 190 |\u001b[39m     expect(final\u001b[33m.\u001b[39mvoice\u001b[33m.\u001b[39mstarted)\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 191 |\u001b[39m     expect(voices)\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-chair.spec.ts",
+                        "column": 53,
+                        "line": 188
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.subtitle-speaker')\nExpected: \u001b[32m\"\u001b[7mA\u001b[27mn\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7mCô Vâ\u001b[27mn\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.subtitle-speaker') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.subtitle-speaker')\u001b[22m\n\u001b[2m    14 × locator resolved to <small class=\"subtitle-speaker future-speaker\">Cô Vân</small>\u001b[22m\n\u001b[2m       - unexpected value \"Cô Vân\"\u001b[22m\n\n\n  186 |     } else\n  187 |       await page.getByRole(\"button\", { name: \"Tiếp lời\", exact: false }).tap();\n> 188 |     await expect(page.locator(\".subtitle-speaker\")).toHaveText(\"An\");\n      |                                                     ^\n  189 |     const final = await state();\n  190 |     expect(final.voice.started).toBe(0);\n  191 |     expect(voices).toEqual([]);\n    at F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-chair.spec.ts:188:53"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T09:39:00.090Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "F:\\Dự Án NTD\\Codethethank\\docs\\classroom-lighting-proof\\runner-traces\\cinematic-chair-Chair-inse-8d1d5-t-and-quiet-two-shot-canvas\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "F:\\Dự Án NTD\\Codethethank\\docs\\classroom-lighting-proof\\runner-traces\\cinematic-chair-Chair-inse-8d1d5-t-and-quiet-two-shot-canvas\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-chair.spec.ts",
+                    "column": 53,
+                    "line": 188
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "690f76986346603fad4e-8b4f55dc50035138d32a",
+          "file": "cinematic-chair.spec.ts",
+          "line": 45,
+          "column": 3
+        }
+      ]
+    },
+    {
+      "title": "cinematic-laptop-first.spec.ts",
+      "file": "cinematic-laptop-first.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Laptop first is playable through An evaluation: desktop",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 74103,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T09:39:31.977Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ace59ff1e95758820956-95cf8857305bfd8633f1",
+          "file": "cinematic-laptop-first.spec.ts",
+          "line": 39,
+          "column": 3
+        }
+      ]
+    },
+    {
+      "title": "cinematic-stayed.spec.ts",
+      "file": "cinematic-stayed.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Chapter 02 complete mobile silent reduced resume",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 121489,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T09:40:47.733Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "91a4d968bc6d784f72b2-9fd20a17c7ba930b5994",
+          "file": "cinematic-stayed.spec.ts",
+          "line": 27,
+          "column": 3
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-17T09:38:02.066Z",
+    "duration": 288672.804,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

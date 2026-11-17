@@ -1,0 +1,14 @@
+﻿{
+    "current":  "menu",
+    "exitCode":  1,
+    "completed":  [
+                      "typecheck",
+                      "lint",
+                      "unit",
+                      "build",
+                      "gameplay"
+                  ],
+    "updated":  "2026-11-16T16:50:56.3439211+07:00",
+    "phase":  "After",
+    "status":  "failed"
+}

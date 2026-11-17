@@ -1,0 +1,186 @@
+{
+  "final": {
+    "beat": "NEXT_SCENE_READY",
+    "time": 0.2667000000000007,
+    "evidence": [
+      "laptop"
+    ],
+    "verdict": {
+      "narrativeRevision": 4,
+      "version": 1,
+      "phase": "connect",
+      "found": [
+        "data",
+        "presentation",
+        "notes"
+      ],
+      "selected": "an",
+      "tested": [
+        "student07",
+        "an"
+      ],
+      "linked": [],
+      "carried": null
+    },
+    "stayed": null,
+    "ripple": null,
+    "finale": null,
+    "followedDoor": false,
+    "world": {
+      "school": {
+        "name": "Trường Đại học Tây Nguyên",
+        "logoLoaded": true
+      },
+      "camera": [
+        1.1851324942500014,
+        1.6167680464201803,
+        -0.4361030252149978
+      ],
+      "shot": null,
+      "teacherBodyY": 0.88,
+      "portraits": {
+        "an": {
+          "x": 674.6840715395656,
+          "y": 347.8715604315249,
+          "visible": true
+        },
+        "teacher": {
+          "x": 215630.97409079506,
+          "y": 278.6166694243756,
+          "visible": false
+        }
+      },
+      "laptopLid": [
+        {
+          "x": 1155.634536564066,
+          "y": 503.59028530931164
+        },
+        {
+          "x": 1441.131917598238,
+          "y": 821.811976438227
+        },
+        {
+          "x": 1632.5134493935218,
+          "y": 201.48296376757963
+        },
+        {
+          "x": 1225.5234329740756,
+          "y": 187.35494812230527
+        }
+      ],
+      "target": [
+        -0.42148675057499985,
+        1.3019416086975,
+        -0.07694504804500049
+      ],
+      "fov": 40.76035331800001,
+      "artDirection": "paper-rain",
+      "characterArt": "sculpted-narrative-v1",
+      "anHand": [
+        -0.6396667411608953,
+        0.9177985639268593,
+        -0.538247476326879
+      ],
+      "focus": "wide",
+      "teacher": [
+        2.7,
+        0,
+        6.2
+      ],
+      "teacherVisible": false,
+      "anHead": 0.1,
+      "anFeetY": [
+        0.002403509109086377,
+        0.002403509109086377
+      ],
+      "teacherFeetY": [
+        0.03749999999999998,
+        0.03749999999999998
+      ],
+      "notebookPage": null,
+      "notebookPosition": [
+        1.25,
+        1.047,
+        -0.15
+      ],
+      "pageTurn": 1,
+      "chair": [
+        2.3,
+        0,
+        0.6
+      ],
+      "drawCalls": 61,
+      "triangles": 51708,
+      "shadowRefreshed": false,
+      "resources": {
+        "geometries": 104,
+        "textures": 19,
+        "programs": 13,
+        "renderTarget": [
+          1280,
+          720
+        ],
+        "samples": 0,
+        "output": [
+          1280,
+          720
+        ],
+        "shadowMap": [
+          1024,
+          1024
+        ]
+      },
+      "resolution": 1
+    },
+    "voice": null,
+    "audio": null
+  },
+  "paints": [
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    }
+  ],
+  "errors": []
+}

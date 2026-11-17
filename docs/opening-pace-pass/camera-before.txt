@@ -1,0 +1,66 @@
+type Vec = [number, number, number];
+type Key = { t: number; eye: Vec; at: Vec };
+
+/** Start the reveal before the doorway; settle without an acceleration kick. */
+export function openingExteriorOpacity(cameraZ: number): number {
+  const p = Math.max(0, Math.min(1, (cameraZ - 30) / 54));
+  return p * p * p * (p * (p * 6 - 15) + 10);
+}
+
+/** One continuous dolly. Enter below the glazing and first suspended bridge. */
+export const openingCameraKeys: Key[] = [
+  { t: 0, eye: [155, 140, 420], at: [0, 55, -65] },
+  { t: 9, eye: [62, 64, 245], at: [0, 30, -58] },
+  { t: 15, eye: [12, 16, 108], at: [0, 12, -55] },
+  { t: 20, eye: [2.5, 5.8, 56], at: [0, 6, -58] },
+  { t: 24, eye: [1.6, 5.6, 30], at: [0, 8, -60] },
+  { t: 28, eye: [0.4, 5.6, 9], at: [0, 12, -64] },
+  { t: 32, eye: [-3, 7, -12], at: [0, 16, -67] },
+  { t: 40, eye: [24, 20, -26], at: [0, 17, -67] },
+  { t: 47, eye: [-20, 14, -32], at: [0, 16, -67] },
+  { t: 56, eye: [3, 3.2, -10], at: [0, 2.55, -15.6] },
+  { t: 60, eye: [3, 3.2, -10], at: [0, 2.55, -15.6] },
+];
+
+function tangent(i: number, field: "eye" | "at", axis: number) {
+  const keys = openingCameraKeys;
+  if (i === 0)
+    return (
+      (keys[1][field][axis] - keys[0][field][axis]) / (keys[1].t - keys[0].t)
+    );
+  if (i >= keys.length - 2) return 0; // Settle only at the final reveal.
+  const before = keys[i - 1],
+    current = keys[i],
+    after = keys[i + 1];
+  const left =
+    (current[field][axis] - before[field][axis]) / (current.t - before.t);
+  const right =
+    (after[field][axis] - current[field][axis]) / (after.t - current.t);
+  // Limit overshoot at direction changes; no excursions through walls/floors.
+  if (left * right <= 0) return 0;
+  return (2 * left * right) / (left + right);
+}
+
+export function sampleOpeningCamera(time: number): { eye: Vec; at: Vec } {
+  const keys = openingCameraKeys;
+  const t = Math.max(0, Math.min(keys.at(-1)!.t, time));
+  let i = keys.findIndex((key) => key.t > t) - 1;
+  if (i < 0) i = keys.length - 2;
+  const a = keys[i],
+    b = keys[i + 1],
+    duration = b.t - a.t;
+  const u = (t - a.t) / duration;
+  // Quintic Hermite: identical velocity and zero acceleration on both sides
+  // of each key. Cubic segments previously had a visible acceleration kick.
+  const sample = (field: "eye" | "at"): Vec =>
+    a[field].map((value, axis) => {
+      const delta = b[field][axis] - value;
+      const v0 = duration * tangent(i, field, axis);
+      const v1 = duration * tangent(i + 1, field, axis);
+      const c3 = 10 * delta - 6 * v0 - 4 * v1;
+      const c4 = -15 * delta + 8 * v0 + 7 * v1;
+      const c5 = 6 * delta - 3 * v0 - 3 * v1;
+      return value + u * v0 + u * u * u * (c3 + u * (c4 + u * c5));
+    }) as Vec;
+  return { eye: sample("eye"), at: sample("at") };
+}

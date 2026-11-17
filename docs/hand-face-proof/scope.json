@@ -1,0 +1,10 @@
+{
+  "changedExistingSource": [
+    "src/art/NarrativeActors.ts",
+    "src/cinematic/ClassroomPerformance.ts"
+  ],
+  "newSource": [
+    "src/art/CharacterActing.ts"
+  ],
+  "outsideOwned": []
+}

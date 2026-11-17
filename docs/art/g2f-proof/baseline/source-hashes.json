@@ -1,0 +1,310 @@
+{
+  "src/App.tsx": {
+    "sha256": "53ebf20ea963c67d531f7562ff4a0839a5d026591938d622cd7567e6680b6e64",
+    "bytes": 14966
+  },
+  "src/Environment.tsx": {
+    "sha256": "5ac679bd0d96bcfa370150cccd7d99aba52db2e5a7fb032c7fcfc22259cc0f01",
+    "bytes": 9491
+  },
+  "src/main.tsx": {
+    "sha256": "3127deae2f0e4c32d6c55b7381c35ba2b87fa1b02a7248e51e6202c24440e95b",
+    "bytes": 257
+  },
+  "src/style.css": {
+    "sha256": "bc49a0c750a0eb7ab099b25bdd76463246a7e000b9eb66cbaeb12de61d3de993",
+    "bytes": 10409
+  },
+  "src/vite-env.d.ts": {
+    "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5",
+    "bytes": 38
+  },
+  "src/art/ClassroomArt.ts": {
+    "sha256": "17d39cc90bc8669b2522656a66211ff848b73d33b745aed2b523db29d3ba119c",
+    "bytes": 19856
+  },
+  "src/art/narrative.css": {
+    "sha256": "e00d2007eea08d4dec7f7138c2fe4d71de568a87bd46d5e0590a8da4e8f463e2",
+    "bytes": 5565
+  },
+  "src/art/NarrativeActors.ts": {
+    "sha256": "703ad0d2b769c17aaea32eb25d320edf2d487f1492df0aaa46f5c11f4815c362",
+    "bytes": 20382
+  },
+  "src/art/NarrativePalette.ts": {
+    "sha256": "b960167b03edc8e6b95156c93bfaee947d49f43cd7bc27d7a4fced5ad82e0e6d",
+    "bytes": 3455
+  },
+  "src/chapter/chapter.css": {
+    "sha256": "7940c2aa7b6bd3e21bc8d54e29155d363628284364bfaacbaa2c976d4762a666",
+    "bytes": 1857
+  },
+  "src/chapter/ChapterAudio.ts": {
+    "sha256": "2fc44ffead0c70b1a3641619f650e1e60fb3d7c429646e2f2dd26473ab470e69",
+    "bytes": 6473
+  },
+  "src/chapter/ChapterGame.tsx": {
+    "sha256": "b265bae581b0152e02077d02ca4ea744cb1729f957112557f3cdd514706330f0",
+    "bytes": 35348
+  },
+  "src/chapter/director.ts": {
+    "sha256": "bddbeccd48c394e2d430d8713135a649985178ea87c2624fed3543a4c826e99c",
+    "bytes": 6032
+  },
+  "src/chapter/SummitWorld.ts": {
+    "sha256": "e6685e3a68d53f9eec1d6249b7a9450082675fa215f88db04996b1e6713c7049",
+    "bytes": 9585
+  },
+  "src/cinematic/AudioDirector.ts": {
+    "sha256": "2f8245abe8e1b476de8ad29de596f1e0b39aadb57e437ea67381f753a8c04170",
+    "bytes": 7438
+  },
+  "src/cinematic/cinematic.css": {
+    "sha256": "ccc8e9f5d02294777152882882775c353cf4805dbf3fb6b24ed047a9af61004b",
+    "bytes": 8843
+  },
+  "src/cinematic/CinematicGame.tsx": {
+    "sha256": "4c752197453fa63f18b0cc00f8c17ee5a54f0a19e72e880c60d5420e76be1daf",
+    "bytes": 23152
+  },
+  "src/cinematic/director.ts": {
+    "sha256": "06f78f23b43169f50eceaa2552026d9ee0a107e68f0d2cd759fa859368705749",
+    "bytes": 7660
+  },
+  "src/cinematic/FallbackWorld.ts": {
+    "sha256": "541e71ed3566ed753741a1b9fc583d72f350b21ca789830000edb6e3935e03cf",
+    "bytes": 12552
+  },
+  "src/cinematic/motifs.ts": {
+    "sha256": "2f59d7600f5251411661ab8fcc9c4370f2030c101939ace8a97e7ef4c4611c03",
+    "bytes": 465
+  },
+  "src/cinematic/overlay.ts": {
+    "sha256": "e754d5b35038873cfc86bca86fff1a2dd44c3c00a223958a9e881e42e4b97d6a",
+    "bytes": 1450
+  },
+  "src/cinematic/Recording.ts": {
+    "sha256": "14271a48841267885a0b5f214c219db5a68467a2c706602503275b64239f5d4d",
+    "bytes": 1129
+  },
+  "src/cinematic/WorldRenderer.ts": {
+    "sha256": "0ab3f90940961dbc75e862b09bc03b99bf7e4bd9910a4a2daa533f51bd77e905",
+    "bytes": 44221
+  },
+  "src/finale/Fallback.ts": {
+    "sha256": "4b22373890ecd4a87e0808d5cb60e1a7396cf131cbee8588b3e78392bef29d96",
+    "bytes": 3453
+  },
+  "src/finale/finale.css": {
+    "sha256": "c66aca58566734a4279d2d07db78102c05a6b57b0065498b2f63c96b361601c8",
+    "bytes": 4876
+  },
+  "src/finale/FinaleControls.tsx": {
+    "sha256": "c84656eda48b6870c8df21d4349c33eb1c253f8931688dc0063bb69ec7c2bf8b",
+    "bytes": 10488
+  },
+  "src/finale/FinaleVisual.ts": {
+    "sha256": "6e3cecbf23ff9caef9e5aa2e0eac776ca58e4e106faf2690a760b6599d39a0f0",
+    "bytes": 7881
+  },
+  "src/finale/letter.ts": {
+    "sha256": "5c3c8c080e644c0977d4d68e16e12f632b55369af99d6d87b05403b9cd92401a",
+    "bytes": 1428
+  },
+  "src/finale/state.ts": {
+    "sha256": "027047fbf92700d1eeff3f0af0886ba259dc2be38c867fb16c933a8d0258db1a",
+    "bytes": 4232
+  },
+  "src/finale/story.ts": {
+    "sha256": "ab9d3a610660ab05624b149dacdc3f40d30891b2bda27247a0246585e4b29a7f",
+    "bytes": 2807
+  },
+  "src/game/state.ts": {
+    "sha256": "c2c6ac7a627f0f0023e79ad5368f4e04e8cd85ff30ccb42a2cfc84e2d0de03b7",
+    "bytes": 3833
+  },
+  "src/game/story.ts": {
+    "sha256": "490db6dba46e1adf4a5acd61c1c9825fc9c6069ead16fac004d1f3febc58dca4",
+    "bytes": 5591
+  },
+  "src/menu/ASSET-PROMPTS.txt": {
+    "sha256": "e12eefbadd6453c15071ee6f04a8f3d3064536bedbc35cf124387f94efcd48b1",
+    "bytes": 3639
+  },
+  "src/menu/GameAudio.ts": {
+    "sha256": "feebae62ccc12937631f657940dc0d3d2f25a3402cb8fa6c16a335e0c2a28e3f",
+    "bytes": 877
+  },
+  "src/menu/GameShell.tsx": {
+    "sha256": "55a6cf1cc64c62f5da0c35e28401fa7bfa3732b59d381f5d32b7c90a56b05b1c",
+    "bytes": 4112
+  },
+  "src/menu/MainMenu.tsx": {
+    "sha256": "00162727809c7942d502d86b4ced3d6913b1af8ba8266f8bf112282839d67c20",
+    "bytes": 8999
+  },
+  "src/menu/menu.css": {
+    "sha256": "bbffbc7542cd4922d2c57bf56804fd2148de19cc3168f0f6964a660313d23fd7",
+    "bytes": 16214
+  },
+  "src/menu/MenuAudio.ts": {
+    "sha256": "d9aa315487cb9a148699e312461f31e5f0af1db528c81c103cc17e67333bf338",
+    "bytes": 3143
+  },
+  "src/menu/MenuUI.tsx": {
+    "sha256": "28cd608633f041943e363541d33ac9562355ffa7df1bbb05273a1d24655f2d13",
+    "bytes": 7847
+  },
+  "src/menu/preferences.ts": {
+    "sha256": "8926a539c6a361ef1ab21c1ee1fe4e227d160eccf1fe4d157216fd9dce0ea2ea",
+    "bytes": 1426
+  },
+  "src/menu/README.md": {
+    "sha256": "467b89a5f33714907572e8247ab99233bae7a5fd22670a8b6657d7dba543f519",
+    "bytes": 5946
+  },
+  "src/menu/saveBridge.ts": {
+    "sha256": "67c47371b6ccb76a094ed5e3f8f887edaa174ed117dc306838a011f6ff1f35e5",
+    "bytes": 955
+  },
+  "src/menu/SceneBackground.tsx": {
+    "sha256": "8dbe128f6526331b2a1c46dbde2fe1ef618c388a03fb2c7b71e1bd0c386c0800",
+    "bytes": 17876
+  },
+  "src/menu/vite-env.d.ts": {
+    "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5",
+    "bytes": 38
+  },
+  "src/ripple/Fallback.ts": {
+    "sha256": "3bdd7cd53be4b5d5208e0bb442c6c104737c7b3349741d6e6a84f2bffed6d0d2",
+    "bytes": 4566
+  },
+  "src/ripple/ripple.css": {
+    "sha256": "7c8b669452ad9295d14703d79ab194473c313d75d2ace6c7ff7f82a4d7d72b36",
+    "bytes": 1224
+  },
+  "src/ripple/RippleControls.tsx": {
+    "sha256": "22e31c2a6a6be6fdf2b896684dbe0b63dbd17e178ee8b137d85e8ac9d968ff14",
+    "bytes": 3185
+  },
+  "src/ripple/RippleWorld.ts": {
+    "sha256": "851062b3e5972cc054fc68ea6ca51a1a8aef357f660a03d80de0c335e0d35af3",
+    "bytes": 15864
+  },
+  "src/ripple/state.ts": {
+    "sha256": "79bfc61373b94bbf7323a7f59466286f5f42a10cb877e53ad6de116605cbf470",
+    "bytes": 4748
+  },
+  "src/ripple/story.ts": {
+    "sha256": "0e0686afa519659680b3bec1b7c64e5c7a62f30ccac5c3b76a73361224665dd2",
+    "bytes": 4888
+  },
+  "src/stayed/Notebook.ts": {
+    "sha256": "89f1d32e68b581fa91445cd25b1c217c69cdbc20b3cc1f9f49524330cec63806",
+    "bytes": 2762
+  },
+  "src/stayed/state.ts": {
+    "sha256": "d34034108685ddc4fe1671cc8da8e2fd42f0b8a7687a8650e14256f950397091",
+    "bytes": 3009
+  },
+  "src/stayed/StayControls.tsx": {
+    "sha256": "34afed5b0e31f2f96eaa9533c19d75ccc3924cec4049f5d3158e59ae2d5b5c11",
+    "bytes": 3200
+  },
+  "src/stayed/stayed.css": {
+    "sha256": "6619ba3f59a690bc704cf14411f0de1ea0a0562c1737b7536558ce5ae830b132",
+    "bytes": 1332
+  },
+  "src/stayed/story.ts": {
+    "sha256": "fc6bd66884613d9b70761cf32b9bde3ff72b1155b8a13e63ad92828c4f73a789",
+    "bytes": 2919
+  },
+  "src/typography/fonts.ts": {
+    "sha256": "77b6c795c21f7e62c090a7d82cbae0bf4f0c51f07dbfc3e2484ba3c18ba8f6f3",
+    "bytes": 808
+  },
+  "src/typography/text.ts": {
+    "sha256": "8cdd2c4b6eacc34b6b40fb5b25c496847d084d2912d43d2d79aecb3203ad4bc9",
+    "bytes": 436
+  },
+  "src/verdict/evidence.ts": {
+    "sha256": "af4ee35e27be89ea88b899b2e1f814dcc373de24fe493ea2d8617b37ff59cdea",
+    "bytes": 1453
+  },
+  "src/verdict/rules.ts": {
+    "sha256": "44612e238448c58a4f3a5af60ece8c772e665050d395449b738c86e11c3c0701",
+    "bytes": 1023
+  },
+  "src/verdict/screen.ts": {
+    "sha256": "091f919b741807e51bc915aff85adeb5cd85b8e19d8c87eb24503ac3c5fa9387",
+    "bytes": 2623
+  },
+  "src/verdict/state.ts": {
+    "sha256": "96d25fa25d0f594ce5302cd64f4f25ae9b4d2222d00132835bf1d4316ad286df",
+    "bytes": 6841
+  },
+  "src/verdict/story.ts": {
+    "sha256": "95a1057d1ef699cf0294e1903c99df7eabf161e0c3565bff58fdaa6315357d62",
+    "bytes": 4898
+  },
+  "src/verdict/verdict.css": {
+    "sha256": "d8228013944c1c5bce5a522362d78eedad1ceca5f0ea5747f8d287098a1b007b",
+    "bytes": 1732
+  },
+  "src/verdict/VerdictControls.tsx": {
+    "sha256": "34e12daef09caf8a76f065efcb22d2d9f84d63a36ad92c351b58502311cebc38",
+    "bytes": 3723
+  },
+  "public/fonts/lesson-serif-vi-bold.woff2": {
+    "sha256": "d09afa7b9bdf33e011adb30af8a08575c910498d57b78ae4b304b408038b0103",
+    "bytes": 49728
+  },
+  "public/fonts/lesson-serif-vi-italic.woff2": {
+    "sha256": "e33fb0782d5b553690141d3c638c738b860b2fed4f963b0fe2dee1a3c695e887",
+    "bytes": 50580
+  },
+  "public/fonts/lesson-serif-vi-normal.woff2": {
+    "sha256": "b8bf796c118268d621e15744d4567ca6fe2f808d3a0853393bdcdde20ee286fa",
+    "bytes": 46452
+  },
+  "public/fonts/lesson-serif.css": {
+    "sha256": "4e4ea0db5ec58d3a0650006e58e9c90ba265484df4c973f0ec332b35e7ecbadd",
+    "bytes": 696
+  },
+  "public/fonts/OFL-NotoSerif.txt": {
+    "sha256": "cee9892f9f0cc8fe882c9e9537ee6a89621d86ee7ceaf70b02e2b2b1c25c061a",
+    "bytes": 4396
+  },
+  "public/menu/canopy.webp": {
+    "sha256": "e1d4bf3a50b85e18b576ccb5f54115cfaa8a829137183f0e47069278b58e063f",
+    "bytes": 140994
+  },
+  "public/menu/city-sunset.webp": {
+    "sha256": "37e746a8aa6813a308406acedf39388cada44f08e64e022e19b9f0d9f78c7013",
+    "bytes": 331136
+  },
+  "public/menu/desk-memory.webp": {
+    "sha256": "a7c44fc1f48c9f28708edb16498243be3e40907a999f82b857d26cf7820fac27",
+    "bytes": 195218
+  },
+  "package.json": {
+    "sha256": "2eb6889df32dede6740cc396ecaff44db632c02419956af1dce7f4aa96682637",
+    "bytes": 955
+  },
+  "package-lock.json": {
+    "sha256": "728a4f9a5a32adba671a9555568210879ea5b35ba1f7682cde272f78577a661c",
+    "bytes": 129872
+  },
+  "vite.config.ts": {
+    "sha256": "48edbc7f1e8110eafe5bf758a71f4f1043d419a7389b0df4d67669f293c74aba",
+    "bytes": 144
+  },
+  "index.html": {
+    "sha256": "9cc27117fe9cb8011c254759ffdc6435cee6022c90c942558d896767ebbdbc93",
+    "bytes": 735
+  },
+  ".gitignore": {
+    "sha256": "3aaed9100bdd41a1c82e15ee664b352bfec2abfcb218ac9b508d2fdace11e672",
+    "bytes": 59
+  }
+}

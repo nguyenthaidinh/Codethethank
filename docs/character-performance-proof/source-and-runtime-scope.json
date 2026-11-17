@@ -1,0 +1,22 @@
+{
+  "changed": [
+    "src/art/NarrativeActors.ts",
+    "src/cinematic/ClassroomPerformance.ts",
+    "src/cinematic/WorldRenderer.ts"
+  ],
+  "outsideOwned": [],
+  "desktop": {
+    "cameraPreserved": true,
+    "drawCallsBefore": 102,
+    "drawCallsAfter": 103,
+    "texturesBefore": 17,
+    "texturesAfter": 18
+  },
+  "mobile": {
+    "cameraPreserved": true,
+    "drawCallsBefore": 110,
+    "drawCallsAfter": 110,
+    "texturesBefore": 16,
+    "texturesAfter": 17
+  }
+}

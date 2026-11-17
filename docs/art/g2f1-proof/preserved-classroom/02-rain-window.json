@@ -1,0 +1,166 @@
+{
+  "beat": "CLASSROOM_EXPLORATION",
+  "time": 5.2998000000000145,
+  "evidence": [
+    "window"
+  ],
+  "verdict": null,
+  "stayed": null,
+  "ripple": null,
+  "finale": null,
+  "followedDoor": false,
+  "world": {
+    "camera": [
+      -0.7450000000000002,
+      2.075,
+      1.9
+    ],
+    "target": [
+      -5.7,
+      2,
+      -2.4
+    ],
+    "fov": 53,
+    "artDirection": "paper-rain",
+    "characterArt": "sculpted-narrative-v1",
+    "anHand": [
+      -0.6396675464557546,
+      0.9178027764886546,
+      -0.5382661736796843
+    ],
+    "focus": "window",
+    "teacher": [
+      2.7,
+      0,
+      6.2
+    ],
+    "teacherVisible": false,
+    "anHead": 0.1,
+    "anFeetY": [
+      0.003192200028274139,
+      0.003192200028274139
+    ],
+    "teacherFeetY": [
+      0.03749999999999998,
+      0.03749999999999998
+    ],
+    "notebookPage": null,
+    "notebookPosition": [
+      1.25,
+      1.047,
+      -0.15
+    ],
+    "pageTurn": 1,
+    "chair": [
+      2.3,
+      0,
+      0.6
+    ],
+    "drawCalls": 40,
+    "triangles": 20898,
+    "shadowRefreshed": false,
+    "resources": {
+      "geometries": 103,
+      "textures": 18,
+      "programs": 13,
+      "renderTarget": [
+        1280,
+        720
+      ],
+      "samples": 0,
+      "output": [
+        1280,
+        720
+      ],
+      "shadowMap": [
+        1024,
+        1024
+      ]
+    },
+    "resolution": 1
+  },
+  "audio": {
+    "context": "running",
+    "events": [
+      {
+        "cue": "aion.space.city",
+        "time": 0.010666666666666666
+      },
+      {
+        "cue": "aion.space.anomaly",
+        "time": 0.9013333333333333
+      },
+      {
+        "cue": "focus",
+        "time": 6.032
+      },
+      {
+        "cue": "focus",
+        "time": 6.032
+      },
+      {
+        "cue": "select",
+        "time": 6.032
+      },
+      {
+        "cue": "aion.inspect.source",
+        "time": 9.04
+      },
+      {
+        "cue": "aion.inspect.limit",
+        "time": 9.232
+      },
+      {
+        "cue": "memory",
+        "time": 10.312
+      },
+      {
+        "cue": "bell",
+        "time": 15.32
+      },
+      {
+        "cue": "step",
+        "time": 16.82133333333333
+      },
+      {
+        "cue": "step",
+        "time": 17.52
+      },
+      {
+        "cue": "focus.window",
+        "time": 18.32
+      },
+      {
+        "cue": "focus.wide",
+        "time": 18.32
+      },
+      {
+        "cue": "focus.window",
+        "time": 18.32
+      },
+      {
+        "cue": "focus.wide",
+        "time": 21.834666666666667
+      },
+      {
+        "cue": "paper",
+        "time": 28.56
+      },
+      {
+        "cue": "focus.window",
+        "time": 28.56
+      }
+    ],
+    "mix": {
+      "rain": 0.38,
+      "fan": 0.016,
+      "ambience": 1,
+      "music": 0
+    },
+    "buses": {
+      "music": 0,
+      "effects": 0.6499999761581421,
+      "ambience": 0.6499999761581421
+    }
+  }
+}

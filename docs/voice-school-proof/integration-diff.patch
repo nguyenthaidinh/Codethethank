@@ -1,0 +1,687 @@
+--- before/src/art/ClassroomArt.ts
++++ after/src/art/ClassroomArt.ts
+@@ -9,7 +9,7 @@
+ type XYZ = [number, number, number];
+ export type ClassroomDirection = NarrativeDirection;
+ 
+-/** Deterministic, owned classroom assets. No loader, network call or scene-sized image. */
++/** Owned classroom geometry; the official school mark is a small local texture. */
+ export class ClassroomArt {
+   readonly geometries: T.BufferGeometry[] = [];
+   readonly textures: T.Texture[] = [];
+@@ -18,6 +18,8 @@
+     string,
+     T.MeshLambertMaterial | T.MeshBasicMaterial
+   >();
++  schoolLogoLoaded = false;
++  private closed = false;
+   private maps = new Map<string, T.CanvasTexture>();
+   get palette() {
+     return narrativePalettes[this.direction];
+@@ -188,21 +190,27 @@
+     bg: string,
+     fg: string,
+     font = 46,
++    matchAspect = false,
+   ) {
+     const canvas = document.createElement("canvas");
+     canvas.width = size[0] > 3 ? 1024 : 512;
+-    canvas.height = canvas.width / 2;
++    const height = matchAspect ? (1024 * size[1]) / size[0] : 512;
++    canvas.height = Math.round((canvas.width * height) / 1024);
+     const c = canvas.getContext("2d")!;
+     c.scale(canvas.width / 1024, canvas.width / 1024);
+     c.fillStyle = narrativeColor(bg, this.palette);
+-    c.fillRect(0, 0, 1024, 512);
++    c.fillRect(0, 0, 1024, height);
+     c.fillStyle = narrativeColor(fg, this.palette);
+     c.textBaseline = "middle";
+     lines.forEach((line, i) => {
+       c.font = `${i === 0 ? "600 " : ""}${font}px Arial`;
+       const fit = Math.min(1, 900 / Math.max(1, c.measureText(line).width));
+       c.font = `${i === 0 ? "600 " : ""}${Math.round(font * fit)}px Arial`;
+-      c.fillText(line, 62, 256 + (i - (lines.length - 1) / 2) * (font * 1.7));
++      c.fillText(
++        line,
++        62,
++        height / 2 + (i - (lines.length - 1) / 2) * (font * 1.7),
++      );
+     });
+     const geo = new T.PlaneGeometry(...size);
+     this.geometries.push(geo);
+@@ -457,12 +465,51 @@
+     );
+     this.label(
+       room,
+-      ["PHÒNG THỰC HÀNH", "ĐẠI HỌC · 2026", "Tắt máy sau khi sử dụng"],
++      ["TRƯỜNG ĐẠI HỌC", "TÂY NGUYÊN", "PHÒNG THỰC HÀNH · 2026"],
+       [1.55, 0.85],
+       [4.65, 2, -6.87],
+       "#b6b7a8",
+       "#354846",
+       65,
++    );
++    this.label(
++      room,
++      ["TRƯỜNG ĐẠI HỌC TÂY NGUYÊN"],
++      [4.15, 0.42],
++      [-1.8, 3.25, -6.72],
++      "#b6b7a8",
++      "#354846",
++      58,
++      true,
++    );
++    const schoolLogoGeometry = new T.PlaneGeometry(0.65, 0.65);
++    this.geometries.push(schoolLogoGeometry);
++    const schoolLogoMaterial = new T.MeshBasicMaterial({
++      color: 0xffffff,
++      toneMapped: false,
++    });
++    this.materials.add(schoolLogoMaterial);
++    const schoolLogo = new T.Mesh(schoolLogoGeometry, schoolLogoMaterial);
++    schoolLogo.name = "tay-nguyen-university-logo";
++    schoolLogo.position.set(-4.45, 3.25, -6.72);
++    room.add(schoolLogo);
++    new T.TextureLoader().load(
++      import.meta.env.BASE_URL + "school/tay-nguyen-university-logo.png",
++      (texture) => {
++        if (this.closed) {
++          texture.dispose();
++          return;
++        }
++        texture.colorSpace = T.SRGBColorSpace;
++        this.textures.push(texture);
++        this.schoolLogoLoaded = true;
++        schoolLogoMaterial.map = texture;
++        schoolLogoMaterial.needsUpdate = true;
++      },
++      undefined,
++      () => {
++        schoolLogo.visible = false;
++      },
+     );
+     this.box(room, [1.6, 1.1, 0.65], [4.85, 0.55, -6.4], "#667e78", 0.02);
+     for (const x of [4.45, 5.25]) {
+@@ -588,6 +635,7 @@
+     );
+   }
+   dispose() {
++    this.closed = true;
+     this.geometries.forEach((g) => g.dispose());
+     this.textures.forEach((t) => t.dispose());
+     this.materials.forEach((m) => m.dispose());
+--- before/src/chapter/ChapterAudio.ts
++++ after/src/chapter/ChapterAudio.ts
+@@ -81,7 +81,7 @@
+       0.15,
+     );
+     this.music.gain.setTargetAtTime(
+-      s.music ? this.mix.music * this.levels.music : 0,
++      s.music ? this.mix.music * this.levels.music * this.voiceDuck : 0,
+       t,
+       0.15,
+     );
+--- before/src/chapter/ChapterGame.tsx
++++ after/src/chapter/ChapterGame.tsx
+@@ -1,3 +1,4 @@
++import { useNarration } from "../speech/useNarration";
+ import { FinaleControls } from "../finale/FinaleControls";
+ import { finaleDurations, type FinaleAction } from "../finale/state";
+ import { finaleCaption } from "../finale/story";
+@@ -146,6 +147,7 @@
+   const future = useRef<FutureWorld | FutureFallback | null>(null),
+     room = useRef<WorldRenderer | FallbackWorld | null>(null),
+     audio = useRef<ChapterAudio | null>(null);
++  const captionAt = useRef<(at: number) => string | null>(() => null);
+   const clock = useRef(0),
+     elapsed = useRef(0),
+     cues = useRef(new Set<string>()),
+@@ -399,7 +401,14 @@
+       const openingWait =
+         state.beat === "OPENING_CINEMATIC" && !future.current?.ready;
+       if (!stop && !openingWait) {
+-        clock.current += raw;
++        const changed =
++          captionAt.current(clock.current + raw) !==
++          captionAt.current(clock.current);
++        if (!(
++          changed &&
++          voice.player.current?.busyFor(captionAt.current(clock.current))
++        ))
++          clock.current += raw;
+         elapsed.current += raw;
+       }
+       const t = clock.current;
+@@ -408,6 +417,20 @@
+           ? (state.verdict ?? freshVerdict)
+           : null;
+       const cue = (id: string, at: number, fn: () => void) => {
++        const speechTransition = [
++          "control",
++          "arrive",
++          "explore",
++          "evaluated",
++          "hold",
++          "compare",
++          "chapter02",
++          "stay.advance",
++          "stay.notes",
++          "ripple.advance",
++          "finale.advance",
++        ].includes(id);
++        if (speechTransition && voice.player.current?.busy) return;
+         if (!stop && t >= at && !cues.current.has(id)) {
+           cues.current.add(id);
+           fn();
+@@ -795,22 +818,32 @@
+       if (roomActive && !rip) audio.current?.focus(focus);
+     }
+   };
+-  const caption = fin
+-    ? finaleCaption(fin, time)
+-    : rip
+-      ? rippleCaption(rip, time)
+-      : v
+-        ? verdictCaption(v, time, inspection)
+-        : explore && focus in objects
+-          ? objects[focus as ObjectId].text
+-          : (futureCaption(
+-              s.beat,
+-              s.beat === "SIGNAL_INVESTIGATION"
+-                ? time - futureSelectedAt.current
+-                : time,
+-              futureSelected,
+-              futureFound.length === 2,
+-            ) ?? chapterCaption(s.beat, time));
++  const resolveCaption = (at: number): string | null =>
++    fin
++      ? finaleCaption(fin, at)
++      : rip
++        ? rippleCaption(rip, at)
++        : v
++          ? verdictCaption(v, at, inspection)
++          : explore && focus in objects
++            ? objects[focus as ObjectId].text
++            : (futureCaption(
++                s.beat,
++                s.beat === "SIGNAL_INVESTIGATION"
++                  ? at - futureSelectedAt.current
++                  : at,
++                futureSelected,
++                futureFound.length === 2,
++              ) ?? chapterCaption(s.beat, at));
++  captionAt.current = resolveCaption;
++  const caption = resolveCaption(time);
++  const voice = useNarration(
++    caption,
++    audio.current,
++    settings.voice !== false && !settings.muted,
++    paused,
++    settings.voice !== false,
++  );
+   const black =
+     s.beat === "OPENING_CINEMATIC"
+       ? Math.max(0, 1 - time / 2.5)
+@@ -1119,6 +1152,14 @@
+           <p>{caption}</p>
+         </div>
+       )}
++      {voice.status === "unavailable" &&
++        settings.voice !== false &&
++        !settings.muted && (
++          <p className="runtime-status" role="status">
++            Chưa tải được câu đọc. Bạn vẫn có thể đọc phụ đề; bật lại giọng đọc
++            để thử lại.
++          </p>
++        )}
+       {(status || !saved || fallback) && (
+         <p className="runtime-status">
+           {status}
+@@ -1175,6 +1216,7 @@
+             {(
+               [
+                 ["captions", "Phụ đề"],
++                ["voice", "Giọng đọc tiếng Việt"],
+                 ["reduced", "Giảm chuyển động"],
+                 ["music", "Nhạc"],
+                 ["sfx", "Âm môi trường và đồ vật"],
+@@ -1183,7 +1225,9 @@
+               <label key={key}>
+                 <input
+                   type="checkbox"
+-                  checked={settings[key]}
++                  checked={
++                    key === "voice" ? settings.voice !== false : settings[key]
++                  }
+                   onChange={(e) =>
+                     setSettings((p) => ({ ...p, [key]: e.target.checked }))
+                   }
+@@ -1208,6 +1252,7 @@
+           world: roomActive
+             ? room.current?.snapshot()
+             : future.current?.snapshot(),
++          voice: voice.player.current?.snapshot() ?? null,
+           audio: audio.current
+             ? {
+                 context: audio.current.context.state,
+--- before/src/chapter/director.ts
++++ after/src/chapter/director.ts
+@@ -164,6 +164,6 @@
+           ? "[Mưa. Một hồi chuông tan học từ xa.]"
+           : "[Tiếng trò chuyện và bước chân khuất dần ngoài hành lang.]";
+   if (beat === "CLASSROOM_ESTABLISHING")
+-    return "Phòng thực hành đại học · 2026 · 17:05. An vẫn ngồi trước laptop.";
++    return "Phòng thực hành Trường Đại học Tây Nguyên · 2026 · 17:05. An vẫn ngồi trước laptop.";
+   return "";
+ }
+--- before/src/cinematic/AudioDirector.ts
++++ after/src/cinematic/AudioDirector.ts
+@@ -16,6 +16,16 @@
+   rainPan: StereoPannerNode;
+   private sources: AudioScheduledSourceNode[] = [];
+   private chairBuffer: AudioBuffer;
++  private voiceActive = false;
++  private voicePaused = false;
++  get voiceDuck() {
++    return this.voiceActive ? 0.3 : 1;
++  }
++  setVoiceActive(active: boolean) {
++    this.voiceActive = active;
++    if (this.settings && this.context.state !== "closed")
++      this.apply(this.settings, this.voicePaused);
++  }
+   private settings: SliceSave | null = null;
+   events: { cue: string; time: number }[] = [];
+   mix = { rain: 0, fan: 0, ambience: 1, music: 0 };
+@@ -104,11 +114,16 @@
+   }
+   apply(s: SliceSave, paused = false) {
+     this.settings = s;
++    this.voicePaused = paused;
+     const t = this.context.currentTime;
+     this.master.gain.setTargetAtTime(s.muted || paused ? 0 : s.volume, t, 0.12);
+     this.foley.gain.setTargetAtTime(s.sfx ? 1 : 0, t, 0.1);
+     this.ambience.gain.setTargetAtTime(s.sfx ? this.mix.ambience : 0, t, 0.15);
+-    this.music.gain.setTargetAtTime(s.music ? this.mix.music : 0, t, 0.15);
++    this.music.gain.setTargetAtTime(
++      s.music ? this.mix.music * this.voiceDuck : 0,
++      t,
++      0.15,
++    );
+   }
+   focus(focus: Focus) {
+     const t = this.context.currentTime;
+--- before/src/cinematic/CinematicGame.tsx
++++ after/src/cinematic/CinematicGame.tsx
+@@ -1,4 +1,11 @@
+-import { useEffect, useLayoutEffect, useReducer, useRef, useState } from "react";
++import { useNarration } from "../speech/useNarration";
++import {
++  useEffect,
++  useLayoutEffect,
++  useReducer,
++  useRef,
++  useState,
++} from "react";
+ import { AudioDirector, type Foley } from "./AudioDirector";
+ import { WorldRenderer, type PropPosition } from "./WorldRenderer";
+ import { FallbackWorld } from "./FallbackWorld";
+@@ -36,7 +43,11 @@
+   profile: "Chọn hồ sơ An",
+   paper: "Nhìn tờ giấy trắng",
+ };
+-export default function CinematicGame({ initialSave, autoStart = false, createAudio }: {
++export default function CinematicGame({
++  initialSave,
++  autoStart = false,
++  createAudio,
++}: {
+   initialSave?: SliceSave;
+   autoStart?: boolean;
+   createAudio?: () => AudioDirector;
+@@ -77,6 +88,13 @@
+     loop = useRef(0),
+     dtSamples = useRef<number[]>([]);
+   const caption = captionFor(s, time, total.current - lastInteraction.current);
++  const voice = useNarration(
++    caption?.text ?? null,
++    audio.current,
++    s.voice !== false && !s.muted && started,
++    paused,
++    s.voice !== false,
++  );
+   const recordMode = new URLSearchParams(location.search).has("record");
+   state.current = s;
+   running.current = started;
+@@ -150,7 +168,22 @@
+       const dt = Math.min(raw, 0.25);
+       const current = state.current;
+       if (running.current && !pausedRef.current) {
+-        clock.current += raw;
++        const currentLine =
++          captionFor(
++            current,
++            clock.current,
++            total.current - lastInteraction.current,
++          )?.text ?? null;
++        const nextLine =
++          captionFor(
++            current,
++            clock.current + raw,
++            total.current - lastInteraction.current + raw,
++          )?.text ?? null;
++        if (!(
++          currentLine !== nextLine && voice.player.current?.busyFor(currentLine)
++        ))
++          clock.current += raw;
+         total.current += raw;
+         dtSamples.current.push(raw);
+         if (dtSamples.current.length > 180) dtSamples.current.shift();
+@@ -178,7 +211,12 @@
+         if (current.beat === "verdict") cue("verdict", 0.05, "verdict");
+         if (current.beat === "paper") cue("paper", 0.2, "paper");
+         const duration = durations[current.beat];
+-        if (duration && t >= duration && !cues.current.has("advance")) {
++        if (
++          duration &&
++          t >= duration &&
++          !cues.current.has("advance") &&
++          !voice.player.current?.busy
++        ) {
+           cues.current.add("advance");
+           dispatch({
+             type: "beat",
+@@ -190,13 +228,15 @@
+           current.observed.includes("laptop") &&
+           current.observed.includes("notebook") &&
+           total.current - lastInteraction.current > 3 &&
+-          !cues.current.has("advance")
++          !cues.current.has("advance") &&
++          !voice.player.current?.busy
+         ) {
+           cues.current.add("advance");
+           dispatch({ type: "beat", beat: "enter" });
+         } else if (
+           current.beat === "explore" &&
+           current.focus !== "wide" &&
++          !voice.player.current?.busy &&
+           total.current - lastInteraction.current > 3.8
+         )
+           dispatch({ type: "focus", focus: "wide" });
+@@ -614,6 +654,19 @@
+               <label>
+                 <input
+                   type="checkbox"
++                  checked={s.voice !== false}
++                  onChange={(e) =>
++                    act({
++                      type: "settings",
++                      value: { voice: e.target.checked },
++                    })
++                  }
++                />
++                Giọng đọc tiếng Việt
++              </label>
++              <label>
++                <input
++                  type="checkbox"
+                   checked={s.captions}
+                   onChange={(e) =>
+                     act({
+--- before/src/cinematic/director.ts
++++ after/src/cinematic/director.ts
+@@ -37,6 +37,7 @@
+   reduced: boolean;
+   muted: boolean;
+   captions: boolean;
++  voice?: boolean;
+   volume: number;
+   music: boolean;
+   sfx: boolean;
+@@ -51,6 +52,7 @@
+   reduced: false,
+   muted: false,
+   captions: true,
++  voice: true,
+   volume: 0.65,
+   music: true,
+   sfx: true,
+@@ -66,7 +68,13 @@
+       value: Partial<
+         Pick<
+           SliceSave,
+-          "reduced" | "muted" | "captions" | "volume" | "music" | "sfx"
++          | "reduced"
++          | "muted"
++          | "captions"
++          | "volume"
++          | "music"
++          | "sfx"
++          | "voice"
+         >
+       >;
+     }
+@@ -91,6 +99,7 @@
+       reduced: s.reduced,
+       muted: s.muted,
+       captions: s.captions,
++      voice: s.voice ?? true,
+       volume: s.volume,
+       music: s.music,
+       sfx: s.sfx,
+@@ -179,6 +188,7 @@
+     return {
+       ...s,
+       chapter: readChapter(s.chapter),
++      voice: typeof s.voice === "boolean" ? s.voice : true,
+       observed: s.observed.filter((x) =>
+         ["laptop", "notebook", "window"].includes(x),
+       ),
+@@ -202,7 +212,7 @@
+     case "arrival":
+       return t < 3
+         ? cue(
+-            "PHÒNG THỰC HÀNH ĐẠI HỌC · 2026",
++            "TRƯỜNG ĐẠI HỌC TÂY NGUYÊN · 2026",
+             "[Chuông tan học. Mưa lất phất ngoài cửa sổ.]",
+           )
+         : cue("17:05 · SAU GIỜ HỌC", "Mọi người đã về. Một màn hình vẫn sáng.");
+--- before/src/cinematic/FallbackWorld.ts
++++ after/src/cinematic/FallbackWorld.ts
+@@ -16,6 +16,7 @@
+   private width = 1280;
+   private height = 720;
+   private unit = 1;
++  private schoolLogo = new Image();
+   private focus: Focus = "door";
+   private overlay = document.createElement("canvas");
+   private overlayEnabled = false;
+@@ -57,6 +58,8 @@
+     paper: [850, 490],
+   };
+   constructor(public canvas: HTMLCanvasElement) {
++    this.schoolLogo.src =
++      import.meta.env.BASE_URL + "school/tay-nguyen-university-logo.png";
+     this.x = canvas.getContext("2d")!;
+     if (!this.x) throw new Error("Canvas không khả dụng");
+   }
+@@ -190,7 +193,10 @@
+     x.fillText("PHÒNG THỰC HÀNH · CNTT", 450, 110);
+     x.fillText("17:05", 1000, 130);
+     x.font = "15px Arial";
+-    x.fillText("Mục tiêu → Dữ liệu → Dự báo", 450, 160);
++    x.fillText("Trường Đại học Tây Nguyên", 450, 160);
++    x.fillText("Mục tiêu → Dữ liệu → Dự báo", 450, 195);
++    if (this.schoolLogo.complete && this.schoolLogo.naturalWidth)
++      x.drawImage(this.schoolLogo, 688, 140, 56, 56);
+     x.fillStyle = "#d7d7bf";
+     for (const px of [390, 760]) {
+       x.fillRect(px, 18, 185, 8);
+@@ -387,8 +393,16 @@
+       this.ripple &&
+       !["sketch", "change", "echo"].includes(this.ripple.phase)
+     )
+-      return { ...this.rippleSnapshot, drawCalls: 1 };
++      return {
++        ...this.rippleSnapshot,
++        drawCalls: 1,
++      };
+     return {
++      school: {
++        name: "Trường Đại học Tây Nguyên",
++        logoLoaded:
++          this.schoolLogo.complete && this.schoolLogo.naturalWidth > 0,
++      },
+       camera: [0, 0, 0],
+       focus: this.focus,
+       teacher: [],
+--- before/src/cinematic/WorldRenderer.ts
++++ after/src/cinematic/WorldRenderer.ts
+@@ -1206,6 +1206,10 @@
+         resolution: this.resolution,
+       };
+     return {
++      school: {
++        name: "Trường Đại học Tây Nguyên",
++        logoLoaded: this.art.schoolLogoLoaded,
++      },
+       camera: this.camera.position.toArray(),
+       target: this.target.toArray(),
+       fov: this.camera.fov,
+--- before/src/finale/FinaleControls.tsx
++++ after/src/finale/FinaleControls.tsx
+@@ -257,8 +257,8 @@
+               }
+               if (e.key === "Tab") {
+                 const list = [
+-                  ...modal.current!.querySelectorAll<HTMLButtonElement>(
+-                    "button",
++                  ...modal.current!.querySelectorAll<HTMLElement>(
++                    "button,a[href]",
+                   ),
+                 ];
+                 const first = list[0],
+@@ -276,17 +276,37 @@
+             <h2 id="credits-title">THE UNWRITTEN LESSON</h2>
+             <p>Dựa trên kịch bản V3 của dự án CODE THE THANKS 2026.</p>
+             <p>
+-              Đồ họa 3D/Canvas và âm thanh được dựng bằng code. Không sử dụng
+-              giọng đọc giả diễn viên.
++              Không gian được dựng bằng Three.js/Canvas. Âm môi trường và hiệu
++              ứng được tổng hợp trong game.
+             </p>
+-            <p>
+-              React, Three.js — MIT. Vite — MIT. Không có ảnh stock hay bản thu
+-              âm ngoài.
+-            </p>
++            <p>React, Three.js và Vite — MIT.</p>
+             <p>
+               Lời tri ân chỉ lưu cục bộ khi bạn chọn. Không có kết nối đăng công
+               khai.
+             </p>
++            <p>
++              Bối cảnh phòng thực hành hư cấu tại Trường Đại học Tây Nguyên.{" "}
++              <a
++                href="https://www.ttn.edu.vn/"
++                target="_blank"
++                rel="noreferrer"
++              >
++                Logo của nhà trường
++              </a>
++              .
++            </p>
++            <p>
++              Giọng đọc tổng hợp:{" "}
++              <a
++                href="https://huggingface.co/rhasspy/piper-voices/blob/main/vi/vi_VN/vais1000/medium/MODEL_CARD"
++                target="_blank"
++                rel="noreferrer"
++              >
++                Piper / VAIS-1000 — dữ liệu CC BY 4.0
++              </a>
++              . Âm thanh được tạo và chuẩn hóa cho game, không phải bản thu diễn
++              viên.
++            </p>
+             <button onClick={() => setCredits(false)}>Đóng Credits</button>
+           </div>
+         </div>
+--- before/src/menu/GameAudio.ts
++++ after/src/menu/GameAudio.ts
+@@ -21,7 +21,9 @@
+       0.15,
+     );
+     this.music.gain.setTargetAtTime(
+-      state.music ? this.mix.music * this.preferences.music : 0,
++      state.music
++        ? this.mix.music * this.preferences.music * this.voiceDuck
++        : 0,
+       t,
+       0.15,
+     );
+--- before/src/menu/GameShell.tsx
++++ after/src/menu/GameShell.tsx
+@@ -95,6 +95,7 @@
+                     ...freshSlice,
+                     muted: preferences.muted,
+                     captions: preferences.captions,
++                    voice: preferences.voice ?? true,
+                     reduced: preferences.reduced,
+                   },
+                   preferences,
+--- before/src/menu/MenuUI.tsx
++++ after/src/menu/MenuUI.tsx
+@@ -229,6 +229,7 @@
+         [
+           { key: "muted", label: "Tắt âm thanh" },
+           { key: "captions", label: "Hiển thị phụ đề" },
++          { key: "voice", label: "Giọng đọc tiếng Việt" },
+           { key: "reduced", label: "Giảm chuyển động" },
+         ] as const
+       ).map(({ key, label }) => (
+@@ -236,7 +237,9 @@
+           <span>{label}</span>
+           <input
+             type="checkbox"
+-            checked={preferences[key]}
++            checked={
++              key === "voice" ? preferences.voice !== false : preferences[key]
++            }
+             onChange={(e) => onChange({ [key]: e.target.checked })}
+           />
+         </label>
+--- before/src/menu/preferences.ts
++++ after/src/menu/preferences.ts
+@@ -4,6 +4,7 @@
+   effects: number;
+   muted: boolean;
+   captions: boolean;
++  voice?: boolean;
+   reduced: boolean;
+   quality: "auto" | "low" | "high";
+ }
+@@ -12,6 +13,7 @@
+   effects: 0.65,
+   muted: true,
+   captions: true,
++  voice: true,
+   reduced: false,
+   quality: "auto",
+ };
+@@ -28,6 +30,7 @@
+       effects: level("effects"),
+       muted: typeof value.muted === "boolean" ? value.muted : true,
+       captions: typeof value.captions === "boolean" ? value.captions : true,
++      voice: typeof value.voice === "boolean" ? value.voice : true,
+       reduced: typeof value.reduced === "boolean" ? value.reduced : false,
+       quality: ["auto", "low", "high"].includes(value.quality)
+         ? value.quality
+--- before/src/menu/saveBridge.ts
++++ after/src/menu/saveBridge.ts
+@@ -27,6 +27,7 @@
+     observed: [...(save?.observed ?? [])],
+     muted: preferences.muted,
+     captions: preferences.captions,
++    voice: preferences.voice ?? true,
+     reduced:
+       preferences.reduced ||
+       matchMedia("(prefers-reduced-motion: reduce)").matches,

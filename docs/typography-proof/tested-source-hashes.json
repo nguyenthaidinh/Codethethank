@@ -1,0 +1,22 @@
+﻿[
+    {
+        "Path":  "F:\\Dự Án NTD\\Codethethank\\dist\\index.html",
+        "Hash":  "D4A43A9EF4CD3B5DF637406814697EB949F5364B45F7F919A2D63D73005B6287"
+    },
+    {
+        "Path":  "F:\\Dự Án NTD\\Codethethank\\src\\main.tsx",
+        "Hash":  "3127DEAE2F0E4C32D6C55B7381C35BA2B87FA1B02A7248E51E6202C24440E95B"
+    },
+    {
+        "Path":  "F:\\Dự Án NTD\\Codethethank\\src\\finale\\letter.ts",
+        "Hash":  "5C3C8C080E644C0977D4D68E16E12F632B55369AF99D6D87B05403B9CD92401A"
+    },
+    {
+        "Path":  "F:\\Dự Án NTD\\Codethethank\\src\\typography\\fonts.ts",
+        "Hash":  "77B6C795C21F7E62C090A7D82CBAE0BF4F0C51F07DBFC3E2484BA3C18BA8F6F3"
+    },
+    {
+        "Path":  "F:\\Dự Án NTD\\Codethethank\\src\\typography\\text.ts",
+        "Hash":  "8CDD2C4B6EACC34B6B40FB5B25C496847D084D2912D43D2D79AECB3203AD4BC9"
+    }
+]

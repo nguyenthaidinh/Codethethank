@@ -1,0 +1,14 @@
+[
+  {
+    "url": "http://127.0.0.1:4173/",
+    "status": 200
+  },
+  {
+    "url": "http://127.0.0.1:5173/docs/chair-cinematic-proof/review.html",
+    "status": 200
+  },
+  {
+    "url": "http://127.0.0.1:5173/docs/chair-cinematic-proof/runtime/chair-cinematic.mp4",
+    "status": 200
+  }
+]

@@ -1,0 +1,73 @@
+{
+  "model": "vi-VN-HoaiMyNeural",
+  "engine": "edge-tts 7.3.1 (build only)",
+  "modelSource": "https://learn.microsoft.com/en-us/azure/ai-services/speech-service/language-support",
+  "scope": "Opening narrator only; seven pre-generated local clips; no user text sent at runtime.",
+  "rate": "+18%",
+  "lines": [
+    {
+      "key": "8a5e58a6",
+      "text": "Năm hai nghìn không trăm bốn mươi sáu. Nhân loại bước vào kỷ nguyên mà những giới hạn của tri thức liên tục được viết lại.",
+      "caption": "Năm 2046. Nhân loại bước vào kỷ nguyên mà những giới hạn của tri thức liên tục được viết lại.",
+      "seconds": 6.504,
+      "tempoCorrection": 1.0,
+      "bytes": 78957,
+      "sha256": "f49003758a5a24ed773e04e4e46ce5d749211ae0eebbed61d1130c533ccc2b5f"
+    },
+    {
+      "key": "5cfc21a5",
+      "text": "Những câu hỏi từng nằm ngoài tầm với… giờ mở ra những hướng đi mới.",
+      "caption": "Những câu hỏi từng nằm ngoài tầm với… giờ mở ra những hướng đi mới.",
+      "seconds": 3.768,
+      "tempoCorrection": 1.0,
+      "bytes": 46125,
+      "sha256": "4168f86a8b8ab27a224e77b91d9576ff035ebda139c9f22ff5858b5fa0d9f8ad"
+    },
+    {
+      "key": "d1556f7c",
+      "text": "Từ những khám phá khoa học tưởng chừng bất khả thi, đến việc dự báo các cuộc khủng hoảng trước khi chúng xảy ra…",
+      "caption": "Từ những khám phá khoa học tưởng chừng bất khả thi, đến việc dự báo các cuộc khủng hoảng trước khi chúng xảy ra…",
+      "seconds": 5.304,
+      "tempoCorrection": 1.0,
+      "bytes": 64557,
+      "sha256": "d021b879033b26f443530bb1e3c84bf2f49567ac9e3b217f7346b0ef2242ab33"
+    },
+    {
+      "key": "5a05af21",
+      "text": "Một trí tuệ đã mở ra những khả năng mà thế giới chưa từng có.",
+      "caption": "Một trí tuệ đã mở ra những khả năng mà thế giới chưa từng có.",
+      "seconds": 3.672,
+      "tempoCorrection": 1.0,
+      "bytes": 44973,
+      "sha256": "e4313d9939d157af81b32a76b2ff81116ddbdba29fcf635eda9a99c23df56bd2"
+    },
+    {
+      "key": "06ee22c7",
+      "text": "Ai-on. Trí tuệ nhân tạo đa năng tiên tiến nhất thế giới.",
+      "caption": "AION. Trí tuệ nhân tạo đa năng tiên tiến nhất thế giới.",
+      "seconds": 3.681417,
+      "tempoCorrection": 1.08972972972973,
+      "bytes": 45261,
+      "sha256": "00aec0d47a6de6dfd44eea154e85f2aa12d7648d105f4171bd8d1f8dff154a50"
+    },
+    {
+      "key": "3e3918f2",
+      "text": "Thành tựu làm thay đổi cách nhân loại khám phá, sáng tạo và định hình tương lai.",
+      "caption": "Thành tựu làm thay đổi cách nhân loại khám phá, sáng tạo và định hình tương lai.",
+      "seconds": 4.392,
+      "tempoCorrection": 1.0,
+      "bytes": 53613,
+      "sha256": "872a172eb8ce3b290724e7f631b92224be55228f958140bcaf0ff6200325aabd"
+    },
+    {
+      "key": "8815e952",
+      "text": "Nhưng ngay cả Ai-on… vẫn có một câu hỏi chưa tìm được lời giải.",
+      "caption": "Nhưng ngay cả AION… vẫn có một câu hỏi chưa tìm được lời giải.",
+      "seconds": 3.768,
+      "tempoCorrection": 1.0,
+      "bytes": 46125,
+      "sha256": "001b6c2b592edfb03d5a511cf9a63c7412dc40853dd26903e5986cd6a1cd9076"
+    }
+  ],
+  "rights": "Microsoft service-generated audio; not covered by the previous Piper model license."
+}

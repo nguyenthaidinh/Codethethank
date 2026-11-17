@@ -1,0 +1,288 @@
+{
+  "beat": "NEXT_SCENE_READY",
+  "time": 0.4166999999999972,
+  "evidence": [
+    "clock",
+    "notebook",
+    "laptop"
+  ],
+  "verdict": {
+    "version": 1,
+    "phase": "chapter02",
+    "found": [
+      "presentation",
+      "notes",
+      "data"
+    ],
+    "selected": "an",
+    "tested": [
+      "mai",
+      "an"
+    ],
+    "linked": [
+      "presentation",
+      "notes"
+    ],
+    "carried": null,
+    "stayed": {
+      "version": 1,
+      "phase": "next",
+      "line": 0,
+      "read": [
+        "outcome",
+        "support"
+      ],
+      "page": "support",
+      "written": true,
+      "seen": [
+        "discussion.0",
+        "discussion.1",
+        "chair.0",
+        "question.0",
+        "question.1",
+        "question.2",
+        "question.3",
+        "question.4",
+        "second_chance.0",
+        "second_chance.1",
+        "second_chance.2",
+        "written.0",
+        "closing.0"
+      ],
+      "nextInspected": true
+    }
+  },
+  "stayed": {
+    "version": 1,
+    "phase": "next",
+    "line": 0,
+    "read": [
+      "outcome",
+      "support"
+    ],
+    "page": "support",
+    "written": true,
+    "seen": [
+      "discussion.0",
+      "discussion.1",
+      "chair.0",
+      "question.0",
+      "question.1",
+      "question.2",
+      "question.3",
+      "question.4",
+      "second_chance.0",
+      "second_chance.1",
+      "second_chance.2",
+      "written.0",
+      "closing.0"
+    ],
+    "nextInspected": true
+  },
+  "ripple": null,
+  "finale": null,
+  "followedDoor": false,
+  "world": {
+    "school": {
+      "name": "Trường Đại học Tây Nguyên",
+      "logoLoaded": true
+    },
+    "camera": [
+      -0.38896507664372526,
+      2.2555174616781373,
+      1.7056031729023282
+    ],
+    "shot": null,
+    "teacherBodyY": 0.5900000000000001,
+    "portraits": {
+      "an": {
+        "x": 1329.5828673790284,
+        "y": 789.5954735847628,
+        "visible": false
+      },
+      "teacher": {
+        "x": 8683.935009509098,
+        "y": 3595.179722301419,
+        "visible": false
+      }
+    },
+    "laptopLid": [
+      {
+        "x": 1114.1075923599824,
+        "y": 688.898771443342
+      },
+      {
+        "x": 1650.0772303343435,
+        "y": 869.4474180240053
+      },
+      {
+        "x": 1683.3371886179477,
+        "y": 578.1209426960548
+      },
+      {
+        "x": 1132.7053378810836,
+        "y": 486.9315912781911
+      }
+    ],
+    "target": [
+      -4.05410686390638,
+      1.7529864317012251,
+      -1.8038497302338068
+    ],
+    "fov": 51.18562961375506,
+    "artDirection": "paper-rain",
+    "characterArt": "sculpted-narrative-v1",
+    "anHand": [
+      -0.5540392790317266,
+      0.9169050362781401,
+      -0.3000685485333634
+    ],
+    "focus": "book",
+    "teacher": [
+      1.1,
+      0,
+      0.05
+    ],
+    "teacherVisible": true,
+    "anHead": 0.27,
+    "anFeetY": [
+      0.002519736997544597,
+      0.002519736997544597
+    ],
+    "teacherFeetY": [
+      0,
+      0
+    ],
+    "notebookPage": "support",
+    "notebookPosition": [
+      0.45,
+      1.047,
+      0.2
+    ],
+    "pageTurn": 1,
+    "chair": [
+      1.1,
+      0,
+      0.25
+    ],
+    "drawCalls": 52,
+    "triangles": 35738,
+    "shadowRefreshed": false,
+    "resources": {
+      "geometries": 134,
+      "textures": 26,
+      "programs": 14,
+      "renderTarget": [
+        1280,
+        720
+      ],
+      "samples": 0,
+      "output": [
+        1280,
+        720
+      ],
+      "shadowMap": [
+        1024,
+        1024
+      ]
+    },
+    "resolution": 1
+  },
+  "voice": {
+    "status": "off",
+    "clip": null,
+    "started": 0,
+    "completed": 0,
+    "busy": false
+  },
+  "audio": {
+    "context": "running",
+    "events": [
+      {
+        "cue": "focus.wide",
+        "time": 0.021333333333333333
+      },
+      {
+        "cue": "door",
+        "time": 1.9306666666666668
+      },
+      {
+        "cue": "step",
+        "time": 2.3306666666666667
+      },
+      {
+        "cue": "step",
+        "time": 2.88
+      },
+      {
+        "cue": "step",
+        "time": 3.432
+      },
+      {
+        "cue": "step",
+        "time": 3.981333333333333
+      },
+      {
+        "cue": "step",
+        "time": 4.530666666666667
+      },
+      {
+        "cue": "step",
+        "time": 5.08
+      },
+      {
+        "cue": "beat.explore",
+        "time": 9.530666666666667
+      },
+      {
+        "cue": "chair.the-one-who-stayed",
+        "time": 18.16
+      },
+      {
+        "cue": "chair",
+        "time": 18.16
+      },
+      {
+        "cue": "paper",
+        "time": 42.306666666666665
+      },
+      {
+        "cue": "paper",
+        "time": 42.501333333333335
+      },
+      {
+        "cue": "paper",
+        "time": 43.501333333333335
+      },
+      {
+        "cue": "paper",
+        "time": 53.64
+      },
+      {
+        "cue": "pen",
+        "time": 58.66133333333333
+      },
+      {
+        "cue": "pen",
+        "time": 59.44
+      },
+      {
+        "cue": "beat.paper",
+        "time": 59.832
+      }
+    ],
+    "mix": {
+      "rain": 0.07,
+      "fan": 0.045,
+      "ambience": 0.7,
+      "music": 0.13
+    },
+    "buses": {
+      "music": 0.07150000333786011,
+      "effects": 0.6499999761581421,
+      "ambience": 0.45500001311302185
+    }
+  },
+  "elapsedSeconds": 69.014,
+  "errors": []
+}

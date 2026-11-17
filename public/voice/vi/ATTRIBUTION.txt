@@ -1,0 +1,18 @@
+THE UNWRITTEN LESSON — Vietnamese synthetic narration
+
+Voice: vi_VN-vais1000-medium, distributed by Michael Hansen / rhasspy.
+Model card: https://huggingface.co/rhasspy/piper-voices/blob/main/vi/vi_VN/vais1000/medium/MODEL_CARD
+Model repository metadata: MIT. See upstream model card for dataset terms.
+Dataset: VAIS-1000 Vietnamese Speech Synthesis Corpus.
+Dataset source: https://ieee-dataport.org/documents/vais-1000-vietnamese-speech-synthesis-corpus
+Dataset license stated in model card: Creative Commons Attribution 4.0.
+License: https://creativecommons.org/licenses/by/4.0/
+
+Adaptation: project-authored game dialogue was synthesized offline with
+piper-tts 1.8.0, normalized to -18 LUFS, then encoded as mono 22.05 kHz MP3.
+These seven clips are synthetic opening narration, not recordings of a cast
+or an imitation of any named person. Character conversations are subtitles only.
+No player letter or recipient name is processed by a speech service.
+
+The model weights and TTS engine are build tools and are not shipped here.
+Unmodified upstream MODEL_CARD is included beside this attribution.

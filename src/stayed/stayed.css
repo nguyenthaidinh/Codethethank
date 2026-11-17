@@ -1,0 +1,272 @@
+.dialogue-advance {
+  position: absolute;
+  right: 25px;
+  bottom: 22px;
+  z-index: 6;
+  min-height: 44px;
+  border: 1px solid #d2d4b64a;
+  background: #152b20b0;
+  padding: 10px 16px;
+  font-size: 12px;
+}
+.dialogue-playback {
+  position: absolute;
+  z-index: 6;
+  right: max(28px, env(safe-area-inset-right));
+  bottom: max(22px, env(safe-area-inset-bottom));
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.dialogue-auto-note {
+  font:
+    11px/1.4 Arial,
+    sans-serif;
+  color: #c2b9a5;
+  text-shadow: 0 1px 4px #081720;
+}
+.dialogue-playback .dialogue-advance {
+  position: relative;
+  right: auto !important;
+  bottom: auto !important;
+  overflow: hidden;
+  border-radius: 3px;
+  background: #142c3cc7;
+}
+.dialogue-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: var(--dialogue-progress, 0%);
+  background: #d8b773;
+}
+@media (max-width: 600px) {
+  .dialogue-playback {
+    right: 16px;
+    bottom: max(22px, env(safe-area-inset-bottom));
+    gap: 10px;
+  }
+  .dialogue-auto-note {
+    font-size: 10px;
+  }
+}
+.dialogue-choices {
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  bottom: 7%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  width: min(720px, 90vw);
+  padding: 22px 24px;
+  background: #122936ed;
+  border-top: 1px solid #bc9d66;
+  color: #f3e4c9;
+}
+.dialogue-choices p {
+  margin: 0 0 14px;
+  font:
+    21px/1.55 LessonSerif,
+    Georgia,
+    serif;
+}
+.dialogue-choices small {
+  display: block;
+  margin-bottom: 9px;
+  color: #c8bda7;
+  font-size: 12px;
+}
+.dialogue-choices > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.dialogue-choices button {
+  min-height: 52px;
+  padding: 12px 16px;
+  border: 1px solid #9d8f7180;
+  background: #294453;
+  color: #f6e8cd;
+  text-align: left;
+  font:
+    18px/1.45 LessonSerif,
+    Georgia,
+    serif;
+}
+.dialogue-choices button:hover {
+  background: #365768;
+  border-color: #d6bc88;
+}
+.dialogue-choices button:focus-visible {
+  outline: 2px solid #e1c599;
+  outline-offset: 3px;
+}
+@media (max-width: 600px) {
+  .dialogue-choices {
+    bottom: 6%;
+    padding: 18px;
+  }
+  .dialogue-choices p {
+    font-size: 19px;
+  }
+  .dialogue-choices > div {
+    grid-template-columns: 1fr;
+  }
+  .dialogue-choices button {
+    font-size: 17px;
+  }
+}
+.notebook-input {
+  position: absolute;
+  left: 50%;
+  bottom: 25%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 16px;
+  z-index: 5;
+}
+.notebook-input button {
+  min-width: 125px;
+  min-height: 48px;
+  padding: 12px;
+  border: 1px solid #d6c99c;
+  background: #d6c99c;
+  color: #263f30;
+  font-size: 13px;
+}
+.notebook-input button[aria-pressed="true"] {
+  background: #eee1b9;
+  box-shadow: 0 0 0 3px #ddc99b35;
+}
+.pen-line {
+  --stroke: 0%;
+  position: absolute;
+  left: 50%;
+  bottom: 25%;
+  transform: translateX(-50%);
+  width: min(390px, 82vw);
+  min-height: 70px;
+  background: linear-gradient(
+    90deg,
+    #daca9f var(--stroke),
+    #e7ddba var(--stroke)
+  );
+  border: 1px solid #a1956b;
+  color: #2f4937;
+  z-index: 5;
+  touch-action: none;
+  font: italic 20px LessonSerif;
+  padding: 12px;
+}
+.pen-line small {
+  display: block;
+  font: 11px Arial;
+  margin-top: 8px;
+}
+
+/* The seated conversation has its own reading space. Exclude Ripple/Finale:
+   StaySave survives into later chapters and must not style the letter editor. */
+.chapter.narrative-room[data-ripple=""]:is(
+    [data-stayed="discussion"],
+    [data-stayed="chair"],
+    [data-stayed="question"],
+    [data-stayed="second_chance"]
+  ) {
+  .subtitle {
+    width: min(720px, calc(100vw - 64px));
+    bottom: max(78px, 9vh);
+  }
+  .subtitle p {
+    font-size: clamp(19px, 1.65vw, 23px);
+    line-height: 1.55;
+    color: #fff5e5;
+    text-shadow:
+      0 2px 6px #081720,
+      0 0 20px #081720aa;
+  }
+  .subtitle-speaker {
+    color: #e1c599;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+  .subtitle-speaker::before {
+    display: none;
+  }
+  .dialogue-advance {
+    min-width: 112px;
+    min-height: 48px;
+    right: max(28px, env(safe-area-inset-right));
+    bottom: max(22px, env(safe-area-inset-bottom));
+    background: transparent;
+    border: 0;
+    color: #dfd5c2;
+    letter-spacing: 0.3px;
+    transition:
+      color 160ms ease,
+      background-color 160ms ease;
+  }
+  .dialogue-advance:hover {
+    color: #fff5e5;
+    background: #15263188;
+  }
+  .dialogue-advance:focus-visible {
+    outline: 2px solid #e1c599;
+    outline-offset: 3px;
+    background: #152631dd;
+  }
+  .minimal-controls {
+    opacity: 0.6;
+  }
+  .minimal-controls:is(:hover, :focus-within) {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .chapter.narrative-room[data-ripple=""]:is(
+      [data-stayed="discussion"],
+      [data-stayed="chair"],
+      [data-stayed="question"],
+      [data-stayed="second_chance"]
+    ) {
+    .subtitle {
+      width: calc(100vw - 40px);
+      bottom: max(98px, 11vh);
+    }
+    .subtitle p {
+      font-size: 18px;
+      line-height: 1.55;
+    }
+    .dialogue-advance {
+      bottom: max(25px, env(safe-area-inset-bottom));
+      right: 16px;
+    }
+  }
+}
+.chapter.narrative-room[data-ripple=""] .dialogue-playback .dialogue-advance {
+  background: #142c3cb8;
+  border: 1px solid #a88c5866;
+  padding: 10px 18px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .chapter.narrative-room[data-ripple=""] .dialogue-advance {
+    transition: none;
+  }
+}
+@media (max-width: 600px) {
+  .notebook-input {
+    gap: 8px;
+    bottom: 29%;
+  }
+  .notebook-input button {
+    min-width: 120px;
+  }
+  .pen-line {
+    bottom: 29%;
+  }
+  .dialogue-advance {
+    right: 14px;
+    bottom: 12px;
+  }
+}

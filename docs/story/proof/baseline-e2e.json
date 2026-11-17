@@ -1,0 +1,298 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\Dự Án NTD\\Codethethank\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config=playwright.g2f.config.ts",
+      "cinematic-verdict.spec.ts",
+      "cinematic-stayed.spec.ts",
+      "--reporter=list,json"
+    ],
+    "configFile": "F:\\Dự Án NTD\\Codethethank\\playwright.g2f.config.ts",
+    "rootDir": "F:/Dự Án NTD/Codethethank/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "F:/Dự Án NTD/Codethethank/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "F:/Dự Án NTD/Codethethank/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "cinematic*.spec.ts"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "F:\\Dự Án NTD\\Codethethank\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e",
+        "snapshotDir": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "cinematic*.spec.ts",
+        "timeout": 90000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4173",
+          "headless": true,
+          "trace": "retain-on-failure",
+          "launchOptions": {
+            "args": [
+              "--use-angle=d3d11"
+            ]
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run preview -- --port 4173",
+      "url": "http://127.0.0.1:4173",
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "cinematic-stayed.spec.ts",
+      "file": "cinematic-stayed.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Chapter 02 complete desktop audio choreography",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 140000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 75760,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T07:09:33.399Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "91a4d968bc6d784f72b2-07ccfc4f3d308379fe14",
+          "file": "cinematic-stayed.spec.ts",
+          "line": 27,
+          "column": 3
+        },
+        {
+          "title": "Chapter 02 complete mobile silent reduced resume",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 140000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 73555,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T07:10:49.409Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "91a4d968bc6d784f72b2-9fd20a17c7ba930b5994",
+          "file": "cinematic-stayed.spec.ts",
+          "line": 27,
+          "column": 3
+        }
+      ]
+    },
+    {
+      "title": "cinematic-verdict.spec.ts",
+      "file": "cinematic-verdict.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Chapter 00 → 01 → 02: same room/audio, samples, An, two comparisons, teacher",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 89188,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T07:12:03.020Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0a3edd9025221efcb013-cedc57cc2d8d1acef100",
+          "file": "cinematic-verdict.spec.ts",
+          "line": 55,
+          "column": 1
+        },
+        {
+          "title": "Chapter 01 mobile: silent reduced motion, hint, save/reload after comparison, second evidence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 56739,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T07:13:32.242Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0a3edd9025221efcb013-b28d04159ca002ac55ab",
+          "file": "cinematic-verdict.spec.ts",
+          "line": 184,
+          "column": 1
+        },
+        {
+          "title": "Chapter 01 GPU/storage/audio fallback remains playable to Chapter 02",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 46292,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T07:14:29.670Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0a3edd9025221efcb013-af855ef5bd0f65fb7e1e",
+          "file": "cinematic-verdict.spec.ts",
+          "line": 234,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-17T07:09:32.156Z",
+    "duration": 344694.839,
+    "expected": 5,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

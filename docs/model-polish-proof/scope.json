@@ -1,0 +1,9 @@
+{
+  "changedExistingSource": [
+    "src/art/NarrativeActors.ts"
+  ],
+  "newSource": [
+    "src/art/CharacterGeometry.ts"
+  ],
+  "outsideModel": []
+}

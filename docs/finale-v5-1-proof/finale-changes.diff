@@ -1,0 +1,115 @@
+--- before/src/finale/Fallback.ts
++++ after/src/finale/Fallback.ts
+@@ -1,3 +1,5 @@
++import { drawPlayerRoomFallback } from "./PlayerRoomFallback";
++import { isPlayerRoom } from "./PlayerRoom";
+ import type { FinaleSave } from "./state";
+ import type { Letter } from "./letter";
+ import type { RippleSave } from "../ripple/state";
+@@ -13,6 +15,10 @@
+   t: number,
+   reduced: boolean,
+ ) {
++  if (isPlayerRoom(s.phase)) {
++    drawPlayerRoomFallback(x, w, h, s.phase, t, reduced);
++    return { focus: s.phase, star: false, drawCalls: 1 };
++  }
+   const sky = ["galaxy", "closing", "ending"].includes(s.phase);
+   const ink = s.phase === "transform";
+   const p = ink ? Math.max(0, Math.min(1, (t - 2) / 7)) : sky ? 1 : 0;
+--- before/src/finale/FinaleControls.tsx
++++ after/src/finale/FinaleControls.tsx
+@@ -3,6 +3,7 @@
+ import { MAX_MESSAGE, MAX_RECIPIENT, type Letter } from "./letter";
+ import { prompts } from "./story";
+ import "./finale.css";
++import "./player-room.css";
+ export function FinaleControls({
+   s,
+   act,
+@@ -79,14 +80,29 @@
+         </div>
+       )}
+       {s.phase === "paper" && (
+-        <div className="finale-actions">
+-          <button onClick={() => act({ type: "write" })}>
+-            Chạm tờ giấy để viết
+-          </button>
+-          <button onClick={() => act({ type: "skip" })}>
+-            Giữ im lặng và tiếp tục
+-          </button>
+-        </div>
++        <>
++          <button
++            className="player-room-monitor"
++            aria-label="Mở máy tính"
++            onClick={() => act({ type: "write" })}
++          >
++            <span>
++              Mở máy tính <span aria-hidden="true">↗</span>
++            </span>
++          </button>
++          <div className="player-room-caption">
++            <span>HIỆN TẠI · GÓC BÀN CỦA BẠN</span>
++            <p>Câu chuyện tiếp theo bắt đầu từ bạn.</p>
++          </div>
++          <div className="finale-actions player-room-actions">
++            <button onClick={() => act({ type: "write" })}>
++              Chạm tờ giấy để viết
++            </button>
++            <button onClick={() => act({ type: "skip" })}>
++              Giữ im lặng và tiếp tục
++            </button>
++          </div>
++        </>
+       )}
+       {s.phase === "letter" && (
+         <section className="letter-paper" aria-label="Lời cảm ơn riêng tư">
+--- before/src/finale/FinaleVisual.ts
++++ after/src/finale/FinaleVisual.ts
+@@ -1,3 +1,4 @@
++import { PlayerRoom, isPlayerRoom } from "./PlayerRoom";
+ import * as T from "three";
+ import type { FinaleSave } from "./state";
+ import type { Letter } from "./letter";
+@@ -22,6 +23,7 @@
+ }
+ /** Continuous paper-to-sky composition, inside the existing research scene. */
+ export class FinaleVisual {
++  private room: PlayerRoom;
+   private group = new T.Group();
+   private star: T.Mesh;
+   private sparks: T.Points;
+@@ -119,6 +121,7 @@
+     this.frame.position.set(0.4, 4, -2);
+     this.group.add(this.frame);
+     scene.add(this.group);
++    this.room = new PlayerRoom(scene);
+   }
+   update(
+     s: FinaleSave,
+@@ -127,6 +130,16 @@
+     reduced: boolean,
+     camera: T.PerspectiveCamera,
+   ) {
++    this.room.root.visible = false;
++    if (isPlayerRoom(s.phase)) {
++      for (const o of this.originals.keys()) o.visible = false;
++      this.paper.visible = false;
++      this.group.visible = false;
++      this.scene.background = new T.Color("#0B1422");
++      (this.scene.fog as T.FogExp2).density = 0.018;
++      this.room.update(s.phase, t, reduced, camera);
++      return;
++    }
+     const sky = ["galaxy", "closing", "ending"].includes(s.phase);
+     const ink = s.phase === "transform";
+     const p = ink ? ease((t - 2) / 7) : sky ? 1 : 0;
+@@ -242,6 +255,7 @@
+     camera.updateProjectionMatrix();
+   }
+   dispose() {
++    this.room.dispose();
+     this.objects.forEach((o) => o.dispose());
+   }
+ }

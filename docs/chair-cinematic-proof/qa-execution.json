@@ -1,0 +1,45 @@
+{
+  "started": "2026-11-17T06:11:37.593Z",
+  "build": "64ffeba60819057bca992c38ec3a9b46b8e75beebea064cdb49de95b3aad1526",
+  "runs": [
+    {
+      "name": "e2e",
+      "command": "node node_modules/@playwright/test/cli.js test --config=playwright.g2f.config.ts cinematic-chair.spec.ts cinematic-stayed.spec.ts cinematic-stayed-fallback.spec.ts cinematic-fullgame.spec.ts cinematic-voice-school.spec.ts cinematic-typography.spec.ts cinematic-mobile.spec.ts --reporter=list,json",
+      "started": "2026-11-17T06:11:37.596Z",
+      "exitCode": 1,
+      "finished": "2026-11-17T06:24:49.337Z"
+    },
+    {
+      "name": "affected",
+      "command": "node node_modules/@playwright/test/cli.js test --config=playwright.g2f.config.ts cinematic-voice-school.spec.ts -g Conversation camera --reporter=list,json",
+      "started": "2026-11-17T06:26:40.406Z",
+      "build": "64ffeba60819057bca992c38ec3a9b46b8e75beebea064cdb49de95b3aad1526",
+      "exitCode": 0,
+      "finished": "2026-11-17T06:27:11.409Z"
+    },
+    {
+      "name": "menu",
+      "command": "node node_modules/@playwright/test/cli.js test --config=playwright.g2f.config.ts --reporter=list,json",
+      "started": "2026-11-17T06:27:11.411Z",
+      "build": "64ffeba60819057bca992c38ec3a9b46b8e75beebea064cdb49de95b3aad1526",
+      "exitCode": 1,
+      "finished": "2026-11-17T06:28:31.986Z"
+    },
+    {
+      "name": "menu-cold-start",
+      "command": "node node_modules/@playwright/test/cli.js test --config=playwright.g2f.config.ts menu-audio.spec.ts -g audio starts only --reporter=list,json",
+      "started": "2026-11-17T06:30:11.686Z",
+      "build": "64ffeba60819057bca992c38ec3a9b46b8e75beebea064cdb49de95b3aad1526",
+      "exitCode": 0,
+      "finished": "2026-11-17T06:30:25.049Z"
+    }
+  ],
+  "finished": "2026-11-17T06:30:25.056Z",
+  "buildUnchanged": true,
+  "correction": "Updated the old dialogue test to wait for conversation.master rather than 1.55 seconds of dolly. Application source/build unchanged. Primary results are retained.",
+  "allFinalCasesPassed": true,
+  "testCorrections": [
+    "Dialogue test now waits for conversation.master instead of the removed dolly.",
+    "Menu dev-server cold launch now waits up to 30s for real game UI before checking the same closed/running audio context assertion. No application changes after primary QA."
+  ]
+}

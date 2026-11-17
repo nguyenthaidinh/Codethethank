@@ -1,0 +1,11 @@
+{
+  "started": "2026-11-17T00:44:46.994Z",
+  "build": "eca21bfb1de43485fd2493d0a6a6d655945ce1981618677302f74ffeb60b1cf0",
+  "runs": [
+    {
+      "name": "e2e",
+      "command": "node node_modules/@playwright/test/cli.js test --reporter=list,json",
+      "started": "2026-11-17T00:44:46.999Z"
+    }
+  ]
+}

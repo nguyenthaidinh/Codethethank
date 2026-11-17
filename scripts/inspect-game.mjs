@@ -1,0 +1,2 @@
+import {chromium} from '@playwright/test';
+const browser=await chromium.launch({headless:true});const page=await browser.newPage({viewport:{width:1280,height:720}});page.on('pageerror',e=>console.log('ERROR',e.message));await page.goto('http://127.0.0.1:5173/?qa=1');await page.getByRole('button',{name:'Chơi không âm thanh'}).click();await page.waitForTimeout(8000);console.log(await page.getByTestId('telemetry').textContent());await page.screenshot({path:'docs/proof-of-feel/inspect.png'});await browser.close();

@@ -1,0 +1,14 @@
+Asset: Official logo of Trường Đại học Tây Nguyên (Tay Nguyen University).
+Source: https://www.ttn.edu.vn/images/Icon/logo.png
+Official homepage referencing the image: https://www.ttn.edu.vn/
+Official brand identity announcement (11 November 2024):
+https://www.ttn.edu.vn/index.php/thongbao/5981-1114112402
+Retrieved: 17 November 2026.
+Original PNG: 1200 x 1200, 459960 bytes.
+SHA256: 18adec2751a91ae3e79f67f8dba7a71ccf911eadaa89f5953cdb73a3cec1f314
+
+Imported without pixel editing. A circular mesh/Canvas clip follows the outer
+blue ring to omit the source PNG's white square corners. Original colors and
+aspect ratio are preserved on classroom signage in a fictional narrative.
+Institutional logo/trademark; not a CC0 game asset. Ownership remains with
+the university. Inclusion does not imply endorsement or official partnership.

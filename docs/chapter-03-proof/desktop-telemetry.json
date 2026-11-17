@@ -1,0 +1,210 @@
+{
+  "beat": "NEXT_SCENE_READY",
+  "time": 0.6333000000000176,
+  "evidence": [
+    "clock",
+    "notebook",
+    "laptop"
+  ],
+  "verdict": {
+    "version": 1,
+    "phase": "chapter02",
+    "found": [
+      "presentation",
+      "notes",
+      "data"
+    ],
+    "selected": "an",
+    "tested": [
+      "mai",
+      "an"
+    ],
+    "linked": [
+      "presentation",
+      "notes"
+    ],
+    "carried": null,
+    "stayed": {
+      "version": 1,
+      "phase": "next",
+      "line": 0,
+      "read": [
+        "outcome",
+        "support"
+      ],
+      "page": "support",
+      "written": true,
+      "seen": [],
+      "nextInspected": true
+    },
+    "ripple": {
+      "version": 1,
+      "phase": "finale",
+      "questions": [
+        "prediction",
+        "opportunity"
+      ],
+      "milestones": 3,
+      "memories": [
+        "evaluation",
+        "stayed",
+        "design"
+      ],
+      "selected": "design",
+      "elapsed": 0,
+      "played": [
+        "reveal.music",
+        "echo.chair",
+        "chair.chair"
+      ]
+    }
+  },
+  "stayed": {
+    "version": 1,
+    "phase": "next",
+    "line": 0,
+    "read": [
+      "outcome",
+      "support"
+    ],
+    "page": "support",
+    "written": true,
+    "seen": [],
+    "nextInspected": true
+  },
+  "ripple": {
+    "version": 1,
+    "phase": "finale",
+    "questions": [
+      "prediction",
+      "opportunity"
+    ],
+    "milestones": 3,
+    "memories": [
+      "evaluation",
+      "stayed",
+      "design"
+    ],
+    "selected": "design",
+    "elapsed": 0,
+    "played": [
+      "reveal.music",
+      "echo.chair",
+      "chair.chair"
+    ]
+  },
+  "finale": null,
+  "followedDoor": false,
+  "world": {
+    "era": 2046,
+    "camera": [
+      3.8,
+      2.6,
+      3.4
+    ],
+    "chair": [
+      1.1,
+      0,
+      0.25
+    ],
+    "teacher": [
+      1.0999999999999999,
+      0,
+      0.19999999999999996
+    ],
+    "focus": "finale",
+    "notebook": true,
+    "motif": "chair.the-one-who-stayed",
+    "drawCalls": 173,
+    "resolution": 0.65
+  },
+  "audio": {
+    "context": "running",
+    "events": [
+      {
+        "cue": "focus.wide",
+        "time": 0.010666666666666666
+      },
+      {
+        "cue": "paper",
+        "time": 0.9813333333333333
+      },
+      {
+        "cue": "paper",
+        "time": 1.16
+      },
+      {
+        "cue": "key",
+        "time": 1.36
+      },
+      {
+        "cue": "paper",
+        "time": 8.96
+      },
+      {
+        "cue": "paper",
+        "time": 15.512
+      },
+      {
+        "cue": "paper",
+        "time": 22.010666666666665
+      },
+      {
+        "cue": "key",
+        "time": 37.328
+      },
+      {
+        "cue": "aion-motif",
+        "time": 45.861333333333334
+      },
+      {
+        "cue": "aion-overtone",
+        "time": 45.861333333333334
+      },
+      {
+        "cue": "chair.the-one-who-stayed",
+        "time": 64.52
+      },
+      {
+        "cue": "chair",
+        "time": 64.52
+      },
+      {
+        "cue": "chair.the-one-who-stayed",
+        "time": 70.592
+      },
+      {
+        "cue": "chair",
+        "time": 70.592
+      },
+      {
+        "cue": "paper",
+        "time": 134.49066666666667
+      },
+      {
+        "cue": "paper",
+        "time": 134.56
+      },
+      {
+        "cue": "paper",
+        "time": 134.62133333333333
+      },
+      {
+        "cue": "key",
+        "time": 134.70133333333334
+      }
+    ],
+    "mix": {
+      "rain": 0,
+      "fan": 0.045,
+      "ambience": 0.7,
+      "music": 0.06
+    },
+    "buses": {
+      "music": 0.032999999821186066,
+      "effects": 0.6499999761581421,
+      "ambience": 0.45500001311302185
+    }
+  },
+  "errors": []
+}

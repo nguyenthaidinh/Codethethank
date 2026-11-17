@@ -1,0 +1,157 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\Dự Án NTD\\Codethethank\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config=playwright.model-review.config.ts",
+      "cinematic-chair.spec.ts",
+      "--grep",
+      "two-shot desktop",
+      "--output=docs/model-polish-proof/desktop-recheck-traces",
+      "--trace=retain-on-failure",
+      "--reporter=list,json"
+    ],
+    "configFile": "F:\\Dự Án NTD\\Codethethank\\playwright.model-review.config.ts",
+    "rootDir": "F:/Dự Án NTD/Codethethank/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "F:/Dự Án NTD/Codethethank/docs/model-polish-proof/desktop-recheck-traces",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "F:/Dự Án NTD/Codethethank/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "cinematic*.spec.ts"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "F:\\Dự Án NTD\\Codethethank\\docs\\model-polish-proof\\desktop-recheck-traces",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e",
+        "snapshotDir": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "cinematic*.spec.ts",
+        "timeout": 90000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4216",
+          "headless": true,
+          "trace": "retain-on-failure",
+          "launchOptions": {
+            "args": [
+              "--use-angle=d3d11"
+            ]
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.1",
+    "workers": 1,
+    "webServer": {
+      "command": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4216 --strictPort --outDir dist-model-review",
+      "url": "http://127.0.0.1:4216",
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "cinematic-chair.spec.ts",
+      "file": "cinematic-chair.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Chair: insert, visible sit and quiet two-shot desktop",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 27019,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:45:50.080Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "690f76986346603fad4e-2b086a8f8122572be062",
+          "file": "cinematic-chair.spec.ts",
+          "line": 45,
+          "column": 3
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-17T10:45:47.568Z",
+    "duration": 30890.668,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

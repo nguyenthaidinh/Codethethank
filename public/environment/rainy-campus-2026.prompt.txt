@@ -1,0 +1,7 @@
+Use case: photorealistic-natural.
+Asset type: distant matte background for a 3D Vietnamese university classroom game, viewed through windows and an open doorway.
+Primary request: a beautiful, believable rain-soaked university courtyard in Vietnam's Central Highlands at 17:05, after class.
+Scene: modest cream concrete teaching buildings with shaded open corridors, wet tiled paths and shallow puddles, lush mature green trees, a quiet landscaped campus. Eye-level wide panorama, approximately 2:1 landscape. Foreground wet paving leads into the scene; buildings and foliage are mostly in the middle and far distance. Soft layers of rain haze give natural depth.
+Lighting: subdued overcast late-afternoon daylight, cool blue-grey air, restrained warm beige walls, wet leaf highlights and soft reflections. Natural exposure, readable shadows, realistic material detail, calm melancholy mood.
+Style: cinematic natural photography, subtle atmospheric perspective, compatible with a muted blue-grey and warm wood 3D game interior. No dramatic color grading.
+Constraints: the image will sit behind animated real-time raindrops, so avoid large foreground rain streaks or droplets baked into the picture. Keep any precipitation distant and delicate. No people, no text, no signs, no logos, no watermarks. Do not include a foreground window frame or doorway.

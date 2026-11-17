@@ -1,0 +1,571 @@
+{
+  "capture": "Actual Chromium CDP frames, including game UI, muxed with the live chapter master audio bus. fps=24 is encoding cadence, not a claimed render rate.",
+  "hardware": {
+    "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x0000A7A0) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/159.0.8154.6 Safari/537.36"
+  },
+  "frames": 838,
+  "seconds": 63.79744791984558,
+  "audioVideoOffset": 0.14917492866516113,
+  "investigation": {
+    "beat": "SIGNAL_INVESTIGATION",
+    "time": 12.899599999999973,
+    "evidence": [],
+    "verdict": null,
+    "stayed": null,
+    "ripple": null,
+    "finale": null,
+    "followedDoor": false,
+    "world": {
+      "renderer": "aion-future-webgl",
+      "place": "anomaly",
+      "view": "core",
+      "camera": [
+        0.055134840533394104,
+        2.930833578877866,
+        -11.199999999999953
+      ],
+      "signal": {
+        "x": 639.7650946033489,
+        "y": 352.27733421006377,
+        "focused": false
+      },
+      "drawCalls": 24,
+      "triangles": 20758,
+      "antialias": true,
+      "output": "direct-aces-srgb",
+      "lighting": "gpu-pbr-ibl",
+      "resources": {
+        "geometries": 38,
+        "textures": 16
+      },
+      "quality": 1,
+      "qualitySettled": true,
+      "assets": [
+        "building-skyscraper-a",
+        "building-skyscraper-b",
+        "floor_tiles_06",
+        "building-a",
+        "building-b",
+        "building-skyscraper-c",
+        "studio_small_09"
+      ],
+      "assetErrors": [],
+      "investigated": [
+        "source",
+        "limit"
+      ],
+      "selected": "limit",
+      "ready": true,
+      "assetsComplete": true,
+      "beat": "SIGNAL_INVESTIGATION"
+    },
+    "audio": {
+      "context": "running",
+      "events": [
+        {
+          "cue": "aion.space.city",
+          "time": 0.032
+        },
+        {
+          "cue": "aion-motif",
+          "time": 13.650666666666666
+        },
+        {
+          "cue": "aion-overtone",
+          "time": 13.650666666666666
+        },
+        {
+          "cue": "aion.space.headquarters",
+          "time": 14.712
+        },
+        {
+          "cue": "signal",
+          "time": 18.672
+        },
+        {
+          "cue": "aion.space.core",
+          "time": 24.730666666666668
+        },
+        {
+          "cue": "aion.research",
+          "time": 36.221333333333334
+        },
+        {
+          "cue": "focus",
+          "time": 44.712
+        },
+        {
+          "cue": "focus",
+          "time": 44.72
+        },
+        {
+          "cue": "select",
+          "time": 44.72
+        },
+        {
+          "cue": "aion.space.anomaly",
+          "time": 44.821333333333335
+        },
+        {
+          "cue": "aion.inspect.source",
+          "time": 48.70133333333333
+        },
+        {
+          "cue": "aion.inspect.limit",
+          "time": 54.58133333333333
+        }
+      ],
+      "mix": {
+        "rain": 0,
+        "fan": 0,
+        "ambience": 1,
+        "music": 0.1
+      },
+      "buses": {
+        "music": 0.054999999701976776,
+        "effects": 0.6499999761581421,
+        "ambience": 0.6499999761581421
+      }
+    }
+  },
+  "transition": [
+    {
+      "beat": "MEMORY_TRANSITION",
+      "time": 3.2166000000000006,
+      "evidence": [],
+      "verdict": null,
+      "stayed": null,
+      "ripple": null,
+      "finale": null,
+      "followedDoor": false,
+      "world": {
+        "renderer": "aion-future-webgl",
+        "place": "anomaly",
+        "view": "core",
+        "camera": [
+          -0.000015326879146996733,
+          2.9333313112208845,
+          -13.797896869973192
+        ],
+        "signal": {
+          "x": 640.0003965449528,
+          "y": 346.8983982334876,
+          "focused": false
+        },
+        "drawCalls": 24,
+        "triangles": 20758,
+        "antialias": true,
+        "output": "direct-aces-srgb",
+        "lighting": "gpu-pbr-ibl",
+        "resources": {
+          "geometries": 38,
+          "textures": 16
+        },
+        "quality": 1,
+        "qualitySettled": true,
+        "assets": [
+          "building-skyscraper-a",
+          "building-skyscraper-b",
+          "floor_tiles_06",
+          "building-a",
+          "building-b",
+          "building-skyscraper-c",
+          "studio_small_09"
+        ],
+        "assetErrors": [],
+        "investigated": [
+          "source",
+          "limit"
+        ],
+        "selected": "limit",
+        "ready": true,
+        "assetsComplete": true,
+        "beat": "MEMORY_TRANSITION"
+      },
+      "audio": {
+        "context": "running",
+        "events": [
+          {
+            "cue": "aion.space.city",
+            "time": 0.032
+          },
+          {
+            "cue": "aion-motif",
+            "time": 13.650666666666666
+          },
+          {
+            "cue": "aion-overtone",
+            "time": 13.650666666666666
+          },
+          {
+            "cue": "aion.space.headquarters",
+            "time": 14.712
+          },
+          {
+            "cue": "signal",
+            "time": 18.672
+          },
+          {
+            "cue": "aion.space.core",
+            "time": 24.730666666666668
+          },
+          {
+            "cue": "aion.research",
+            "time": 36.221333333333334
+          },
+          {
+            "cue": "focus",
+            "time": 44.712
+          },
+          {
+            "cue": "focus",
+            "time": 44.72
+          },
+          {
+            "cue": "select",
+            "time": 44.72
+          },
+          {
+            "cue": "aion.space.anomaly",
+            "time": 44.821333333333335
+          },
+          {
+            "cue": "aion.inspect.source",
+            "time": 48.70133333333333
+          },
+          {
+            "cue": "aion.inspect.limit",
+            "time": 54.58133333333333
+          },
+          {
+            "cue": "memory",
+            "time": 57.752
+          }
+        ],
+        "mix": {
+          "rain": 0,
+          "fan": 0,
+          "ambience": 0,
+          "music": 0
+        },
+        "buses": {
+          "music": 0,
+          "effects": 0.6499999761581421,
+          "ambience": 0
+        }
+      }
+    },
+    {
+      "beat": "MEMORY_TRANSITION",
+      "time": 5.733100000000016,
+      "evidence": [],
+      "verdict": null,
+      "stayed": null,
+      "ripple": null,
+      "finale": null,
+      "followedDoor": false,
+      "world": {
+        "renderer": "aion-future-webgl",
+        "place": "anomaly",
+        "view": "core",
+        "camera": [
+          -0.00005989113017607525,
+          2.9333333285156287,
+          -13.79999498926805
+        ],
+        "signal": {
+          "x": 640.0015531840518,
+          "y": 346.89486529587913,
+          "focused": false
+        },
+        "drawCalls": 24,
+        "triangles": 20758,
+        "antialias": true,
+        "output": "direct-aces-srgb",
+        "lighting": "gpu-pbr-ibl",
+        "resources": {
+          "geometries": 38,
+          "textures": 16
+        },
+        "quality": 1,
+        "qualitySettled": true,
+        "assets": [
+          "building-skyscraper-a",
+          "building-skyscraper-b",
+          "floor_tiles_06",
+          "building-a",
+          "building-b",
+          "building-skyscraper-c",
+          "studio_small_09"
+        ],
+        "assetErrors": [],
+        "investigated": [
+          "source",
+          "limit"
+        ],
+        "selected": "limit",
+        "ready": true,
+        "assetsComplete": true,
+        "beat": "MEMORY_TRANSITION"
+      },
+      "audio": {
+        "context": "running",
+        "events": [
+          {
+            "cue": "aion.space.city",
+            "time": 0.032
+          },
+          {
+            "cue": "aion-motif",
+            "time": 13.650666666666666
+          },
+          {
+            "cue": "aion-overtone",
+            "time": 13.650666666666666
+          },
+          {
+            "cue": "aion.space.headquarters",
+            "time": 14.712
+          },
+          {
+            "cue": "signal",
+            "time": 18.672
+          },
+          {
+            "cue": "aion.space.core",
+            "time": 24.730666666666668
+          },
+          {
+            "cue": "aion.research",
+            "time": 36.221333333333334
+          },
+          {
+            "cue": "focus",
+            "time": 44.712
+          },
+          {
+            "cue": "focus",
+            "time": 44.72
+          },
+          {
+            "cue": "select",
+            "time": 44.72
+          },
+          {
+            "cue": "aion.space.anomaly",
+            "time": 44.821333333333335
+          },
+          {
+            "cue": "aion.inspect.source",
+            "time": 48.70133333333333
+          },
+          {
+            "cue": "aion.inspect.limit",
+            "time": 54.58133333333333
+          },
+          {
+            "cue": "memory",
+            "time": 57.752
+          },
+          {
+            "cue": "bell",
+            "time": 62.76
+          }
+        ],
+        "mix": {
+          "rain": 0,
+          "fan": 0,
+          "ambience": 1,
+          "music": 0
+        },
+        "buses": {
+          "music": 0,
+          "effects": 0.6499999761581421,
+          "ambience": 0.6499999761581421
+        }
+      }
+    }
+  ],
+  "final": {
+    "beat": "CLASSROOM_EXPLORATION",
+    "time": 1.9998999999999931,
+    "evidence": [],
+    "verdict": null,
+    "stayed": null,
+    "ripple": null,
+    "finale": null,
+    "followedDoor": false,
+    "world": {
+      "camera": [
+        3.3999999999999995,
+        1.95,
+        3.3
+      ],
+      "target": [
+        -0.04999999999999982,
+        1.2,
+        -0.95
+      ],
+      "fov": 50,
+      "artDirection": "paper-rain",
+      "characterArt": "sculpted-narrative-v1",
+      "anHand": [
+        -0.6396632166044847,
+        0.9177799973694257,
+        -0.538167455900603
+      ],
+      "focus": "wide",
+      "teacher": [
+        2.7,
+        0,
+        6.2
+      ],
+      "teacherVisible": false,
+      "anHead": 0.1,
+      "anFeetY": [
+        -0.000987545694581704,
+        -0.000987545694581704
+      ],
+      "teacherFeetY": [
+        0.03749999999999998,
+        0.03749999999999998
+      ],
+      "notebookPage": null,
+      "notebookPosition": [
+        1.25,
+        1.047,
+        -0.15
+      ],
+      "pageTurn": 1,
+      "chair": [
+        2.3,
+        0,
+        0.6
+      ],
+      "drawCalls": 97,
+      "triangles": 60326,
+      "shadowRefreshed": false,
+      "resources": {
+        "geometries": 103,
+        "textures": 18,
+        "programs": 13,
+        "renderTarget": [
+          1280,
+          720
+        ],
+        "samples": 0,
+        "output": [
+          1280,
+          720
+        ],
+        "shadowMap": [
+          1024,
+          1024
+        ]
+      },
+      "resolution": 1
+    },
+    "audio": {
+      "context": "running",
+      "events": [
+        {
+          "cue": "aion.space.city",
+          "time": 0.032
+        },
+        {
+          "cue": "aion-motif",
+          "time": 13.650666666666666
+        },
+        {
+          "cue": "aion-overtone",
+          "time": 13.650666666666666
+        },
+        {
+          "cue": "aion.space.headquarters",
+          "time": 14.712
+        },
+        {
+          "cue": "signal",
+          "time": 18.672
+        },
+        {
+          "cue": "aion.space.core",
+          "time": 24.730666666666668
+        },
+        {
+          "cue": "aion.research",
+          "time": 36.221333333333334
+        },
+        {
+          "cue": "focus",
+          "time": 44.712
+        },
+        {
+          "cue": "focus",
+          "time": 44.72
+        },
+        {
+          "cue": "select",
+          "time": 44.72
+        },
+        {
+          "cue": "aion.space.anomaly",
+          "time": 44.821333333333335
+        },
+        {
+          "cue": "aion.inspect.source",
+          "time": 48.70133333333333
+        },
+        {
+          "cue": "aion.inspect.limit",
+          "time": 54.58133333333333
+        },
+        {
+          "cue": "memory",
+          "time": 57.752
+        },
+        {
+          "cue": "bell",
+          "time": 62.76
+        },
+        {
+          "cue": "step",
+          "time": 64.26133333333334
+        },
+        {
+          "cue": "step",
+          "time": 64.96
+        },
+        {
+          "cue": "focus.window",
+          "time": 65.76
+        },
+        {
+          "cue": "focus.wide",
+          "time": 65.76
+        },
+        {
+          "cue": "focus.window",
+          "time": 65.76
+        },
+        {
+          "cue": "focus.wide",
+          "time": 69.28
+        }
+      ],
+      "mix": {
+        "rain": 0.14,
+        "fan": 0.045,
+        "ambience": 1,
+        "music": 0
+      },
+      "buses": {
+        "music": 0,
+        "effects": 0.6499999761581421,
+        "ambience": 0.6499999761581421
+      }
+    }
+  },
+  "errors": []
+}

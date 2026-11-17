@@ -1,0 +1,18 @@
+﻿[
+    {
+        "Path":  "F:\\Dự Án NTD\\Codethethank\\dist\\index.html",
+        "Hash":  "04876BA6EAC0AE7B26D67D83666A749A0EDBD5937B33981785FCB8ED71218F19"
+    },
+    {
+        "Path":  "F:\\Dự Án NTD\\Codethethank\\src\\cinematic\\WorldRenderer.ts",
+        "Hash":  "F781C37E90B66B28C0B4B2C276273BF3A6CB8F3A893ADAFEDE9CA62437D39265"
+    },
+    {
+        "Path":  "F:\\Dự Án NTD\\Codethethank\\src\\cinematic\\FallbackWorld.ts",
+        "Hash":  "A63D8E337DB3D402D4DCA9DB390023D48055618A6D2B0D6CB5E92E815E6CF41B"
+    },
+    {
+        "Path":  "F:\\Dự Án NTD\\Codethethank\\src\\chapter\\ChapterGame.tsx",
+        "Hash":  "EECCCA186643909A05C23E2E469880BC0F855874D0B21674DF0E0278A673F1D3"
+    }
+]

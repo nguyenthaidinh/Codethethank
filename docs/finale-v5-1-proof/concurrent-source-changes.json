@@ -1,0 +1,47 @@
+[
+  {
+    "path": "src/cinematic/FallbackWorld.ts",
+    "owner": "concurrent work; not edited by this task",
+    "hash": "595B50C4DE2CDD9F24D4931139CD67110CF8807C6FABDAF43D8536F912A92A99"
+  },
+  {
+    "path": "src/cinematic/WorldRenderer.ts",
+    "owner": "concurrent work; not edited by this task",
+    "hash": "8ED138220B8F7FF622B87E7D35C9E66031CB392A75FEFBDBC1D87C1C89EEAA0B"
+  },
+  {
+    "path": "src/finale/Fallback.ts",
+    "owner": "F5.1/F5.2",
+    "hash": "4E2A501ED156941BF81CBB947D9EB1246AB5F7586B4A40BFDE7DBB649F92135B"
+  },
+  {
+    "path": "src/finale/FinaleControls.tsx",
+    "owner": "F5.1/F5.2",
+    "hash": "B394C11BC09FFF8AFB8890B2F36D392BED890EDE778D7B2293753F9A42F67B4F"
+  },
+  {
+    "path": "src/finale/FinaleVisual.ts",
+    "owner": "F5.1/F5.2",
+    "hash": "2CA62857D6F5C0C13E60078F081BADBB6E9813E0EBBBF8CFD22894F730F50C56"
+  },
+  {
+    "path": "src/ripple/Fallback.ts",
+    "owner": "concurrent work; not edited by this task",
+    "hash": "A70680C78B5F672503ED0F932D8DF11E53026A9133C1B49D03CFD1F430349ED9"
+  },
+  {
+    "path": "src/ripple/RippleControls.tsx",
+    "owner": "concurrent work; not edited by this task",
+    "hash": "FFD93627C98E464321AEFDCF72895C9130DBEF757655B37905CA9D47B69DCE56"
+  },
+  {
+    "path": "src/ripple/RippleWorld.ts",
+    "owner": "concurrent work; not edited by this task",
+    "hash": "790CFD5ECFD0C91DADC26275678D4EC9516702F29532BA745D4D696C88DB9EA0"
+  },
+  {
+    "path": "src/ripple/story.ts",
+    "owner": "concurrent work; not edited by this task",
+    "hash": "A40108F093BBD35474DA4974423D8864069C60C48DE204AD0561D6741C8625AF"
+  }
+]

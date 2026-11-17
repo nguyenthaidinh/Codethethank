@@ -1,0 +1,1205 @@
+--- before/src/chapter/ChapterAudio.ts
++++ after/src/chapter/ChapterAudio.ts
+@@ -107,15 +107,21 @@
+   }
+   signalFocus(focused: boolean) {
+     const t = this.context.currentTime;
+-    this.future.gain.setTargetAtTime(focused ? 0.1 : 0.35, t, 0.3);
+-    this.voices.gain.setTargetAtTime(focused ? 0.009 : 0.045, t, 0.3);
++    this.future.gain.setTargetAtTime(focused ? 0.04 : 0.08, t, 0.3);
++    this.voices.gain.setTargetAtTime(focused ? 0.002 : 0.006, t, 0.3);
+     if (focused) this.chime("focus", 440);
+   }
+   openingSpace(place: FuturePlace) {
+     if (this.school !== 0) return;
+     const t = this.context.currentTime;
+     this.future.gain.setTargetAtTime(
+-      place === "city" ? 0.3 : place === "headquarters" ? 0.2 : 0.11,
++      place === "city"
++        ? 0.22
++        : place === "headquarters"
++          ? 0.16
++          : place === "core"
++            ? 0.09
++            : 0.045,
+       t,
+       0.8,
+     );
+@@ -124,6 +130,15 @@
+       t,
+       0.8,
+     );
++    this.mix.music =
++      place === "city"
++        ? 0.035
++        : place === "headquarters"
++          ? 0.075
++          : place === "core"
++            ? 0.16
++            : 0;
++    if (this.chapterSettings) this.apply(this.chapterSettings);
+     this.events.push({ cue: "aion.space." + place, time: t });
+   }
+   chime(name: string, hz = 440) {
+--- before/src/chapter/ChapterGame.tsx
++++ after/src/chapter/ChapterGame.tsx
+@@ -34,6 +34,8 @@
+ import { FutureFallback } from "../future/FutureFallback";
+ import {
+   futureCaption,
++  OPENING_DURATION,
++  narration,
+   futurePlace,
+   channels,
+   type Channel,
+@@ -160,6 +162,7 @@
+       return [];
+     }
+   });
++  const futureSelectedAt = useRef(0);
+   const [futureSelected, setFutureSelected] = useState<Channel | null>(null);
+   const [futureView, setFutureView] = useState<"core" | "atrium">("core");
+   useEffect(() => future.current?.lookPlace(futureView), [futureView]);
+@@ -411,9 +414,9 @@
+         }
+       };
+       if (state.beat === "OPENING_CINEMATIC") {
+-        cue("motif", 10, () => audio.current?.motif());
+-        cue("signal", 15, () => audio.current?.chime("signal", 523.25));
+-        cue("control", 30, () => dispatch({ type: "skip" }));
++        cue("motif", 27, () => audio.current?.motif());
++        cue("signal", 42, () => audio.current?.chime("signal", 523.25));
++        cue("control", OPENING_DURATION, () => dispatch({ type: "skip" }));
+       }
+       if (state.beat === "MEMORY_TRANSITION") {
+         cue("fade", 0, () => audio.current?.environment(0, true));
+@@ -783,6 +786,8 @@
+       await ensureAudio();
+       audio.current?.apply({ ...current.current.settings, muted: false });
+       audio.current?.environment(roomActive ? 1 : 0);
++      if (!roomActive)
++        audio.current?.openingSpace(futurePlace(s.beat, clock.current));
+       if (v?.phase === "reaction") audio.current?.beat("verdict");
+       if (st) audio.current?.stayMix(st.phase);
+       if (rip) audio.current?.rippleMix(rip.phase, rip.milestones);
+@@ -798,7 +803,14 @@
+         ? verdictCaption(v, time, inspection)
+         : explore && focus in objects
+           ? objects[focus as ObjectId].text
+-          : (futureCaption(s.beat, time) ?? chapterCaption(s.beat, time));
++          : (futureCaption(
++              s.beat,
++              s.beat === "SIGNAL_INVESTIGATION"
++                ? time - futureSelectedAt.current
++                : time,
++              futureSelected,
++              futureFound.length === 2,
++            ) ?? chapterCaption(s.beat, time));
+   const black =
+     s.beat === "OPENING_CINEMATIC"
+       ? Math.max(0, 1 - time / 2.5)
+@@ -983,7 +995,7 @@
+           onClick={() => dispatch({ type: "signal" })}
+         >
+           <span className="hotspot-ring">◈</span>
+-          <span className="hotspot-name">Tín hiệu bất thường</span>
++          <span className="hotspot-name">Ẩn số chưa có lời giải</span>
+         </button>
+       )}
+       {!paused &&
+@@ -1026,6 +1038,7 @@
+               else buttons.current.delete("future-" + id);
+             }}
+             onClick={() => {
++              futureSelectedAt.current = clock.current;
+               setFutureSelected(id);
+               setFutureFound((v) => [...new Set([...v, id])]);
+               audio.current?.chime(
+@@ -1035,9 +1048,7 @@
+             }}
+           >
+             <span className="hotspot-ring" />
+-            <span className="hotspot-name">
+-              {id === "source" ? "Nguồn dữ liệu" : "Giới hạn dự báo"}
+-            </span>
++            <span className="hotspot-name">{channels[id].short}</span>
+           </button>
+         ))}
+       {!paused &&
+@@ -1097,6 +1108,14 @@
+       )}
+       {!paused && settings.captions && caption && (
+         <div className="subtitle" aria-live="polite">
++          {s.beat === "OPENING_CINEMATIC" && (
++            <small className="future-speaker">
++              {
++                narration.find((line) => time >= line.start && time < line.end)
++                  ?.speaker
++              }
++            </small>
++          )}
+           <p>{caption}</p>
+         </div>
+       )}
+--- before/src/future/direction.ts
++++ after/src/future/direction.ts
+@@ -1,60 +1,131 @@
+ import type { ChapterBeat } from "../chapter/director";
+ export type FuturePlace = "city" | "headquarters" | "core" | "anomaly";
+ export type Channel = "source" | "limit";
++export const OPENING_DURATION = 53;
++export const narration = [
++  {
++    start: 0,
++    end: 6,
++    speaker: "NGƯỜI DẪN",
++    text: "Năm 2046. Nhân loại bước vào kỷ nguyên mà những giới hạn của tri thức liên tục được viết lại.",
++  },
++  {
++    start: 6,
++    end: 12,
++    speaker: "NGƯỜI DẪN",
++    text: "Những câu hỏi từng nằm ngoài tầm với… giờ mở ra những hướng đi mới.",
++  },
++  {
++    start: 12,
++    end: 20,
++    speaker: "NGƯỜI DẪN",
++    text: "Từ những khám phá khoa học tưởng chừng bất khả thi, đến việc dự báo các cuộc khủng hoảng trước khi chúng xảy ra…",
++  },
++  {
++    start: 20,
++    end: 27,
++    speaker: "NGƯỜI DẪN",
++    text: "Một trí tuệ đã mở ra những khả năng mà thế giới chưa từng có.",
++  },
++  {
++    start: 27,
++    end: 34,
++    speaker: "NGƯỜI DẪN",
++    text: "AION. Trí tuệ nhân tạo đa năng tiên tiến nhất thế giới.",
++  },
++  {
++    start: 34,
++    end: 42,
++    speaker: "NGƯỜI DẪN",
++    text: "Thành tựu làm thay đổi cách nhân loại khám phá, sáng tạo và định hình tương lai.",
++  },
++  {
++    start: 42,
++    end: 48,
++    speaker: "NGƯỜI DẪN",
++    text: "Nhưng ngay cả AION… vẫn có một câu hỏi chưa tìm được lời giải.",
++  },
++  {
++    start: 48,
++    end: 53,
++    speaker: "AION",
++    text: "Từ những dữ liệu còn lại, tôi đã tái dựng các khả năng có thể kiểm chứng. Nhưng lời giải vẫn chưa đầy đủ.",
++  },
++] as const;
+ export const channels: Record<
+   Channel,
+-  { label: string; title: string; lines: string[] }
++  {
++    label: string;
++    title: string;
++    short: string;
++    lines: string[];
++    dialogue: string[];
++  }
+ > = {
+   source: {
+-    label: "Đối chiếu nguồn dữ liệu",
+-    title: "NGUỒN / 2026",
++    label: "Điều tra dự đoán ban đầu",
++    short: "Dự đoán ban đầu",
++    title: "DỰ ĐOÁN BAN ĐẦU / 2026",
+     lines: [
+-      "Mô hình thử nghiệm độc lập",
+-      "Ưu tiên cải thiện học tập dự đoán",
+-      "Kết quả: NOT RECOMMENDED",
++      "Mô hình thử nghiệm độc lập năm 2026.",
++      "Mục tiêu: ưu tiên mức cải thiện học tập dự đoán.",
++      "ORIGINAL RESULT: NOT RECOMMENDED",
++      "Nhu cầu hỗ trợ chưa nằm trong quyết định.",
++    ],
++    dialogue: [
++      "Kết quả đánh giá khi ấy phù hợp với mục tiêu mà mô hình được giao.",
++      "Nó dự báo kết quả từ các biến đã ghi nhận. Nó không ghi lại toàn bộ hoàn cảnh của người này.",
+     ],
+   },
+   limit: {
+-    label: "Theo dấu phần dữ liệu bị thiếu",
+-    title: "KHOẢNG TRỐNG",
++    label: "Đối chiếu kết quả về sau",
++    short: "Kết quả về sau",
++    title: "KẾT QUẢ LỊCH SỬ",
+     lines: [
+-      "Dự đoán kết quả không phải toàn bộ câu chuyện.",
+-      "Điều xảy ra sau kết luận chưa được đối chiếu.",
+-      "Tư liệu gốc: phòng thực hành · 17:05",
++      "LATER OUTCOME: CONTRADICTS FORECAST",
++      "Hành trình về sau vượt xa dự đoán ban đầu.",
++      "CAUSAL EXPLANATION: INCOMPLETE",
++      "Khoảng trống bắt đầu từ một buổi chiều năm 2026.",
++    ],
++    dialogue: [
++      "Nhưng những gì xảy ra sau đó… vượt xa dự đoán ban đầu.",
++      "Có một điều đã thay đổi tương lai của người này. Tư liệu còn lại chưa đủ để xác định đó là gì.",
+     ],
+   },
+ };
+ export function futurePlace(beat: ChapterBeat, time: number): FuturePlace {
+-  return beat === "OPENING_CINEMATIC"
+-    ? time < 11
++  if (beat === "OPENING_CINEMATIC")
++    return time < 12
+       ? "city"
+-      : time < 21
++      : time < 27
+         ? "headquarters"
+-        : "core"
+-    : beat === "PLAYER_CONTROL_ENABLED"
+-      ? "core"
+-      : "anomaly";
++        : time < 42
++          ? "core"
++          : "anomaly";
++  return "anomaly";
+ }
+-export function futureCaption(beat: ChapterBeat, t: number): string | null {
++export function futureCaption(
++  beat: ChapterBeat,
++  t: number,
++  selected: Channel | null = null,
++  compared = false,
++): string | null {
+   if (beat === "OPENING_CINEMATIC")
+-    return t < 3
+-      ? "[Thành phố thức dậy. Tiếng giao thông vọng xa.]"
+-      : t < 9
+-        ? "2046 · Một thế giới cùng tiến về phía trước."
+-        : t < 15
+-          ? "Trụ sở AION · Nghiên cứu, y tế, giáo dục."
+-          : t < 21
+-            ? "AION — trí tuệ nhân tạo đa năng số 1 thế giới, năm 2046."
+-            : t < 26
+-              ? "AION: Có một kết quả mà tôi muốn cùng bạn xem lại."
+-              : "[Một hồ sơ năm 2026 chưa khép lại.]";
++    return (
++      narration.find((line) => t >= line.start && t < line.end)?.text ??
++      narration.at(-1)!.text
++    );
+   if (beat === "PLAYER_CONTROL_ENABLED")
+-    return "[Nguồn sáng màu hổ phách trên bàn đối chiếu. Chạm để quan sát.]";
+-  if (beat === "SIGNAL_INVESTIGATION")
+-    return "Đối chiếu nguồn và phần dữ liệu còn thiếu trước khi mở tư liệu gốc.";
++    return "AION: Một dự đoán từng được đưa ra. Một tương lai đã diễn ra rất khác. Hãy cùng tôi đối chiếu.";
++  if (beat === "SIGNAL_INVESTIGATION") {
++    if (compared && t > 9)
++      return "AION: Giữa kết quả đánh giá và tương lai của người này… vẫn còn một khoảng trống. Hãy tìm điều đã bị bỏ qua.";
++    if (selected) return "AION: " + channels[selected].dialogue[t < 5 ? 0 : 1];
++    return "AION: Hai luồng dữ liệu, một sự kiện chưa được giải thích. Chạm dự đoán ban đầu và kết quả về sau để điều tra.";
++  }
+   if (beat === "MEMORY_TRANSITION")
+     return t < 3
+-      ? "[Máy móc lùi xa.]"
++      ? "[Hệ thống lùi xa.]"
+       : t < 4
+         ? ""
+         : t < 6
+--- before/src/future/future.css
++++ after/src/future/future.css
+@@ -88,6 +88,15 @@
+   line-height: 1.55;
+   letter-spacing: 0.005em;
+ }
++.future-opening .future-speaker {
++  display: block;
++  margin-bottom: 8px;
++  color: #a9c4ce;
++  font:
++    10px Arial,
++    sans-serif;
++  letter-spacing: 0.18em;
++}
+ .future-opening .chapter-hint {
+   color: #b9d1db;
+ }
+--- before/src/future/FutureFallback.ts
++++ after/src/future/FutureFallback.ts
+@@ -10,6 +10,7 @@
+   private h = 720;
+   private found: Channel[] = [];
+   private selected: Channel | null = null;
++  private place = "city";
+   private view: "core" | "atrium" = "core";
+   get ready() {
+     return true;
+@@ -53,6 +54,7 @@
+         beat === "PLAYER_CONTROL_ENABLED" && this.view === "atrium"
+           ? "headquarters"
+           : futurePlace(beat, t);
++    this.place = place;
+     c.setTransform(this.canvas.width / w, 0, 0, this.canvas.height / h, 0, 0);
+     const sky = c.createLinearGradient(0, 0, 0, h);
+     sky.addColorStop(0, "#071423");
+@@ -88,6 +90,18 @@
+       );
+       c.lineTo(w * 0.65, h * 0.8);
+       c.stroke();
++      c.fillStyle = "#10293c";
++      c.fillRect(w * 0.52, h * 0.2, w * 0.075, h * 0.61);
++      c.fillRect(w * 0.39, h * 0.6, w * 0.13, h * 0.21);
++      c.fillRect(w * 0.595, h * 0.5, w * 0.1, h * 0.31);
++      c.strokeStyle = "#9dbbc9";
++      c.lineWidth = 1;
++      for (let y = h * 0.24; y < h * 0.8; y += h * 0.037) {
++        c.beginPath();
++        c.moveTo(w * 0.52, y);
++        c.lineTo(w * 0.595, y);
++        c.stroke();
++      }
+     } else {
+       c.fillStyle = "#0d202f";
+       c.beginPath();
+@@ -107,7 +121,7 @@
+           c.lineTo(xx, h * 0.85 - i * 30);
+           c.stroke();
+         }
+-      for (let i = 0; i < 3; i++) {
++      for (let i = 0; i < 5; i++) {
+         c.fillStyle = "#91b7c533";
+         c.fillRect(0, h * (0.23 + i * 0.13), w * 0.26, h * 0.015);
+         c.fillRect(w * 0.74, h * (0.23 + i * 0.13), w * 0.26, h * 0.015);
+@@ -127,32 +141,66 @@
+         c.lineTo(w * 0.6 - wave, yy);
+         c.stroke();
+       }
+-      c.fillStyle = "#071b2b";
+-      c.fillRect(w * 0.28, h * 0.57, w * 0.44, h * 0.22);
+-      c.strokeStyle = "#d8b984";
+-      c.strokeRect(w * 0.28, h * 0.57, w * 0.44, h * 0.22);
+-      c.fillStyle = "#ead5ae";
+-      c.font = `${Math.max(12, w * 0.015)}px Arial`;
+-      c.textAlign = "center";
+-      c.fillText(
+-        beat === "SIGNAL_INVESTIGATION"
+-          ? "2026 / NOT RECOMMENDED"
+-          : "20:11 / TÍN HIỆU CHƯA KHÉP LẠI",
+-        w * 0.5,
+-        h * 0.64,
+-      );
+-      if (this.selected) {
+-        c.font = "11px Arial";
+-        c.fillStyle = "#c7dce3";
+-        c.fillText(channels[this.selected].title, w * 0.5, h * 0.68);
+-      }
+-      c.font = "12px Arial";
+-      c.fillStyle = "#a4c7d5";
+-      c.fillText(
+-        `NGUỒN ${this.found.includes("source") ? "✓" : "○"}     GIỚI HẠN ${this.found.includes("limit") ? "✓" : "○"}`,
+-        w * 0.5,
+-        h * 0.72,
+-      );
++      // Service pylons and bridges retain a hierarchy of human/infrastructure scale.
++      for (let i = 0; i < 6; i++) {
++        const px = w * (0.31 + i * 0.075),
++          height = h * (0.26 + (i % 2) * 0.07);
++        c.fillStyle = "#102c3e";
++        c.fillRect(px, h * 0.58 - height, w * 0.035, height);
++        c.strokeStyle = "#8cc5d6";
++        c.lineWidth = 1;
++        for (let y = h * 0.58 - height; y < h * 0.58; y += h * 0.03) {
++          c.beginPath();
++          c.moveTo(px, y);
++          c.lineTo(px + w * 0.035, y);
++          c.stroke();
++        }
++      }
++      const mystery = beat !== "OPENING_CINEMATIC" || t >= 42;
++      if (mystery) {
++        const left = w * 0.15,
++          top = h * 0.23,
++          width = w * 0.7;
++        c.fillStyle = "#071522";
++        c.fillRect(left, top, width, h * 0.5);
++        c.strokeStyle = "#b89c73";
++        c.strokeRect(left, top, width, h * 0.5);
++        let yy = top + 28;
++        c.textAlign = "left";
++        const write = (text: string, size: number, color = "#c9dce2") => {
++          c.fillStyle = color;
++          c.font = `${size}px Arial`;
++          let line = "";
++          for (const word of text.split(" ")) {
++            if (c.measureText(line + word).width > width - 28) {
++              c.fillText(line.trim(), left + 14, yy);
++              yy += size * 1.4;
++              line = "";
++            }
++            line += word + " ";
++          }
++          if (line) {
++            c.fillText(line.trim(), left + 14, yy);
++            yy += size * 1.4;
++          }
++        };
++        write("THE UNEXPLAINED VARIABLE", w < 600 ? 16 : 24, "#e6c496");
++        yy += 12;
++        write(
++          this.selected ? channels[this.selected].title : "UNRESOLVED / 2026",
++          w < 600 ? 13 : 19,
++          "#9acbd7",
++        );
++        yy += 10;
++        for (const line of this.selected
++          ? channels[this.selected].lines
++          : [
++              "ORIGINAL RESULT: NOT RECOMMENDED",
++              "LATER OUTCOME: CONTRADICTS FORECAST",
++              "CAUSAL EXPLANATION: INCOMPLETE",
++            ])
++          write(line, w < 600 ? 13 : 18);
++      }
+     }
+     c.textAlign = "center";
+     c.font = "bold 30px Arial";
+@@ -160,11 +208,15 @@
+     c.fillText("A I O N", w * 0.5, h * 0.13);
+     c.font = "11px Arial";
+     c.fillStyle = "#a7c6d6";
+-    c.fillText("2046  /  RESEARCH HEADQUARTERS", w * 0.5, h * 0.17);
++    c.fillText(
++      "2046  /  AION CITADEL · GRAND ATRIUM · NEXUS",
++      w * 0.5,
++      h * 0.17,
++    );
+     this.signal = { x: w * 0.5, y: h * 0.61, focused: this.signal.focused };
+     this.anchors = {
+-      source: { x: w * 0.35, y: h * 0.55 },
+-      limit: { x: w * 0.65, y: h * 0.55 },
++      source: { x: w * 0.35, y: h * 0.58 },
++      limit: { x: w * 0.65, y: h * 0.58 },
+       open: { x: w * 0.5, y: h * 0.7 },
+       research: { x: w * 0.2, y: h * 0.4 },
+     };
+@@ -176,6 +228,9 @@
+   snapshot() {
+     return {
+       renderer: "future-canvas-fallback",
++      place: this.place,
++      investigated: [...this.found],
++      selected: this.selected,
+       signal: this.signal,
+       drawCalls: 0,
+       triangles: 0,
+--- before/src/future/FutureWorld.ts
++++ after/src/future/FutureWorld.ts
+@@ -3,6 +3,7 @@
+ import { RGBELoader } from "three/addons/loaders/RGBELoader.js";
+ import { mergeGeometries } from "three/addons/utils/BufferGeometryUtils.js";
+ import { RoundedBoxGeometry } from "three/addons/geometries/RoundedBoxGeometry.js";
++import { buildGrandArchitecture } from "./GrandArchitecture";
+ import type { ChapterBeat } from "../chapter/director";
+ import { FutureFallback } from "./FutureFallback";
+ import {
+@@ -17,12 +18,16 @@
+   return p * p * (3 - 2 * p);
+ };
+ const cameraKeys: { t: number; eye: Vec; at: Vec }[] = [
+-  { t: 0, eye: [68, 37, 118], at: [0, 31, -18] },
+-  { t: 8, eye: [31, 22, 70], at: [0, 28, -15] },
+-  { t: 11, eye: [9, 7, 35], at: [0, 9, -8] },
+-  { t: 16, eye: [-12, 5.3, 13], at: [-14, 8, -5] },
+-  { t: 21, eye: [-7, 4.8, -1], at: [0, 4.5, -21] },
+-  { t: 30, eye: [7, 4.4, -10], at: [0, 4.5, -22] },
++  { t: 0, eye: [155, 140, 420], at: [0, 55, -65] },
++  { t: 7, eye: [70, 95, 260], at: [0, 65, -65] },
++  { t: 12, eye: [20, 35, 125], at: [0, 25, -34] },
++  { t: 17, eye: [12, 8, 37], at: [0, 22, -40] },
++  { t: 23, eye: [-14, 15, 5], at: [0, 20, -60] },
++  { t: 27, eye: [16, 18, -5], at: [0, 17, -67] },
++  { t: 35, eye: [24, 20, -26], at: [0, 17, -67] },
++  { t: 42, eye: [-20, 14, -22], at: [0, 16, -67] },
++  { t: 49, eye: [3, 3.2, -10], at: [0, 2.55, -15.6] },
++  { t: 53, eye: [3, 3.2, -10], at: [0, 2.55, -15.6] },
+ ];
+ 
+ /** Opening-only world. City assets never load on a classroom/later checkpoint. */
+@@ -36,8 +41,8 @@
+   private city = new T.Group();
+   private exterior = new T.Group();
+   private inside = new T.Group();
+-  private eye = new T.Vector3(68, 37, 118);
+-  private at = new T.Vector3(0, 31, -18);
++  private eye = new T.Vector3(265, 145, 390);
++  private at = new T.Vector3(0, 55, -65);
+   private look = new T.Vector2();
+   private pointer = new T.Vector2();
+   private w = 1280;
+@@ -57,6 +62,7 @@
+   private loaded: string[] = [];
+   private loom!: T.InstancedMesh;
+   private traffic!: T.InstancedMesh;
++  private grand!: ReturnType<typeof buildGrandArchitecture>;
+   private glyph!: T.Mesh;
+   private terminalCanvas = document.createElement("canvas");
+   private terminalTexture: T.CanvasTexture | null = null;
+@@ -112,13 +118,13 @@
+       );
+     this.renderer.outputColorSpace = T.SRGBColorSpace;
+     this.renderer.toneMapping = T.ACESFilmicToneMapping;
+-    this.renderer.toneMappingExposure = 1.1;
++    this.renderer.toneMappingExposure = 1.0;
+     // Direct output applies ACES/sRGB once and avoids the costly float-target
+     // FXAA path on software WebGL. Context MSAA supplies edge antialiasing.
+     this.renderer.shadowMap.enabled = false;
+     this.scene.background = new T.Color("#15344a");
+-    this.scene.fog = new T.FogExp2("#426379", 0.0028);
+-    this.scene.add(new T.HemisphereLight("#b1c9db", "#101e2c", 0.85));
++    this.scene.fog = new T.FogExp2("#355165", 0.0012);
++    this.scene.add(new T.HemisphereLight("#b1c9db", "#101e2c", 0.5));
+     const key = new T.DirectionalLight("#d8ebf4", 2.2);
+     key.position.set(-35, 70, 40);
+     this.scene.add(key);
+@@ -306,231 +312,34 @@
+     });
+   }
+   private buildArchitecture() {
+-    this.researchScreen = new T.MeshBasicMaterial({ color: "#91b9c8" });
+-    this.materials.add(this.researchScreen);
+-    const silver = this.mat("#8197a7", 0.68, 0.28),
+-      graphite = this.mat("#122c40", 0.5, 0.32),
+-      floor = this.mat("#4f6573", 0.42, 0.38),
+-      white = this.mat("#c2d1d7", 0.3, 0.38),
+-      dark = this.mat("#071925", 0.3, 0.35),
+-      light = this.mat("#b3e0e6", 0.1, 0.45, true);
+-    const floorMesh = this.box(
+-      floor,
+-      [0, -0.25, 0],
+-      [56, 0.5, 82],
+-      this.inside,
+-      0.2,
+-      false,
+-    );
+-    floorMesh.name = "licensed-tile-floor";
+-    this.box(dark, [0, -1.3, -30], [700, 0.6, 700], this.city);
+-    for (let z = -260; z < 240; z += 60)
+-      this.box(graphite, [0, -0.95, z], [650, 0.05, 9], this.city);
+-    this.box(graphite, [0, 9.5, -37], [50, 19, 1.5], this.inside, 0.2);
+-    for (const x of [-23, 23])
+-      this.box(graphite, [x, 9.5, -8], [1, 19, 56], this.inside, 0.15);
+-    this.box(silver, [0, 1, -35.95], [48, 0.12, 0.1]);
+-    this.box(graphite, [0, -0.7, -4], [72, 0.8, 100], this.exterior, 0.4);
+-    // Monumental split arch: a sheltered civic atrium, research wings beneath.
+-    for (const z of [-30, -24])
+-      this.part(
+-        this.arch(50, 86, 6, 3),
+-        silver,
+-        [0, 0, z],
+-        undefined,
+-        undefined,
+-        this.exterior,
+-        false,
+-      );
+-    for (const side of [-1, 1]) {
+-      this.box(
+-        graphite,
+-        [side * 23, 25, -16],
+-        [10, 50, 32],
+-        this.exterior,
+-        0.7,
+-      );
+-      for (let y = 3; y < 52; y += 3.8) {
+-        this.box(silver, [side * 23, y, 1], [10, 0.12, 0.16], this.exterior);
+-        this.box(light, [side * 23, y, 1.1], [7, 0.035, 0.03], this.exterior);
+-      }
+-      // Occupied labs stacked around a genuine central void.
+-      for (const y of [0, 6.3, 12.6]) {
+-        this.box(
+-          white,
+-          [side * 20, y - 0.1, -8],
+-          [10, 0.35, 48],
+-          this.inside,
+-          0.1,
+-        );
+-        this.box(graphite, [side * 15, y + 0.4, -8], [0.18, 0.9, 48]);
+-        this.box(light, [side * 14.88, y + 0.89, -8], [0.035, 0.035, 46]);
+-        this.box(dark, [side * 22.3, y + 2, -8], [0.14, 3.8, 47]);
+-        for (let z = -26; z < 13; z += 9) {
+-          this.box(
+-            silver,
+-            [side * 18, y + 1.05, z],
+-            [3.4, 0.12, 1.5],
+-            this.inside,
+-            0.09,
+-          );
+-          this.box(
+-            dark,
+-            [side * 18, y + 1.62, z - 0.5],
+-            [2.3, 1.05, 0.09],
+-            this.inside,
+-            0.06,
+-          );
+-          this.box(
+-            this.researchScreen,
+-            [side * 18, y + 1.62, z - 0.44],
+-            [1.9, 0.6, 0.015],
+-          );
+-          this.box(graphite, [side * 18, y + 0.5, z], [0.35, 1, 0.8]);
+-        }
+-      }
+-      for (let z = -30; z <= 22; z += 13) {
+-        this.box(silver, [side * 24, 8, z], [0.25, 16, 0.4]);
+-      }
+-    }
+-    for (let z = -34; z <= 28; z += 10) {
+-      this.part(this.arch(48, 20, 0.27, 0.22), silver, [0, 0, z]);
+-      this.box(light, [0, 19.5, z], [28, 0.07, 0.12]);
+-    }
+-    const glazing = new T.MeshStandardMaterial({
+-      color: "#7cabbf",
+-      metalness: 0.45,
+-      roughness: 0.15,
+-      transparent: true,
+-      opacity: 0.16,
+-      depthWrite: false,
++    this.grand = buildGrandArchitecture({
++      inside: this.inside,
++      exterior: this.exterior,
++      city: this.city,
++      mat: this.mat.bind(this),
++      box: this.box.bind(this),
++      part: this.part.bind(this),
++      label: this.label.bind(this),
++      arch: this.arch.bind(this),
++      ownMaterial: (m) => this.materials.add(m),
++      ownGeometry: (g) => this.geometries.add(g),
+     });
+-    this.materials.add(glazing);
+-    for (const side of [-1, 1])
+-      this.box(glazing, [side * 24, 9, -5], [0.05, 18, 62]);
+-    for (const x of [-18, -9, 9, 18])
+-      this.box(silver, [x, 8, 28], [0.14, 16, 0.14]);
+-    this.box(glazing, [0, 10, 29], [48, 20, 0.04]);
+-    const roofPositions: number[] = [],
+-      roofUV: number[] = [],
+-      roofIndices: number[] = [];
+-    for (let j = 0; j <= 4; j++)
+-      for (let i = 0; i <= 28; i++) {
+-        const a = (i / 28) * Math.PI;
+-        roofPositions.push(Math.cos(a) * 24, Math.sin(a) * 20, -36 + j * 16);
+-        roofUV.push(i / 28, j / 4);
+-      }
+-    for (let j = 0; j < 4; j++)
+-      for (let i = 0; i < 28; i++) {
+-        const k = j * 29 + i;
+-        roofIndices.push(k, k + 29, k + 1, k + 1, k + 29, k + 30);
+-      }
+-    const roof = new T.BufferGeometry();
+-    roof.setAttribute(
+-      "position",
+-      new T.Float32BufferAttribute(roofPositions, 3),
+-    );
+-    roof.setAttribute("uv", new T.Float32BufferAttribute(roofUV, 2));
+-    roof.setIndex(roofIndices);
+-    roof.computeVertexNormals();
+-    const roofMat = glazing.clone();
+-    roofMat.side = T.DoubleSide;
+-    roofMat.opacity = 0.22;
+-    this.materials.add(roofMat);
+-    this.part(
+-      roof,
+-      roofMat,
+-      [0, 0, 0],
+-      undefined,
+-      undefined,
+-      this.inside,
+-      false,
+-    );
+-    // Open entrance permits an actual continuous camera move through the glass lobby.
+-    const brand = this.label(
+-      "A I O N",
+-      "RESEARCH HEADQUARTERS  /  2046",
+-      18,
+-      4.5,
+-    );
+-    brand.position.set(0, 21, 29.2);
+-    this.exterior.add(brand);
+-    const wall = this.label("AION", "GENERAL INTELLIGENCE / 2046", 11, 2.75);
+-    wall.position.set(0, 13, -35);
+-    this.inside.add(wall);
+-    const signage = this.label(
+-      "RESEARCH / 01",
+-      "SCIENCE    ·    HEALTH    ·    LEARNING",
+-      8,
+-      2,
+-    );
+-    signage.position.set(-18, 4, -32);
+-    this.inside.add(signage);
+-    signage.position.z = -36;
+-    // Soft local occlusion, an inexpensive authored decal shared by all workstations.
+-    const shadowCanvas = document.createElement("canvas");
+-    shadowCanvas.width = shadowCanvas.height = 128;
+-    const sx = shadowCanvas.getContext("2d")!,
+-      gradient = sx.createRadialGradient(64, 64, 5, 64, 64, 64);
+-    gradient.addColorStop(0, "#000000a0");
+-    gradient.addColorStop(1, "#00000000");
+-    sx.fillStyle = gradient;
+-    sx.fillRect(0, 0, 128, 128);
+-    const st = new T.CanvasTexture(shadowCanvas);
+-    this.textures.add(st);
+-    const sm = new T.MeshBasicMaterial({
+-      map: st,
+-      transparent: true,
+-      depthWrite: false,
+-      opacity: 0.6,
+-    });
+-    this.materials.add(sm);
+-    for (const side of [-1, 1])
+-      for (const y of [0, 6.3, 12.6])
+-        for (let z = -26; z < 13; z += 9)
+-          this.part(
+-            new T.PlaneGeometry(4, 3),
+-            sm,
+-            [side * 18, y + 0.09, z],
+-            undefined,
+-            [-Math.PI / 2, 0, 0],
+-          );
+-    this.part(new T.PlaneGeometry(17, 17), sm, [0, 0.04, -22], undefined, [
+-      -Math.PI / 2,
+-      0,
+-      0,
+-    ]);
+-    // Thin infrastructural light channels, recessed into the floor.
+-    for (const x of [-10, 10])
+-      this.box(light, [x, 0.025, 2], [0.035, 0.025, 55]);
+-    const staffMat = this.mat("#344956", 0.05, 0.9),
+-      heads = this.mat("#9b9285", 0, 0.9);
+-    // Recessed wall lights give scale and a physical source for the working light.
+-    for (const x of [-19, -10, 10, 19])
+-      this.box(light, [x, 9, -35.9], [0.08, 15, 0.08]);
+-    // Distant anonymous staff, kept below portrait scale; no named/founder character.
+-    for (let i = 0; i < 18; i++) {
+-      const side = i % 2 ? 1 : -1,
+-        y = Math.floor(i / 6) * 6.3,
+-        x = side * (17.5 + (i % 3) * 1.3),
+-        z = -24 + (i % 6) * 7;
+-      this.part(new T.CapsuleGeometry(0.16, 0.53, 2, 6), staffMat, [
+-        x,
+-        y + 1.02,
+-        z,
+-      ]);
+-      this.part(new T.SphereGeometry(0.12, 8, 6), heads, [x, y + 1.55, z]);
+-    }
+-    // Tram and road light instancing communicates a working city at very low draw cost.
+-    this.traffic = new T.InstancedMesh(
+-      new T.BoxGeometry(1.5, 0.15, 0.45),
+-      light,
+-      34,
+-    );
+-    this.geometries.add(this.traffic.geometry);
+-    this.city.add(this.traffic);
+-    for (const x of [-70, 70])
+-      this.box(graphite, [x, -0.4, 20], [8, 0.8, 280], this.city);
++    this.researchScreen = this.grand.screen;
++    this.traffic = this.grand.traffic;
++    const sky = document.createElement("canvas");
++    sky.width = 16;
++    sky.height = 512;
++    const c = sky.getContext("2d")!,
++      gradient = c.createLinearGradient(0, 0, 0, 512);
++    gradient.addColorStop(0, "#071522");
++    gradient.addColorStop(0.65, "#294c63");
++    gradient.addColorStop(1, "#6a8c9b");
++    c.fillStyle = gradient;
++    c.fillRect(0, 0, 16, 512);
++    const texture = new T.CanvasTexture(sky);
++    texture.colorSpace = T.SRGBColorSpace;
++    this.textures.add(texture);
++    this.scene.background = texture;
+   }
+   private buildCore() {
+     const silver = this.mat("#678899", 0.7, 0.25),
+@@ -663,14 +472,14 @@
+               if (v instanceof T.Texture) this.textures.add(v);
+             });
+           });
+-          const instances = new T.InstancedMesh(g, mesh.material, 24);
++          const instances = new T.InstancedMesh(g, mesh.material, 36);
+           const dummy = new T.Object3D();
+-          for (let i = 0; i < 24; i++) {
++          for (let i = 0; i < 36; i++) {
+             const side = i % 2 ? 1 : -1,
+-              ring = Math.floor(i / 8),
+-              x = side * (66 + (i % 4) * 34 + index * 9 + ring * 35),
+-              z = -130 + (Math.floor(i / 2) % 4) * 70 - ring * 40;
+-            const height = 24 + ((i * 17 + index * 13) % 65),
++              ring = Math.floor(i / 12),
++              x = side * (112 + index * 27 + ring * 75),
++              z = -430 + (Math.floor(i / 2) % 6) * 130 + index * 11;
++            const height = 28 + ((i * 17 + index * 13) % 80),
+               scale = height / Math.max(size.y, 0.1);
+             dummy.position.set(x, 0, z);
+             dummy.scale.set(scale, scale, scale);
+@@ -812,140 +621,113 @@
+     this.fallback?.setInvestigation(found, selected);
+   }
+   private drawTerminal(beat: ChapterBeat, time: number) {
+-    const idle = beat === "OPENING_CINEMATIC" && time < 26;
+-    const key = JSON.stringify([beat, this.found, this.selected, idle]);
++    const idle = beat === "OPENING_CINEMATIC" && time < 42;
++    const portrait = this.w / this.h < 0.85;
++    const key = JSON.stringify([
++      beat,
++      this.found,
++      this.selected,
++      idle,
++      portrait,
++    ]);
+     if (key === this.terminalKey || !this.terminalTexture) return;
+     this.terminalKey = key;
+-    if (this.w / this.h < 0.85) {
+-      this.terminalCanvas.width = 720;
+-      this.terminalCanvas.height = 1024;
+-      const x = this.terminalCanvas.getContext("2d")!;
+-      x.fillStyle = "#091b2b";
+-      x.fillRect(0, 0, 720, 1024);
+-      x.strokeStyle = "#648995";
+-      x.strokeRect(20, 20, 680, 984);
+-      x.fillStyle = "#9abcc8";
+-      x.font = "24px Arial";
+-      x.fillText("AION / ĐỐI CHIẾU TƯ LIỆU", 48, 75);
+-      let y = 145;
+-      const wrap = (text: string, size: number, color: string) => {
+-        x.font = `${size}px Arial`;
+-        x.fillStyle = color;
+-        let line = "";
+-        for (const word of text.split(" ")) {
+-          if (x.measureText(line + word).width > 620) {
+-            x.fillText(line.trim(), 48, y);
+-            y += size * 1.4;
+-            line = "";
+-          }
+-          line += word + " ";
++    const w = portrait ? 720 : 1280,
++      h = portrait ? 1024 : 640;
++    this.terminalCanvas.width = w;
++    this.terminalCanvas.height = h;
++    const x = this.terminalCanvas.getContext("2d")!;
++    x.fillStyle = "#071522";
++    x.fillRect(0, 0, w, h);
++    x.strokeStyle = "#658493";
++    x.lineWidth = 2;
++    x.strokeRect(18, 18, w - 36, h - 36);
++    const left = portrait ? 46 : 65;
++    let y = portrait ? 72 : 65;
++    const write = (
++      text: string,
++      size: number,
++      color = "#c9dce2",
++      gap = 1.4,
++    ) => {
++      x.fillStyle = color;
++      x.font = `${size}px Arial`;
++      let line = "";
++      for (const word of text.split(" ")) {
++        if (x.measureText(line + word).width > w - left * 2) {
++          x.fillText(line.trim(), left, y);
++          y += size * gap;
++          line = "";
+         }
+-        if (line) {
+-          x.fillText(line.trim(), 48, y);
+-          y += size * 1.4;
+-        }
+-      };
+-      wrap(
+-        idle ? "AION / RESEARCH FABRIC" : "2026 — HỒ SƠ CHƯA KHÉP LẠI",
+-        42,
+-        "#e8c592",
++        line += word + " ";
++      }
++      if (line) {
++        x.fillText(line.trim(), left, y);
++        y += size * gap;
++      }
++    };
++    write(
++      idle ? "AION NEXUS / LIVE RESEARCH" : "AION CORE / HISTORICAL ANALYSIS",
++      portrait ? 22 : 21,
++      "#89b3c4",
++    );
++    y += portrait ? 35 : 12;
++    write(
++      idle ? "A CONTINUOUS FRONTIER" : "THE UNEXPLAINED VARIABLE",
++      portrait ? 38 : 44,
++      idle ? "#dcebef" : "#e7c496",
++    );
++    if (idle) {
++      y += 35;
++      write("Khám phá những giới hạn chưa được biết đến.", portrait ? 31 : 29);
++      write(
++        "Mô phỏng · kiểm chứng · mở ra khả năng mới.",
++        portrait ? 28 : 26,
++        "#8eb3c5",
+       );
+-      y += 35;
+-      if (idle) wrap("Khoa học / Y tế / Giáo dục", 34, "#c5dce4");
+-      else if (this.selected) {
+-        wrap(channels[this.selected].title, 32, "#a7d4df");
+-        y += 20;
+-        for (const line of channels[this.selected].lines) {
+-          wrap(line, 34, "#d9e5e8");
+-          y += 15;
+-        }
+-      } else {
+-        wrap("Một dự đoán. Một phần câu chuyện còn thiếu.", 36, "#d9e5e8");
+-        y += 25;
+-        wrap("Chạm hai đường dữ liệu để đối chiếu.", 32, "#94bacb");
+-      }
+-      x.font = "25px Arial";
+-      x.fillStyle = "#acd1d9";
+-      x.fillText(
+-        (this.found.includes("source") ? "✓ " : "○ ") + "NGUỒN",
+-        48,
+-        870,
++    } else {
++      y += portrait ? 24 : 9;
++      write(
++        this.selected ? channels[this.selected].title : "UNRESOLVED / 2026",
++        portrait ? 29 : 25,
++        "#aad4df",
+       );
+-      x.fillText(
+-        (this.found.includes("limit") ? "✓ " : "○ ") + "GIỚI HẠN",
+-        385,
+-        870,
+-      );
++      y += portrait ? 18 : 8;
++      const lines = this.selected
++        ? channels[this.selected].lines
++        : [
++            "YEAR: 2026",
++            "ORIGINAL RESULT: NOT RECOMMENDED",
++            "LATER OUTCOME: CONTRADICTS FORECAST",
++            "CAUSAL EXPLANATION: INCOMPLETE",
++          ];
++      for (const line of lines) {
++        write(line, portrait ? 30 : 27);
++        y += portrait ? 12 : 5;
++      }
++    }
++    if (!idle) {
++      const foot = portrait ? 875 : 518;
++      for (const [i, ch] of (["source", "limit"] as Channel[]).entries()) {
++        const xx = left + i * (portrait ? 330 : 600);
++        x.fillStyle = this.found.includes(ch) ? "#b2dcd2" : "#7e9fad";
++        x.font = `${portrait ? 22 : 24}px Arial`;
++        x.fillText(
++          (this.found.includes(ch) ? "✓ " : "○ ") +
++            (ch === "source" ? "DỰ ĐOÁN" : "KẾT QUẢ VỀ SAU"),
++          xx,
++          foot,
++        );
++      }
+       if (this.found.length === 2) {
+-        x.fillStyle = "#e8c592";
+-        x.font = "25px Arial";
+-        x.fillText("ĐÃ ĐỐI CHIẾU · MỞ TƯ LIỆU", 48, 970);
+-      }
+-      this.terminalTexture.needsUpdate = true;
+-      return;
+-    }
+-    this.terminalCanvas.width = 1280;
+-    this.terminalCanvas.height = 640;
+-    const x = this.terminalCanvas.getContext("2d")!;
+-    x.fillStyle = "#091b2b";
+-    x.fillRect(0, 0, 1280, 640);
+-    x.strokeStyle = "#5d8595";
+-    x.lineWidth = 2;
+-    x.strokeRect(18, 18, 1244, 604);
+-    x.textAlign = "left";
+-    x.fillStyle = "#9abcc8";
+-    x.font = "22px Arial";
+-    x.fillText("AION / ĐỐI CHIẾU TƯ LIỆU", 65, 75);
+-    if (idle) {
+-      x.fillStyle = "#c5dce4";
+-      x.font = "bold 46px Arial";
+-      x.fillText("AION / RESEARCH FABRIC", 65, 180);
+-      x.font = "30px Arial";
+-      x.fillText("Khoa học  /  Y tế  /  Giáo dục", 65, 280);
+-      x.fillStyle = "#86b5c9";
+-      x.font = "26px Arial";
+-      x.fillText("Các mô phỏng đang được đối chiếu.", 65, 380);
+-      this.terminalTexture.needsUpdate = true;
+-      return;
+-    }
+-    x.fillStyle = "#e8c592";
+-    x.font = "bold 46px Arial";
+-    x.fillText("2026 — HỒ SƠ CHƯA KHÉP LẠI", 65, 148);
+-    if (this.selected) {
+-      const ch = channels[this.selected];
+-      x.font = "bold 30px Arial";
+-      x.fillStyle = "#dbe8e9";
+-      x.fillText(ch.title, 65, 225);
+-      x.font = "27px Arial";
+-      ch.lines.forEach((l, i) => x.fillText(l, 65, 295 + i * 49));
+-    } else {
+-      x.font = "30px Arial";
+-      x.fillStyle = "#d0dde0";
+-      x.fillText("Một dự đoán. Một phần câu chuyện còn thiếu.", 65, 247);
+-      x.font = "27px Arial";
+-      x.fillStyle = "#9ec3cf";
+-      x.fillText("Chạm hai đường dữ liệu để đối chiếu.", 65, 312);
+-    }
+-    for (const [i, ch] of (["source", "limit"] as Channel[]).entries()) {
+-      const xx = 65 + i * 600;
+-      x.strokeStyle = this.found.includes(ch) ? "#9ce2d8" : "#658799";
+-      x.beginPath();
+-      x.moveTo(xx, 470);
+-      x.lineTo(xx + 510, 470);
+-      x.stroke();
+-      x.fillStyle = this.found.includes(ch) ? "#b4dfd6" : "#91adba";
+-      x.font = "24px Arial";
+-      x.fillText(
+-        (this.found.includes(ch) ? "✓ " : "○ ") +
+-          (ch === "source" ? "NGUỒN DỮ LIỆU" : "GIỚI HẠN DỰ BÁO"),
+-        xx,
+-        518,
+-      );
+-    }
+-    if (this.found.length === 2) {
+-      x.fillStyle = "#e7c58c";
+-      x.font = "bold 25px Arial";
+-      x.fillText("ĐÃ ĐỐI CHIẾU · MỞ TƯ LIỆU GỐC", 65, 590);
++        x.fillStyle = "#e6c492";
++        x.font = `${portrait ? 23 : 25}px Arial`;
++        x.fillText(
++          "KHOẢNG TRỐNG / TRỞ VỀ TƯ LIỆU GỐC",
++          left,
++          portrait ? 970 : 590,
++        );
++      }
+     }
+     this.terminalTexture.needsUpdate = true;
+   }
+@@ -970,9 +752,9 @@
+     }
+     c.fillStyle = "#b7d6e0";
+     c.font = "22px Arial";
+-    c.fillText("AION / RESEARCH FABRIC", 55, 55);
++    c.fillText("AION NEXUS / PROBLEM SPACE", 55, 55);
+     c.font = "18px Arial";
+-    c.fillText("KHOA HỌC     /     Y TẾ     /     GIÁO DỤC", 55, 465);
++    c.fillText("EXPLORE     /     SIMULATE     /     VERIFY", 55, 465);
+     this.coreTexture.needsUpdate = true;
+   }
+   render(
+@@ -997,7 +779,7 @@
+     let eye: Vec = [4, 3.2, -10],
+       at: Vec = [0, 4, -21];
+     if (beat === "OPENING_CINEMATIC") {
+-      const time = reduced ? (t < 11 ? 6 : t < 21 ? 17 : 28) : t;
++      const time = reduced ? (t < 12 ? 7 : t < 27 ? 21 : t < 42 ? 35 : 50) : t;
+       let i = cameraKeys.findIndex((k) => k.t > time);
+       if (i < 0) i = cameraKeys.length - 1;
+       i = Math.max(1, i);
+@@ -1010,8 +792,8 @@
+       eye = [0, 2.9, beat === "MEMORY_TRANSITION" ? -13.8 : -11.2];
+       at = [0, 2.55, -15.6];
+     } else if (this.view === "atrium") {
+-      eye = [-7, 4.5, -1];
+-      at = [-19, 8.1, -14];
++      eye = [-15, 14, 24];
++      at = [-29, 20, -30];
+     }
+     const blend = this.first || reduced ? 1 : 1 - Math.exp(-dt * 2.4);
+     this.first = false;
+@@ -1054,9 +836,9 @@
+     this.loom.instanceMatrix.needsUpdate = true;
+     for (let i = 0; i < 34; i++) {
+       d.position.set(
+-        i % 2 ? 70 : -70,
++        i % 2 ? 108 : -108,
+         0.2,
+-        ((i * 13 + (reduced ? 0 : elapsed * 6)) % 280) - 140,
++        ((i * 29 + (reduced ? 0 : elapsed * 12)) % 700) - 350,
+       );
+       d.rotation.set(0, 0, 0);
+       d.updateMatrix();
+@@ -1065,12 +847,43 @@
+     this.traffic.instanceMatrix.needsUpdate = true;
+     this.glyph.visible =
+       beat === "PLAYER_CONTROL_ENABLED" ||
+-      (beat === "OPENING_CINEMATIC" && t >= 26);
++      (beat === "OPENING_CINEMATIC" && t >= 42);
+     (this.glyph.material as T.MeshStandardMaterial).emissiveIntensity = this
+       .signal.focused
+       ? 1.6
+       : 0.8;
+     this.glyph.scale.setScalar(reduced ? 1 : 1 + Math.sin(elapsed * 2) * 0.08);
++    for (let i = 0; i < 144; i++) {
++      const row = Math.floor(i / 6),
++        col = i % 6,
++        angle =
++          (col * Math.PI) / 3 + row * 0.075 + (reduced ? 0 : elapsed * 0.035),
++        radius = 5.8 + Math.sin(row * 0.23) * 1.7;
++      d.position.set(
++        Math.cos(angle) * radius,
++        3.6 + row * 1.13,
++        Math.sin(angle) * radius,
++      );
++      d.rotation.set(
++        0,
++        angle +
++          (this.selected === "source"
++            ? -0.12
++            : this.selected === "limit"
++              ? 0.12
++              : 0),
++        0,
++      );
++      d.updateMatrix();
++      this.grand.leaves.setMatrixAt(i, d.matrix);
++    }
++    this.grand.leaves.instanceMatrix.needsUpdate = true;
++    this.grand.lift.position.y = reduced
++      ? 16
++      : 16 + Math.sin(elapsed * 0.12) * 15;
++    this.grand.statuses.forEach((node, i) => {
++      node.visible = beat !== "OPENING_CINEMATIC" || t >= 27 + i * 1.7;
++    });
+     this.drawTerminal(beat, t);
+     this.drawCore(elapsed, reduced);
+     this.renderer.render(this.scene, this.camera);
+@@ -1086,7 +899,7 @@
+       source: project([portrait ? -0.62 : -1.2, portrait ? 2 : 1.8, -15.5]),
+       limit: project([portrait ? 0.62 : 1.2, portrait ? 2 : 1.8, -15.5]),
+       open: project([0, portrait ? 1.25 : 1.2, -15.5]),
+-      research: project([-16, 5, -15]),
++      research: project([-28, 12, 3]),
+     };
+     this.lastBeat = beat;
+   }
+@@ -1114,6 +927,18 @@
+       this.fallback?.snapshot() ?? {
+         renderer: "aion-future-webgl",
+         place: this.phase,
++        landmark: "aion-citadel-v2",
++        historicalAnalysis:
++          this.phase === "anomaly"
++            ? {
++                year: 2026,
++                original: "NOT RECOMMENDED",
++                later: "CONTRADICTS FORECAST",
++                causal: "INCOMPLETE",
++              }
++            : null,
++        nexusLeaves: 144,
++        atriumLevels: 5,
+         view: this.view,
+         camera: this.camera.position.toArray(),
+         signal: this.signal,

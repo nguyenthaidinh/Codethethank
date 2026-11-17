@@ -1,0 +1,32 @@
+[
+  {
+    "style": "normal",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notoserif/NotoSerif%5Bwdth%2Cwght%5D.ttf",
+    "sourceSHA256": "4d8e6761424656867019081a1a01336f3cb086982682698714054fc33f782713",
+    "output": "public\\fonts\\lesson-serif-vi-normal.woff2",
+    "bytes": 46452,
+    "sha256": "b8bf796c118268d621e15744d4567ca6fe2f808d3a0853393bdcdde20ee286fa",
+    "vietnameseCoverageChecked": true,
+    "markPositioningPreserved": true
+  },
+  {
+    "style": "bold",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notoserif/NotoSerif%5Bwdth%2Cwght%5D.ttf",
+    "sourceSHA256": "4d8e6761424656867019081a1a01336f3cb086982682698714054fc33f782713",
+    "output": "public\\fonts\\lesson-serif-vi-bold.woff2",
+    "bytes": 49728,
+    "sha256": "d09afa7b9bdf33e011adb30af8a08575c910498d57b78ae4b304b408038b0103",
+    "vietnameseCoverageChecked": true,
+    "markPositioningPreserved": true
+  },
+  {
+    "style": "italic",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notoserif/NotoSerif-Italic%5Bwdth%2Cwght%5D.ttf",
+    "sourceSHA256": "e87acbc6c0efd0d9a20d6a8cbbda2b266c14be3a3a6f5af8ec9d7b2460570ad1",
+    "output": "public\\fonts\\lesson-serif-vi-italic.woff2",
+    "bytes": 50580,
+    "sha256": "e33fb0782d5b553690141d3c638c738b860b2fed4f963b0fe2dee1a3c695e887",
+    "vietnameseCoverageChecked": true,
+    "markPositioningPreserved": true
+  }
+]

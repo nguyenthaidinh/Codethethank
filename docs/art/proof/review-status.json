@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "images": 17,
+  "videoDuration": 53.195,
+  "seekSeconds": 25,
+  "desktop": [
+    1366,
+    900
+  ],
+  "mobile": [
+    390,
+    844
+  ],
+  "errors": [],
+  "updated": "2026-11-16T13:31:52.554Z"
+}

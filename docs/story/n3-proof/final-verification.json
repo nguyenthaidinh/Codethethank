@@ -1,0 +1,29 @@
+{
+  "unit": 53,
+  "uniqueE2E": {
+    "Full game from real menu to completed gratitude ending without checkpoints": true,
+    "Ripple end-to-end desktop audio match cut and recording": true,
+    "Ripple end-to-end mobile WebGL touch reduced resume": true,
+    "Ripple end-to-end fallback touch muted reduced resume": true,
+    "Ripple resumes claimed chair audio without replay and finishes by keyboard": true
+  },
+  "firstRun": {
+    "startTime": "2026-11-17T08:11:57.395Z",
+    "duration": 879052.257,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  },
+  "desktopRecheck": {
+    "startTime": "2026-11-17T08:26:40.542Z",
+    "duration": 112603.56300000001,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "productionBuildUnchanged": true,
+  "unchangedSourceFiles": 75,
+  "note": "Initial desktop recording run timed out after reaching the ending, with interrupted trace ZIP. Lower recording load/base64 export and 300s artifact budget; all gameplay assertions/deadlines retained. Desktop recheck passed."
+}

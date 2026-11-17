@@ -1,0 +1,38 @@
+{
+  "georgia": {
+    "fonts": [
+      {
+        "familyName": "Times New Roman",
+        "postScriptName": "TimesNewRomanPSMT",
+        "isCustomFont": false,
+        "glyphCount": 4
+      },
+      {
+        "familyName": "Georgia",
+        "postScriptName": "Georgia",
+        "isCustomFont": false,
+        "glyphCount": 64
+      }
+    ]
+  },
+  "times": {
+    "fonts": [
+      {
+        "familyName": "Times New Roman",
+        "postScriptName": "TimesNewRomanPSMT",
+        "isCustomFont": false,
+        "glyphCount": 62
+      }
+    ]
+  },
+  "arial": {
+    "fonts": [
+      {
+        "familyName": "Arial",
+        "postScriptName": "ArialMT",
+        "isCustomFont": false,
+        "glyphCount": 62
+      }
+    ]
+  }
+}

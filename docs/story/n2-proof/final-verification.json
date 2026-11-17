@@ -1,0 +1,30 @@
+{
+  "unit": 50,
+  "e2e": {
+    "startTime": "2026-11-17T07:50:01.025Z",
+    "duration": 479016.32700000005,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "openingVoice": {
+    "startTime": "2026-11-17T07:58:01.618Z",
+    "duration": 83977.752,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "buildUnchangedDuringTests": true,
+  "source": {
+    "changed": [
+      "src/future/direction.ts",
+      "src/future/FutureFallback.ts",
+      "src/future/FutureWorld.ts",
+      "src/future/terminalStyle.ts"
+    ],
+    "unchangedCount": 74,
+    "narratorLinesPreserved": 7
+  }
+}

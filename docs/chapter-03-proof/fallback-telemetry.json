@@ -1,0 +1,110 @@
+{
+  "beat": "NEXT_SCENE_READY",
+  "time": 0.08340000000000146,
+  "evidence": [
+    "clock",
+    "notebook",
+    "laptop"
+  ],
+  "verdict": {
+    "version": 1,
+    "phase": "chapter02",
+    "found": [
+      "presentation",
+      "notes",
+      "data"
+    ],
+    "selected": "an",
+    "tested": [
+      "mai",
+      "an"
+    ],
+    "linked": [
+      "presentation",
+      "notes"
+    ],
+    "carried": null,
+    "stayed": {
+      "version": 1,
+      "phase": "next",
+      "line": 0,
+      "read": [
+        "outcome",
+        "support"
+      ],
+      "page": "support",
+      "written": true,
+      "seen": [],
+      "nextInspected": true
+    },
+    "ripple": {
+      "version": 1,
+      "phase": "finale",
+      "questions": [
+        "prediction",
+        "opportunity"
+      ],
+      "milestones": 3,
+      "memories": [
+        "evaluation",
+        "stayed",
+        "design"
+      ],
+      "selected": "design",
+      "elapsed": 0,
+      "played": [
+        "reveal.music",
+        "echo.chair",
+        "chair.chair"
+      ]
+    }
+  },
+  "stayed": {
+    "version": 1,
+    "phase": "next",
+    "line": 0,
+    "read": [
+      "outcome",
+      "support"
+    ],
+    "page": "support",
+    "written": true,
+    "seen": [],
+    "nextInspected": true
+  },
+  "ripple": {
+    "version": 1,
+    "phase": "finale",
+    "questions": [
+      "prediction",
+      "opportunity"
+    ],
+    "milestones": 3,
+    "memories": [
+      "evaluation",
+      "stayed",
+      "design"
+    ],
+    "selected": "design",
+    "elapsed": 0,
+    "played": [
+      "reveal.music",
+      "echo.chair",
+      "chair.chair"
+    ]
+  },
+  "finale": null,
+  "followedDoor": false,
+  "world": {
+    "era": 2046,
+    "chair": [
+      1.1,
+      0,
+      0.25
+    ],
+    "focus": "finale",
+    "drawCalls": 1
+  },
+  "audio": null,
+  "errors": []
+}

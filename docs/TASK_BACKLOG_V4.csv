@@ -1,0 +1,23 @@
+﻿Task ID,Gate,Priority,Task,Dependency,Evidence of done
+AUD-01,G0,P0,Audit repo & baseline tests,None,Reproducible report
+AUD-02,G0,P0,Checkpoint & save compatibility audit,AUD-01,Save matrix
+FIN-01,G1,P0,FINALE_READY entry,AUD-02,Playable transition
+FIN-02,G1,P0,Last memory + AION final dialogue,FIN-01,Camera + subtitles
+FIN-03,G1,P0,Letter input IME and private default,FIN-02,"Unicode, privacy E2E"
+FIN-04,G1,P0,Ink to star and fallback,FIN-03,Runtime gameplay proof
+FIN-05,G1,P0,Galaxy credits replay and completed save,FIN-04,Full game E2E
+ART-01,G2,P1,Art Bible and scene palette,FIN-05,Approved Art Bible
+ART-02,G2,P1,Asset source/license registry,ART-01,Asset register
+ART-03,G2,P1,Classroom 17:05 hero vertical slice,ART-02,Real-runtime visual approval
+CHR-01,G3,P1,Character bible and acting plan,ART-01,Consistent age and silhouette
+CHR-02,G3,P1,Chair animation camera match cut,CHR-01,Side by side video
+CAM-01,G3,P1,Cinematic camera shotlist pass,ART-03,Camera QA
+SND-01,G4,P1,Sound Bible and cue audit,AUD-01,Cue map and bus tests
+SND-02,G4,P1,Foley rain chair paper mix,SND-01,A/B mix review
+PLAY-01,G5,P1,Interaction affordance and hints,FIN-05,Novice usability test
+PLAY-02,G5,P1,Evaluation clarity and pacing,PLAY-01,Comprehension results
+QA-01,G6,P0,Full-story regression and E2E,FIN-05,All critical tests pass
+QA-02,G7,P1,Real-device Safari Android testing,QA-01,Device matrix
+PERF-01,G7,P1,GPU and memory profiling,QA-01,Before/after benchmarks
+REL-01,G8,P1,Release build licenses credits notes,QA-02,Signed release candidate
+COM-01,P2,P2,Moderated public galaxy optional,FIN-05,Opt-in+moderation E2E

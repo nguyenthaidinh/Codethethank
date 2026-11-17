@@ -1,0 +1,18 @@
+﻿{
+    "current":  "complete",
+    "exitCode":  0,
+    "completed":  [
+                      "typecheck",
+                      "lint",
+                      "unit",
+                      "build",
+                      "gameplay",
+                      "menu"
+                  ],
+    "updated":  "2026-11-16T16:52:57.9937116+07:00",
+    "phase":  "After",
+    "status":  "passed",
+    "initialMenuFailure":  true,
+    "menuRetestLog":  "menu-retest.log",
+    "initialMenuFailureLog":  "menu-initial-failure.log"
+}

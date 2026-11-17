@@ -1,0 +1,1494 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\Dự Án NTD\\Codethethank\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config=playwright.g2f.config.ts",
+      "--reporter=list,json"
+    ],
+    "configFile": "F:\\Dự Án NTD\\Codethethank\\playwright.g2f.config.ts",
+    "rootDir": "F:/Dự Án NTD/Codethethank/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "F:/Dự Án NTD/Codethethank/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "F:/Dự Án NTD/Codethethank/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "cinematic*.spec.ts"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "F:\\Dự Án NTD\\Codethethank\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e",
+        "snapshotDir": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "cinematic*.spec.ts",
+        "timeout": 90000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4173",
+          "headless": true,
+          "trace": "retain-on-failure",
+          "launchOptions": {
+            "args": [
+              "--use-angle=d3d11"
+            ]
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run preview -- --port 4173",
+      "url": "http://127.0.0.1:4173",
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "cinematic-chapter.spec.ts",
+      "file": "cinematic-chapter.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Chapter 00: 360px no WebGL, audio or storage still reaches next scene",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 27741,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T01:14:08.084Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2ecf38696f64940e908b-a7aa8c9c14f3900ec2a1",
+          "file": "cinematic-chapter.spec.ts",
+          "line": 11,
+          "column": 1
+        },
+        {
+          "title": "Chapter 00: real menu start, 30s cinema, signal, transition, six props, then Chapter 01",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 79340,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T01:14:36.081Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2ecf38696f64940e908b-e499a1a7aadd9a38178c",
+          "file": "cinematic-chapter.spec.ts",
+          "line": 83,
+          "column": 1
+        },
+        {
+          "title": "Chapter 00 mobile: skip, tap, reduced motion, checkpoint Continue without replay",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 35341,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T01:15:55.470Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2ecf38696f64940e908b-ff483974c1c77c599121",
+          "file": "cinematic-chapter.spec.ts",
+          "line": 162,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "cinematic-finale.spec.ts",
+      "file": "cinematic-finale.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Final Act desktop private letter IME resume galaxy menu replay",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 66807,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T01:16:31.284Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ba310fdd6971eb9ad298-722924e47c996a1d1da7",
+          "file": "cinematic-finale.spec.ts",
+          "line": 47,
+          "column": 3
+        },
+        {
+          "title": "Final Act mobile fallback skip offline",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 57235,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T01:17:38.135Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ba310fdd6971eb9ad298-a44656ece739c9ab46f8",
+          "file": "cinematic-finale.spec.ts",
+          "line": 47,
+          "column": 3
+        },
+        {
+          "title": "Final Act 360px: unavailable storage/audio keeps private letter playable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 23222,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T01:18:35.707Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ba310fdd6971eb9ad298-729ef615fce20b609e79",
+          "file": "cinematic-finale.spec.ts",
+          "line": 214,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "cinematic-fullgame.spec.ts",
+      "file": "cinematic-fullgame.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Full game from real menu to completed gratitude ending without checkpoints",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 600000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 307724,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T01:18:59.023Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "50fab786e16bdffa4c41-10c91bb45fbc56061c4e",
+          "file": "cinematic-fullgame.spec.ts",
+          "line": 4,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "cinematic-future.spec.ts",
+      "file": "cinematic-future.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "G2F city, occupied headquarters, reactive core, inspection resume and unchanged room",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 64076,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T01:24:06.938Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "89a088180982348e5e4d-3e7f4b2dc4c36541e2d7",
+          "file": "cinematic-future.spec.ts",
+          "line": 11,
+          "column": 1
+        },
+        {
+          "title": "G2F touch, reduced motion and muted play keep inspection usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 29062,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T01:25:11.108Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "89a088180982348e5e4d-728588b0279d986a1434",
+          "file": "cinematic-future.spec.ts",
+          "line": 76,
+          "column": 1
+        },
+        {
+          "title": "G2F missing city assets and lost WebGL retain a playable Canvas path",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 29248,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T01:25:40.332Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "89a088180982348e5e4d-42b08abdae439ba7a92d",
+          "file": "cinematic-future.spec.ts",
+          "line": 122,
+          "column": 1
+        },
+        {
+          "title": "G2F later checkpoints request no future world module or environment assets",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 22877,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T01:26:09.654Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "89a088180982348e5e4d-35ebdff8bac8e0eee144",
+          "file": "cinematic-future.spec.ts",
+          "line": 157,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "cinematic-g2-art.spec.ts",
+      "file": "cinematic-g2-art.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "G2 hero real menu, rain, verdict, teacher, chair and notebook",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 260000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 152653,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T01:26:32.728Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a5c3a977a62c88c66a5c-7acb0d20aab106b95199",
+          "file": "cinematic-g2-art.spec.ts",
+          "line": 23,
+          "column": 1
+        },
+        {
+          "title": "G2 hero mobile touch reduced mute resume",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 260000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 34064,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T01:29:05.434Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a5c3a977a62c88c66a5c-a6eef6cda2fcf05f265e",
+          "file": "cinematic-g2-art.spec.ts",
+          "line": 234,
+          "column": 3
+        },
+        {
+          "title": "G2 hero fallback keyboard",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 260000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 33870,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T01:29:39.565Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a5c3a977a62c88c66a5c-7d4e57f486b3b05f066a",
+          "file": "cinematic-g2-art.spec.ts",
+          "line": 234,
+          "column": 3
+        },
+        {
+          "title": "G2 hero narrative direction uses the same playable classroom",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 260000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "Art comparison is implemented after the source baseline is frozen",
+                  "location": {
+                    "file": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-g2-art.spec.ts",
+                    "line": 327,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 138,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T01:30:13.679Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "Art comparison is implemented after the source baseline is frozen",
+                      "location": {
+                        "file": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-g2-art.spec.ts",
+                        "line": 327,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "a5c3a977a62c88c66a5c-0d8609efc62d3cd11005",
+          "file": "cinematic-g2-art.spec.ts",
+          "line": 324,
+          "column": 1
+        },
+        {
+          "title": "G2 hero renderer budget and shader diagnostics",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 260000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "New renderer measurement after preserved baseline",
+                  "location": {
+                    "file": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-g2-art.spec.ts",
+                    "line": 369,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 115,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T01:30:13.851Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "New renderer measurement after preserved baseline",
+                      "location": {
+                        "file": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-g2-art.spec.ts",
+                        "line": 369,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "a5c3a977a62c88c66a5c-f06bad1f8b840996b1cb",
+          "file": "cinematic-g2-art.spec.ts",
+          "line": 368,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "cinematic-input.spec.ts",
+      "file": "cinematic-input.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "restored profile supports desktop drag, keyboard controls and offline completion",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 23373,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T01:30:14.021Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "144c9df739df34ec4205-a1f4571799dd30e9bf17",
+          "file": "cinematic-input.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "cinematic-mobile.spec.ts",
+      "file": "cinematic-mobile.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "mobile 390: tap full slice, muted reduced motion, pause and save/resume",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 63974,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T01:30:37.457Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d0ef491ae83c9af99ea5-8c2c38abb94d2fc3fdd8",
+          "file": "cinematic-mobile.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "360: failed audio and storage, keyboard pause, GPU fallback is playable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 38266,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T01:31:41.470Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d0ef491ae83c9af99ea5-aa7034c737b8dc2f768a",
+          "file": "cinematic-mobile.spec.ts",
+          "line": 73,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "cinematic-ripple.spec.ts",
+      "file": "cinematic-ripple.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Ripple end-to-end desktop audio match cut and recording",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 159179,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T01:32:19.906Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1e7a57c5f6c16692c131-97c9336674872159445d",
+          "file": "cinematic-ripple.spec.ts",
+          "line": 39,
+          "column": 3
+        },
+        {
+          "title": "Ripple end-to-end mobile WebGL touch reduced resume",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 104583,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T01:34:59.161Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1e7a57c5f6c16692c131-038b6b05e2f16ee72671",
+          "file": "cinematic-ripple.spec.ts",
+          "line": 39,
+          "column": 3
+        },
+        {
+          "title": "Ripple end-to-end fallback touch muted reduced resume",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 100708,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T01:36:43.800Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1e7a57c5f6c16692c131-d2d51925cbc9bf39487a",
+          "file": "cinematic-ripple.spec.ts",
+          "line": 39,
+          "column": 3
+        },
+        {
+          "title": "Ripple resumes claimed chair audio without replay and finishes by keyboard",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 20188,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "LAYOUT { vw: \u001b[33m390\u001b[39m, scroll: \u001b[33m390\u001b[39m, offenders: [] }\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T01:38:25.217Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1e7a57c5f6c16692c131-4fc461ad29fc9454c71e",
+          "file": "cinematic-ripple.spec.ts",
+          "line": 263,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "cinematic-stayed-fallback.spec.ts",
+      "file": "cinematic-stayed-fallback.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Chapter 02 keyboard and Canvas fallback restore both pages and finish",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 16110,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T01:38:45.513Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "16625383b6df133b5aa1-f6d0dede60fda3d339a0",
+          "file": "cinematic-stayed-fallback.spec.ts",
+          "line": 5,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "cinematic-stayed.spec.ts",
+      "file": "cinematic-stayed.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Chapter 02 complete desktop audio choreography",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 140000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 80435,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T01:39:01.697Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "91a4d968bc6d784f72b2-07ccfc4f3d308379fe14",
+          "file": "cinematic-stayed.spec.ts",
+          "line": 27,
+          "column": 3
+        },
+        {
+          "title": "Chapter 02 complete mobile silent reduced resume",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 140000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 77620,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T01:40:22.171Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "91a4d968bc6d784f72b2-9fd20a17c7ba930b5994",
+          "file": "cinematic-stayed.spec.ts",
+          "line": 27,
+          "column": 3
+        }
+      ]
+    },
+    {
+      "title": "cinematic-typography.spec.ts",
+      "file": "cinematic-typography.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Vietnamese tones use one complete font in regular bold italic and Canvas",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 532,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T01:41:39.852Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8ebd22d0297728d6b1ea-0816f498ed63a27a269a",
+          "file": "cinematic-typography.spec.ts",
+          "line": 25,
+          "column": 1
+        },
+        {
+          "title": "Vietnamese real notebook and subtitles desktop",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4343,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T01:41:40.408Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8ebd22d0297728d6b1ea-68eb96f34242e2dcfd06",
+          "file": "cinematic-typography.spec.ts",
+          "line": 91,
+          "column": 3
+        },
+        {
+          "title": "Vietnamese real notebook and subtitles mobile touch",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3862,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T01:41:44.773Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8ebd22d0297728d6b1ea-ea39951528d51be9e2ab",
+          "file": "cinematic-typography.spec.ts",
+          "line": 91,
+          "column": 3
+        },
+        {
+          "title": "Unavailable bundled fonts keep Vietnamese readable and the menu playable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 347,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T01:41:48.669Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8ebd22d0297728d6b1ea-3bec71d11f52c96faf97",
+          "file": "cinematic-typography.spec.ts",
+          "line": 183,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "cinematic-v4.spec.ts",
+      "file": "cinematic-v4.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "V4 Finale focus and mid-transform resume keyboard-only WebGL",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 64627,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T01:41:49.084Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e57432f96a10de4cb733-f75fd44e718affe1d5cd",
+          "file": "cinematic-v4.spec.ts",
+          "line": 10,
+          "column": 3
+        },
+        {
+          "title": "V4 Finale focus and mid-transform resume touch Canvas fallback",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 60727,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T01:42:53.742Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e57432f96a10de4cb733-6bcb191c90c700debb5f",
+          "file": "cinematic-v4.spec.ts",
+          "line": 10,
+          "column": 3
+        }
+      ]
+    },
+    {
+      "title": "cinematic-verdict.spec.ts",
+      "file": "cinematic-verdict.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Chapter 00 → 01 → 02: same room/audio, samples, An, two comparisons, teacher",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 87879,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T01:43:54.994Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0a3edd9025221efcb013-cedc57cc2d8d1acef100",
+          "file": "cinematic-verdict.spec.ts",
+          "line": 55,
+          "column": 1
+        },
+        {
+          "title": "Chapter 01 mobile: silent reduced motion, hint, save/reload after comparison, second evidence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 60067,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T01:45:22.896Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0a3edd9025221efcb013-b28d04159ca002ac55ab",
+          "file": "cinematic-verdict.spec.ts",
+          "line": 184,
+          "column": 1
+        },
+        {
+          "title": "Chapter 01 GPU/storage/audio fallback remains playable to Chapter 02",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 47701,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T01:46:23.008Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0a3edd9025221efcb013-af855ef5bd0f65fb7e1e",
+          "file": "cinematic-verdict.spec.ts",
+          "line": 234,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "cinematic.spec.ts",
+      "file": "cinematic.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "proof of feel: real camera, spatial audio, teacher, chair, verdict and recorded audio",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 57698,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "CINEMATIC_TELEMETRY {\"beat\":\"complete\",\"time\":1.0164999999999995,\"observed\":[\"window\",\"laptop\",\"notebook\"],\"selected\":true,\"audio\":{\"mix\":{\"rain\":0.14,\"fan\":0.045,\"ambience\":1,\"music\":0},\"events\":[{\"cue\":\"focus.door\",\"time\":0},{\"cue\":\"beat.arrival\",\"time\":0},{\"cue\":\"bell\",\"time\":0},{\"cue\":\"step\",\"time\":0.48},{\"cue\":\"door\",\"time\":1.28},{\"cue\":\"beat.explore\",\"time\":3.3013333333333335},{\"cue\":\"focus.wide\",\"time\":3.3013333333333335},{\"cue\":\"focus.wide\",\"time\":3.3013333333333335},{\"cue\":\"paper\",\"time\":5.36},{\"cue\":\"focus.window\",\"time\":5.370666666666667},{\"cue\":\"focus.wide\",\"time\":9.170666666666667},{\"cue\":\"key\",\"time\":9.381333333333334},{\"cue\":\"focus.laptop\",\"time\":9.384},{\"cue\":\"paper\",\"time\":13.061333333333334},{\"cue\":\"focus.notebook\",\"time\":13.061333333333334},{\"cue\":\"beat.enter\",\"time\":16.072},{\"cue\":\"focus.door\",\"time\":16.072},{\"cue\":\"focus.door\",\"time\":16.072},{\"cue\":\"door\",\"time\":16.250666666666667},{\"cue\":\"step\",\"time\":17.08},{\"cue\":\"step\",\"time\":17.650666666666666},{\"cue\":\"step\",\"time\":18.21066666666667},{\"cue\":\"step\",\"time\":18.781333333333333},{\"cue\":\"step\",\"time\":19.352},{\"cue\":\"step\",\"time\":19.930666666666667},{\"cue\":\"step\",\"time\":20.501333333333335},{\"cue\":\"beat.chair\",\"time\":21.592},{\"cue\":\"focus.chair\",\"time\":21.592},{\"cue\":\"focus.chair\",\"time\":21.592},{\"cue\":\"chair\",\"time\":21.741333333333333},{\"cue\":\"beat.invitation\",\"time\":25.4},{\"cue\":\"focus.faces\",\"time\":25.4},{\"cue\":\"focus.faces\",\"time\":25.4},{\"cue\":\"beat.profile\",\"time\":31.421333333333333},{\"cue\":\"focus.profile\",\"time\":31.421333333333333},{\"cue\":\"focus.profile\",\"time\":31.421333333333333},{\"cue\":\"paper\",\"time\":33.29066666666667},{\"cue\":\"beat.evaluate\",\"time\":33.42133333333334},{\"cue\":\"focus.laptop\",\"time\":33.42133333333334},{\"cue\":\"focus.laptop\",\"time\":33.42133333333334},{\"cue\":\"key\",\"time\":33.592},{\"cue\":\"key\",\"time\":33.861333333333334},{\"cue\":\"beat.verdict\",\"time\":35.12},{\"cue\":\"focus.laptop\",\"time\":35.12},{\"cue\":\"verdict\",\"time\":35.21066666666667},{\"cue\":\"beat.response\",\"time\":39.13066666666667},{\"cue\":\"focus.faces\",\"time\":39.13066666666667},{\"cue\":\"focus.faces\",\"time\":39.13066666666667},{\"cue\":\"beat.paper\",\"time\":45.152},{\"cue\":\"focus.paper\",\"time\":45.152},{\"cue\":\"focus.paper\",\"time\":45.152},{\"cue\":\"paper\",\"time\":45.352},{\"cue\":\"beat.complete\",\"time\":54.181333333333335},{\"cue\":\"focus.wide\",\"time\":54.181333333333335},{\"cue\":\"focus.wide\",\"time\":54.181333333333335}],\"context\":\"running\"},\"world\":{\"camera\":[2.8996764067437804,2.0824452737766235,2.9043976225810866],\"target\":[0.07880077404336716,1.1718478308162354,-0.793599060090197],\"fov\":48.89599336534256,\"artDirection\":\"paper-rain\",\"characterArt\":\"sculpted-narrative-v1\",\"anHand\":[-0.6396619505727235,0.9177732839142769,-0.5381394141318496],\"focus\":\"wide\",\"teacher\":[1.1,0,0.05],\"teacherVisible\":true,\"anHead\":0.1,\"anFeetY\":[-0.00218198204174469,-0.00218198204174469],\"teacherFeetY\":[0,0],\"notebookPage\":null,\"notebookPosition\":[1.25,1.047,-0.15],\"pageTurn\":1,\"chair\":[1.1,0,0.25],\"drawCalls\":127,\"triangles\":96306,\"shadowRefreshed\":false,\"resources\":{\"geometries\":133,\"textures\":24,\"programs\":14,\"renderTarget\":[1280,720],\"samples\":0,\"output\":[1280,720],\"shadowMap\":[1024,1024]},\"resolution\":1},\"fps\":58.068262468546514}\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T01:47:10.756Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b496d51900683cab0ab4-38cafe030141e93a07ff",
+          "file": "cinematic.spec.ts",
+          "line": 4,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-17T01:14:06.469Z",
+    "duration": 2046862.523,
+    "expected": 34,
+    "skipped": 2,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

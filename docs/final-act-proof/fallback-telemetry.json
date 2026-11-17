@@ -1,0 +1,123 @@
+{
+  "beat": "NEXT_SCENE_READY",
+  "time": 0.13340000000000146,
+  "evidence": [
+    "clock",
+    "notebook",
+    "laptop"
+  ],
+  "verdict": {
+    "version": 1,
+    "phase": "chapter02",
+    "found": [
+      "presentation",
+      "notes",
+      "data"
+    ],
+    "selected": "an",
+    "tested": [
+      "mai",
+      "an"
+    ],
+    "linked": [
+      "presentation",
+      "notes"
+    ],
+    "carried": null,
+    "stayed": {
+      "version": 1,
+      "phase": "next",
+      "line": 0,
+      "read": [
+        "outcome",
+        "support"
+      ],
+      "page": "support",
+      "written": true,
+      "seen": [],
+      "nextInspected": true
+    },
+    "ripple": {
+      "version": 1,
+      "phase": "finale",
+      "questions": [
+        "prediction",
+        "opportunity"
+      ],
+      "milestones": 3,
+      "memories": [
+        "evaluation",
+        "stayed",
+        "design"
+      ],
+      "selected": null,
+      "elapsed": 0,
+      "played": [
+        "echo.chair",
+        "chair.chair",
+        "reveal.music"
+      ]
+    },
+    "finale": {
+      "memoryFocus": null,
+      "version": 1,
+      "phase": "ending",
+      "elapsed": 0,
+      "choice": "skip",
+      "starSeen": true,
+      "starCue": true,
+      "completed": true
+    }
+  },
+  "stayed": {
+    "version": 1,
+    "phase": "next",
+    "line": 0,
+    "read": [
+      "outcome",
+      "support"
+    ],
+    "page": "support",
+    "written": true,
+    "seen": [],
+    "nextInspected": true
+  },
+  "ripple": {
+    "version": 1,
+    "phase": "finale",
+    "questions": [
+      "prediction",
+      "opportunity"
+    ],
+    "milestones": 3,
+    "memories": [
+      "evaluation",
+      "stayed",
+      "design"
+    ],
+    "selected": null,
+    "elapsed": 0,
+    "played": [
+      "echo.chair",
+      "chair.chair",
+      "reveal.music"
+    ]
+  },
+  "finale": {
+    "memoryFocus": null,
+    "version": 1,
+    "phase": "ending",
+    "elapsed": 0,
+    "choice": "skip",
+    "starSeen": true,
+    "starCue": true,
+    "completed": true
+  },
+  "followedDoor": false,
+  "world": {
+    "focus": "ending",
+    "star": true,
+    "drawCalls": 1
+  },
+  "audio": null
+}

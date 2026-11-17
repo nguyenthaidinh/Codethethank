@@ -1,0 +1,474 @@
+{
+  "beat": "NEXT_SCENE_READY",
+  "time": 4.299799999999998,
+  "evidence": [
+    "clock",
+    "notebook",
+    "laptop"
+  ],
+  "verdict": {
+    "narrativeRevision": 4,
+    "version": 1,
+    "phase": "chapter02",
+    "found": [
+      "presentation",
+      "notes",
+      "data"
+    ],
+    "selected": "an",
+    "tested": [
+      "student07",
+      "an"
+    ],
+    "linked": [
+      "presentation",
+      "notes"
+    ],
+    "carried": null,
+    "stayed": {
+      "narrativeRevision": 4,
+      "version": 1,
+      "phase": "chair",
+      "line": 0,
+      "read": [],
+      "page": null,
+      "written": false,
+      "seen": [
+        "discussion.0",
+        "discussion.1"
+      ],
+      "nextInspected": false
+    }
+  },
+  "stayed": {
+    "narrativeRevision": 4,
+    "version": 1,
+    "phase": "chair",
+    "line": 0,
+    "read": [],
+    "page": null,
+    "written": false,
+    "seen": [
+      "discussion.0",
+      "discussion.1"
+    ],
+    "nextInspected": false
+  },
+  "ripple": null,
+  "finale": null,
+  "followedDoor": false,
+  "world": {
+    "school": {
+      "name": "Trường Đại học Tây Nguyên",
+      "logoLoaded": true
+    },
+    "camera": [
+      1.3852036987648835,
+      1.855561109629465,
+      -1.9167083222209882
+    ],
+    "shot": "chair.sit",
+    "teacherBodyY": 0.5900000000000001,
+    "portraits": {
+      "an": {
+        "x": 880.0387588161426,
+        "y": 270.3657667821258,
+        "visible": true
+      },
+      "teacher": {
+        "x": 361.59349868400807,
+        "y": 323.8007874628276,
+        "visible": true
+      }
+    },
+    "laptopLid": [
+      {
+        "x": 1291.9051309350943,
+        "y": 466.42006556968096
+      },
+      {
+        "x": 1021.326176491066,
+        "y": 582.749787177278
+      },
+      {
+        "x": 1120.9055899073503,
+        "y": 256.23220933085764
+      },
+      {
+        "x": 1405.8401937413141,
+        "y": 210.6914724967465
+      }
+    ],
+    "target": [
+      0.2963009246912209,
+      1.0759185204940467,
+      0.0763009246912209
+    ],
+    "fov": 48.926018493824415,
+    "artDirection": "paper-rain",
+    "characterArt": "sculpted-narrative-v1",
+    "anHand": [
+      -0.5541232243356935,
+      0.9168548093067559,
+      -0.2998969929829717
+    ],
+    "focus": "chair_insert",
+    "teacher": [
+      1.0999999999999999,
+      0,
+      0.04999999999999993
+    ],
+    "teacherVisible": true,
+    "anHead": 0.08000000000000002,
+    "anFeetY": [
+      -0.003976404175698889,
+      -0.003976404175698889
+    ],
+    "teacherFeetY": [
+      0,
+      0
+    ],
+    "notebookPage": null,
+    "notebookPosition": [
+      1.25,
+      1.047,
+      -0.15
+    ],
+    "pageTurn": 1,
+    "chair": [
+      1.1,
+      0,
+      0.25
+    ],
+    "drawCalls": 112,
+    "triangles": 93480,
+    "shadowRefreshed": false,
+    "resources": {
+      "geometries": 133,
+      "textures": 24,
+      "programs": 13,
+      "renderTarget": [
+        1280,
+        720
+      ],
+      "samples": 0,
+      "output": [
+        1280,
+        720
+      ],
+      "shadowMap": [
+        1024,
+        1024
+      ]
+    },
+    "resolution": 1
+  },
+  "voice": {
+    "status": "off",
+    "clip": null,
+    "started": 0,
+    "completed": 0,
+    "busy": false
+  },
+  "audio": {
+    "context": "running",
+    "events": [
+      {
+        "cue": "aion.space.city",
+        "time": 0.072
+      },
+      {
+        "cue": "aion.space.anomaly",
+        "time": 1.12
+      },
+      {
+        "cue": "focus",
+        "time": 1.3706666666666667
+      },
+      {
+        "cue": "focus",
+        "time": 1.3813333333333333
+      },
+      {
+        "cue": "focus",
+        "time": 1.3813333333333333
+      },
+      {
+        "cue": "select",
+        "time": 1.3813333333333333
+      },
+      {
+        "cue": "aion.inspect.source",
+        "time": 3.7306666666666666
+      },
+      {
+        "cue": "aion.inspect.limit",
+        "time": 4.72
+      },
+      {
+        "cue": "memory",
+        "time": 5.061333333333334
+      },
+      {
+        "cue": "bell",
+        "time": 10.021333333333333
+      },
+      {
+        "cue": "step",
+        "time": 11.52
+      },
+      {
+        "cue": "step",
+        "time": 12.330666666666668
+      },
+      {
+        "cue": "focus.window",
+        "time": 13.090666666666667
+      },
+      {
+        "cue": "focus.wide",
+        "time": 13.090666666666667
+      },
+      {
+        "cue": "focus.window",
+        "time": 13.090666666666667
+      },
+      {
+        "cue": "focus.wide",
+        "time": 16.6
+      },
+      {
+        "cue": "clock",
+        "time": 20.370666666666665
+      },
+      {
+        "cue": "focus.clock",
+        "time": 20.370666666666665
+      },
+      {
+        "cue": "focus.wide",
+        "time": 22.192
+      },
+      {
+        "cue": "paper",
+        "time": 23.981333333333332
+      },
+      {
+        "cue": "focus.notebook",
+        "time": 23.992
+      },
+      {
+        "cue": "focus.wide",
+        "time": 25.712
+      },
+      {
+        "cue": "key",
+        "time": 27.442666666666668
+      },
+      {
+        "cue": "focus.laptop",
+        "time": 27.450666666666667
+      },
+      {
+        "cue": "beat.explore",
+        "time": 29.32
+      },
+      {
+        "cue": "paper",
+        "time": 29.650666666666666
+      },
+      {
+        "cue": "focus.notebook",
+        "time": 29.661333333333335
+      },
+      {
+        "cue": "paper",
+        "time": 31.525333333333332
+      },
+      {
+        "cue": "focus.notes",
+        "time": 31.530666666666665
+      },
+      {
+        "cue": "key",
+        "time": 33.330666666666666
+      },
+      {
+        "cue": "focus.laptop",
+        "time": 33.34133333333333
+      },
+      {
+        "cue": "key",
+        "time": 35.152
+      },
+      {
+        "cue": "beat.explore",
+        "time": 35.16
+      },
+      {
+        "cue": "key",
+        "time": 35.44
+      },
+      {
+        "cue": "beat.explore",
+        "time": 36.12
+      },
+      {
+        "cue": "key",
+        "time": 36.2
+      },
+      {
+        "cue": "key",
+        "time": 36.712
+      },
+      {
+        "cue": "key",
+        "time": 37.34133333333333
+      },
+      {
+        "cue": "beat.explore",
+        "time": 37.96
+      },
+      {
+        "cue": "beat.explore",
+        "time": 39.090666666666664
+      },
+      {
+        "cue": "key",
+        "time": 39.32
+      },
+      {
+        "cue": "beat.explore",
+        "time": 39.94133333333333
+      },
+      {
+        "cue": "key",
+        "time": 39.992
+      },
+      {
+        "cue": "key",
+        "time": 40.6
+      },
+      {
+        "cue": "key",
+        "time": 41.16
+      },
+      {
+        "cue": "beat.verdict",
+        "time": 41.832
+      },
+      {
+        "cue": "verdict",
+        "time": 41.912
+      },
+      {
+        "cue": "beat.explore",
+        "time": 49.84
+      },
+      {
+        "cue": "focus.wide",
+        "time": 49.84
+      },
+      {
+        "cue": "paper",
+        "time": 51.392
+      },
+      {
+        "cue": "focus.notebook",
+        "time": 51.4
+      },
+      {
+        "cue": "beat.explore",
+        "time": 53.232
+      },
+      {
+        "cue": "focus.laptop",
+        "time": 53.232
+      },
+      {
+        "cue": "beat.explore",
+        "time": 57.25066666666667
+      },
+      {
+        "cue": "focus.wide",
+        "time": 57.25066666666667
+      },
+      {
+        "cue": "paper",
+        "time": 57.501333333333335
+      },
+      {
+        "cue": "focus.notes",
+        "time": 57.501333333333335
+      },
+      {
+        "cue": "beat.explore",
+        "time": 59.28
+      },
+      {
+        "cue": "focus.laptop",
+        "time": 59.28
+      },
+      {
+        "cue": "beat.explore",
+        "time": 63.28
+      },
+      {
+        "cue": "focus.wide",
+        "time": 63.28
+      },
+      {
+        "cue": "door",
+        "time": 65.192
+      },
+      {
+        "cue": "step",
+        "time": 65.6
+      },
+      {
+        "cue": "step",
+        "time": 66.14133333333334
+      },
+      {
+        "cue": "step",
+        "time": 66.69066666666667
+      },
+      {
+        "cue": "step",
+        "time": 67.24
+      },
+      {
+        "cue": "step",
+        "time": 67.792
+      },
+      {
+        "cue": "step",
+        "time": 68.36
+      },
+      {
+        "cue": "beat.explore",
+        "time": 72.8
+      },
+      {
+        "cue": "chair.the-one-who-stayed",
+        "time": 81.952
+      },
+      {
+        "cue": "chair",
+        "time": 81.952
+      }
+    ],
+    "mix": {
+      "rain": 0.14,
+      "fan": 0.045,
+      "ambience": 1,
+      "music": 0
+    },
+    "buses": {
+      "music": 0,
+      "effects": 0.6499999761581421,
+      "ambience": 0.6499999761581421
+    }
+  },
+  "mainPathSeconds": 43.573
+}

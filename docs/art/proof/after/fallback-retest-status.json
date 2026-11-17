@@ -1,0 +1,7 @@
+﻿{
+    "exitCode":  0,
+    "command":  "ART_CAPTURE_PHASE=fallback-fix npx playwright test cinematic-g2-art.spec.ts --grep \u0027fallback keyboard\u0027 --trace off",
+    "durationSeconds":  32.9,
+    "updated":  "2026-11-16T15:53:09.9709341+07:00",
+    "passed":  1
+}

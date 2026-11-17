@@ -1,0 +1,122 @@
+.future-opening {
+  background: #071423;
+}
+.future-opening .chapter-letterbox {
+  background: linear-gradient(
+    #030a13a8,
+    transparent 17%,
+    transparent 72%,
+    #030a13d9
+  );
+}
+.future-opening .chapter-skip {
+  background: transparent;
+  border-color: #b9d2df40;
+  backdrop-filter: none;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+}
+.future-opening .world-hotspot.chapter-signal .hotspot-ring,
+.future-opening .future-node .hotspot-ring {
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+  transform: rotate(45deg);
+  background: #cba76e26;
+  border: 1px solid #e2c18f;
+  box-shadow: 0 0 16px #d9c19530;
+  font-size: 0;
+}
+.future-opening .world-hotspot {
+  width: 56px;
+  height: 56px;
+  min-height: 56px;
+  background: transparent;
+  border: 0;
+  display: grid;
+  place-items: center;
+  transform: translate(-50%, -50%);
+}
+.future-opening .hotspot-name {
+  font:
+    11px Arial,
+    sans-serif;
+  letter-spacing: 0.025em;
+  background: #081b2ce3;
+  padding: 7px 9px;
+  border-radius: 2px;
+  color: #d8e6eb;
+  white-space: nowrap;
+}
+.future-opening .future-node .hotspot-name {
+  opacity: 1;
+  top: 47px;
+}
+.future-opening .future-node.checked .hotspot-ring {
+  background: #a4d9d533;
+  border-color: #a3d7cf;
+  box-shadow: none;
+}
+.future-opening .future-node:focus-visible,
+.future-opening .future-open:focus-visible {
+  outline: 2px solid #d4e5ec;
+  outline-offset: 3px;
+}
+.future-opening .future-open {
+  position: absolute;
+  z-index: 5;
+  transform: translate(-50%, -50%);
+  min-height: 48px;
+  max-width: 85vw;
+  padding: 12px 18px;
+  border: 1px solid #bca47b88;
+  background: #081b2ceb;
+  color: #e8d1ad;
+  font:
+    12px Arial,
+    sans-serif;
+  letter-spacing: 0.025em;
+  border-radius: 2px;
+}
+.future-opening .subtitle {
+  bottom: 6%;
+  text-shadow: 0 2px 9px #000;
+}
+.future-opening .subtitle p {
+  font-family: Arial, sans-serif;
+  font-size: clamp(16px, 1.4vw, 21px);
+  line-height: 1.55;
+  letter-spacing: 0.005em;
+}
+.future-opening .future-speaker {
+  display: block;
+  margin-bottom: 8px;
+  color: #a9c4ce;
+  font:
+    10px Arial,
+    sans-serif;
+  letter-spacing: 0.18em;
+}
+.future-opening .chapter-hint {
+  color: #b9d1db;
+}
+.future-opening .minimal-controls button {
+  background: #07142380;
+  border-color: #a7c4d53d;
+}
+@media (max-width: 600px) {
+  .future-opening .future-open {
+    font-size: 11px;
+    padding: 11px 14px;
+  }
+  .future-opening .future-node .hotspot-name {
+    font-size: 10px;
+  }
+  .future-opening .subtitle {
+    bottom: 7%;
+    width: 88%;
+  }
+  .future-opening .subtitle p {
+    font-size: 16px;
+  }
+}

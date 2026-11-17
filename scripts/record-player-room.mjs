@@ -1,0 +1,51 @@
+import {chromium,expect} from '@playwright/test';
+import {mkdirSync,writeFileSync,readFileSync} from 'node:fs';
+import {spawnSync} from 'node:child_process';
+import {resolve} from 'node:path';
+const out=resolve('docs/finale-v5-1-proof/runtime'),framesDir=resolve('docs/finale-v5-1-proof/recording-frames');
+mkdirSync(out,{recursive:true});mkdirSync(framesDir,{recursive:true});
+const browser=await chromium.launch({headless:true,args:process.platform==='win32'?['--use-angle=d3d11']:[]});
+try{
+ const page=await browser.newPage({viewport:{width:1280,height:720}}),errors=[];
+ page.on('pageerror',e=>errors.push(e.message));
+ const checkpoint=JSON.parse(readFileSync('docs/finale-v5-1-proof/before/checkpoint.json','utf8'));
+ checkpoint.chapter.verdict.finale.phase='question';
+ await page.addInitScript(save=>{
+  localStorage.setItem('project2011.cinematic.v3',JSON.stringify(save));
+  const original=AudioContext.prototype.createMediaStreamDestination;
+  AudioContext.prototype.createMediaStreamDestination=function(){const node=original.call(this);window.__roomStream=node.stream;return node;};
+ },checkpoint);
+ await page.goto('http://127.0.0.1:4188/');
+ await page.getByRole('button',{name:'Bật âm thanh',exact:true}).click();
+ await page.getByRole('button',{name:'Tiếp tục',exact:true}).click();
+ await page.getByTestId('chapter-telemetry').waitFor({state:'attached'});
+ await expect.poll(()=>page.evaluate(()=>!!window.__roomStream),{timeout:30000}).toBe(true);
+ const cdp=await page.context().newCDPSession(page),frames=[];
+ cdp.on('Page.screencastFrame',async e=>{const name=String(frames.length).padStart(6,'0')+'.jpg';writeFileSync(resolve(framesDir,name),Buffer.from(e.data,'base64'));frames.push({name,time:e.metadata.timestamp});await cdp.send('Page.screencastFrameAck',{sessionId:e.sessionId});});
+ const audioStart=await page.evaluate(()=>{
+  const stream=new MediaStream(window.__roomStream.getAudioTracks().map(t=>t.clone()));
+  window.__roomChunks=[];window.__roomRecorder=new MediaRecorder(stream,{mimeType:'audio/webm;codecs=opus'});
+  window.__roomRecorder.ondataavailable=e=>{if(e.data.size)window.__roomChunks.push(e.data)};window.__roomRecorder.start(100);return Date.now()/1000;
+ });
+ await cdp.send('Page.startScreencast',{format:'jpeg',quality:90,maxWidth:1280,maxHeight:720,everyNthFrame:1});
+ await expect(page.locator('.chapter')).toHaveAttribute('data-finale','paper',{timeout:30000});
+ await page.waitForTimeout(3500);await page.screenshot({path:resolve(out,'player-room-desktop.png')});
+ const before=JSON.parse(await page.getByTestId('chapter-telemetry').textContent());
+ await page.getByRole('button',{name:'Mở máy tính',exact:true}).hover();await page.waitForTimeout(1200);
+ await page.getByRole('button',{name:'Mở máy tính',exact:true}).click();
+ await page.waitForTimeout(900);await page.screenshot({path:resolve(out,'camera-push.png')});
+ await page.waitForTimeout(1900);await page.screenshot({path:resolve(out,'editor-integration.png')});
+ await page.getByRole('button',{name:'Tạm dừng',exact:true}).click();await page.waitForTimeout(1800);
+ await expect(page.getByRole('button',{name:'Mở máy tính',exact:true})).toHaveCount(0);
+ await page.getByRole('button',{name:'Tiếp tục quan sát',exact:true}).click();await page.waitForTimeout(1700);
+ const after=JSON.parse(await page.getByTestId('chapter-telemetry').textContent());
+ await cdp.send('Page.stopScreencast');
+ const data=await page.evaluate(async()=>{const r=window.__roomRecorder;await new Promise(resolve=>{r.onstop=resolve;r.stop()});r.stream.getTracks().forEach(t=>t.stop());return Array.from(new Uint8Array(await new Blob(window.__roomChunks,{type:r.mimeType}).arrayBuffer()));});
+ writeFileSync(resolve(out,'live-audio.webm'),Buffer.from(data));
+ writeFileSync(resolve(framesDir,'frames.txt'),frames.map((f,i)=>`file '${f.name}'\nduration ${i<frames.length-1?Math.max(.001,frames[i+1].time-f.time):.08}\n`).join('')+`file '${frames.at(-1).name}'\n`);
+ const offset=Math.max(0,frames[0].time-audioStart);await browser.close();
+ const ff=spawnSync('ffmpeg.exe',['-y','-f','concat','-safe','0','-i',resolve(framesDir,'frames.txt'),'-ss',String(offset),'-i',resolve(out,'live-audio.webm'),'-vf','fps=24','-c:v','libx264','-preset','fast','-crf','21','-pix_fmt','yuv420p','-c:a','aac','-b:a','128k','-shortest','-movflags','+faststart',resolve(out,'player-room-with-audio.mp4')],{encoding:'utf8',maxBuffer:8e6});
+ writeFileSync(resolve(out,'video-encode.log'),ff.stderr??'');if(ff.status!==0)throw Error('ffmpeg failed');
+ writeFileSync(resolve(out,'recording.json'),JSON.stringify({capture:'Actual Chromium CDP frames and live master audio bus, no substituted soundtrack. 24fps is export cadence.',frames:frames.length,seconds:frames.at(-1).time-frames[0].time,offset,before,after,errors},null,2));
+ expect(errors).toEqual([]);console.log('Recorded',frames.length,'frames');
+}finally{await browser.close();}

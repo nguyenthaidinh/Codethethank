@@ -1,0 +1,334 @@
+[
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\App.tsx",
+    "Hash": "53EBF20EA963C67D531F7562FF4A0839A5D026591938D622CD7567E6680B6E64"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\Environment.tsx",
+    "Hash": "5AC679BD0D96BCFA370150CCCD7D99ABA52DB2E5A7FB032C7FCFC22259CC0F01"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\main.tsx",
+    "Hash": "3127DEAE2F0E4C32D6C55B7381C35BA2B87FA1B02A7248E51E6202C24440E95B"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\style.css",
+    "Hash": "BC49A0C750A0EB7AB099B25BDD76463246A7E000B9EB66CBAEB12DE61D3DE993"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\vite-env.d.ts",
+    "Hash": "65996936FBB042915F7B74A200FCDDE7E410F32A669B1AB9597CFAA4B0FADDB5"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\art\\ClassroomArt.ts",
+    "Hash": "46C12CBDB8566938A684455A3FD427CCB41AD0874C853AB2C04A15F210EEC64E"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\art\\narrative.css",
+    "Hash": "0439484121D625D2157563F5ADBE3AAAAC327C01F3D07635CE82332C4B34FE83"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\art\\NarrativeActors.ts",
+    "Hash": "703AD0D2B769C17AAEA32EB25D320EDF2D487F1492DF0AAA46F5C11F4815C362"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\art\\NarrativePalette.ts",
+    "Hash": "B960167B03EDC8E6B95156C93BFAEE947D49F43CD7BC27D7A4FCED5AD82E0E6D"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\chapter\\chapter.css",
+    "Hash": "7940C2AA7B6BD3E21BC8D54E29155D363628284364BFAACBAA2C976D4762A666"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\chapter\\ChapterAudio.ts",
+    "Hash": "32465D2FDA8B002F5EB00699863DE7E65B04FF7AAFD569A6B7B118BECD80CA3B"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\chapter\\ChapterGame.tsx",
+    "Hash": "2C9B2528221A852C6F36EE2234D7D8BED7E0B982CCF3D51E8C56B9FBAE4950EB"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\chapter\\director.ts",
+    "Hash": "894559F32C77991FEA7247CF378E8F97B3C35DB321E4F6F8CB08B3E0AE7B27DD"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\chapter\\SummitWorld.ts",
+    "Hash": "E6685E3A68D53F9EEC1D6249B7A9450082675FA215F88DB04996B1E6713C7049"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\cinematic\\AudioDirector.ts",
+    "Hash": "74A22413D61119E4248717B186D042D89E78F1BCC560B71AC8E6296E551A285F"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\cinematic\\cinematic.css",
+    "Hash": "CCC8E9F5D02294777152882882775C353CF4805DBF3FB6B24ED047A9AF61004B"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\cinematic\\CinematicGame.tsx",
+    "Hash": "1B22412E2708C819B3279B26EAEC671D87C09DDF8447EC1DDC4158035CF42977"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\cinematic\\ClassroomCinematography.ts",
+    "Hash": "568A1E28C9228797E677B7DF257C1CEAFEE5F813FB76BB4B00341276D1805504"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\cinematic\\director.ts",
+    "Hash": "7966556E0CE15BBAD84A4536B54A94DB5AE6AA2926762EC6C7136FEA58AF71E8"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\cinematic\\FallbackWorld.ts",
+    "Hash": "595B50C4DE2CDD9F24D4931139CD67110CF8807C6FABDAF43D8536F912A92A99"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\cinematic\\motifs.ts",
+    "Hash": "2F59D7600F5251411661AB8FCC9C4370F2030C101939ACE8A97E7EF4C4611C03"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\cinematic\\overlay.ts",
+    "Hash": "E754D5B35038873CFC86BCA86FFF1A2DD44C3C00A223958A9E881E42E4B97D6A"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\cinematic\\Recording.ts",
+    "Hash": "14271A48841267885A0B5F214C219DB5A68467A2C706602503275B64239F5D4D"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\cinematic\\SceneChrome.tsx",
+    "Hash": "7BC007AF0FC26E0B9A3B37150D413C76A4B66B602DE883264D92F0F56D544914"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\cinematic\\WorldRenderer.ts",
+    "Hash": "8ED138220B8F7FF622B87E7D35C9E66031CB392A75FEFBDBC1D87C1C89EEAA0B"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\finale\\Fallback.ts",
+    "Hash": "4E2A501ED156941BF81CBB947D9EB1246AB5F7586B4A40BFDE7DBB649F92135B"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\finale\\finale.css",
+    "Hash": "C66ACA58566734A4279D2D07DB78102C05A6B57B0065498B2F63C96B361601C8"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\finale\\FinaleControls.tsx",
+    "Hash": "58EF37F9BB2E06DB7106C4EAD4F2E1A00BC90363C1CBC7A9A4D4ED9D40B34340"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\finale\\FinaleVisual.ts",
+    "Hash": "2CA62857D6F5C0C13E60078F081BADBB6E9813E0EBBBF8CFD22894F730F50C56"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\finale\\letter-experience.css",
+    "Hash": "45E1AD410B6E1562F4FD5AF6E7DF68D4CB1A4E86033BEBF5CB3053F695921D8B"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\finale\\letter.ts",
+    "Hash": "257F03694F8A9E687EA91B7633C9A2137BBF2570D8818A455827CE5516CBD20D"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\finale\\LetterExperience.tsx",
+    "Hash": "1961E609879B286EDF9C40387468D6991749987E9C12EF7D054F63CF176C7DDF"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\finale\\player-room.css",
+    "Hash": "802B7E30152F3411C1146EB1549D3E6132E132A30E9BADEC05EA87BA564214A8"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\finale\\PlayerRoom.ts",
+    "Hash": "40BC73E5E8E345AA1E45236CDBD5153070AB633E2B0F9C834EF191F5DF8F4B0D"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\finale\\PlayerRoomFallback.ts",
+    "Hash": "42B3A2EB0B6701A47442F31F1E34016DC28EDF3DE5143643F63E3C5F52243E5D"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\finale\\state.ts",
+    "Hash": "027047FBF92700D1EEFF3F0AF0886BA259DC2BE38C867FB16C933A8D0258DB1A"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\finale\\story.ts",
+    "Hash": "17EE526E5628AEE415E7084A4B88C79EFB8800EDC28E3CADBE632D134AFF28D3"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\future\\direction.ts",
+    "Hash": "39614406D88E2FA30C602CC3B6804EFD6A06E50EEC665C2A424935820E5A1E00"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\future\\future.css",
+    "Hash": "456F7BA91B0FCEAEFC46371BA981CBA38848A0E30438C79A52D8D717D1C91681"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\future\\FutureFallback.ts",
+    "Hash": "D4796E7A7CAC95DF16A7834FC16D56A40AB19D424FC836FD958C0047C2C28C7C"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\future\\FutureWorld.ts",
+    "Hash": "917DF83DB8A5906B63500AEE209F79498B9D828F5E9579B22FCF209CC8893E3F"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\future\\GrandArchitecture.ts",
+    "Hash": "A811F449E168B6117E1831A467FBAAF64205E37EA72C19B37F2568BBDED500E8"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\future\\inspection.ts",
+    "Hash": "D2D07BA5BDD2546C37A2BD5FD881C81816D27A4F005F2D6746CF0DC0494AE8BD"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\future\\terminalStyle.ts",
+    "Hash": "2453CC6519D4EB59A5FDBB18FEE7F39676995D13C713C249FECFD064E354796E"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\game\\state.ts",
+    "Hash": "C2C6AC7A627F0F0023E79AD5368F4E04E8CD85FF30CCB42A2CFC84E2D0DE03B7"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\game\\story.ts",
+    "Hash": "490DB6DBA46E1ADF4A5ACD61C1C9825FC9C6069EAD16FAC004D1F3FEBC58DCA4"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\menu\\ASSET-PROMPTS.txt",
+    "Hash": "E12EEFBADD6453C15071EE6F04A8F3D3064536BEDBC35CF124387F94EFCD48B1"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\menu\\GameAudio.ts",
+    "Hash": "FC78C908F22584C401515F20C995395D0C2507476490FDF4FDC8700506B61D9C"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\menu\\GameShell.tsx",
+    "Hash": "C6220F2009AFC00BB0784CD5648DAE47DB9851A6E1352FA6055940419C721009"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\menu\\MainMenu.tsx",
+    "Hash": "00162727809C7942D502D86B4CED3D6913B1AF8BA8266F8BF112282839D67C20"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\menu\\menu.css",
+    "Hash": "BBFFBC7542CD4922D2C57BF56804FD2148DE19CC3168F0F6964A660313D23FD7"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\menu\\MenuAudio.ts",
+    "Hash": "D9AA315487CB9A148699E312461F31E5F0AF1DB528C81C103CC17E67333BF338"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\menu\\MenuUI.tsx",
+    "Hash": "F1D045B10EF4733CD5BE2463454D4AC8E6C8194E65FC6E2EA21558F5D805A256"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\menu\\preferences.ts",
+    "Hash": "68063AD4569E356D3B14B07DE1364C67E1633249789C86168B1A7085673EB2A7"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\menu\\README.md",
+    "Hash": "467B89A5F33714907572E8247AB99233BAE7A5FD22670A8B6657D7DBA543F519"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\menu\\saveBridge.ts",
+    "Hash": "C37AD6B04BFD959EC7759A7113E3E05DEBD5C2117AB98AD13AFB0A6468431FD4"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\menu\\SceneBackground.tsx",
+    "Hash": "8DBE128F6526331B2A1C46DBDE2FE1EF618C388A03FB2C7B71E1BD0C386C0800"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\menu\\vite-env.d.ts",
+    "Hash": "65996936FBB042915F7B74A200FCDDE7E410F32A669B1AB9597CFAA4B0FADDB5"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\ripple\\Fallback.ts",
+    "Hash": "A70680C78B5F672503ED0F932D8DF11E53026A9133C1B49D03CFD1F430349ED9"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\ripple\\ripple.css",
+    "Hash": "7C8B669452AD9295D14703D79AB194473C313D75D2ACE6C7FF7F82A4D7D72B36"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\ripple\\RippleControls.tsx",
+    "Hash": "FFD93627C98E464321AEFDCF72895C9130DBEF757655B37905CA9D47B69DCE56"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\ripple\\RippleWorld.ts",
+    "Hash": "790CFD5ECFD0C91DADC26275678D4EC9516702F29532BA745D4D696C88DB9EA0"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\ripple\\state.ts",
+    "Hash": "79BFC61373B94BBF7323A7F59466286F5F42A10CB877E53AD6DE116605CBF470"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\ripple\\story.ts",
+    "Hash": "A40108F093BBD35474DA4974423D8864069C60C48DE204AD0561D6741C8625AF"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\speech\\catalog.json",
+    "Hash": "73C7CC2DC14B28B018C06F4B5699DC00AEE4F8C12FC1978F3AB2FE6EB9E52FCB"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\speech\\policy.ts",
+    "Hash": "9E8AD45EC06F3C0030182FCFAACF07BEE78E4ACA8CBD1901FAA7641074DC3D0D"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\speech\\text.ts",
+    "Hash": "E4C6DE2F53FC4179EEA39C34E455952B0F5F705929DE608476562765E3EDE054"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\speech\\useNarration.ts",
+    "Hash": "8C58D948E6FC89152CDF86CE8BC802CD99C84E83BF025B10EAAD7DAC9212832A"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\speech\\VoicePlayer.ts",
+    "Hash": "8D874183332F7480BBC53DD698D197B66B41BB049C04F80D505EA4F723592230"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\stayed\\Notebook.ts",
+    "Hash": "BC4370E8ED4F190BC1FDED5A38B7201E14333CBCF1D44E58EE092C62433D1E9E"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\stayed\\state.ts",
+    "Hash": "543586350AC612B2B624A561B1DA8B253E38D38330B78D7DFA0D6836F8627DB7"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\stayed\\StayControls.tsx",
+    "Hash": "34AFED5B0E31F2F96EAA9533C19D75CCC3924CEC4049F5D3158E59AE2D5B5C11"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\stayed\\stayed.css",
+    "Hash": "6619BA3F59A690BC704CF14411F0DE1EA0A0562C1737B7536558CE5AE830B132"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\stayed\\story.ts",
+    "Hash": "ED54C4CF303541A328982A942FAD8A3A66AA69ED84D53B1381512FF633493548"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\typography\\fonts.ts",
+    "Hash": "77B6C795C21F7E62C090A7D82CBAE0BF4F0C51F07DBFC3E2484BA3C18BA8F6F3"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\typography\\text.ts",
+    "Hash": "8CDD2C4B6EACC34B6B40FB5B25C496847D084D2912D43D2D79AECB3203AD4BC9"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\verdict\\evidence.ts",
+    "Hash": "411CD0725D00D7E218C66D8C690405698F2968BAC62AB7649BB484234A7656E2"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\verdict\\rules.ts",
+    "Hash": "D2089A8FE5C67BF19490ED10DF5EE03A8CBAC06A7BD6D6A910070130CBE3B345"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\verdict\\screen.ts",
+    "Hash": "236FA7AD2F05ACC01CA85F10F0F835AE8F2C67FB8AEA41424914DB7F12E1D1DB"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\verdict\\state.ts",
+    "Hash": "71A7116C7CAF4E6D01B4DD5D016C855410F537C2796737C2422D46B3F79115A7"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\verdict\\story.ts",
+    "Hash": "7F4D78FF02790FD519FDD96DA44790BDC6739C3C392F368D77F9A227A901AB62"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\verdict\\verdict.css",
+    "Hash": "D8228013944C1C5BCE5A522362D78EEDAD1CECA5F0EA5747F8D287098A1B007B"
+  },
+  {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\src\\verdict\\VerdictControls.tsx",
+    "Hash": "93054AFDC1A751554E7BEF3FA82673F7A82EF727705C8FEEB22A298C24F80BBC"
+  }
+]

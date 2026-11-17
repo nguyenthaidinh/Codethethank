@@ -1,0 +1,57 @@
+type Vec = [number, number, number];
+type Key = { t: number; eye: Vec; at: Vec };
+
+/** One continuous dolly: shared tangents keep velocity through interior keys. */
+export const openingCameraKeys: Key[] = [
+  { t: 0, eye: [155, 140, 420], at: [0, 55, -65] },
+  { t: 9, eye: [70, 95, 260], at: [0, 65, -65] },
+  { t: 15, eye: [20, 35, 125], at: [0, 25, -34] },
+  { t: 21, eye: [12, 8, 37], at: [0, 22, -40] },
+  { t: 28, eye: [3, 13, 6], at: [0, 20, -60] },
+  { t: 32, eye: [12, 17, -8], at: [0, 17, -67] },
+  { t: 40, eye: [24, 20, -26], at: [0, 17, -67] },
+  { t: 47, eye: [-20, 14, -32], at: [0, 16, -67] },
+  { t: 56, eye: [3, 3.2, -10], at: [0, 2.55, -15.6] },
+  { t: 60, eye: [3, 3.2, -10], at: [0, 2.55, -15.6] },
+];
+
+function tangent(i: number, field: "eye" | "at", axis: number) {
+  const keys = openingCameraKeys;
+  if (i === 0)
+    return (
+      (keys[1][field][axis] - keys[0][field][axis]) / (keys[1].t - keys[0].t)
+    );
+  if (i >= keys.length - 2) return 0; // Settle only at the final reveal.
+  const before = keys[i - 1],
+    current = keys[i],
+    after = keys[i + 1];
+  const left =
+    (current[field][axis] - before[field][axis]) / (current.t - before.t);
+  const right =
+    (after[field][axis] - current[field][axis]) / (after.t - current.t);
+  // Limit overshoot at direction changes; no excursions through walls/floors.
+  if (left * right <= 0) return 0;
+  return (2 * left * right) / (left + right);
+}
+
+export function sampleOpeningCamera(time: number): { eye: Vec; at: Vec } {
+  const keys = openingCameraKeys;
+  const t = Math.max(0, Math.min(keys.at(-1)!.t, time));
+  let i = keys.findIndex((key) => key.t > t) - 1;
+  if (i < 0) i = keys.length - 2;
+  const a = keys[i],
+    b = keys[i + 1],
+    duration = b.t - a.t;
+  const u = (t - a.t) / duration,
+    u2 = u * u,
+    u3 = u2 * u;
+  const sample = (field: "eye" | "at"): Vec =>
+    a[field].map(
+      (value, axis) =>
+        (2 * u3 - 3 * u2 + 1) * value +
+        (u3 - 2 * u2 + u) * duration * tangent(i, field, axis) +
+        (-2 * u3 + 3 * u2) * b[field][axis] +
+        (u3 - u2) * duration * tangent(i + 1, field, axis),
+    ) as Vec;
+  return { eye: sample("eye"), at: sample("at") };
+}

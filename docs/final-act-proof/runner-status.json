@@ -1,0 +1,17 @@
+﻿{
+    "current":  "complete",
+    "status":  "passed",
+    "completed":  [
+                      "finale-touch-and-fallback",
+                      "full-game",
+                      "legacy-input",
+                      "legacy-mobile",
+                      "ripple",
+                      "stayed",
+                      "verdict",
+                      "legacy-recording",
+                      "menu"
+                  ],
+    "exitCode":  0,
+    "updated":  "2026-11-16T13:55:03.7631733+07:00"
+}

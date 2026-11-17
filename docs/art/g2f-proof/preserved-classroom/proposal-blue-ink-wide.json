@@ -1,0 +1,81 @@
+{
+  "beat": "CLASSROOM_EXPLORATION",
+  "time": 3.031500000000186,
+  "evidence": [],
+  "verdict": null,
+  "stayed": null,
+  "ripple": null,
+  "finale": null,
+  "followedDoor": false,
+  "world": {
+    "camera": [
+      3.355,
+      1.925,
+      3.3
+    ],
+    "target": [
+      -0.04999999999999982,
+      1.2,
+      -0.95
+    ],
+    "fov": 50,
+    "artDirection": "blue-ink",
+    "characterArt": "sculpted-narrative-v1",
+    "anHand": [
+      -0.6396621452759178,
+      0.917774317712145,
+      -0.5381437030689997
+    ],
+    "focus": "wide",
+    "teacher": [
+      2.7,
+      0,
+      6.2
+    ],
+    "teacherVisible": false,
+    "anHead": 0.1,
+    "anFeetY": [
+      -0.001999087249219045,
+      -0.001999087249219045
+    ],
+    "teacherFeetY": [
+      0.03749999999999998,
+      0.03749999999999998
+    ],
+    "notebookPage": null,
+    "notebookPosition": [
+      1.25,
+      1.047,
+      -0.15
+    ],
+    "pageTurn": 1,
+    "chair": [
+      2.3,
+      0,
+      0.6
+    ],
+    "drawCalls": 97,
+    "triangles": 60326,
+    "shadowRefreshed": false,
+    "resources": {
+      "geometries": 103,
+      "textures": 17,
+      "programs": 13,
+      "renderTarget": [
+        1280,
+        720
+      ],
+      "samples": 0,
+      "output": [
+        1280,
+        720
+      ],
+      "shadowMap": [
+        1024,
+        1024
+      ]
+    },
+    "resolution": 1
+  },
+  "audio": null
+}

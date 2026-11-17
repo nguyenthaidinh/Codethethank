@@ -1,0 +1,136 @@
+/* Scoped foundation: never changes classroom, menu or AION styles. */
+.chapter[data-finale] {
+  --finale-midnight: #0b1422;
+  --finale-steel: #24384a;
+  --finale-cyan: #72b7c9;
+  --finale-amber: #d5a76b;
+  --finale-ivory: #f0eee8;
+}
+.player-room-monitor {
+  position: absolute;
+  z-index: 6;
+  left: 35%;
+  top: 32%;
+  width: 30%;
+  height: 26%;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--finale-ivory);
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+}
+.player-room-monitor > span {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font: 12px Arial;
+  padding: 8px 12px;
+  background: var(--finale-midnight);
+  border-bottom: 1px solid var(--finale-cyan);
+}
+.player-room-monitor:hover,
+.player-room-monitor:focus-visible {
+  outline: 2px solid var(--finale-cyan);
+  outline-offset: 5px;
+  background: #72b7c90a;
+}
+.player-room-caption {
+  position: absolute;
+  left: 6%;
+  top: 16%;
+  z-index: 5;
+  pointer-events: none;
+  color: var(--finale-ivory);
+  text-shadow: 0 2px 12px #0b1422;
+}
+.player-room-caption > span {
+  font: 10px Arial;
+  letter-spacing: 0.18em;
+  color: var(--finale-cyan);
+}
+.player-room-caption p {
+  font:
+    clamp(15px, 1.7vw, 23px) Arial, "Segoe UI", sans-serif;
+  max-width: 280px;
+}
+.player-room-actions {
+  bottom: 15%;
+  gap: 8px;
+}
+.player-room-actions button {
+  background: var(--finale-midnight);
+  color: var(--finale-ivory);
+  border-color: var(--finale-steel);
+  font-size: 12px;
+}
+/* Existing private editor is only given an integration surface; no F5.3 fields or sharing. */
+.chapter[data-finale="letter"] .letter-paper,
+.chapter[data-finale="review"] .letter-paper {
+  background: var(--finale-midnight);
+  color: var(--finale-ivory);
+  border: 1px solid var(--finale-steel);
+  transform: translateX(-50%);
+  box-shadow: 0 20px 70px #0008;
+}
+.chapter[data-finale="letter"] .letter-paper {
+  animation: room-editor-enter 1.9s ease both;
+}
+.chapter[data-finale="letter"] .letter-paper :is(input, textarea, button),
+.chapter[data-finale="review"] .letter-paper button {
+  color: var(--finale-ivory);
+  border-color: var(--finale-steel);
+}
+.chapter[data-finale="letter"] .letter-paper textarea {
+  background: none;
+}
+.chapter[data-finale="letter"] .paper-date,
+.chapter[data-finale="review"] .paper-date {
+  color: var(--finale-cyan);
+}
+.chapter[data-finale="letter"] .letter-paper :is(input, textarea)::placeholder {
+  color: #a6b4bd;
+}
+@keyframes room-editor-enter {
+  0%,
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.motion-reduced .letter-paper {
+  animation: none !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .chapter[data-finale="letter"] .letter-paper {
+    animation: none;
+  }
+}
+@media (max-width: 600px) {
+  .player-room-caption {
+    top: 14%;
+    left: 7%;
+    right: 7%;
+    text-align: center;
+  }
+  .player-room-caption p {
+    max-width: none;
+    font-size: 17px;
+  }
+  .player-room-actions {
+    bottom: 18%;
+  }
+  .player-room-actions button {
+    padding: 10px 12px;
+  }
+  .chapter[data-finale="letter"] .letter-paper {
+    width: 94vw;
+    max-height: 78svh;
+    top: 10%;
+    padding: 18px;
+  }
+}

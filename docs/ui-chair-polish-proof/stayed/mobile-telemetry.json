@@ -1,0 +1,214 @@
+{
+  "beat": "NEXT_SCENE_READY",
+  "time": 0.7831999999999972,
+  "evidence": [
+    "clock",
+    "notebook",
+    "laptop"
+  ],
+  "verdict": {
+    "narrativeRevision": 4,
+    "version": 1,
+    "phase": "chapter02",
+    "found": [
+      "presentation",
+      "notes",
+      "data"
+    ],
+    "selected": "an",
+    "tested": [
+      "student07",
+      "an"
+    ],
+    "linked": [
+      "presentation",
+      "notes"
+    ],
+    "carried": null,
+    "stayed": {
+      "narrativeRevision": 4,
+      "version": 1,
+      "phase": "next",
+      "line": 0,
+      "read": [
+        "outcome",
+        "support"
+      ],
+      "page": "support",
+      "written": true,
+      "seen": [
+        "discussion.0",
+        "discussion.1",
+        "chair.0",
+        "question.0",
+        "question.1",
+        "question.2",
+        "question.3",
+        "question.4",
+        "question.5",
+        "question.6",
+        "question.7",
+        "question.8",
+        "question.9",
+        "question.10",
+        "question.11",
+        "question.12",
+        "second_chance.0",
+        "second_chance.1",
+        "second_chance.2",
+        "written.0",
+        "closing.0"
+      ],
+      "nextInspected": true
+    }
+  },
+  "stayed": {
+    "narrativeRevision": 4,
+    "version": 1,
+    "phase": "next",
+    "line": 0,
+    "read": [
+      "outcome",
+      "support"
+    ],
+    "page": "support",
+    "written": true,
+    "seen": [
+      "discussion.0",
+      "discussion.1",
+      "chair.0",
+      "question.0",
+      "question.1",
+      "question.2",
+      "question.3",
+      "question.4",
+      "question.5",
+      "question.6",
+      "question.7",
+      "question.8",
+      "question.9",
+      "question.10",
+      "question.11",
+      "question.12",
+      "second_chance.0",
+      "second_chance.1",
+      "second_chance.2",
+      "written.0",
+      "closing.0"
+    ],
+    "nextInspected": true
+  },
+  "ripple": null,
+  "finale": null,
+  "followedDoor": false,
+  "world": {
+    "school": {
+      "name": "Trường Đại học Tây Nguyên",
+      "logoLoaded": true
+    },
+    "camera": [
+      0.5,
+      2.7,
+      1.15
+    ],
+    "shot": null,
+    "teacherBodyY": 0.5900000000000001,
+    "portraits": {
+      "an": {
+        "x": -207.82094270050732,
+        "y": 390.53244772337695,
+        "visible": false
+      },
+      "teacher": {
+        "x": 356.91327795865584,
+        "y": 369.61633958821534,
+        "visible": true
+      }
+    },
+    "laptopLid": [
+      {
+        "x": -247.56225050154436,
+        "y": 286.3388096899128
+      },
+      {
+        "x": 24.616603127487533,
+        "y": 265.42425894073807
+      },
+      {
+        "x": -15.628511320509924,
+        "y": 93.49301141118397
+      },
+      {
+        "x": -351.9077789138671,
+        "y": 113.01874727043457
+      }
+    ],
+    "target": [
+      0.65,
+      1.047,
+      -0.1
+    ],
+    "fov": 65,
+    "artDirection": "paper-rain",
+    "characterArt": "sculpted-narrative-v1",
+    "anHand": [
+      -0.5540719385813367,
+      0.9168861681564717,
+      -0.3000020762016293
+    ],
+    "focus": "book",
+    "teacher": [
+      1.1,
+      0,
+      0.05
+    ],
+    "teacherVisible": true,
+    "anHead": 0.27,
+    "anFeetY": [
+      0,
+      0
+    ],
+    "teacherFeetY": [
+      0,
+      0
+    ],
+    "notebookPage": "support",
+    "notebookPosition": [
+      0.45,
+      1.047,
+      0.2
+    ],
+    "pageTurn": 1,
+    "chair": [
+      1.1,
+      0,
+      0.25
+    ],
+    "drawCalls": 79,
+    "triangles": 62478,
+    "shadowRefreshed": false,
+    "resources": {
+      "geometries": 128,
+      "textures": 17,
+      "programs": 13,
+      "renderTarget": [
+        390,
+        844
+      ],
+      "samples": 0,
+      "output": [
+        390,
+        844
+      ],
+      "shadowMap": [
+        1024,
+        1024
+      ]
+    },
+    "resolution": 1
+  },
+  "voice": null,
+  "audio": null,
+  "elapsedSeconds": 113.516,
+  "errors": []
+}

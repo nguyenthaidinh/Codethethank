@@ -1,0 +1,29 @@
+{
+  "fonts": [
+    {
+      "familyName": "Noto Serif",
+      "postScriptName": "NotoSerif-Regular",
+      "isCustomFont": true,
+      "glyphCount": 82
+    }
+  ],
+  "paints": [
+    {
+      "font": "italic 44px LessonSerif",
+      "ready": true
+    },
+    {
+      "font": "italic 44px LessonSerif",
+      "ready": true
+    },
+    {
+      "font": "italic 44px LessonSerif",
+      "ready": true
+    },
+    {
+      "font": "italic 44px LessonSerif",
+      "ready": true
+    }
+  ],
+  "errors": []
+}

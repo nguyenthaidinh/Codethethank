@@ -1,0 +1,36 @@
+{
+  "typecheck": "PASS",
+  "lint": "PASS",
+  "build": "PASS",
+  "unit": {
+    "passed": 77,
+    "total": 77
+  },
+  "initialE2E": {
+    "startTime": "2026-11-17T11:06:14.774Z",
+    "duration": 458020.565,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  },
+  "finalDesktopTouch": {
+    "startTime": "2026-11-17T11:17:36.954Z",
+    "duration": 41268.001000000004,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "review": {
+    "video": {
+      "duration": 54.983,
+      "width": 1280,
+      "height": 720
+    },
+    "errors": [],
+    "checkpointLauncher": "PASS"
+  },
+  "artApproval": "Pending Product Owner review",
+  "physicalMobile": false
+}

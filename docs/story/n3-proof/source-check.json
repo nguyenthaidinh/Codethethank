@@ -1,0 +1,13 @@
+{
+  "changed": [
+    "src/cinematic/FallbackWorld.ts",
+    "src/cinematic/WorldRenderer.ts",
+    "src/ripple/Fallback.ts",
+    "src/ripple/RippleControls.tsx",
+    "src/ripple/RippleWorld.ts",
+    "src/ripple/story.ts"
+  ],
+  "unchangedCount": 75,
+  "rendererChanges": "string literals only, AST comparison passed",
+  "stateSaveAudioAndCameraModules": "unchanged"
+}

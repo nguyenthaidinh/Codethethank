@@ -1,0 +1,614 @@
+{
+  "beat": "NEXT_SCENE_READY",
+  "time": 39.69849999999982,
+  "evidence": [
+    "clock",
+    "notebook",
+    "laptop"
+  ],
+  "verdict": {
+    "narrativeRevision": 4,
+    "version": 1,
+    "phase": "chapter02",
+    "found": [
+      "presentation",
+      "notes",
+      "data"
+    ],
+    "selected": "an",
+    "tested": [
+      "student07",
+      "an"
+    ],
+    "linked": [
+      "presentation",
+      "notes"
+    ],
+    "carried": null,
+    "stayed": {
+      "narrativeRevision": 4,
+      "version": 1,
+      "phase": "next",
+      "line": 0,
+      "read": [
+        "outcome",
+        "support"
+      ],
+      "page": "support",
+      "written": true,
+      "seen": [
+        "discussion.0",
+        "discussion.1",
+        "chair.0",
+        "question.0",
+        "question.1",
+        "question.2",
+        "question.3",
+        "question.4",
+        "question.5",
+        "question.6",
+        "question.7",
+        "question.8",
+        "question.9",
+        "question.10",
+        "question.11",
+        "question.12",
+        "second_chance.0",
+        "second_chance.1",
+        "second_chance.2",
+        "written.0",
+        "closing.0"
+      ],
+      "nextInspected": true
+    },
+    "ripple": {
+      "version": 1,
+      "phase": "finale",
+      "questions": [
+        "prediction",
+        "opportunity"
+      ],
+      "milestones": 3,
+      "memories": [
+        "evaluation",
+        "stayed",
+        "design"
+      ],
+      "selected": "design",
+      "elapsed": 0,
+      "played": [
+        "reveal.music",
+        "echo.chair",
+        "chair.chair"
+      ]
+    },
+    "finale": {
+      "memoryFocus": null,
+      "version": 1,
+      "phase": "ending",
+      "elapsed": 0,
+      "choice": "letter",
+      "starSeen": true,
+      "starCue": true,
+      "completed": true
+    }
+  },
+  "stayed": {
+    "narrativeRevision": 4,
+    "version": 1,
+    "phase": "next",
+    "line": 0,
+    "read": [
+      "outcome",
+      "support"
+    ],
+    "page": "support",
+    "written": true,
+    "seen": [
+      "discussion.0",
+      "discussion.1",
+      "chair.0",
+      "question.0",
+      "question.1",
+      "question.2",
+      "question.3",
+      "question.4",
+      "question.5",
+      "question.6",
+      "question.7",
+      "question.8",
+      "question.9",
+      "question.10",
+      "question.11",
+      "question.12",
+      "second_chance.0",
+      "second_chance.1",
+      "second_chance.2",
+      "written.0",
+      "closing.0"
+    ],
+    "nextInspected": true
+  },
+  "ripple": {
+    "version": 1,
+    "phase": "finale",
+    "questions": [
+      "prediction",
+      "opportunity"
+    ],
+    "milestones": 3,
+    "memories": [
+      "evaluation",
+      "stayed",
+      "design"
+    ],
+    "selected": "design",
+    "elapsed": 0,
+    "played": [
+      "reveal.music",
+      "echo.chair",
+      "chair.chair"
+    ]
+  },
+  "finale": {
+    "memoryFocus": null,
+    "version": 1,
+    "phase": "ending",
+    "elapsed": 0,
+    "choice": "letter",
+    "starSeen": true,
+    "starCue": true,
+    "completed": true
+  },
+  "followedDoor": false,
+  "world": {
+    "era": 2046,
+    "camera": [
+      1.2,
+      8.4,
+      7
+    ],
+    "chair": [
+      1.1,
+      0,
+      0.25
+    ],
+    "teacher": [
+      1.0999999999999999,
+      0,
+      0.19999999999999996
+    ],
+    "focus": "finale",
+    "notebook": true,
+    "motif": "chair.the-one-who-stayed",
+    "drawCalls": 7,
+    "resolution": 1
+  },
+  "voice": {
+    "status": "off",
+    "clip": null,
+    "started": 0,
+    "completed": 0,
+    "busy": false
+  },
+  "audio": {
+    "context": "running",
+    "events": [
+      {
+        "cue": "aion.space.city",
+        "time": 0
+      },
+      {
+        "cue": "aion.space.anomaly",
+        "time": 1.7706666666666666
+      },
+      {
+        "cue": "focus",
+        "time": 2.2213333333333334
+      },
+      {
+        "cue": "focus",
+        "time": 2.232
+      },
+      {
+        "cue": "focus",
+        "time": 2.24
+      },
+      {
+        "cue": "select",
+        "time": 2.2506666666666666
+      },
+      {
+        "cue": "aion.inspect.source",
+        "time": 7.12
+      },
+      {
+        "cue": "aion.inspect.limit",
+        "time": 7.741333333333333
+      },
+      {
+        "cue": "memory",
+        "time": 8.52
+      },
+      {
+        "cue": "bell",
+        "time": 13.52
+      },
+      {
+        "cue": "step",
+        "time": 15.021333333333333
+      },
+      {
+        "cue": "step",
+        "time": 15.8
+      },
+      {
+        "cue": "focus.window",
+        "time": 16.52
+      },
+      {
+        "cue": "focus.wide",
+        "time": 16.52
+      },
+      {
+        "cue": "focus.window",
+        "time": 16.530666666666665
+      },
+      {
+        "cue": "focus.wide",
+        "time": 20.04
+      },
+      {
+        "cue": "clock",
+        "time": 24.250666666666667
+      },
+      {
+        "cue": "focus.clock",
+        "time": 24.250666666666667
+      },
+      {
+        "cue": "focus.wide",
+        "time": 26.04
+      },
+      {
+        "cue": "paper",
+        "time": 27.872
+      },
+      {
+        "cue": "focus.notebook",
+        "time": 27.88
+      },
+      {
+        "cue": "focus.wide",
+        "time": 29.8
+      },
+      {
+        "cue": "key",
+        "time": 31.632
+      },
+      {
+        "cue": "focus.laptop",
+        "time": 31.637333333333334
+      },
+      {
+        "cue": "beat.explore",
+        "time": 33.541333333333334
+      },
+      {
+        "cue": "paper",
+        "time": 33.88
+      },
+      {
+        "cue": "focus.notebook",
+        "time": 33.89066666666667
+      },
+      {
+        "cue": "paper",
+        "time": 35.85066666666667
+      },
+      {
+        "cue": "focus.notes",
+        "time": 35.858666666666664
+      },
+      {
+        "cue": "key",
+        "time": 38.501333333333335
+      },
+      {
+        "cue": "focus.laptop",
+        "time": 38.512
+      },
+      {
+        "cue": "key",
+        "time": 40.52
+      },
+      {
+        "cue": "beat.explore",
+        "time": 40.53066666666667
+      },
+      {
+        "cue": "key",
+        "time": 40.781333333333336
+      },
+      {
+        "cue": "beat.explore",
+        "time": 41.61066666666667
+      },
+      {
+        "cue": "key",
+        "time": 41.70133333333333
+      },
+      {
+        "cue": "key",
+        "time": 42.57066666666667
+      },
+      {
+        "cue": "key",
+        "time": 42.8
+      },
+      {
+        "cue": "beat.explore",
+        "time": 43.501333333333335
+      },
+      {
+        "cue": "beat.explore",
+        "time": 43.8
+      },
+      {
+        "cue": "key",
+        "time": 44.010666666666665
+      },
+      {
+        "cue": "beat.explore",
+        "time": 44.28
+      },
+      {
+        "cue": "key",
+        "time": 44.30133333333333
+      },
+      {
+        "cue": "key",
+        "time": 45.072
+      },
+      {
+        "cue": "key",
+        "time": 45.501333333333335
+      },
+      {
+        "cue": "beat.verdict",
+        "time": 46.090666666666664
+      },
+      {
+        "cue": "verdict",
+        "time": 46.152
+      },
+      {
+        "cue": "beat.explore",
+        "time": 54.12
+      },
+      {
+        "cue": "focus.wide",
+        "time": 54.12
+      },
+      {
+        "cue": "paper",
+        "time": 54.632
+      },
+      {
+        "cue": "focus.notebook",
+        "time": 54.632
+      },
+      {
+        "cue": "beat.explore",
+        "time": 56.57066666666667
+      },
+      {
+        "cue": "focus.laptop",
+        "time": 56.57066666666667
+      },
+      {
+        "cue": "beat.explore",
+        "time": 60.57066666666667
+      },
+      {
+        "cue": "focus.wide",
+        "time": 60.57066666666667
+      },
+      {
+        "cue": "paper",
+        "time": 62.592
+      },
+      {
+        "cue": "focus.notes",
+        "time": 62.6
+      },
+      {
+        "cue": "beat.explore",
+        "time": 64.69066666666667
+      },
+      {
+        "cue": "focus.laptop",
+        "time": 64.69066666666667
+      },
+      {
+        "cue": "beat.explore",
+        "time": 68.73066666666666
+      },
+      {
+        "cue": "focus.wide",
+        "time": 68.74133333333333
+      },
+      {
+        "cue": "door",
+        "time": 70.74133333333333
+      },
+      {
+        "cue": "step",
+        "time": 71.04
+      },
+      {
+        "cue": "step",
+        "time": 71.592
+      },
+      {
+        "cue": "step",
+        "time": 72.17066666666666
+      },
+      {
+        "cue": "step",
+        "time": 72.712
+      },
+      {
+        "cue": "step",
+        "time": 73.30133333333333
+      },
+      {
+        "cue": "step",
+        "time": 73.78133333333334
+      },
+      {
+        "cue": "beat.explore",
+        "time": 78.28
+      },
+      {
+        "cue": "chair.the-one-who-stayed",
+        "time": 87.432
+      },
+      {
+        "cue": "chair",
+        "time": 87.432
+      },
+      {
+        "cue": "paper",
+        "time": 149.86133333333333
+      },
+      {
+        "cue": "paper",
+        "time": 150.45066666666668
+      },
+      {
+        "cue": "paper",
+        "time": 152.36
+      },
+      {
+        "cue": "paper",
+        "time": 164.152
+      },
+      {
+        "cue": "pen",
+        "time": 168.072
+      },
+      {
+        "cue": "pen",
+        "time": 168.432
+      },
+      {
+        "cue": "beat.paper",
+        "time": 168.73066666666668
+      },
+      {
+        "cue": "paper",
+        "time": 181.78133333333332
+      },
+      {
+        "cue": "paper",
+        "time": 182.06133333333332
+      },
+      {
+        "cue": "key",
+        "time": 182.33066666666667
+      },
+      {
+        "cue": "paper",
+        "time": 190.29066666666668
+      },
+      {
+        "cue": "paper",
+        "time": 197.072
+      },
+      {
+        "cue": "paper",
+        "time": 203.352
+      },
+      {
+        "cue": "key",
+        "time": 219.10133333333334
+      },
+      {
+        "cue": "aion-motif",
+        "time": 227.62133333333333
+      },
+      {
+        "cue": "aion-overtone",
+        "time": 227.62133333333333
+      },
+      {
+        "cue": "chair.the-one-who-stayed",
+        "time": 246.29066666666668
+      },
+      {
+        "cue": "chair",
+        "time": 246.29066666666668
+      },
+      {
+        "cue": "chair.the-one-who-stayed",
+        "time": 252.37066666666666
+      },
+      {
+        "cue": "chair",
+        "time": 252.37066666666666
+      },
+      {
+        "cue": "paper",
+        "time": 263.256
+      },
+      {
+        "cue": "paper",
+        "time": 263.48
+      },
+      {
+        "cue": "paper",
+        "time": 263.76
+      },
+      {
+        "cue": "key",
+        "time": 264.17066666666665
+      },
+      {
+        "cue": "paper",
+        "time": 308.5706666666667
+      },
+      {
+        "cue": "key",
+        "time": 309.9413333333333
+      },
+      {
+        "cue": "paper",
+        "time": 310.54133333333334
+      },
+      {
+        "cue": "finale.star",
+        "time": 315.56
+      },
+      {
+        "cue": "key",
+        "time": 320.992
+      },
+      {
+        "cue": "key",
+        "time": 324.73066666666665
+      }
+    ],
+    "mix": {
+      "rain": 0,
+      "fan": 0.045,
+      "ambience": 0.5,
+      "music": 0.05
+    },
+    "buses": {
+      "music": 0.027499999850988388,
+      "effects": 0.6499999761581421,
+      "ambience": 0.32499998807907104
+    }
+  }
+}

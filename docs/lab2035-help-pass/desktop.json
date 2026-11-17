@@ -1,0 +1,151 @@
+{
+  "result": "PASS",
+  "errors": [],
+  "state": {
+    "beat": "NEXT_SCENE_READY",
+    "time": 28.148999999999646,
+    "evidence": [
+      "clock",
+      "notebook",
+      "laptop"
+    ],
+    "verdict": {
+      "version": 1,
+      "narrativeRevision": 4,
+      "phase": "chapter02",
+      "found": [
+        "presentation",
+        "notes",
+        "data"
+      ],
+      "selected": "an",
+      "tested": [
+        "student07",
+        "an"
+      ],
+      "linked": [
+        "presentation",
+        "notes"
+      ],
+      "carried": null,
+      "stayed": {
+        "version": 1,
+        "narrativeRevision": 4,
+        "phase": "next",
+        "line": 0,
+        "read": [
+          "outcome",
+          "support"
+        ],
+        "page": "support",
+        "written": true,
+        "seen": [],
+        "nextInspected": true
+      },
+      "ripple": {
+        "version": 1,
+        "phase": "years",
+        "questions": [
+          "prediction",
+          "opportunity"
+        ],
+        "milestones": 1,
+        "memories": [],
+        "selected": null,
+        "elapsed": 0,
+        "played": [],
+        "lab2035": {
+          "version": 1,
+          "loaded": [
+            "record",
+            "access"
+          ],
+          "enabled": [
+            "record"
+          ],
+          "trials": [
+            3,
+            1
+          ],
+          "selected": 1,
+          "running": null,
+          "noteRead": true,
+          "marked": true
+        }
+      }
+    },
+    "stayed": {
+      "version": 1,
+      "narrativeRevision": 4,
+      "phase": "next",
+      "line": 0,
+      "read": [
+        "outcome",
+        "support"
+      ],
+      "page": "support",
+      "written": true,
+      "seen": [],
+      "nextInspected": true
+    },
+    "ripple": {
+      "version": 1,
+      "phase": "years",
+      "questions": [
+        "prediction",
+        "opportunity"
+      ],
+      "milestones": 1,
+      "memories": [],
+      "selected": null,
+      "elapsed": 0,
+      "played": [],
+      "lab2035": {
+        "version": 1,
+        "loaded": [
+          "record",
+          "access"
+        ],
+        "enabled": [
+          "record"
+        ],
+        "trials": [
+          3,
+          1
+        ],
+        "selected": 1,
+        "running": null,
+        "noteRead": true,
+        "marked": true
+      }
+    },
+    "finale": null,
+    "followedDoor": false,
+    "world": {
+      "era": 2035,
+      "camera": [
+        1.6,
+        2.65,
+        2.5
+      ],
+      "chair": [
+        2.3,
+        0,
+        0.6
+      ],
+      "teacher": [
+        1.1,
+        0,
+        0.2
+      ],
+      "focus": "years",
+      "notebook": true,
+      "motif": "chair.the-one-who-stayed",
+      "futureWorkspace": false,
+      "drawCalls": 158,
+      "resolution": 1
+    },
+    "voice": null,
+    "audio": null
+  }
+}

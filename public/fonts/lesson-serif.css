@@ -1,0 +1,22 @@
+/* Noto Serif, SIL OFL 1.1. Full Vietnamese + Latin, with GPOS/GSUB mark positioning. */
+@font-face {
+  font-family: LessonSerif;
+  src: url('./lesson-serif-vi-normal.woff2') format('woff2'), local('Times New Roman');
+  font-style: normal;
+  font-weight: 100 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: LessonSerif;
+  src: url('./lesson-serif-vi-bold.woff2') format('woff2'), local('Times New Roman Bold');
+  font-style: normal;
+  font-weight: 600 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: LessonSerif;
+  src: url('./lesson-serif-vi-italic.woff2') format('woff2'), local('Times New Roman Italic');
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+}

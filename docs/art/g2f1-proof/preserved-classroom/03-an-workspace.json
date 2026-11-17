@@ -1,0 +1,205 @@
+{
+  "beat": "LAPTOP_INVESTIGATION",
+  "time": 2.133199999999996,
+  "evidence": [
+    "window",
+    "clock",
+    "notebook",
+    "laptop"
+  ],
+  "verdict": null,
+  "stayed": null,
+  "ripple": null,
+  "finale": null,
+  "followedDoor": false,
+  "world": {
+    "camera": [
+      0.555,
+      1.735,
+      0.6000000000000001
+    ],
+    "target": [
+      -0.45,
+      1.22,
+      -1.03
+    ],
+    "fov": 45,
+    "artDirection": "paper-rain",
+    "characterArt": "sculpted-narrative-v1",
+    "anHand": [
+      -0.639660054429457,
+      0.9177631930461241,
+      -0.5380980876104088
+    ],
+    "focus": "laptop",
+    "teacher": [
+      2.7,
+      0,
+      6.2
+    ],
+    "teacherVisible": false,
+    "anHead": 0.1,
+    "anFeetY": [
+      -0.003948168951876663,
+      -0.003948168951876663
+    ],
+    "teacherFeetY": [
+      0.03749999999999998,
+      0.03749999999999998
+    ],
+    "notebookPage": null,
+    "notebookPosition": [
+      1.25,
+      1.047,
+      -0.15
+    ],
+    "pageTurn": 1,
+    "chair": [
+      2.3,
+      0,
+      0.6
+    ],
+    "drawCalls": 62,
+    "triangles": 51320,
+    "shadowRefreshed": false,
+    "resources": {
+      "geometries": 104,
+      "textures": 19,
+      "programs": 13,
+      "renderTarget": [
+        1280,
+        720
+      ],
+      "samples": 0,
+      "output": [
+        1280,
+        720
+      ],
+      "shadowMap": [
+        1024,
+        1024
+      ]
+    },
+    "resolution": 1
+  },
+  "audio": {
+    "context": "running",
+    "events": [
+      {
+        "cue": "aion.space.city",
+        "time": 0.010666666666666666
+      },
+      {
+        "cue": "aion.space.anomaly",
+        "time": 0.9013333333333333
+      },
+      {
+        "cue": "focus",
+        "time": 6.032
+      },
+      {
+        "cue": "focus",
+        "time": 6.032
+      },
+      {
+        "cue": "select",
+        "time": 6.032
+      },
+      {
+        "cue": "aion.inspect.source",
+        "time": 9.04
+      },
+      {
+        "cue": "aion.inspect.limit",
+        "time": 9.232
+      },
+      {
+        "cue": "memory",
+        "time": 10.312
+      },
+      {
+        "cue": "bell",
+        "time": 15.32
+      },
+      {
+        "cue": "step",
+        "time": 16.82133333333333
+      },
+      {
+        "cue": "step",
+        "time": 17.52
+      },
+      {
+        "cue": "focus.window",
+        "time": 18.32
+      },
+      {
+        "cue": "focus.wide",
+        "time": 18.32
+      },
+      {
+        "cue": "focus.window",
+        "time": 18.32
+      },
+      {
+        "cue": "focus.wide",
+        "time": 21.834666666666667
+      },
+      {
+        "cue": "paper",
+        "time": 28.56
+      },
+      {
+        "cue": "focus.window",
+        "time": 28.56
+      },
+      {
+        "cue": "focus.wide",
+        "time": 30.781333333333333
+      },
+      {
+        "cue": "clock",
+        "time": 32.72
+      },
+      {
+        "cue": "focus.clock",
+        "time": 32.72
+      },
+      {
+        "cue": "focus.wide",
+        "time": 34.66133333333333
+      },
+      {
+        "cue": "paper",
+        "time": 36.61066666666667
+      },
+      {
+        "cue": "focus.notebook",
+        "time": 36.61066666666667
+      },
+      {
+        "cue": "focus.wide",
+        "time": 38.552
+      },
+      {
+        "cue": "key",
+        "time": 40.501333333333335
+      },
+      {
+        "cue": "focus.laptop",
+        "time": 40.501333333333335
+      }
+    ],
+    "mix": {
+      "rain": 0.14,
+      "fan": 0.08,
+      "ambience": 1,
+      "music": 0
+    },
+    "buses": {
+      "music": 0,
+      "effects": 0.6499999761581421,
+      "ambience": 0.6499999761581421
+    }
+  }
+}

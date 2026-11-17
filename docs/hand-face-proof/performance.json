@@ -1,0 +1,100 @@
+{
+  "desktop": {
+    "cameraPreserved": true,
+    "before": {
+      "drawCalls": 109,
+      "triangles": 96618,
+      "resolution": 1,
+      "resources": {
+        "geometries": 134,
+        "textures": 18,
+        "programs": 13,
+        "renderTarget": [
+          1280,
+          720
+        ],
+        "samples": 0,
+        "output": [
+          1280,
+          720
+        ],
+        "shadowMap": [
+          1024,
+          1024
+        ]
+      }
+    },
+    "after": {
+      "drawCalls": 111,
+      "triangles": 99498,
+      "resolution": 1,
+      "resources": {
+        "geometries": 139,
+        "textures": 29,
+        "programs": 17,
+        "renderTarget": [
+          1280,
+          720
+        ],
+        "samples": 0,
+        "output": [
+          1280,
+          720
+        ],
+        "shadowMap": [
+          1024,
+          1024
+        ]
+      }
+    }
+  },
+  "mobile": {
+    "cameraPreserved": true,
+    "before": {
+      "drawCalls": 116,
+      "triangles": 105612,
+      "resolution": 1,
+      "resources": {
+        "geometries": 132,
+        "textures": 17,
+        "programs": 13,
+        "renderTarget": [
+          390,
+          844
+        ],
+        "samples": 0,
+        "output": [
+          390,
+          844
+        ],
+        "shadowMap": [
+          1024,
+          1024
+        ]
+      }
+    },
+    "after": {
+      "drawCalls": 118,
+      "triangles": 108492,
+      "resolution": 1,
+      "resources": {
+        "geometries": 138,
+        "textures": 28,
+        "programs": 17,
+        "renderTarget": [
+          390,
+          844
+        ],
+        "samples": 0,
+        "output": [
+          390,
+          844
+        ],
+        "shadowMap": [
+          1024,
+          1024
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+[
+  "src/cinematic/WorldRenderer.ts",
+  "src/stayed/Notebook.ts",
+  "src/stayed/state.ts",
+  "src/stayed/story.ts",
+  "src/verdict/evidence.ts",
+  "src/verdict/rules.ts",
+  "src/verdict/screen.ts",
+  "src/verdict/state.ts",
+  "src/verdict/story.ts",
+  "src/verdict/VerdictControls.tsx"
+]

@@ -1,0 +1,50 @@
+{
+  "file": "voice/vi-hoaimy-calm/opening-continuous.mp3",
+  "seconds": 30.269541666666665,
+  "gap": 0.22,
+  "sha256": "e69f1fdf9d4f57c29dee43e48c05b13cf224a4632f67fdd8ac221bc6fd2e5803",
+  "clips": [
+    {
+      "key": "8a5e58a6",
+      "start": 0.25,
+      "end": 6.594125,
+      "sourceFile": "voice/vi-hoaimy-calm/8a5e58a6.mp3"
+    },
+    {
+      "key": "5cfc21a5",
+      "start": 6.814125,
+      "end": 10.040583333333334,
+      "sourceFile": "voice/vi-hoaimy-calm/5cfc21a5.mp3"
+    },
+    {
+      "key": "d1556f7c",
+      "start": 10.260583333333333,
+      "end": 15.224291666666666,
+      "sourceFile": "voice/vi-hoaimy-calm/d1556f7c.mp3"
+    },
+    {
+      "key": "5a05af21",
+      "start": 15.444291666666667,
+      "end": 18.559041666666666,
+      "sourceFile": "voice/vi-hoaimy-calm/5a05af21.mp3"
+    },
+    {
+      "key": "06ee22c7",
+      "start": 18.779041666666668,
+      "end": 22.060375,
+      "sourceFile": "voice/vi-hoaimy-calm/06ee22c7.mp3"
+    },
+    {
+      "key": "3e3918f2",
+      "start": 22.280375,
+      "end": 26.2185,
+      "sourceFile": "voice/vi-hoaimy-calm/3e3918f2.mp3"
+    },
+    {
+      "key": "8815e952",
+      "start": 26.4385,
+      "end": 29.669541666666667,
+      "sourceFile": "voice/vi-hoaimy-calm/8815e952.mp3"
+    }
+  ]
+}

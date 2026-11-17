@@ -1,0 +1,32 @@
+{
+  "fonts": {
+    "normal": [
+      {
+        "familyName": "Noto Serif",
+        "postScriptName": "NotoSerif-Regular",
+        "isCustomFont": true,
+        "glyphCount": 62
+      }
+    ],
+    "bold": [
+      {
+        "familyName": "Noto Serif",
+        "postScriptName": "NotoSerif-Regular",
+        "isCustomFont": true,
+        "glyphCount": 62
+      }
+    ],
+    "italic": [
+      {
+        "familyName": "Noto Serif",
+        "postScriptName": "NotoSerif-Italic",
+        "isCustomFont": true,
+        "glyphCount": 62
+      }
+    ]
+  },
+  "widths": [
+    857.6318359375,
+    857.6318359375
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "result": "PASS",
+  "start": {
+    "beat": "NEXT_SCENE_READY",
+    "time": 5.483300000000007,
+    "evidence": [
+      "clock",
+      "notebook",
+      "laptop"
+    ],
+    "verdict": {
+      "version": 1,
+      "narrativeRevision": 4,
+      "phase": "chapter02",
+      "found": [
+        "presentation",
+        "notes",
+        "data"
+      ],
+      "selected": "an",
+      "tested": [
+        "student07",
+        "an"
+      ],
+      "linked": [
+        "presentation",
+        "notes"
+      ],
+      "carried": null,
+      "stayed": {
+        "version": 1,
+        "narrativeRevision": 4,
+        "phase": "next",
+        "line": 0,
+        "read": [
+          "outcome",
+          "support"
+        ],
+        "page": "support",
+        "written": true,
+        "seen": [],
+        "nextInspected": true
+      },
+      "ripple": {
+        "version": 1,
+        "phase": "world",
+        "questions": [
+          "prediction",
+          "opportunity"
+        ],
+        "milestones": 3,
+        "memories": [],
+        "selected": null,
+        "elapsed": 5.000000000000003,
+        "played": []
+      }
+    },
+    "stayed": {
+      "version": 1,
+      "narrativeRevision": 4,
+      "phase": "next",
+      "line": 0,
+      "read": [
+        "outcome",
+        "support"
+      ],
+      "page": "support",
+      "written": true,
+      "seen": [],
+      "nextInspected": true
+    },
+    "ripple": {
+      "version": 1,
+      "phase": "world",
+      "questions": [
+        "prediction",
+        "opportunity"
+      ],
+      "milestones": 3,
+      "memories": [],
+      "selected": null,
+      "elapsed": 5.000000000000003,
+      "played": []
+    },
+    "finale": null,
+    "followedDoor": false,
+    "world": {
+      "era": 2046,
+      "camera": [
+        1.15,
+        2.6,
+        5.9
+      ],
+      "chair": [
+        2.3,
+        0,
+        0.6
+      ],
+      "teacher": [
+        1.1,
+        0,
+        0.2
+      ],
+      "focus": "world",
+      "notebook": true,
+      "motif": "chair.the-one-who-stayed",
+      "futureWorkspace": true,
+      "drawCalls": 90,
+      "resolution": 1
+    },
+    "voice": null,
+    "audio": null
+  },
+  "end": {
+    "beat": "NEXT_SCENE_READY",
+    "time": 0.28330000000000105,
+    "evidence": [
+      "clock",
+      "notebook",
+      "laptop"
+    ],
+    "verdict": {
+      "version": 1,
+      "narrativeRevision": 4,
+      "phase": "chapter02",
+      "found": [
+        "presentation",
+        "notes",
+        "data"
+      ],
+      "selected": "an",
+      "tested": [
+        "student07",
+        "an"
+      ],
+      "linked": [
+        "presentation",
+        "notes"
+      ],
+      "carried": null,
+      "stayed": {
+        "version": 1,
+        "narrativeRevision": 4,
+        "phase": "next",
+        "line": 0,
+        "read": [
+          "outcome",
+          "support"
+        ],
+        "page": "support",
+        "written": true,
+        "seen": [],
+        "nextInspected": true
+      },
+      "ripple": {
+        "version": 1,
+        "phase": "record",
+        "questions": [
+          "prediction",
+          "opportunity"
+        ],
+        "milestones": 3,
+        "memories": [],
+        "selected": null,
+        "elapsed": 0,
+        "played": []
+      }
+    },
+    "stayed": {
+      "version": 1,
+      "narrativeRevision": 4,
+      "phase": "next",
+      "line": 0,
+      "read": [
+        "outcome",
+        "support"
+      ],
+      "page": "support",
+      "written": true,
+      "seen": [],
+      "nextInspected": true
+    },
+    "ripple": {
+      "version": 1,
+      "phase": "record",
+      "questions": [
+        "prediction",
+        "opportunity"
+      ],
+      "milestones": 3,
+      "memories": [],
+      "selected": null,
+      "elapsed": 0,
+      "played": []
+    },
+    "finale": null,
+    "followedDoor": false,
+    "world": {
+      "era": 2046,
+      "camera": [
+        1.15,
+        2.6,
+        5.9
+      ],
+      "chair": [
+        2.3,
+        0,
+        0.6
+      ],
+      "teacher": [
+        1.1,
+        0,
+        0.2
+      ],
+      "focus": "record",
+      "notebook": true,
+      "motif": "chair.the-one-who-stayed",
+      "futureWorkspace": true,
+      "drawCalls": 90,
+      "resolution": 1
+    },
+    "voice": null,
+    "audio": null
+  }
+}

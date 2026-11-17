@@ -1,0 +1,433 @@
+/* Classroom art reset: scenery leads, labels appear only at the moment of attention. */
+.subtitle-speaker {
+  display: block;
+  margin-bottom: 9px;
+  font:
+    600 11px/1.4 Arial,
+    sans-serif;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: #dec596;
+}
+.chapter.narrative-room {
+  --story-ink: #172d40;
+  --story-paper: #f0e0bb;
+  --story-gold: #dfb970;
+}
+.chapter.narrative-room .chapter-letterbox {
+  background: linear-gradient(
+    #132737 0 2.5%,
+    transparent 2.5% 97.5%,
+    #132737 97.5%
+  );
+}
+.chapter.narrative-room .minimal-controls {
+  opacity: 0.72;
+}
+.chapter.narrative-room .minimal-controls button {
+  border-color: transparent;
+  background: #142d3d3b;
+}
+.chapter.narrative-room .minimal-controls button:hover {
+  background: #173248b8;
+}
+.chapter.narrative-room .world-hotspot {
+  width: 56px;
+  height: 56px;
+  background: transparent;
+  border: 0;
+}
+.chapter.narrative-room .hotspot-ring {
+  width: 12px;
+  height: 12px;
+  font-size: 0;
+  color: transparent;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  transform: none;
+  position: relative;
+  overflow: visible;
+}
+.chapter.narrative-room .hotspot-ring::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  background: #f4ddb0;
+  transform: rotate(45deg);
+  box-shadow: 0 0 7px #ffdd9f88;
+  opacity: 0.65;
+  transition:
+    opacity 0.2s,
+    transform 0.2s;
+}
+.chapter.narrative-room .observed .hotspot-ring::after {
+  background: transparent;
+  border: 1px solid #e3cf9a;
+  opacity: 0.45;
+}
+.chapter.narrative-room .world-hotspot:hover .hotspot-ring,
+.chapter.narrative-room .world-hotspot:focus-visible .hotspot-ring {
+  background: none;
+  box-shadow: none;
+  border: 0;
+  transform: none;
+}
+.chapter.narrative-room .world-hotspot:hover .hotspot-ring::after,
+.chapter.narrative-room .world-hotspot:focus-visible .hotspot-ring::after {
+  opacity: 1;
+  transform: rotate(45deg) scale(1.4);
+}
+.chapter.narrative-room .hotspot-name {
+  font:
+    12px/1.4 Arial,
+    sans-serif;
+  letter-spacing: 0.2px;
+  background: #173147ec;
+  color: #f3e6cb;
+  padding: 7px 10px;
+  border-radius: 2px;
+  border-bottom: 1px solid #c9ac73;
+  box-shadow: none;
+}
+.chapter.narrative-room .subtitle {
+  bottom: 4.5%;
+  width: min(740px, 88vw);
+}
+.chapter.narrative-room .subtitle p {
+  font:
+    20px/1.45 LessonSerif,
+    "Times New Roman",
+    serif;
+  color: #f6e8ca;
+  text-shadow:
+    0 2px 4px #14283f,
+    0 0 16px #14283faa;
+}
+.chapter.narrative-room .chapter-hint {
+  color: #e7d7b5;
+  font-size: 12px;
+  opacity: 0.78;
+  bottom: 5%;
+}
+.chapter.narrative-room .chapter-return,
+.chapter.narrative-room .chapter-skip,
+.chapter.narrative-room .chapter-action,
+.chapter.narrative-room .dialogue-advance {
+  border: 0;
+  border-bottom: 1px solid #c5a66b88;
+  background: #173147c7;
+  color: #eeddb9;
+  backdrop-filter: none;
+  border-radius: 2px;
+  font:
+    13px/1.4 LessonSerif,
+    serif;
+  box-shadow: none;
+}
+.chapter.narrative-room .chapter-action {
+  bottom: 17%;
+  min-height: 44px;
+  padding: 10px 18px;
+}
+.chapter.narrative-room .chapter-return {
+  background: #173147a6;
+  padding: 8px 12px;
+}
+.chapter.narrative-room .verdict-chapter-label {
+  color: #dfc797;
+  opacity: 0.75;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+.chapter.narrative-room .notebook-input {
+  bottom: 17%;
+  gap: 10px;
+}
+.chapter.narrative-room .notebook-input button {
+  min-width: 105px;
+  min-height: 44px;
+  padding: 9px 14px;
+  border: 0;
+  border-bottom: 1px solid #a1a79b;
+  background: #183349c9;
+  color: #f0dfb8;
+  font:
+    14px LessonSerif,
+    serif;
+}
+.chapter.narrative-room .notebook-input button[aria-pressed="true"] {
+  background: #233f53e8;
+  border-bottom: 2px solid #e6bd70;
+  box-shadow: none;
+}
+.chapter.narrative-room .pen-line {
+  bottom: 17%;
+  min-height: 54px;
+  width: min(330px, 82vw);
+  padding: 9px 14px;
+  background:
+    linear-gradient(90deg, #d9b56c var(--stroke), transparent var(--stroke))
+      bottom/100% 3px no-repeat,
+    #173147df;
+  color: #f1dfb9;
+  border: 0;
+  font:
+    italic 18px LessonSerif,
+    serif;
+}
+.chapter.narrative-room .pen-line small {
+  font-size: 10px;
+  opacity: 0.7;
+  margin-top: 5px;
+}
+.chapter.narrative-room .laptop-input {
+  bottom: 16%;
+  gap: 6px;
+}
+.chapter.narrative-room .profile-factors {
+  background: #163044e6;
+  color: #eee1c3;
+  border-left: 2px solid #d5b378;
+  border-radius: 2px;
+}
+.chapter.narrative-room .profile-keys button,
+.chapter.narrative-room .run-key {
+  border: 0;
+  border-bottom: 1px solid #90a3a7;
+  background: #173147e8;
+  color: #eadabb;
+}
+.chapter.narrative-room .profile-keys button[aria-pressed="true"] {
+  background: #d7ba80;
+  color: #20384b;
+}
+.chapter.narrative-room .verdict-hint-button {
+  background: #1731479c;
+  color: #e5d4ae;
+  border: 1px solid #b2b4a44a;
+}
+.chapter.narrative-room .verdict-hint {
+  background: #173147ed;
+  color: #f0dfbb;
+  border: 0;
+  border-left: 2px solid #d3b170;
+}
+@media (max-width: 600px) {
+  .chapter.narrative-room .chapter-letterbox {
+    background: linear-gradient(
+      #132737 0 1.5%,
+      transparent 1.5% 98.5%,
+      #132737 98.5%
+    );
+  }
+  .chapter.narrative-room .subtitle {
+    bottom: 5.5%;
+    width: 88vw;
+  }
+  .chapter.narrative-room .subtitle p {
+    font-size: 17px;
+    line-height: 1.4;
+  }
+  .chapter.narrative-room .chapter-action,
+  .chapter.narrative-room .notebook-input,
+  .chapter.narrative-room .pen-line {
+    bottom: 22%;
+  }
+  .chapter.narrative-room .laptop-input {
+    bottom: 22%;
+  }
+  .chapter.narrative-room .notebook-input button {
+    min-width: 102px;
+  }
+  .chapter.narrative-room .profile-factors {
+    max-width: 88vw;
+    font-size: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .chapter.narrative-room * {
+    scroll-behavior: auto;
+  }
+}
+
+/* Reading space stays below the actors; the camera owns the middle of the frame. */
+.chapter.narrative-room .investigation-objective {
+  position: absolute;
+  left: max(24px, env(safe-area-inset-left));
+  top: 78px;
+  z-index: 5;
+  width: min(330px, calc(100vw - 48px));
+  padding: 10px 13px;
+  margin: 0;
+  color: #f1e5cd;
+  background: #10232cdb;
+  border-left: 2px solid #d4b478;
+  font:
+    12px/1.55 Arial,
+    sans-serif;
+  pointer-events: none;
+}
+.chapter.narrative-room .investigation-objective span {
+  display: block;
+  color: #dfc18e;
+  margin-bottom: 3px;
+  font-weight: 600;
+}
+.chapter.narrative-room .evidence-target .hotspot-name {
+  pointer-events: none;
+}
+.chapter.narrative-room .evidence-target:not(.observed) .hotspot-name {
+  opacity: 1;
+  top: 50%;
+  left: 44px;
+  transform: translateY(-50%);
+  max-width: min(200px, 65vw);
+  white-space: normal;
+}
+.chapter.narrative-room[data-verdict="investigate"]
+  .world-hotspot[data-label-edge="left"]
+  .hotspot-name {
+  left: 44px;
+  transform: translateY(-50%);
+  text-align: left;
+}
+.chapter.narrative-room[data-verdict="investigate"]
+  .world-hotspot[data-label-edge="right"]
+  .hotspot-name {
+  left: auto;
+  right: 44px;
+  transform: translateY(-50%);
+  text-align: right;
+}
+.chapter.narrative-room .subtitle p {
+  animation: dialogue-appear 180ms ease-out both;
+}
+@keyframes dialogue-appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.chapter.narrative-room .subtitle-speaker::before {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 1px;
+  background: #d4b47899;
+  margin: 0 auto 9px;
+}
+.chapter.narrative-room .subtitle[data-kind="ambience"] p {
+  animation: none;
+  font:
+    italic 14px/1.6 Arial,
+    sans-serif;
+  color: #dfded2;
+  opacity: 0.75;
+}
+.chapter.narrative-room[data-chair-moment="true"] .minimal-controls {
+  opacity: 0.5;
+  transition: opacity 200ms ease;
+}
+.chapter.narrative-room[data-chair-moment="true"] .minimal-controls:hover,
+.chapter.narrative-room[data-chair-moment="true"]
+  .minimal-controls:focus-within {
+  opacity: 1;
+}
+.chapter.narrative-room .chapter-letterbox {
+  background: linear-gradient(
+    #101e28 0 2.5%,
+    transparent 2.5% 63%,
+    #0b192347 79%,
+    #09151fd9 97.5%,
+    #101e28 97.5%
+  );
+}
+.chapter.narrative-room .minimal-controls {
+  gap: 6px;
+  opacity: 0.9;
+}
+.chapter.narrative-room .minimal-controls button {
+  display: grid;
+  place-items: center;
+  color: #f1e4ce;
+  background: #14242a88;
+  border: 1px solid #ead9b01f;
+  width: 44px;
+  height: 44px;
+}
+.chapter.narrative-room .subtitle {
+  width: min(690px, calc(100vw - 48px));
+  bottom: max(36px, 5vh);
+}
+.chapter.narrative-room .subtitle p {
+  font-size: clamp(18px, 1.5vw, 21px);
+  line-height: 1.55;
+  margin-top: 0;
+  color: #f7f0df;
+  text-shadow: 0 2px 6px #07131b;
+}
+.chapter.narrative-room[data-conversation="true"] .subtitle {
+  bottom: max(80px, 9vh);
+}
+.chapter.narrative-room .dialogue-advance {
+  right: max(28px, env(safe-area-inset-right));
+  bottom: max(27px, env(safe-area-inset-bottom));
+  min-width: 114px;
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 0;
+  border-bottom: 1px solid #d6c39c55;
+  border-radius: 2px;
+  background: linear-gradient(transparent, #10202988);
+  color: #ecdfc7;
+  font:
+    13px/1.4 Arial,
+    sans-serif;
+}
+.chapter.narrative-room .dialogue-advance:hover,
+.chapter.narrative-room .dialogue-advance:focus-visible {
+  border-color: #e3c891;
+  background: #253843;
+}
+.chapter.narrative-room .chapter-return {
+  border-bottom: 0;
+  border-radius: 20px;
+  background: #10232c9c;
+  font:
+    12px/1.4 Arial,
+    sans-serif;
+  padding: 10px 15px;
+}
+@media (max-width: 600px) {
+  .chapter.narrative-room .subtitle {
+    width: calc(100vw - 36px);
+    bottom: 44px;
+  }
+  .chapter.narrative-room .subtitle p {
+    font-size: 18px;
+    line-height: 1.48;
+  }
+  .chapter.narrative-room[data-conversation="true"] .subtitle {
+    bottom: max(92px, 11vh);
+  }
+  .chapter.narrative-room .dialogue-advance {
+    bottom: max(25px, env(safe-area-inset-bottom));
+    right: 18px;
+  }
+  .chapter.narrative-room .subtitle-speaker {
+    margin-bottom: 7px;
+    font-size: 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .chapter.narrative-room .subtitle p {
+    animation: none;
+  }
+  .chapter.narrative-room .minimal-controls {
+    transition: none;
+  }
+}

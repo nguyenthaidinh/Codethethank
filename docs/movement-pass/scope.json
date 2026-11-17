@@ -1,0 +1,13 @@
+{
+  "ownedChanges": [
+    "src/art/NarrativeActors.ts",
+    "src/cinematic/ClassroomPerformance.ts",
+    "src/cinematic/WorldRenderer.ts"
+  ],
+  "otherSessionChanges": [
+    "src/finale/FinaleControls.tsx",
+    "src/finale/LetterExperience.tsx",
+    "src/finale/RevealControls.tsx"
+  ],
+  "newModule": "src/cinematic/TeacherLocomotion.ts"
+}

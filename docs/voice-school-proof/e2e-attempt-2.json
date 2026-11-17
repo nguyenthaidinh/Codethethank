@@ -1,0 +1,290 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\Dự Án NTD\\Codethethank\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config=playwright.g2f.config.ts",
+      "cinematic-voice-school.spec.ts",
+      "--reporter=list,json"
+    ],
+    "configFile": "F:\\Dự Án NTD\\Codethethank\\playwright.g2f.config.ts",
+    "rootDir": "F:/Dự Án NTD/Codethethank/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "F:/Dự Án NTD/Codethethank/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "F:/Dự Án NTD/Codethethank/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "cinematic*.spec.ts"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "F:\\Dự Án NTD\\Codethethank\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e",
+        "snapshotDir": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "cinematic*.spec.ts",
+        "timeout": 90000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4173",
+          "headless": true,
+          "trace": "retain-on-failure",
+          "launchOptions": {
+            "args": [
+              "--use-angle=d3d11"
+            ]
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run preview -- --port 4173",
+      "url": "http://127.0.0.1:4173",
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "cinematic-voice-school.spec.ts",
+      "file": "cinematic-voice-school.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Vietnamese voice: user gesture, shared pause, separate captions, mute and interrupted clips",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6677,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T04:20:47.511Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d1e47a4e95b10e1c7796-2c4a5d5682921bb852da",
+          "file": "cinematic-voice-school.spec.ts",
+          "line": 26,
+          "column": 1
+        },
+        {
+          "title": "School logo and dialogue: desktop WebGL",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7697,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T04:20:54.407Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d1e47a4e95b10e1c7796-4a5c6d4f63135f835cd5",
+          "file": "cinematic-voice-school.spec.ts",
+          "line": 109,
+          "column": 3
+        },
+        {
+          "title": "School logo and dialogue: touch Canvas reduced motion",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4171,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T04:21:02.137Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d1e47a4e95b10e1c7796-acd7802a3134f74eedba",
+          "file": "cinematic-voice-school.spec.ts",
+          "line": 109,
+          "column": 3
+        },
+        {
+          "title": "Missing voice clips fail to subtitles without blocking teacher scene",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 46712,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.chapter')\nExpected: \u001b[32m\"discussion\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\nTimeout:  45000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('.chapter') with timeout 45000ms\u001b[22m\n\u001b[2m  - waiting for locator('.chapter')\u001b[22m\n\u001b[2m    85 × locator resolved to <div data-finale=\"\" data-ripple=\"\" data-focus=\"laptop\" data-completed=\"false\" data-verdict=\"investigate\" data-chapter=\"NEXT_SCENE_READY\" data-evidence=\"clock,notebook,laptop\" class=\"cinematic chapter  in-classroom narrative-room\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"null\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.chapter')\nExpected: \u001b[32m\"discussion\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\nTimeout:  45000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('.chapter') with timeout 45000ms\u001b[22m\n\u001b[2m  - waiting for locator('.chapter')\u001b[22m\n\u001b[2m    85 × locator resolved to <div data-finale=\"\" data-ripple=\"\" data-focus=\"laptop\" data-completed=\"false\" data-verdict=\"investigate\" data-chapter=\"NEXT_SCENE_READY\" data-evidence=\"clock,notebook,laptop\" class=\"cinematic chapter  in-classroom narrative-room\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"null\"\u001b[22m\n\n    at F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-voice-school.spec.ts:214:42",
+                    "location": {
+                      "file": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-voice-school.spec.ts",
+                      "column": 42,
+                      "line": 214
+                    },
+                    "snippet": " \u001b[90m 212 |\u001b[39m   \u001b[36mawait\u001b[39m click(page\u001b[33m,\u001b[39m \u001b[32m\"Bật âm thanh\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 213 |\u001b[39m   \u001b[36mawait\u001b[39m click(page\u001b[33m,\u001b[39m \u001b[32m\"Tiếp tục\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 214 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\".chapter\"\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 215 |\u001b[39m     \u001b[32m\"data-stayed\"\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 216 |\u001b[39m     \u001b[32m\"discussion\"\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 217 |\u001b[39m     { timeout\u001b[33m:\u001b[39m \u001b[35m45000\u001b[39m }\u001b[33m,\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-voice-school.spec.ts",
+                        "column": 42,
+                        "line": 214
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.chapter')\nExpected: \u001b[32m\"discussion\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\nTimeout:  45000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('.chapter') with timeout 45000ms\u001b[22m\n\u001b[2m  - waiting for locator('.chapter')\u001b[22m\n\u001b[2m    85 × locator resolved to <div data-finale=\"\" data-ripple=\"\" data-focus=\"laptop\" data-completed=\"false\" data-verdict=\"investigate\" data-chapter=\"NEXT_SCENE_READY\" data-evidence=\"clock,notebook,laptop\" class=\"cinematic chapter  in-classroom narrative-room\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"null\"\u001b[22m\n\n\n  212 |   await click(page, \"Bật âm thanh\");\n  213 |   await click(page, \"Tiếp tục\");\n> 214 |   await expect(page.locator(\".chapter\")).toHaveAttribute(\n      |                                          ^\n  215 |     \"data-stayed\",\n  216 |     \"discussion\",\n  217 |     { timeout: 45000 },\n    at F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-voice-school.spec.ts:214:42"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T04:21:06.338Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "F:\\Dự Án NTD\\Codethethank\\test-results\\cinematic-voice-school-Mis-1246c-hout-blocking-teacher-scene\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "F:\\Dự Án NTD\\Codethethank\\test-results\\cinematic-voice-school-Mis-1246c-hout-blocking-teacher-scene\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-voice-school.spec.ts",
+                    "column": 42,
+                    "line": 214
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d1e47a4e95b10e1c7796-3179699cb9f6425e17af",
+          "file": "cinematic-voice-school.spec.ts",
+          "line": 186,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-17T04:20:46.192Z",
+    "duration": 68093.788,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

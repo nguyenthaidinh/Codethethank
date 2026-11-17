@@ -1,0 +1,106 @@
+{
+  "date": "2026-11-17",
+  "typecheck": "PASS",
+  "lint": "PASS",
+  "unit": 36,
+  "e2e": {
+    "startTime": "2026-11-17T02:40:17.005Z",
+    "duration": 2009116.798,
+    "expected": 36,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "menu": {
+    "startTime": "2026-11-17T03:13:46.940Z",
+    "duration": 25975.411,
+    "expected": 11,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "buildSHA256": "c09aab3d4c4a0b6aadcae750a138c489f049edfccf5ff0e0275003d63a7ae4de",
+  "source": {
+    "compared": 101,
+    "preserved": 95,
+    "changed": [
+      "src/chapter/ChapterAudio.ts",
+      "src/chapter/ChapterGame.tsx",
+      "src/future/direction.ts",
+      "src/future/future.css",
+      "src/future/FutureFallback.ts",
+      "src/future/FutureWorld.ts"
+    ]
+  },
+  "stageStats": [
+    {
+      "place": "city",
+      "samples": 604,
+      "p50": 16.699999999999818,
+      "p90": 16.800000000000182,
+      "maxCalls": 42,
+      "maxTriangles": 302882
+    },
+    {
+      "place": "headquarters",
+      "samples": 760,
+      "p50": 16.700000000000728,
+      "p90": 16.80000000000109,
+      "maxCalls": 28,
+      "maxTriangles": 40832
+    },
+    {
+      "place": "core",
+      "samples": 710,
+      "p50": 16.69999999999709,
+      "p90": 33.29999999999927,
+      "maxCalls": 22,
+      "maxTriangles": 39470
+    },
+    {
+      "place": "anomaly",
+      "samples": 471,
+      "p50": 16.69999999999709,
+      "p90": 50,
+      "maxCalls": 32,
+      "maxTriangles": 41000
+    }
+  ],
+  "bundleRows": [
+    {
+      "prefix": "CinematicGame-",
+      "before": 732962,
+      "after": 732953
+    },
+    {
+      "prefix": "FutureWorld-",
+      "before": 70908,
+      "after": 71216
+    },
+    {
+      "prefix": "ChapterGame-",
+      "before": 49880,
+      "after": 52872
+    }
+  ],
+  "bundles": {
+    "AudioDirector-hA5dFka5.js": 4577,
+    "ChapterGame-j19A-qnK.js": 52872,
+    "ChapterGame-jCgCHm8i.css": 15527,
+    "CinematicGame-CZC_M8it.css": 6998,
+    "CinematicGame-FtWxM2SK.js": 732953,
+    "FutureWorld-8Ey34saq.js": 71216,
+    "GameAudio-B09aLPUT.js": 460,
+    "index-DRPcPqjv.css": 12832,
+    "index-f7bW1Q3J.js": 261470,
+    "SceneBackground-BCFXFL-6.js": 11294
+  },
+  "media": {
+    "bytes": 29769739,
+    "seconds": 96.803,
+    "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x0000A7A0) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+  },
+  "artApproval": "PENDING PRODUCT OWNER",
+  "physicalMobile": "NOT VERIFIED",
+  "gate3": "CLOSED"
+}

@@ -1,0 +1,67 @@
+{
+  "model": "vi_VN-vais1000-medium",
+  "modelSHA256": "ec7c89e2c85f4d1edc24b6120c18aaf1bda614f06b511567eb9c7c0de15e2dab",
+  "engine": "piper-tts 1.8.0 (offline build only)",
+  "modelSource": "https://huggingface.co/rhasspy/piper-voices/tree/main/vi/vi_VN/vais1000/medium",
+  "modelCardDatasetLicense": "CC-BY-4.0",
+  "lines": [
+    {
+      "key": "8a5e58a6",
+      "text": "Năm hai nghìn không trăm bốn mươi sáu. Nhân loại bước vào kỷ nguyên mà những giới hạn của tri thức liên tục được viết lại.",
+      "caption": "Năm 2046. Nhân loại bước vào kỷ nguyên mà những giới hạn của tri thức liên tục được viết lại.",
+      "seconds": 5.28254,
+      "bytes": 43093,
+      "sha256": "53b82abdfe118b6df9423cd2fa65c6b65a798b125c8730a67ae29f61aedcea55"
+    },
+    {
+      "key": "5cfc21a5",
+      "text": "Những câu hỏi từng nằm ngoài tầm với… giờ mở ra những hướng đi mới.",
+      "caption": "Những câu hỏi từng nằm ngoài tầm với… giờ mở ra những hướng đi mới.",
+      "seconds": 3.065034,
+      "bytes": 25330,
+      "sha256": "0a7f7cb9ddf72ece7607ca2164767659062ae290ac12aa65129cc9afa444c87a"
+    },
+    {
+      "key": "d1556f7c",
+      "text": "Từ những khám phá khoa học tưởng chừng bất khả thi, đến việc dự báo các cuộc khủng hoảng trước khi chúng xảy ra…",
+      "caption": "Từ những khám phá khoa học tưởng chừng bất khả thi, đến việc dự báo các cuộc khủng hoảng trước khi chúng xảy ra…",
+      "seconds": 5.02712,
+      "bytes": 41004,
+      "sha256": "783e9130121451a226311f2591337fd4db3e0567f101bc497da0da8b9a23a320"
+    },
+    {
+      "key": "5a05af21",
+      "text": "Một trí tuệ đã mở ra những khả năng mà thế giới chưa từng có.",
+      "caption": "Một trí tuệ đã mở ra những khả năng mà thế giới chưa từng có.",
+      "seconds": 3.053424,
+      "bytes": 25121,
+      "sha256": "ef088feccb3dc00b7bdd8b98e3cc39cb2d99c527286fed826c4889eba73ab4a8"
+    },
+    {
+      "key": "06ee22c7",
+      "text": "Ai-on. Trí tuệ nhân tạo đa năng tiên tiến nhất thế giới.",
+      "caption": "AION. Trí tuệ nhân tạo đa năng tiên tiến nhất thế giới.",
+      "seconds": 2.484535,
+      "bytes": 20733,
+      "sha256": "8a5a3df8939475a65a2d2f03540736b9c809d481160aca2e6e1b61ba2ecf6b7f"
+    },
+    {
+      "key": "3e3918f2",
+      "text": "Thành tựu làm thay đổi cách nhân loại khám phá, sáng tạo và định hình tương lai.",
+      "caption": "Thành tựu làm thay đổi cách nhân loại khám phá, sáng tạo và định hình tương lai.",
+      "seconds": 3.808073,
+      "bytes": 31181,
+      "sha256": "70ebdc9d68690596e05d042451007f1c4088ef14d21ad3767f001bc87e28f8fc"
+    },
+    {
+      "key": "8815e952",
+      "text": "Nhưng ngay cả Ai-on… vẫn có một câu hỏi chưa tìm được lời giải.",
+      "caption": "Nhưng ngay cả AION… vẫn có một câu hỏi chưa tìm được lời giải.",
+      "seconds": 2.879274,
+      "bytes": 23867,
+      "sha256": "54d194126762d4d2d6285043dc3bdd840b0e4267e90809bb090cb040172901f0"
+    }
+  ],
+  "buildSeconds": 4.070980072021484,
+  "scope": "Opening narrator only; no character conversations"
+}

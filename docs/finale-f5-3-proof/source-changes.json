@@ -1,0 +1,17 @@
+[
+  {
+    "path": "src/finale/FinaleControls.tsx",
+    "owner": "F5.3 + concurrent ending text",
+    "hash": "58EF37F9BB2E06DB7106C4EAD4F2E1A00BC90363C1CBC7A9A4D4ED9D40B34340"
+  },
+  {
+    "path": "src/finale/letter.ts",
+    "owner": "F5.3",
+    "hash": "257F03694F8A9E687EA91B7633C9A2137BBF2570D8818A455827CE5516CBD20D"
+  },
+  {
+    "path": "src/finale/story.ts",
+    "owner": "concurrent chat; preserved",
+    "hash": "17EE526E5628AEE415E7084A4B88C79EFB8800EDC28E3CADBE632D134AFF28D3"
+  }
+]

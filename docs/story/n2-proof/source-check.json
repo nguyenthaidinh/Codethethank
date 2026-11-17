@@ -1,0 +1,10 @@
+{
+  "changed": [
+    "src/future/direction.ts",
+    "src/future/FutureFallback.ts",
+    "src/future/FutureWorld.ts",
+    "src/future/terminalStyle.ts"
+  ],
+  "unchangedCount": 74,
+  "narratorLinesPreserved": 7
+}

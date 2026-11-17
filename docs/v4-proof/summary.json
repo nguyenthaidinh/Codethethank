@@ -1,0 +1,21 @@
+﻿{
+    "finalBuild":  "04876BA6EAC0AE7B26D67D83666A749A0EDBD5937B33981785FCB8ED71218F19",
+    "gates":  {
+                  "G0":  "PASS technical baseline",
+                  "G1":  "PASS functional Chromium QA",
+                  "G2":  "NOT STARTED"
+              },
+    "finalDelta":  "One legacy recording title line; core suite plus targeted final-title retest, not a claimed full rerun on final hash",
+    "cinematicKB":  606.62,
+    "coreBuild":  "BF77A4C21DAA7F720ACF6190375E18AED7B35021BB47ACB2DF9FFA05132C427F",
+    "cinematicGzipKB":  158.03,
+    "community":  "LOCAL PRIVATE ONLY; no backend",
+    "checks":  {
+                   "unitPassed":  30,
+                   "typecheck":  "PASS",
+                   "gameplayCorePassed":  23,
+                   "lint":  "PASS",
+                   "menuPassed":  11,
+                   "finalTitleRetestPassed":  1
+               }
+}

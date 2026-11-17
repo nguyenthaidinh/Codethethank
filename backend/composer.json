@@ -1,0 +1,17 @@
+{
+  "name": "unwritten-lesson/gratitude-api",
+  "description": "F5.5 isolated gratitude submission API",
+  "type": "project",
+  "license": "proprietary",
+  "require": {"php": "^8.3", "ext-intl": "*", "ext-mbstring": "*", "laravel/framework": "^13.17", "laravel/sanctum": "^4.0"},
+  "require-dev": {"fakerphp/faker": "^1.23", "laravel/pint": "^1.27", "mockery/mockery": "^1.6", "nunomaduro/collision": "^8.6", "phpunit/phpunit": "^12.5.12"},
+  "autoload": {"psr-4": {"App\\": "app/", "Database\\Factories\\": "database/factories/", "Database\\Seeders\\": "database/seeders/"}},
+  "autoload-dev": {"psr-4": {"Tests\\": "tests/"}},
+  "scripts": {
+    "test": ["@php artisan config:clear --ansi", "@php artisan test"],
+    "lint": "@php vendor/bin/pint --test",
+    "post-autoload-dump": ["Illuminate\\Foundation\\ComposerScripts::postAutoloadDump", "@php artisan package:discover --ansi"]
+  },
+  "config": {"optimize-autoloader": true, "preferred-install": "dist", "sort-packages": true},
+  "minimum-stability": "stable", "prefer-stable": true
+}

@@ -1,0 +1,23 @@
+﻿{
+    "finaleVideo":  "finale-live-audio.webm",
+    "publishing":  "LOCAL ONLY; no backend or automatic publication",
+    "buildIndexSha256":  "2BF7C07C388792DE3F69C0028C62955F7F0F388D24C289F4DDE142DBAD2DB47E",
+    "runner":  "runner-status.json",
+    "lint":  "PASS",
+    "typecheck":  "PASS",
+    "menu":  {
+                 "passed":  11,
+                 "failed":  0
+             },
+    "gameplay":  {
+                     "aggregation":  "4 retained passes plus 17 completed cases on the same final build",
+                     "fullGameMinutes":  5.4,
+                     "failed":  0,
+                     "passed":  21
+                 },
+    "result":  "PASS",
+    "unit":  {
+                 "passed":  28,
+                 "failed":  0
+             }
+}

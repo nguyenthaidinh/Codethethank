@@ -1,0 +1,22 @@
+{
+  "started": "2026-11-17T05:38:52.202Z",
+  "build": "087ebf6037b77e813d5b363cee6e18ac2302122e3f6696f30f544fd4daebcbeb",
+  "runs": [
+    {
+      "name": "e2e",
+      "command": "node node_modules/@playwright/test/cli.js test --config=playwright.g2f.config.ts cinematic-voice-school.spec.ts cinematic-fullgame.spec.ts cinematic-finale.spec.ts cinematic-mobile.spec.ts cinematic-typography.spec.ts --reporter=list,json",
+      "started": "2026-11-17T05:38:52.204Z",
+      "exitCode": 0,
+      "finished": "2026-11-17T05:49:26.790Z"
+    },
+    {
+      "name": "menu",
+      "command": "node node_modules/@playwright/test/cli.js test --config=playwright.g2f.config.ts --reporter=list,json",
+      "started": "2026-11-17T05:49:26.791Z",
+      "exitCode": 0,
+      "finished": "2026-11-17T05:49:55.086Z"
+    }
+  ],
+  "finished": "2026-11-17T05:49:55.086Z",
+  "buildUnchanged": true
+}

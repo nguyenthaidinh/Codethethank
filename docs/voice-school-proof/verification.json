@@ -1,0 +1,91 @@
+{
+  "date": "2026-11-17",
+  "buildSHA256": "ea159a4b9b8206d1799132ab9e72aed8bc01a64e9abc0cf00e5284692da7d8c8",
+  "typecheck": "PASS",
+  "lint": "PASS",
+  "unit": 40,
+  "e2e": {
+    "startTime": "2026-11-17T04:23:07.528Z",
+    "duration": 569228.48,
+    "expected": 14,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "menu": {
+    "startTime": "2026-11-17T04:32:37.797Z",
+    "duration": 27692.084,
+    "expected": 11,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "source": {
+    "compared": 70,
+    "preserved": 55,
+    "changed": [
+      "src/art/ClassroomArt.ts",
+      "src/chapter/ChapterAudio.ts",
+      "src/chapter/ChapterGame.tsx",
+      "src/chapter/director.ts",
+      "src/cinematic/AudioDirector.ts",
+      "src/cinematic/CinematicGame.tsx",
+      "src/cinematic/director.ts",
+      "src/cinematic/FallbackWorld.ts",
+      "src/cinematic/WorldRenderer.ts",
+      "src/finale/FinaleControls.tsx",
+      "src/menu/GameAudio.ts",
+      "src/menu/GameShell.tsx",
+      "src/menu/MenuUI.tsx",
+      "src/menu/preferences.ts",
+      "src/menu/saveBridge.ts"
+    ]
+  },
+  "voice": {
+    "clips": 106,
+    "bytes": 2863453,
+    "totalSeconds": 347.834917,
+    "longestSeconds": 7.140136
+  },
+  "journey": {
+    "completed": true,
+    "voice": {
+      "status": "idle",
+      "clip": null,
+      "started": 74,
+      "completed": 43,
+      "busy": false
+    }
+  },
+  "bundleDiff": [
+    {
+      "prefix": "CinematicGame-",
+      "before": 732953,
+      "after": 744518
+    },
+    {
+      "prefix": "ChapterGame-",
+      "before": 52872,
+      "after": 54173
+    },
+    {
+      "prefix": "FutureWorld-",
+      "before": 71216,
+      "after": 71217
+    }
+  ],
+  "media": {
+    "seconds": 31.213,
+    "bytes": 5053276,
+    "codecs": [
+      "h264",
+      "aac"
+    ],
+    "sha256": "e6df35f9ce6b0f4e731f13d52610f3df6b49bd54258d41422b439bac3645c510"
+  },
+  "limitations": [
+    "One synthetic reader, not an actor cast.",
+    "Physical phones and Safari/iOS unverified.",
+    "No human pronunciation/listening assessment or new art approval."
+  ]
+}

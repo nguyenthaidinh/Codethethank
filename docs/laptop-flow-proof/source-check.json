@@ -1,0 +1,200 @@
+{
+  "changed": [
+    "src/art/narrative.css",
+    "src/chapter/ChapterGame.tsx",
+    "src/chapter/director.ts",
+    "src/cinematic/FallbackWorld.ts",
+    "src/cinematic/WorldRenderer.ts",
+    "src/future/FutureFallback.ts",
+    "src/future/FutureWorld.ts",
+    "src/verdict/screen.ts",
+    "src/verdict/VerdictControls.tsx"
+  ],
+  "added": [
+    "src/future/terminalStyle.ts"
+  ],
+  "protected": [
+    {
+      "path": "src/art/ClassroomArt.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/art/NarrativeActors.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/art/NarrativePalette.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/chapter/ChapterAudio.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/cinematic/AudioDirector.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/cinematic/ClassroomCinematography.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/finale/Fallback.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/finale/finale.css",
+      "unchanged": true
+    },
+    {
+      "path": "src/finale/FinaleControls.tsx",
+      "unchanged": true
+    },
+    {
+      "path": "src/finale/FinaleVisual.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/finale/letter.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/finale/state.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/finale/story.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/game/story.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/menu/ASSET-PROMPTS.txt",
+      "unchanged": true
+    },
+    {
+      "path": "src/menu/GameAudio.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/menu/GameShell.tsx",
+      "unchanged": true
+    },
+    {
+      "path": "src/menu/MainMenu.tsx",
+      "unchanged": true
+    },
+    {
+      "path": "src/menu/menu.css",
+      "unchanged": true
+    },
+    {
+      "path": "src/menu/MenuAudio.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/menu/MenuUI.tsx",
+      "unchanged": true
+    },
+    {
+      "path": "src/menu/preferences.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/menu/README.md",
+      "unchanged": true
+    },
+    {
+      "path": "src/menu/saveBridge.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/menu/SceneBackground.tsx",
+      "unchanged": true
+    },
+    {
+      "path": "src/menu/vite-env.d.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/ripple/Fallback.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/ripple/ripple.css",
+      "unchanged": true
+    },
+    {
+      "path": "src/ripple/RippleControls.tsx",
+      "unchanged": true
+    },
+    {
+      "path": "src/ripple/RippleWorld.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/ripple/state.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/ripple/story.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/speech/catalog.json",
+      "unchanged": true
+    },
+    {
+      "path": "src/speech/policy.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/speech/text.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/speech/useNarration.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/speech/VoicePlayer.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/stayed/Notebook.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/stayed/state.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/stayed/StayControls.tsx",
+      "unchanged": true
+    },
+    {
+      "path": "src/stayed/stayed.css",
+      "unchanged": true
+    },
+    {
+      "path": "src/stayed/story.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/verdict/rules.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/verdict/state.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/verdict/story.ts",
+      "unchanged": true
+    }
+  ],
+  "cinematicBytes": 742706,
+  "buildSHA256": "49586E8C7F0491B79875180126EBDABAD054848E642B79DDF7037E4C1824035B"
+}

@@ -1,0 +1,162 @@
+{
+  "desktop": {
+    "camera": {
+      "before": [
+        0.75,
+        1.5,
+        -1.25
+      ],
+      "after": [
+        0.75,
+        1.5,
+        -1.25
+      ]
+    },
+    "target": {
+      "before": [
+        0.3,
+        1.22,
+        0.03
+      ],
+      "after": [
+        0.3,
+        1.22,
+        0.03
+      ]
+    },
+    "fov": {
+      "before": 64,
+      "after": 64
+    },
+    "drawCalls": {
+      "before": 102,
+      "after": 102
+    },
+    "triangles": {
+      "before": 83402,
+      "after": 83402
+    },
+    "resources": {
+      "before": {
+        "geometries": 128,
+        "textures": 17,
+        "programs": 13,
+        "renderTarget": [
+          1280,
+          720
+        ],
+        "samples": 0,
+        "output": [
+          1280,
+          720
+        ],
+        "shadowMap": [
+          1024,
+          1024
+        ]
+      },
+      "after": {
+        "geometries": 128,
+        "textures": 17,
+        "programs": 13,
+        "renderTarget": [
+          1280,
+          720
+        ],
+        "samples": 0,
+        "output": [
+          1280,
+          720
+        ],
+        "shadowMap": [
+          1024,
+          1024
+        ]
+      }
+    },
+    "resolution": {
+      "before": 1,
+      "after": 1
+    }
+  },
+  "mobile": {
+    "camera": {
+      "before": [
+        2.3,
+        1.7,
+        -2.65
+      ],
+      "after": [
+        2.3,
+        1.7,
+        -2.65
+      ]
+    },
+    "target": {
+      "before": [
+        0.4,
+        0.98,
+        0.04
+      ],
+      "after": [
+        0.4,
+        0.98,
+        0.04
+      ]
+    },
+    "fov": {
+      "before": 65,
+      "after": 65
+    },
+    "drawCalls": {
+      "before": 110,
+      "after": 110
+    },
+    "triangles": {
+      "before": 95340,
+      "after": 95340
+    },
+    "resources": {
+      "before": {
+        "geometries": 126,
+        "textures": 16,
+        "programs": 13,
+        "renderTarget": [
+          390,
+          844
+        ],
+        "samples": 0,
+        "output": [
+          390,
+          844
+        ],
+        "shadowMap": [
+          1024,
+          1024
+        ]
+      },
+      "after": {
+        "geometries": 126,
+        "textures": 16,
+        "programs": 13,
+        "renderTarget": [
+          390,
+          844
+        ],
+        "samples": 0,
+        "output": [
+          390,
+          844
+        ],
+        "shadowMap": [
+          1024,
+          1024
+        ]
+      }
+    },
+    "resolution": {
+      "before": 1,
+      "after": 1
+    }
+  }
+}

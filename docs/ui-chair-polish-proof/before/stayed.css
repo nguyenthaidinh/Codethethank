@@ -1,0 +1,74 @@
+.dialogue-advance {
+  position: absolute;
+  right: 25px;
+  bottom: 22px;
+  z-index: 6;
+  min-height: 44px;
+  border: 1px solid #d2d4b64a;
+  background: #152b20b0;
+  padding: 10px 16px;
+  font-size: 12px;
+}
+.notebook-input {
+  position: absolute;
+  left: 50%;
+  bottom: 25%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 16px;
+  z-index: 5;
+}
+.notebook-input button {
+  min-width: 125px;
+  min-height: 48px;
+  padding: 12px;
+  border: 1px solid #d6c99c;
+  background: #d6c99c;
+  color: #263f30;
+  font-size: 13px;
+}
+.notebook-input button[aria-pressed="true"] {
+  background: #eee1b9;
+  box-shadow: 0 0 0 3px #ddc99b35;
+}
+.pen-line {
+  --stroke: 0%;
+  position: absolute;
+  left: 50%;
+  bottom: 25%;
+  transform: translateX(-50%);
+  width: min(390px, 82vw);
+  min-height: 70px;
+  background: linear-gradient(
+    90deg,
+    #daca9f var(--stroke),
+    #e7ddba var(--stroke)
+  );
+  border: 1px solid #a1956b;
+  color: #2f4937;
+  z-index: 5;
+  touch-action: none;
+  font: italic 20px LessonSerif;
+  padding: 12px;
+}
+.pen-line small {
+  display: block;
+  font: 11px Arial;
+  margin-top: 8px;
+}
+@media (max-width: 600px) {
+  .notebook-input {
+    gap: 8px;
+    bottom: 29%;
+  }
+  .notebook-input button {
+    min-width: 120px;
+  }
+  .pen-line {
+    bottom: 29%;
+  }
+  .dialogue-advance {
+    right: 14px;
+    bottom: 12px;
+  }
+}

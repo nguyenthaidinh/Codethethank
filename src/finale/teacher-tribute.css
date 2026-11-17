@@ -1,0 +1,215 @@
+.game-teacher-tribute {
+  isolation: isolate;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: max(24px, 5vh) 20px 24px;
+  background: radial-gradient(
+    ellipse at 50% 100%,
+    #20455a,
+    #081526 60%,
+    #040b16
+  );
+  color: #f1eee3;
+  text-align: center;
+}
+.game-tribute-sky,
+.game-tribute-wishes {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+}
+.game-tribute-wish {
+  position: absolute;
+  top: 0;
+  width: 20%;
+  color: #dbe2df;
+  animation: game-wish-rise 28s linear infinite;
+  padding: 14px;
+  text-shadow: 0 2px 12px #020814;
+}
+.game-tribute-wish.side-0 {
+  left: 2%;
+}
+.game-tribute-wish.side-1 {
+  right: 2%;
+}
+.game-tribute-wish > span {
+  color: #e1b97b;
+  font-size: 24px;
+}
+.game-tribute-wish p {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  font:
+    clamp(12px, 1.1vw, 19px)/1.7 Arial,
+    sans-serif;
+}
+.game-live-wish-status {
+  position: absolute;
+  right: 12px;
+  bottom: 10px;
+  max-width: 23%;
+  color: #98b3c2;
+  font:
+    10px/1.4 Arial,
+    sans-serif;
+}
+.game-tribute-wish small {
+  color: #93b8c5;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+}
+.game-tribute-sound {
+  position: absolute;
+  bottom: 22px;
+  left: 22px;
+  z-index: 2;
+  display: grid;
+  gap: 6px;
+  max-width: 22%;
+  font-size: 11px;
+}
+.game-teacher-tribute > header,
+.game-teacher-tribute > footer {
+  max-width: 54%;
+}
+.game-teacher-tribute .game-tribute-window {
+  width: min(680px, 50%);
+}
+@keyframes game-wish-rise {
+  0% {
+    transform: translateY(105vh);
+    opacity: 0;
+  }
+  12%,
+  78% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(-30vh);
+    opacity: 0;
+  }
+}
+@media (max-width: 600px) {
+  .game-tribute-wish {
+    width: 23%;
+    padding: 5px;
+  }
+  .game-tribute-wish p {
+    font-size: 10px;
+  }
+  .game-tribute-wish small {
+    display: none;
+  }
+  .game-tribute-sound {
+    left: 8px;
+    bottom: 8px;
+    max-width: 30%;
+  }
+  .game-tribute-sound button {
+    padding: 8px;
+    font-size: 11px;
+  }
+  .game-teacher-tribute > header {
+    max-width: 90%;
+  }
+  .game-teacher-tribute > footer {
+    max-width: 60%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .game-tribute-wish {
+    animation: none;
+    top: 35%;
+  }
+  .game-tribute-wish:nth-child(n + 3) {
+    display: none;
+  }
+}
+.game-teacher-tribute header {
+  flex: none;
+}
+.game-teacher-tribute header span {
+  color: #91d9e1;
+  font: 10px/1.5 sans-serif;
+  letter-spacing: 0.2em;
+}
+.game-teacher-tribute h2 {
+  margin: 12px 0;
+  color: #e1b97b;
+  font:
+    italic 400 clamp(32px, 5vw, 72px)/1.2 Arial,
+    "Segoe UI",
+    sans-serif;
+}
+.game-teacher-tribute header p {
+  font:
+    clamp(14px, 1.3vw, 21px)/1.6 Arial,
+    "Segoe UI",
+    sans-serif;
+}
+.game-tribute-window {
+  flex: 1;
+  min-height: 0;
+  width: min(680px, 100%);
+  overflow: hidden;
+  mask-image: linear-gradient(transparent, black 12%, black 86%, transparent);
+}
+.game-tribute-roll {
+  animation: game-teacher-roll 57s linear both;
+  padding-top: 25vh;
+}
+.game-tribute-roll p {
+  margin: 0;
+  padding: 16px 8px;
+  font:
+    400 clamp(23px, 2.5vw, 42px)/1.5 Arial,
+    "Segoe UI",
+    sans-serif;
+}
+.game-tribute-roll .game-tribute-last {
+  color: #e1b97b;
+  padding: 40px 0 20vh;
+  font-size: clamp(19px, 2vw, 30px);
+}
+.game-teacher-tribute footer {
+  flex: none;
+  font-size: 12px;
+  color: #b3c8d4;
+}
+.game-teacher-tribute button {
+  padding: 12px 22px;
+  border: 1px solid #91d9e166;
+  background: #0c2035;
+  color: #f1eee3;
+  cursor: pointer;
+}
+@keyframes game-teacher-roll {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100% + 22vh));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .game-tribute-roll {
+    animation: none;
+    padding-top: 0;
+  }
+  .game-tribute-window {
+    overflow-y: auto;
+    mask-image: none;
+  }
+}

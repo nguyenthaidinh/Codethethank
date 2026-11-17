@@ -1,0 +1,12 @@
+import {zipSync,unzipSync} from 'three/addons/libs/fflate.module.js';
+import {readFileSync,writeFileSync,readdirSync,statSync} from 'node:fs';
+import {join,relative} from 'node:path';
+import {createHash} from 'node:crypto';
+const walk=dir=>readdirSync(dir).flatMap(name=>{const path=join(dir,name);return statSync(path).isDirectory()?walk(path):[path];});
+const files=Object.fromEntries(walk('dist').map(path=>[relative('dist',path).replaceAll('\\','/'),new Uint8Array(readFileSync(path))]));
+const zipped=zipSync(files,{level:6}),contents=unzipSync(zipped);
+const digest=buffer=>createHash('sha256').update(buffer).digest('hex');
+for(const [path,data]of Object.entries(files))if(digest(data)!==digest(contents[path]))throw Error(`Archive mismatch: ${path}`);
+const target='docs/art2r/proof/after/production-build.zip';writeFileSync(target,zipped);
+writeFileSync('docs/art2r/proof/after/archive-check.json',JSON.stringify({path:target,files:Object.keys(files).length,bytes:zipped.length,allEntriesByteIdentical:true,sha256:digest(zipped)},null,2));
+console.log(`Archive PASS: ${Object.keys(files).length} byte-checked entries, ${zipped.length} bytes`);

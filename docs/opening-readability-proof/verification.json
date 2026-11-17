@@ -1,0 +1,64 @@
+{
+  "date": "2026-11-17",
+  "buildSHA256": "087ebf6037b77e813d5b363cee6e18ac2302122e3f6696f30f544fd4daebcbeb",
+  "typecheck": "PASS",
+  "lint": "PASS",
+  "unit": 41,
+  "e2e": {
+    "startTime": "2026-11-17T05:38:53.078Z",
+    "duration": 633686.799,
+    "expected": 16,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "menu": {
+    "startTime": "2026-11-17T05:49:27.711Z",
+    "duration": 27359.655000000002,
+    "expected": 11,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "changed": [
+    "src/art/ClassroomArt.ts",
+    "src/art/narrative.css",
+    "src/chapter/ChapterGame.tsx",
+    "src/cinematic/CinematicGame.tsx",
+    "src/cinematic/FallbackWorld.ts",
+    "src/cinematic/WorldRenderer.ts",
+    "src/finale/FinaleControls.tsx",
+    "src/menu/MenuUI.tsx",
+    "src/speech/catalog.json",
+    "public/voice/vi/ATTRIBUTION.txt",
+    "public/school/PROVENANCE.txt"
+  ],
+  "retiredUnchanged": 99,
+  "protectedStoryCastLogoUnchanged": true,
+  "voice": {
+    "clips": 7,
+    "bytes": 210329,
+    "openingRequests": 7,
+    "afterOpening": {
+      "status": "off",
+      "clip": null,
+      "started": 9,
+      "completed": 7,
+      "busy": false
+    }
+  },
+  "bundle": {
+    "before": 744518,
+    "after": 739799
+  },
+  "video": {
+    "seconds": 30.794,
+    "bytes": 5071710,
+    "sha256": "545abab1ac3e5a6e6284439eb15b7d1f5b66fa3435e31b7d61fd51b35d0508df",
+    "voicesInPast": 0
+  },
+  "limitations": [
+    "Physical phones/Safari and human playtest unverified.",
+    "Existing character assets retained; visual approval remains with Product Owner."
+  ]
+}

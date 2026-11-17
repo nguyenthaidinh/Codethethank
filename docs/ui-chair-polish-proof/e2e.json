@@ -1,0 +1,411 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\Dự Án NTD\\Codethethank\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config=playwright.chair-review.config.ts",
+      "cinematic-chair.spec.ts",
+      "cinematic-stayed.spec.ts",
+      "cinematic-stayed-fallback.spec.ts",
+      "--reporter=list,json"
+    ],
+    "configFile": "F:\\Dự Án NTD\\Codethethank\\playwright.chair-review.config.ts",
+    "rootDir": "F:/Dự Án NTD/Codethethank/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "F:/Dự Án NTD/Codethethank/test-results/chair-polish",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "F:/Dự Án NTD/Codethethank/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "cinematic*.spec.ts"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "F:\\Dự Án NTD\\Codethethank\\test-results\\chair-polish",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e",
+        "snapshotDir": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "cinematic*.spec.ts",
+        "timeout": 90000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4191",
+          "headless": true,
+          "trace": "retain-on-failure",
+          "launchOptions": {
+            "args": [
+              "--use-angle=d3d11"
+            ]
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.1",
+    "workers": 1,
+    "webServer": {
+      "command": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4191 --strictPort --outDir dist-chair-review",
+      "url": "http://127.0.0.1:4191",
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "cinematic-chair.spec.ts",
+      "file": "cinematic-chair.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Chair: insert, visible sit and quiet two-shot desktop",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 9446,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"chair.i\u001b[7mnser\u001b[27mt\"\u001b[39m\nReceived: \u001b[31m\"chair.\u001b[7ms\u001b[27mit\"\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"chair.i\u001b[7mnser\u001b[27mt\"\u001b[39m\nReceived: \u001b[31m\"chair.\u001b[7ms\u001b[27mit\"\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-chair.spec.ts:93:8",
+                    "location": {
+                      "file": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-chair.spec.ts",
+                      "column": 8,
+                      "line": 93
+                    },
+                    "snippet": " \u001b[90m 91 |\u001b[39m     \u001b[36mawait\u001b[39m expect\n \u001b[90m 92 |\u001b[39m       \u001b[33m.\u001b[39mpoll(\u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m (\u001b[36mawait\u001b[39m state())\u001b[33m.\u001b[39mworld\u001b[33m?.\u001b[39mshot)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 93 |\u001b[39m       \u001b[33m.\u001b[39mtoBe(\u001b[32m\"chair.insert\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 94 |\u001b[39m     \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(\u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m (\u001b[36mawait\u001b[39m state())\u001b[33m.\u001b[39mtime)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0.7\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 95 |\u001b[39m     \u001b[36mconst\u001b[39m insert \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m state()\u001b[33m;\u001b[39m\n \u001b[90m 96 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mscreenshot({ path\u001b[33m:\u001b[39m \u001b[32m`${out}/${mode}-chair-insert.png`\u001b[39m })\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-chair.spec.ts",
+                        "column": 8,
+                        "line": 93
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"chair.i\u001b[7mnser\u001b[27mt\"\u001b[39m\nReceived: \u001b[31m\"chair.\u001b[7ms\u001b[27mit\"\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  91 |     await expect\n  92 |       .poll(async () => (await state()).world?.shot)\n> 93 |       .toBe(\"chair.insert\");\n     |        ^\n  94 |     await expect.poll(async () => (await state()).time).toBeGreaterThan(0.7);\n  95 |     const insert = await state();\n  96 |     await page.screenshot({ path: `${out}/${mode}-chair-insert.png` });\n    at F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-chair.spec.ts:93:8"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T09:08:45.675Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "F:\\Dự Án NTD\\Codethethank\\test-results\\chair-polish\\cinematic-chair-Chair-inse-1541a--and-quiet-two-shot-desktop\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "F:\\Dự Án NTD\\Codethethank\\test-results\\chair-polish\\cinematic-chair-Chair-inse-1541a--and-quiet-two-shot-desktop\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-chair.spec.ts",
+                    "column": 8,
+                    "line": 93
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "690f76986346603fad4e-2b086a8f8122572be062",
+          "file": "cinematic-chair.spec.ts",
+          "line": 45,
+          "column": 3
+        },
+        {
+          "title": "Chair: insert, visible sit and quiet two-shot mobile",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 9919,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0.8\u001b[39m\nReceived:   \u001b[31m0.7869536058245374\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0.8\u001b[39m\nReceived:   \u001b[31m0.7869536058245374\u001b[39m\n    at F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-chair.spec.ts:105:41",
+                    "location": {
+                      "file": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-chair.spec.ts",
+                      "column": 41,
+                      "line": 105
+                    },
+                    "snippet": " \u001b[90m 103 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mscreenshot({ path\u001b[33m:\u001b[39m \u001b[32m`${out}/${mode}-sitting.png`\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 104 |\u001b[39m     \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mfallback) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 105 |\u001b[39m       expect(insert\u001b[33m.\u001b[39mworld\u001b[33m.\u001b[39mteacherBodyY)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0.8\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 106 |\u001b[39m       expect(seated\u001b[33m.\u001b[39mworld\u001b[33m.\u001b[39mteacherBodyY)\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m0.61\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 107 |\u001b[39m       \u001b[36mif\u001b[39m (mobile) expect(seated\u001b[33m.\u001b[39mworld\u001b[33m.\u001b[39mcamera)\u001b[33m.\u001b[39mtoEqual(sitting\u001b[33m.\u001b[39mworld\u001b[33m.\u001b[39mcamera)\u001b[33m;\u001b[39m\n \u001b[90m 108 |\u001b[39m     }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-chair.spec.ts",
+                        "column": 41,
+                        "line": 105
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0.8\u001b[39m\nReceived:   \u001b[31m0.7869536058245374\u001b[39m\n\n  103 |     await page.screenshot({ path: `${out}/${mode}-sitting.png` });\n  104 |     if (!fallback) {\n> 105 |       expect(insert.world.teacherBodyY).toBeGreaterThan(0.8);\n      |                                         ^\n  106 |       expect(seated.world.teacherBodyY).toBeLessThan(0.61);\n  107 |       if (mobile) expect(seated.world.camera).toEqual(sitting.world.camera);\n  108 |     }\n    at F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-chair.spec.ts:105:41"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T09:09:05.251Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "F:\\Dự Án NTD\\Codethethank\\test-results\\chair-polish\\cinematic-chair-Chair-inse-c7350-t-and-quiet-two-shot-mobile\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "F:\\Dự Án NTD\\Codethethank\\test-results\\chair-polish\\cinematic-chair-Chair-inse-c7350-t-and-quiet-two-shot-mobile\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-chair.spec.ts",
+                    "column": 41,
+                    "line": 105
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "690f76986346603fad4e-e9c16509902bda427e10",
+          "file": "cinematic-chair.spec.ts",
+          "line": 45,
+          "column": 3
+        },
+        {
+          "title": "Chair: insert, visible sit and quiet two-shot canvas",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 34069,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T09:09:21.380Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "690f76986346603fad4e-8b4f55dc50035138d32a",
+          "file": "cinematic-chair.spec.ts",
+          "line": 45,
+          "column": 3
+        }
+      ]
+    },
+    {
+      "title": "cinematic-stayed-fallback.spec.ts",
+      "file": "cinematic-stayed-fallback.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Chapter 02 keyboard and Canvas fallback restore both pages and finish",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 19643,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T09:09:56.004Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "16625383b6df133b5aa1-f6d0dede60fda3d339a0",
+          "file": "cinematic-stayed-fallback.spec.ts",
+          "line": 5,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "cinematic-stayed.spec.ts",
+      "file": "cinematic-stayed.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Chapter 02 complete desktop audio choreography",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 173846,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T09:10:15.825Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "91a4d968bc6d784f72b2-07ccfc4f3d308379fe14",
+          "file": "cinematic-stayed.spec.ts",
+          "line": 27,
+          "column": 3
+        },
+        {
+          "title": "Chapter 02 complete mobile silent reduced resume",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 129530,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T09:13:09.829Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "91a4d968bc6d784f72b2-9fd20a17c7ba930b5994",
+          "file": "cinematic-stayed.spec.ts",
+          "line": 27,
+          "column": 3
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-17T09:08:41.339Z",
+    "duration": 399942.925,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

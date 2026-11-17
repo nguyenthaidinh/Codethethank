@@ -1,0 +1,350 @@
+{
+  "capture": "Actual Chromium CDP frames and live master audio bus, no substituted soundtrack. 24fps is export cadence.",
+  "frames": 909,
+  "seconds": 24.332359075546265,
+  "offset": 0.03484177589416504,
+  "before": {
+    "beat": "NEXT_SCENE_READY",
+    "time": 5.469100000002245,
+    "evidence": [
+      "clock",
+      "notebook",
+      "laptop"
+    ],
+    "verdict": {
+      "narrativeRevision": 4,
+      "version": 1,
+      "phase": "chapter02",
+      "found": [
+        "presentation",
+        "notes",
+        "data"
+      ],
+      "selected": "an",
+      "tested": [
+        "student07",
+        "an"
+      ],
+      "linked": [
+        "presentation",
+        "notes"
+      ],
+      "carried": null,
+      "stayed": {
+        "narrativeRevision": 4,
+        "version": 1,
+        "phase": "next",
+        "line": 0,
+        "read": [
+          "outcome",
+          "support"
+        ],
+        "page": "support",
+        "written": true,
+        "seen": [],
+        "nextInspected": true
+      },
+      "ripple": {
+        "version": 1,
+        "phase": "finale",
+        "questions": [
+          "prediction",
+          "opportunity"
+        ],
+        "milestones": 3,
+        "memories": [
+          "evaluation",
+          "stayed",
+          "design"
+        ],
+        "selected": null,
+        "elapsed": 0,
+        "played": [
+          "echo.chair",
+          "chair.chair",
+          "reveal.music"
+        ]
+      },
+      "finale": {
+        "memoryFocus": null,
+        "version": 1,
+        "phase": "paper",
+        "elapsed": 0,
+        "choice": null,
+        "starSeen": false,
+        "starCue": false,
+        "completed": false
+      }
+    },
+    "stayed": {
+      "narrativeRevision": 4,
+      "version": 1,
+      "phase": "next",
+      "line": 0,
+      "read": [
+        "outcome",
+        "support"
+      ],
+      "page": "support",
+      "written": true,
+      "seen": [],
+      "nextInspected": true
+    },
+    "ripple": {
+      "version": 1,
+      "phase": "finale",
+      "questions": [
+        "prediction",
+        "opportunity"
+      ],
+      "milestones": 3,
+      "memories": [
+        "evaluation",
+        "stayed",
+        "design"
+      ],
+      "selected": null,
+      "elapsed": 0,
+      "played": [
+        "echo.chair",
+        "chair.chair",
+        "reveal.music"
+      ]
+    },
+    "finale": {
+      "memoryFocus": null,
+      "version": 1,
+      "phase": "paper",
+      "elapsed": 0,
+      "choice": null,
+      "starSeen": false,
+      "starCue": false,
+      "completed": false
+    },
+    "followedDoor": false,
+    "world": {
+      "era": 2046,
+      "camera": [
+        0.2,
+        1.58,
+        2.15
+      ],
+      "chair": [
+        1.1,
+        0,
+        0.25
+      ],
+      "teacher": [
+        1.0999999999999999,
+        0,
+        0.19999999999999996
+      ],
+      "focus": "finale",
+      "notebook": true,
+      "motif": "chair.the-one-who-stayed",
+      "drawCalls": 45,
+      "resolution": 1
+    },
+    "voice": {
+      "status": "off",
+      "clip": null,
+      "started": 0,
+      "completed": 0,
+      "busy": false
+    },
+    "audio": {
+      "context": "running",
+      "events": [],
+      "mix": {
+        "rain": 0,
+        "fan": 0,
+        "ambience": 0.5,
+        "music": 0.015
+      },
+      "buses": {
+        "music": 0.008249999955296516,
+        "effects": 0.6499999761581421,
+        "ambience": 0.32499998807907104
+      }
+    }
+  },
+  "after": {
+    "beat": "NEXT_SCENE_READY",
+    "time": 4.249899999999999,
+    "evidence": [
+      "clock",
+      "notebook",
+      "laptop"
+    ],
+    "verdict": {
+      "narrativeRevision": 4,
+      "version": 1,
+      "phase": "chapter02",
+      "found": [
+        "presentation",
+        "notes",
+        "data"
+      ],
+      "selected": "an",
+      "tested": [
+        "student07",
+        "an"
+      ],
+      "linked": [
+        "presentation",
+        "notes"
+      ],
+      "carried": null,
+      "stayed": {
+        "narrativeRevision": 4,
+        "version": 1,
+        "phase": "next",
+        "line": 0,
+        "read": [
+          "outcome",
+          "support"
+        ],
+        "page": "support",
+        "written": true,
+        "seen": [],
+        "nextInspected": true
+      },
+      "ripple": {
+        "version": 1,
+        "phase": "finale",
+        "questions": [
+          "prediction",
+          "opportunity"
+        ],
+        "milestones": 3,
+        "memories": [
+          "evaluation",
+          "stayed",
+          "design"
+        ],
+        "selected": null,
+        "elapsed": 0,
+        "played": [
+          "echo.chair",
+          "chair.chair",
+          "reveal.music"
+        ]
+      },
+      "finale": {
+        "memoryFocus": null,
+        "version": 1,
+        "phase": "letter",
+        "elapsed": 0,
+        "choice": null,
+        "starSeen": false,
+        "starCue": false,
+        "completed": false
+      }
+    },
+    "stayed": {
+      "narrativeRevision": 4,
+      "version": 1,
+      "phase": "next",
+      "line": 0,
+      "read": [
+        "outcome",
+        "support"
+      ],
+      "page": "support",
+      "written": true,
+      "seen": [],
+      "nextInspected": true
+    },
+    "ripple": {
+      "version": 1,
+      "phase": "finale",
+      "questions": [
+        "prediction",
+        "opportunity"
+      ],
+      "milestones": 3,
+      "memories": [
+        "evaluation",
+        "stayed",
+        "design"
+      ],
+      "selected": null,
+      "elapsed": 0,
+      "played": [
+        "echo.chair",
+        "chair.chair",
+        "reveal.music"
+      ]
+    },
+    "finale": {
+      "memoryFocus": null,
+      "version": 1,
+      "phase": "letter",
+      "elapsed": 0,
+      "choice": null,
+      "starSeen": false,
+      "starCue": false,
+      "completed": false
+    },
+    "followedDoor": false,
+    "world": {
+      "era": 2046,
+      "camera": [
+        0.2,
+        1.66,
+        0.8
+      ],
+      "chair": [
+        1.1,
+        0,
+        0.25
+      ],
+      "teacher": [
+        1.0999999999999999,
+        0,
+        0.19999999999999996
+      ],
+      "focus": "finale",
+      "notebook": true,
+      "motif": "chair.the-one-who-stayed",
+      "drawCalls": 33,
+      "resolution": 1
+    },
+    "voice": {
+      "status": "off",
+      "clip": null,
+      "started": 0,
+      "completed": 0,
+      "busy": false
+    },
+    "audio": {
+      "context": "running",
+      "events": [
+        {
+          "cue": "paper",
+          "time": 7.032
+        },
+        {
+          "cue": "key",
+          "time": 17.352
+        },
+        {
+          "cue": "key",
+          "time": 21.712
+        }
+      ],
+      "mix": {
+        "rain": 0,
+        "fan": 0,
+        "ambience": 0.5,
+        "music": 0.015
+      },
+      "buses": {
+        "music": 0.008249999955296516,
+        "effects": 0.6499999761581421,
+        "ambience": 0.32499998807907104
+      }
+    }
+  },
+  "errors": []
+}

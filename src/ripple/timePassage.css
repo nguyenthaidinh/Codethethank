@@ -1,0 +1,33 @@
+.ripple-controls-content{display:contents;}
+.ripple-time-passage{position:absolute;inset:0;z-index:12;pointer-events:none;overflow:hidden;isolation:isolate;}
+.time-lid{position:absolute;left:0;right:0;height:50.1%;background:#03090d;transform:scaleY(var(--passage-cover));will-change:transform;transition:transform .12s linear;}
+.time-lid-top{top:0;transform-origin:top;}
+.time-lid-bottom{bottom:0;transform-origin:bottom;}
+.time-passage-title{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;text-align:center;box-sizing:border-box;opacity:var(--passage-title);color:#ece7d6;font-family:"Segoe UI",Arial,sans-serif;background:radial-gradient(ellipse at 50% 52%,#16323a30,transparent 62%);}
+.time-passage-title>span{font-size:10px;line-height:1.7;letter-spacing:.26em;color:#a4b6b4;}
+.time-passage-title>strong{font:300 clamp(72px,12vw,150px)/1.25 "Segoe UI",Arial,sans-serif;letter-spacing:-.055em;margin:12px 0;color:#dfd0ae;}
+.time-passage-title>i{display:block;width:42px;height:1px;background:#b4a37d99;margin:5px 0 22px;}
+.time-passage-title h2{font:400 clamp(26px,3vw,39px)/1.3 LessonSerif,Georgia,serif;margin:0 0 15px;}
+.time-passage-title p{max-width:390px;font-size:13px;line-height:1.8;color:#9eafad;margin:0;}
+.ripple-time-passage.is-still{background:#03090d;opacity:var(--passage-cover);}
+.ripple-time-passage.is-still .time-lid{display:none;}
+.chapter.ripple-passage-active .subtitle,.chapter.ripple-passage-active .verdict-hint{visibility:hidden;}
+.chapter.ripple-passage-active .ripple-controls-content{visibility:hidden;}
+.chapter .ripple-sketch{position:absolute;z-index:5;left:50%;bottom:21%;transform:translateX(-50%);width:min(680px,88vw);color:#e8e5d6;font-family:"Segoe UI",Arial,sans-serif;background:linear-gradient(135deg,#10232bea,#10232bda);padding:24px 28px;border-left:2px solid #baab7e;box-sizing:border-box;box-shadow:0 18px 60px #020c1644;}
+.ripple-sketch header>span{font-size:9px;letter-spacing:.18em;color:#9bb7b7;}
+.ripple-sketch h2{font:400 clamp(22px,2.4vw,30px)/1.3 LessonSerif,Georgia,serif;margin:9px 0 13px;}
+.ripple-sketch-guide{font-size:12px;line-height:1.7;color:#b6c8c3;margin:0 0 20px;}
+.ripple-sketch-lines{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:17px;}
+.chapter .ripple-sketch-lines button{display:flex;align-items:center;gap:13px;min-height:70px;padding:12px 5px;border:0;border-top:1px solid #9dbbb144;border-bottom:1px solid #9dbbb144;background:transparent;color:#e7e2c9;font:17px/1.4 LessonSerif,Georgia,serif;text-align:left;cursor:pointer;}
+.ripple-sketch-lines button>span:first-child{font:10px Consolas,monospace;color:#c5b68b;min-width:17px;}
+.ripple-sketch-lines small{display:block;font:11px/1.5 "Segoe UI",Arial,sans-serif;color:#98b3b2;margin-top:6px;}
+.ripple-sketch-lines>i{font-style:normal;color:#879f99;}
+.chapter .ripple-sketch-lines button[aria-pressed=true]{border-color:#d9c497;color:#f6e2b8;}
+.chapter .ripple-sketch-confirm{display:block;margin:22px 0 0;padding:12px 17px;border:1px solid #d7c59366;border-radius:5px;background:#d6c79f;color:#213d42;font-size:13px;min-height:46px;cursor:pointer;}
+.ripple-sketch-confirm>span{padding-left:24px;}
+.chapter .ripple-sketch-confirm:disabled{opacity:.4;cursor:default;}
+.ripple-sketch-footnote{display:block;font-size:10px;line-height:1.6;color:#96aeaa;margin-top:12px;}
+.chapter .ripple-sketch button:focus-visible{outline:2px solid #cde0d8;outline-offset:4px;}
+@media(max-width:600px){.chapter .ripple-sketch{padding:18px 18px;bottom:22%;width:90vw;}.ripple-sketch h2{font-size:23px;}.ripple-sketch-guide{font-size:11px;margin-bottom:14px;}.ripple-sketch-lines{gap:8px;}.chapter .ripple-sketch-lines button{font-size:15px;gap:7px;padding:10px 0;}.ripple-sketch-lines small{font-size:10px;}.chapter .ripple-sketch-confirm{width:100%;font-size:12px;margin-top:17px;}.time-passage-title>span{font-size:8px;letter-spacing:.18em;}.time-passage-title p{font-size:12px;max-width:270px;}}
+@media(max-height:550px){.chapter .ripple-sketch{bottom:20%;padding:13px 20px;}.ripple-sketch h2{font-size:21px;margin:5px 0;}.ripple-sketch-guide{margin-bottom:8px;}.chapter .ripple-sketch-lines button{min-height:50px;padding:7px 0;}.chapter .ripple-sketch-confirm{margin-top:10px;min-height:40px;padding:8px 14px;}.ripple-sketch-footnote{margin-top:7px;}}
+@media(prefers-reduced-motion:reduce){.time-lid{will-change:auto;transition:none;}}

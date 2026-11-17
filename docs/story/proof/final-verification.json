@@ -1,0 +1,22 @@
+{
+  "unit": 47,
+  "e2eRegression": {
+    "startTime": "2026-11-17T07:15:53.995Z",
+    "duration": 943595.906,
+    "expected": 10,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "notebookCorrection": {
+    "startTime": "2026-11-17T07:32:10.801Z",
+    "duration": 15722.389,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "protectedSourceUnchanged": 68,
+  "finalBuildHashes": "final-build-hashes.json",
+  "note": "10 regression tests before final notebook text-position correction; 2 focused WebGL/Canvas tests on final build. Logic unchanged by correction."
+}

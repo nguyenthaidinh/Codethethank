@@ -1,0 +1,12 @@
+School ending revision — 18 November 2026
+
+Source: user-supplied photograph codex-clipboard-cc93cfe3-a8f4-41b3-b8e3-aedd721f0099.png.
+Method: built-in image_gen image edit/outpaint, transparent_background=false.
+Generated original: ending-artifacts/sources/school-twilight.png.
+Final game asset: public/ending/school-twilight.webp (434,346 bytes).
+Previous campus-night artwork retained as an unused earlier version.
+
+Desktop: text and controls in the dark left garden; facade/sign/entrance on the right. Firework launches moved into the upper-right sky. Portrait: school image above the text and actions; compact controls below. Existing behavior, save, letter, tribute and reduced-motion support retained.
+
+Final image edit prompt:
+Edit the supplied real photograph of TRƯỜNG ĐẠI HỌC TÂY NGUYÊN into a premium cinematic game ending background. Preserve this specific recognizable building, architecture, cream/yellow facade, teal entry canopy, mature tree at right, palms, and exact existing Vietnamese school sign 'TRƯỜNG ĐẠI HỌC TÂY NGUYÊN'. Do not invent a different school. Recompose by extending the canvas substantially LEFT into a natural quiet tree-shaded garden and dark blue twilight atmosphere; entire original school facade must sit in the RIGHT 60 percent of a wide 16:9 composition, including its roof, readable sign, entrance, with margin from right and bottom edges. Leftmost 38 percent is calm dark midnight navy foliage/sky negative space for later game interface text, no architecture there. Soft transition between dark left garden and luminous building, no vertical split or collage. Color grade original exaggerated teal saturation into tasteful believable dusk: midnight blue sky, warm sunset illumination on cream facade and sun shining through right tree, gentle warm interior window lights. Photoreal cinematic architectural photography, beautifully detailed, natural texture, soft atmospheric depth. Preserve the identity and actual layout of the school; do not add futuristic buildings. Keep visible sky above school for separately animated fireworks. No new text, no game title, no buttons, no fireworks baked into image, no watermark. This is a background artwork only; game interface will be rendered separately on the dark LEFT side. Wide landscape output.

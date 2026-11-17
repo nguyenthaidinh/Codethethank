@@ -1,0 +1,186 @@
+{
+  "uniqueCases": 30,
+  "passed": 30,
+  "cases": [
+    {
+      "file": "cinematic-chair.spec.ts",
+      "title": "Chair: insert, visible sit and quiet two-shot desktop",
+      "passed": true,
+      "run": "e2e"
+    },
+    {
+      "file": "cinematic-chair.spec.ts",
+      "title": "Chair: insert, visible sit and quiet two-shot mobile",
+      "passed": true,
+      "run": "e2e"
+    },
+    {
+      "file": "cinematic-chair.spec.ts",
+      "title": "Chair: insert, visible sit and quiet two-shot canvas",
+      "passed": true,
+      "run": "e2e"
+    },
+    {
+      "file": "cinematic-fullgame.spec.ts",
+      "title": "Full game from real menu to completed gratitude ending without checkpoints",
+      "passed": true,
+      "run": "e2e"
+    },
+    {
+      "file": "cinematic-mobile.spec.ts",
+      "title": "mobile 390: tap full slice, muted reduced motion, pause and save/resume",
+      "passed": true,
+      "run": "e2e"
+    },
+    {
+      "file": "cinematic-mobile.spec.ts",
+      "title": "360: failed audio and storage, keyboard pause, GPU fallback is playable",
+      "passed": true,
+      "run": "e2e"
+    },
+    {
+      "file": "cinematic-stayed-fallback.spec.ts",
+      "title": "Chapter 02 keyboard and Canvas fallback restore both pages and finish",
+      "passed": true,
+      "run": "e2e"
+    },
+    {
+      "file": "cinematic-stayed.spec.ts",
+      "title": "Chapter 02 complete desktop audio choreography",
+      "passed": true,
+      "run": "e2e"
+    },
+    {
+      "file": "cinematic-stayed.spec.ts",
+      "title": "Chapter 02 complete mobile silent reduced resume",
+      "passed": true,
+      "run": "e2e"
+    },
+    {
+      "file": "cinematic-typography.spec.ts",
+      "title": "Vietnamese tones use one complete font in regular bold italic and Canvas",
+      "passed": true,
+      "run": "e2e"
+    },
+    {
+      "file": "cinematic-typography.spec.ts",
+      "title": "Vietnamese real notebook and subtitles desktop",
+      "passed": true,
+      "run": "e2e"
+    },
+    {
+      "file": "cinematic-typography.spec.ts",
+      "title": "Vietnamese real notebook and subtitles mobile touch",
+      "passed": true,
+      "run": "e2e"
+    },
+    {
+      "file": "cinematic-typography.spec.ts",
+      "title": "Unavailable bundled fonts keep Vietnamese readable and the menu playable",
+      "passed": true,
+      "run": "e2e"
+    },
+    {
+      "file": "cinematic-voice-school.spec.ts",
+      "title": "Opening narrator only: gesture, pause, separate subtitles, then no AION or past voice",
+      "passed": true,
+      "run": "e2e"
+    },
+    {
+      "file": "cinematic-voice-school.spec.ts",
+      "title": "School and silent past: desktop WebGL",
+      "passed": true,
+      "run": "e2e"
+    },
+    {
+      "file": "cinematic-voice-school.spec.ts",
+      "title": "School and silent past: touch Canvas reduced",
+      "passed": true,
+      "run": "e2e"
+    },
+    {
+      "file": "cinematic-voice-school.spec.ts",
+      "title": "Missing opening narration stays readable and can be skipped",
+      "passed": true,
+      "run": "e2e"
+    },
+    {
+      "file": "cinematic-voice-school.spec.ts",
+      "title": "Conversation camera and reading space: desktop WebGL keyboard",
+      "passed": true,
+      "run": "affected"
+    },
+    {
+      "file": "cinematic-voice-school.spec.ts",
+      "title": "Conversation camera and reading space: mobile WebGL touch",
+      "passed": true,
+      "run": "affected"
+    },
+    {
+      "file": "menu-audio.spec.ts",
+      "title": "audio starts only on interaction and menu context closes before game audio",
+      "passed": true,
+      "run": "menu-cold-start"
+    },
+    {
+      "file": "menu-audio.spec.ts",
+      "title": "missing art falls back to the animated vector environment",
+      "passed": true,
+      "run": "menu"
+    },
+    {
+      "file": "menu.spec.ts",
+      "title": "branding, valid save gating, settings persistence and modal keyboard focus",
+      "passed": true,
+      "run": "menu"
+    },
+    {
+      "file": "menu.spec.ts",
+      "title": "continue resumes the real checkpoint, with settings passed to gameplay",
+      "passed": true,
+      "run": "menu"
+    },
+    {
+      "file": "menu.spec.ts",
+      "title": "new journey confirms overwrite and starts Chapter 00",
+      "passed": true,
+      "run": "menu"
+    },
+    {
+      "file": "menu.spec.ts",
+      "title": "layout 1366x768 and reduced motion",
+      "passed": true,
+      "run": "menu"
+    },
+    {
+      "file": "menu.spec.ts",
+      "title": "layout 1920x1080 and reduced motion",
+      "passed": true,
+      "run": "menu"
+    },
+    {
+      "file": "menu.spec.ts",
+      "title": "layout 390x844 and reduced motion",
+      "passed": true,
+      "run": "menu"
+    },
+    {
+      "file": "menu.spec.ts",
+      "title": "layout 360x640 and reduced motion",
+      "passed": true,
+      "run": "menu"
+    },
+    {
+      "file": "menu.spec.ts",
+      "title": "layout 844x390 and reduced motion",
+      "passed": true,
+      "run": "menu"
+    },
+    {
+      "file": "menu.spec.ts",
+      "title": "storage and audio failure still permit a silent journey",
+      "passed": true,
+      "run": "menu"
+    }
+  ]
+}

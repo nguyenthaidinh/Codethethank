@@ -1,0 +1,114 @@
+[
+  {
+    "fallback": false,
+    "result": "PASS",
+    "errors": [],
+    "state": {
+      "beat": "PLAYER_CONTROL_ENABLED",
+      "time": 0.016599999999999455,
+      "evidence": [],
+      "verdict": null,
+      "stayed": null,
+      "ripple": null,
+      "finale": null,
+      "followedDoor": false,
+      "world": {
+        "renderer": "aion-future-webgl",
+        "place": "anomaly",
+        "landmark": "aion-citadel-v2",
+        "historicalAnalysis": {
+          "heading": "AION / ARCHITECTURE AUDIT / 2046",
+          "title": "HUMAN REVIEW",
+          "status": "ORIGIN UNKNOWN",
+          "lines": [
+            "CORE PRINCIPLE: HUMAN REVIEW",
+            "FUNCTION: VERIFIED",
+            "DESIGN ORIGIN: INCOMPLETE",
+            "HISTORICAL TRACE: 2026"
+          ],
+          "principle": "HUMAN REVIEW",
+          "function": "VERIFIED",
+          "origin": "INCOMPLETE",
+          "year": 2026
+        },
+        "nexusLeaves": 144,
+        "atriumLevels": 5,
+        "view": "core",
+        "camera": [
+          4,
+          3.2,
+          -10
+        ],
+        "signal": {
+          "x": 2.8537191570221636,
+          "y": 528.7544829076538,
+          "focused": false
+        },
+        "drawCalls": 29,
+        "triangles": 40928,
+        "antialias": true,
+        "output": "direct-aces-srgb",
+        "lighting": "gpu-pbr-ibl",
+        "resources": {
+          "geometries": 46,
+          "textures": 15
+        },
+        "quality": 0.75,
+        "resolutionChanges": 0,
+        "renderSize": [
+          293,
+          633
+        ],
+        "skylineVisible": false,
+        "qualitySettled": false,
+        "assets": [
+          "floor_tiles_06",
+          "building-skyscraper-b",
+          "building-skyscraper-c",
+          "building-skyscraper-a",
+          "building-b",
+          "building-a",
+          "studio_small_09"
+        ],
+        "assetErrors": [],
+        "investigated": [],
+        "selected": null,
+        "ready": true,
+        "assetsComplete": true,
+        "beat": "PLAYER_CONTROL_ENABLED"
+      },
+      "voice": null,
+      "audio": null
+    }
+  },
+  {
+    "fallback": true,
+    "result": "PASS",
+    "errors": [],
+    "state": {
+      "beat": "PLAYER_CONTROL_ENABLED",
+      "time": 0.05,
+      "evidence": [],
+      "verdict": null,
+      "stayed": null,
+      "ripple": null,
+      "finale": null,
+      "followedDoor": false,
+      "world": {
+        "renderer": "future-canvas-fallback",
+        "place": "anomaly",
+        "investigated": [],
+        "selected": null,
+        "signal": {
+          "x": 195,
+          "y": 514.84,
+          "focused": false
+        },
+        "drawCalls": 0,
+        "triangles": 0
+      },
+      "voice": null,
+      "audio": null
+    }
+  }
+]

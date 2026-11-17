@@ -1,0 +1,83 @@
+{
+  "date": "2026-11-17",
+  "buildSHA256": "64ffeba60819057bca992c38ec3a9b46b8e75beebea064cdb49de95b3aad1526",
+  "typecheck": "PASS",
+  "lint": "PASS",
+  "unit": 43,
+  "e2e": {
+    "primary": {
+      "startTime": "2026-11-17T06:11:38.696Z",
+      "duration": 790578.147,
+      "expected": 18,
+      "skipped": 0,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    "corrected": {
+      "startTime": "2026-11-17T06:26:42.320Z",
+      "duration": 29046.238,
+      "expected": 2,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "finalUniqueGameplayPassed": 19,
+    "finalUniqueCasesPassed": 30,
+    "corrections": [
+      "Dialogue test now waits for conversation.master instead of the removed dolly.",
+      "Menu dev-server cold launch now waits up to 30s for real game UI before checking the same closed/running audio context assertion. No application changes after primary QA."
+    ]
+  },
+  "menu": {
+    "primary": {
+      "startTime": "2026-11-17T06:27:12.953Z",
+      "duration": 78991.12,
+      "expected": 10,
+      "skipped": 0,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    "coldStartCorrected": {
+      "startTime": "2026-11-17T06:30:12.434Z",
+      "duration": 12587.702000000001,
+      "expected": 1,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "finalUniqueMenuPassed": 11
+  },
+  "source": {
+    "compared": 76,
+    "preserved": 71,
+    "changed": [
+      "src/art/narrative.css",
+      "src/chapter/ChapterGame.tsx",
+      "src/cinematic/FallbackWorld.ts",
+      "src/cinematic/SceneChrome.tsx",
+      "src/cinematic/WorldRenderer.ts"
+    ],
+    "added": [
+      "src/cinematic/ClassroomCinematography.ts"
+    ],
+    "protectedVoiceStoryCastMotifUnchanged": true
+  },
+  "voice": {
+    "publicClips": 7,
+    "voicesInClassroomRecording": 0
+  },
+  "video": {
+    "seconds": 31.096,
+    "bytes": 3235981,
+    "sha256": "6aa15a6df4d6eaa09199276ef422ee545a52c0003a00db1bba2321f9d0ba690a",
+    "capturedFrames": 872
+  },
+  "bundle": {
+    "before": 739799,
+    "after": 742498
+  },
+  "limits": [
+    "Physical phones, Safari/iOS, human playtest unverified.",
+    "Existing character models retained. This is a camera/choreography/UI pass; Product Owner visual approval remains pending."
+  ]
+}

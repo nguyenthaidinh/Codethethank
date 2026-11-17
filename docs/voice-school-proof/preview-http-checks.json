@@ -1,0 +1,22 @@
+[
+  {
+    "url": "http://127.0.0.1:4173/",
+    "status": 200
+  },
+  {
+    "url": "http://127.0.0.1:4173/voice/vi/f76dbc2c.mp3",
+    "status": 200
+  },
+  {
+    "url": "http://127.0.0.1:4173/school/tay-nguyen-university-logo.png",
+    "status": 200
+  },
+  {
+    "url": "http://127.0.0.1:5173/docs/voice-school-proof/review.html",
+    "status": 200
+  },
+  {
+    "url": "http://127.0.0.1:5173/docs/voice-school-proof/runtime/voice-scene.mp4",
+    "status": 200
+  }
+]

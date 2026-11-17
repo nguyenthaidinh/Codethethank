@@ -1,0 +1,24 @@
+{
+  "before": [
+    {
+      "familyName": "Times New Roman",
+      "postScriptName": "TimesNewRomanPSMT",
+      "isCustomFont": false,
+      "glyphCount": 4
+    },
+    {
+      "familyName": "Georgia",
+      "postScriptName": "Georgia",
+      "isCustomFont": false,
+      "glyphCount": 65
+    }
+  ],
+  "after": [
+    {
+      "familyName": "Noto Serif",
+      "postScriptName": "NotoSerif-Regular",
+      "isCustomFont": true,
+      "glyphCount": 62
+    }
+  ]
+}

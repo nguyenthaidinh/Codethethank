@@ -1,0 +1,346 @@
+--- before/src/chapter/ChapterAudio.ts
++++ after/src/chapter/ChapterAudio.ts
+@@ -3,6 +3,7 @@
+ import { AudioDirector } from "../cinematic/AudioDirector";
+ import type { SliceSave } from "../cinematic/director";
+ import type { StayPhase } from "../stayed/story";
++import type { FuturePlace } from "../future/direction";
+ /** Original synthesized crowd, machinery and motifs; no fetched or unlicensed audio. */
+ export class ChapterAudio extends AudioDirector {
+   private future: GainNode;
+@@ -110,6 +111,21 @@
+     this.voices.gain.setTargetAtTime(focused ? 0.009 : 0.045, t, 0.3);
+     if (focused) this.chime("focus", 440);
+   }
++  openingSpace(place: FuturePlace) {
++    if (this.school !== 0) return;
++    const t = this.context.currentTime;
++    this.future.gain.setTargetAtTime(
++      place === "city" ? 0.3 : place === "headquarters" ? 0.2 : 0.11,
++      t,
++      0.8,
++    );
++    this.voices.gain.setTargetAtTime(
++      place === "headquarters" ? 0.025 : place === "city" ? 0.012 : 0.003,
++      t,
++      0.8,
++    );
++    this.events.push({ cue: "aion.space." + place, time: t });
++  }
+   chime(name: string, hz = 440) {
+     const c = this.context,
+       t = c.currentTime,
+--- before/src/chapter/ChapterGame.tsx
++++ after/src/chapter/ChapterGame.tsx
+@@ -30,7 +30,16 @@
+ import { FallbackWorld } from "../cinematic/FallbackWorld";
+ import type { AudioDirector } from "../cinematic/AudioDirector";
+ import { ChapterAudio } from "./ChapterAudio";
+-import { SummitWorld } from "./SummitWorld";
++import type { FutureWorld } from "../future/FutureWorld";
++import { FutureFallback } from "../future/FutureFallback";
++import {
++  futureCaption,
++  futurePlace,
++  channels,
++  type Channel,
++} from "../future/direction";
++import { INSPECTION_KEY, readInspection } from "../future/inspection";
++import "../future/future.css";
+ import {
+   chapterReducer,
+   chapterCaption,
+@@ -132,7 +141,7 @@
+   const root = useRef<HTMLDivElement>(null),
+     futureCanvas = useRef<HTMLCanvasElement>(null),
+     roomCanvas = useRef<HTMLCanvasElement>(null);
+-  const future = useRef<SummitWorld | null>(null),
++  const future = useRef<FutureWorld | FutureFallback | null>(null),
+     room = useRef<WorldRenderer | FallbackWorld | null>(null),
+     audio = useRef<ChapterAudio | null>(null);
+   const clock = useRef(0),
+@@ -143,6 +152,35 @@
+     focusSignal = useRef(false);
+   const current = useRef({ s, settings, focus, paused, letter });
+   current.current = { s, settings, focus, paused, letter };
++  const [futureFound, setFutureFound] = useState<Channel[]>(() => {
++    if (initialSave.chapter?.beat !== "SIGNAL_INVESTIGATION") return [];
++    try {
++      return readInspection(localStorage.getItem(INSPECTION_KEY));
++    } catch {
++      return [];
++    }
++  });
++  const [futureSelected, setFutureSelected] = useState<Channel | null>(null);
++  const [futureView, setFutureView] = useState<"core" | "atrium">("core");
++  useEffect(() => future.current?.lookPlace(futureView), [futureView]);
++  const futureInspection = useRef({
++    found: futureFound,
++    selected: futureSelected,
++  });
++  futureInspection.current = { found: futureFound, selected: futureSelected };
++  useEffect(() => {
++    try {
++      if (s.beat === "OPENING_CINEMATIC")
++        localStorage.removeItem(INSPECTION_KEY);
++      else if (s.beat === "SIGNAL_INVESTIGATION")
++        localStorage.setItem(
++          INSPECTION_KEY,
++          JSON.stringify({ version: 1, found: futureFound }),
++        );
++    } catch {
++      /* Inspection remains playable when storage is unavailable. */
++    }
++  }, [s.beat, futureFound]);
+   const roomActive = [
+     "CLASSROOM_ESTABLISHING",
+     "CLASSROOM_EXPLORATION",
+@@ -279,7 +317,54 @@
+   }, []);
+   useEffect(() => {
+     if (!futureCanvas.current || !root.current) return;
+-    future.current = new SummitWorld(futureCanvas.current);
++    let mounted = true;
++    if (
++      [
++        "OPENING_CINEMATIC",
++        "PLAYER_CONTROL_ENABLED",
++        "SIGNAL_INVESTIGATION",
++        "MEMORY_TRANSITION",
++      ].includes(current.current.s.beat)
++    )
++      void import("../future/FutureWorld")
++        .then(({ FutureWorld }) => {
++          if (
++            mounted &&
++            futureCanvas.current &&
++            [
++              "OPENING_CINEMATIC",
++              "PLAYER_CONTROL_ENABLED",
++              "SIGNAL_INVESTIGATION",
++              "MEMORY_TRANSITION",
++            ].includes(current.current.s.beat)
++          ) {
++            future.current = new FutureWorld(futureCanvas.current);
++            resize();
++          }
++        })
++        .catch(() => {
++          if (
++            mounted &&
++            futureCanvas.current &&
++            [
++              "OPENING_CINEMATIC",
++              "PLAYER_CONTROL_ENABLED",
++              "SIGNAL_INVESTIGATION",
++              "MEMORY_TRANSITION",
++            ].includes(current.current.s.beat)
++          ) {
++            const replacement = document.createElement("canvas");
++            replacement.className = "world-canvas chapter-future";
++            replacement.setAttribute(
++              "aria-label",
++              "Trụ sở AION 2046 · đồ họa tương thích",
++            );
++            futureCanvas.current.replaceWith(replacement);
++            futureCanvas.current = replacement;
++            future.current = new FutureFallback(replacement);
++            resize();
++          }
++        });
+     const element = root.current;
+     const resize = () => {
+       future.current?.resize(element.clientWidth, element.clientHeight);
+@@ -290,6 +375,7 @@
+     resize();
+     let last = performance.now(),
+       update = 0;
++    let openingPlace: string | null = null;
+     const place = (id: string, x: number, y: number) => {
+       const b = buttons.current.get(id);
+       if (b) {
+@@ -307,7 +393,9 @@
+         paused: stop,
+       } = current.current;
+       const dt = stop ? 0 : Math.min(raw, 0.25);
+-      if (!stop) {
++      const openingWait =
++        state.beat === "OPENING_CINEMATIC" && !future.current?.ready;
++      if (!stop && !openingWait) {
+         clock.current += raw;
+         elapsed.current += raw;
+       }
+@@ -444,6 +532,15 @@
+         "NEXT_SCENE_READY",
+       ].includes(state.beat);
+       if (!school) {
++        const placeName = futurePlace(state.beat, t);
++        if (placeName !== openingPlace && audio.current) {
++          openingPlace = placeName;
++          audio.current.openingSpace(placeName);
++        }
++        future.current?.setInvestigation(
++          futureInspection.current.found,
++          futureInspection.current.selected,
++        );
+         future.current?.render(
+           state.beat,
+           t,
+@@ -453,7 +550,14 @@
+         );
+         const signal = future.current?.signal;
+         if (signal) place("signal", signal.x, signal.y);
++        for (const [id, p] of Object.entries(future.current?.anchors ?? {}))
++          place("future-" + id, p.x, p.y);
++        future.current?.adaptQuality(raw);
+       } else if (room.current) {
++        if (future.current) {
++          future.current.dispose();
++          future.current = null;
++        }
+         const roomState = {
+           ...prefs,
+           beat:
+@@ -541,6 +645,7 @@
+     };
+     frame.current = requestAnimationFrame(tick);
+     return () => {
++      mounted = false;
+       cancelAnimationFrame(frame.current);
+       observer.disconnect();
+       future.current?.dispose();
+@@ -693,13 +798,15 @@
+         ? verdictCaption(v, time, inspection)
+         : explore && focus in objects
+           ? objects[focus as ObjectId].text
+-          : chapterCaption(s.beat, time);
++          : (futureCaption(s.beat, time) ?? chapterCaption(s.beat, time));
+   const black =
+-    s.beat === "MEMORY_TRANSITION"
+-      ? Math.min(1, time / 2)
+-      : s.beat === "CLASSROOM_ESTABLISHING"
+-        ? Math.max(0, 1 - time / 2)
+-        : 0;
++    s.beat === "OPENING_CINEMATIC"
++      ? Math.max(0, 1 - time / 2.5)
++      : s.beat === "MEMORY_TRANSITION"
++        ? Math.min(1, time / 2)
++        : s.beat === "CLASSROOM_ESTABLISHING"
++          ? Math.max(0, 1 - time / 2)
++          : 0;
+   const markFocus = (value: boolean) => {
+     if (focusSignal.current === value) return;
+     focusSignal.current = value;
+@@ -709,7 +816,7 @@
+   return (
+     <div
+       ref={root}
+-      className={`cinematic chapter ${settings.reduced ? "motion-reduced" : ""} ${roomActive ? "in-classroom" : ""} ${roomActive && (!rip || ["sketch", "change", "echo"].includes(rip.phase)) ? "narrative-room" : ""}`}
++      className={`cinematic chapter ${settings.reduced ? "motion-reduced" : ""} ${roomActive ? "in-classroom" : "future-opening"} ${roomActive && (!rip || ["sketch", "change", "echo"].includes(rip.phase)) ? "narrative-room" : ""}`}
+       data-finale={fin?.phase ?? ""}
+       data-completed={fin?.completed ?? false}
+       data-ripple={rip?.phase ?? ""}
+@@ -720,7 +827,9 @@
+       data-focus={focus}
+       onPointerMove={(e) => {
+         if (paused) return;
+-        if (s.beat === "PLAYER_CONTROL_ENABLED") {
++        if (
++          ["PLAYER_CONTROL_ENABLED", "SIGNAL_INVESTIGATION"].includes(s.beat)
++        ) {
+           future.current?.observe(
+             (e.clientX / innerWidth - 0.5) * 2,
+             (e.clientY / innerHeight - 0.5) * 2,
+@@ -741,7 +850,7 @@
+       <canvas
+         ref={futureCanvas}
+         className="world-canvas chapter-future"
+-        aria-label="Hội nghị AION năm 2046"
++        aria-label="Thành phố, trụ sở và trung tâm trí tuệ AION năm 2046"
+       />
+       <canvas
+         ref={roomCanvas}
+@@ -877,14 +986,75 @@
+           <span className="hotspot-name">Tín hiệu bất thường</span>
+         </button>
+       )}
+-      {!paused && s.beat === "SIGNAL_INVESTIGATION" && time > 1.5 && (
+-        <button
+-          className="chapter-action"
+-          onClick={() => dispatch({ type: "open" })}
+-        >
+-          Chạm để mở hồ sơ 2026 ↗
+-        </button>
+-      )}
++      {!paused &&
++        s.beat === "PLAYER_CONTROL_ENABLED" &&
++        (futureView === "core" ? (
++          <button
++            className="world-hotspot future-node"
++            aria-label="Nhìn về khu nghiên cứu"
++            ref={(el) => {
++              if (el) buttons.current.set("future-research", el);
++              else buttons.current.delete("future-research");
++            }}
++            onClick={() => {
++              setFutureView("atrium");
++              audio.current?.chime("aion.research", 294);
++            }}
++          >
++            <span className="hotspot-ring" />
++            <span className="hotspot-name">Khu nghiên cứu</span>
++          </button>
++        ) : (
++          <button
++            className="chapter-return"
++            onClick={() => setFutureView("core")}
++          >
++            Trở lại bàn đối chiếu →
++          </button>
++        ))}
++      {!paused &&
++        s.beat === "SIGNAL_INVESTIGATION" &&
++        time > 1.5 &&
++        (Object.keys(channels) as Channel[]).map((id) => (
++          <button
++            key={id}
++            className={`world-hotspot future-node ${futureFound.includes(id) ? "checked" : ""}`}
++            aria-label={channels[id].label}
++            aria-pressed={futureFound.includes(id)}
++            ref={(el) => {
++              if (el) buttons.current.set("future-" + id, el);
++              else buttons.current.delete("future-" + id);
++            }}
++            onClick={() => {
++              setFutureSelected(id);
++              setFutureFound((v) => [...new Set([...v, id])]);
++              audio.current?.chime(
++                "aion.inspect." + id,
++                id === "source" ? 392 : 294,
++              );
++            }}
++          >
++            <span className="hotspot-ring" />
++            <span className="hotspot-name">
++              {id === "source" ? "Nguồn dữ liệu" : "Giới hạn dự báo"}
++            </span>
++          </button>
++        ))}
++      {!paused &&
++        s.beat === "SIGNAL_INVESTIGATION" &&
++        time > 1.5 &&
++        futureFound.length === 2 && (
++          <button
++            className="future-open"
++            ref={(el) => {
++              if (el) buttons.current.set("future-open", el);
++              else buttons.current.delete("future-open");
++            }}
++            onClick={() => dispatch({ type: "open" })}
++          >
++            Chạm để mở hồ sơ 2026 ↗
++          </button>
++        )}
+       {!paused &&
+         explore &&
+         focus === "wide" &&

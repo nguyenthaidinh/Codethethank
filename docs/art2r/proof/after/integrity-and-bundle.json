@@ -1,0 +1,103 @@
+{
+  "sourceChanged": [
+    {
+      "path": "src/art/ClassroomArt.ts",
+      "kind": "modified"
+    },
+    {
+      "path": "src/art/narrative.css",
+      "kind": "added"
+    },
+    {
+      "path": "src/art/NarrativeActors.ts",
+      "kind": "added"
+    },
+    {
+      "path": "src/art/NarrativePalette.ts",
+      "kind": "added"
+    },
+    {
+      "path": "src/chapter/ChapterGame.tsx",
+      "kind": "modified"
+    },
+    {
+      "path": "src/cinematic/WorldRenderer.ts",
+      "kind": "modified"
+    }
+  ],
+  "protectedFiles": [
+    {
+      "path": "src/chapter/director.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/verdict/state.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/stayed/state.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/ripple/state.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/finale/state.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/cinematic/motifs.ts",
+      "unchanged": true
+    }
+  ],
+  "sourceStillMatchesTestedBuild": true,
+  "bundle": {
+    "before": {
+      "Name": "CinematicGame-5AqdiDgK.js",
+      "Length": 638427
+    },
+    "after": {
+      "Name": "CinematicGame-kfHCg935.js",
+      "Length": 676701
+    },
+    "deltaBytes": 38274,
+    "deltaPercent": 5.995047201951054
+  },
+  "production": {
+    "Path": "F:\\Dự Án NTD\\Codethethank\\dist\\index.html",
+    "Hash": "20728C143C0B97912AEFEA406A35C8F6A4792FE49BBBCB6E9B211AD68666A729"
+  },
+  "video": {
+    "durationSeconds": 55.701,
+    "bytes": 2785030,
+    "codecs": [
+      {
+        "type": "video",
+        "codec": "vp8",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "type": "audio",
+        "codec": "opus",
+        "sampleRate": "48000"
+      }
+    ],
+    "meanDb": -36.9,
+    "peakDb": -19.2
+  },
+  "performance": {
+    "before": {
+      "p50Ms": 66.70000000000073,
+      "p90Ms": 83.39999999999964,
+      "renderScale": 0.65
+    },
+    "after": {
+      "p50Ms": 116.59999999999854,
+      "p90Ms": 116.70000000000073,
+      "renderScale": 0.65
+    },
+    "note": "Same logical scene, changed camera/art. Host rAF intervals; no concurrent automated browser workload during probe. Other host applications are not controlled; not a device FPS benchmark or isolated causal comparison."
+  }
+}

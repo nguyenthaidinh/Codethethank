@@ -1,0 +1,53 @@
+[
+  {
+    "mode": "desktop",
+    "before": {
+      "medianMs": 16.699999999999818,
+      "p95Ms": 16.799999999999272,
+      "samples": 119,
+      "devicePixelRatio": 1
+    },
+    "after": {
+      "medianMs": 16.699999999999818,
+      "p95Ms": 16.800000000000182,
+      "samples": 119,
+      "devicePixelRatio": 1
+    },
+    "drawCallsBefore": 76,
+    "drawCallsAfter": 45
+  },
+  {
+    "mode": "mobile",
+    "before": {
+      "medianMs": 16.699999999999818,
+      "p95Ms": 16.800000000000182,
+      "samples": 119,
+      "devicePixelRatio": 1
+    },
+    "after": {
+      "medianMs": 16.699999999999818,
+      "p95Ms": 16.800000000000182,
+      "samples": 119,
+      "devicePixelRatio": 1
+    },
+    "drawCallsBefore": 77,
+    "drawCallsAfter": 34
+  },
+  {
+    "mode": "fallback",
+    "before": {
+      "medianMs": 16.699999999999818,
+      "p95Ms": 16.700000000000728,
+      "samples": 119,
+      "devicePixelRatio": 1
+    },
+    "after": {
+      "medianMs": 16.699999999999818,
+      "p95Ms": 16.700000000000728,
+      "samples": 119,
+      "devicePixelRatio": 1
+    },
+    "drawCallsBefore": 1,
+    "drawCallsAfter": 1
+  }
+]

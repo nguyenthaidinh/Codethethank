@@ -1,0 +1,124 @@
+{
+  "desktop": {
+    "sameCamera": true,
+    "beforePhase": "conversation.master",
+    "afterPhase": "conversation.master",
+    "before": {
+      "camera": [
+        0.75,
+        1.5,
+        -1.25
+      ],
+      "drawCalls": 103,
+      "triangles": 86346,
+      "resolution": 1,
+      "resources": {
+        "geometries": 128,
+        "textures": 18,
+        "programs": 13,
+        "renderTarget": [
+          1280,
+          720
+        ],
+        "samples": 0,
+        "output": [
+          1280,
+          720
+        ],
+        "shadowMap": [
+          1024,
+          1024
+        ]
+      }
+    },
+    "after": {
+      "camera": [
+        0.75,
+        1.5,
+        -1.25
+      ],
+      "drawCalls": 109,
+      "triangles": 96618,
+      "resolution": 1,
+      "resources": {
+        "geometries": 134,
+        "textures": 18,
+        "programs": 13,
+        "renderTarget": [
+          1280,
+          720
+        ],
+        "samples": 0,
+        "output": [
+          1280,
+          720
+        ],
+        "shadowMap": [
+          1024,
+          1024
+        ]
+      }
+    }
+  },
+  "mobile": {
+    "sameCamera": true,
+    "beforePhase": "conversation.master",
+    "afterPhase": "conversation.master",
+    "before": {
+      "camera": [
+        2.3,
+        1.7,
+        -2.65
+      ],
+      "drawCalls": 110,
+      "triangles": 95340,
+      "resolution": 1,
+      "resources": {
+        "geometries": 126,
+        "textures": 17,
+        "programs": 13,
+        "renderTarget": [
+          390,
+          844
+        ],
+        "samples": 0,
+        "output": [
+          390,
+          844
+        ],
+        "shadowMap": [
+          1024,
+          1024
+        ]
+      }
+    },
+    "after": {
+      "camera": [
+        2.3,
+        1.7,
+        -2.65
+      ],
+      "drawCalls": 116,
+      "triangles": 105612,
+      "resolution": 1,
+      "resources": {
+        "geometries": 132,
+        "textures": 17,
+        "programs": 13,
+        "renderTarget": [
+          390,
+          844
+        ],
+        "samples": 0,
+        "output": [
+          390,
+          844
+        ],
+        "shadowMap": [
+          1024,
+          1024
+        ]
+      }
+    }
+  }
+}

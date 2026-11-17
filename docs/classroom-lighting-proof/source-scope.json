@@ -1,0 +1,11 @@
+{
+  "changed": [
+    "src/art/ClassroomArt.ts",
+    "src/cinematic/WorldRenderer.ts"
+  ],
+  "added": [
+    "src/cinematic/ClassroomLighting.ts"
+  ],
+  "cameraUnchanged": true,
+  "finaleUnchanged": true
+}

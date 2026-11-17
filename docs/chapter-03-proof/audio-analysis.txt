@@ -1,0 +1,14 @@
+﻿  Stream #0:0(eng): Audio: pcm_s16le, 48000 Hz, stereo, s16, 1536 kb/s (default)
+    Metadata:
+      encoder         : Lavc62.28.102 pcm_s16le
+[Parsed_volumedetect_0 @ 000001ecde903140] n_samples: 3168000
+[Parsed_volumedetect_0 @ 000001ecde903140] mean_volume: -47.2 dB
+[Parsed_volumedetect_0 @ 000001ecde903140] max_volume: -29.7 dB
+[Parsed_volumedetect_0 @ 000001ecde903140] histogram_29db: 4
+[Parsed_volumedetect_0 @ 000001ecde903140] histogram_30db: 50
+[Parsed_volumedetect_0 @ 000001ecde903140] histogram_31db: 193
+[Parsed_volumedetect_0 @ 000001ecde903140] histogram_32db: 752
+[Parsed_volumedetect_0 @ 000001ecde903140] histogram_33db: 1805
+[Parsed_volumedetect_0 @ 000001ecde903140] histogram_34db: 3551
+[out#0/null @ 000001ecde840600] video:0KiB audio:6188KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+size=N/A time=00:00:33.03 bitrate=N/A speed= 330x elapsed=0:00:00.10    

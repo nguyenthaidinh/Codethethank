@@ -1,0 +1,169 @@
+openapi: 3.1.0
+info:
+  title: The Unwritten Lesson — Gratitude API
+  version: 1.0.0
+  description: F5.5 only. No moderation UI, public feed, stage controls, or game integration.
+servers:
+  - url: http://127.0.0.1:8055/api/v1
+paths:
+  /sharing-policy:
+    get:
+      summary: Read the current public-sharing consent and Unicode code-point limits
+      responses:
+        '200':
+          description: Consent text/version and recipient/message/display_name limits
+        '429': { $ref: '#/components/responses/RateLimited' }
+  /submissions:
+    post:
+      summary: Explicitly submit for moderation; never publishes immediately
+      description: Generate and securely retain both keys before sending. Retry the same normalized payload with the same keys. A new key with the same receipt is a conflict. Audience preference alone is not consent.
+      parameters:
+        - name: Idempotency-Key
+          in: header
+          required: true
+          schema: { type: string, format: uuid, description: Lowercase random UUID v4 }
+        - $ref: '#/components/parameters/ReceiptToken'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/SubmissionInput' }
+      responses:
+        '201': { $ref: '#/components/responses/Receipt' }
+        '200':
+          description: Idempotent replay; current status may now be withdrawn or moderated
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ReceiptEnvelope' }
+        '400': { $ref: '#/components/responses/InvalidJson' }
+        '409':
+          description: Key already used with different normalized data/receipt, or receipt reused with another key
+        '413': { $ref: '#/components/responses/TooLarge' }
+        '415': { $ref: '#/components/responses/UnsupportedMedia' }
+        '422':
+          description: Missing/false/stale consent, invalid keys, unexpected fields or invalid text
+        '429': { $ref: '#/components/responses/RateLimited' }
+        '503': { description: Storage unavailable; preserve payload and keys, do not assume success or completion failure }
+  /submissions/{id}:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema: { type: string, format: uuid }
+      - $ref: '#/components/parameters/ReceiptToken'
+    get:
+      summary: Read status using the secret receipt; returns no letter content
+      responses:
+        '200': { $ref: '#/components/responses/Receipt' }
+        '404': { $ref: '#/components/responses/NotFound' }
+        '429': { $ref: '#/components/responses/RateLimited' }
+    delete:
+      summary: Withdraw and scrub recipient/message/display_name from the active database
+      description: Repeatable. Retains a content-free tombstone and audit; replay cannot recreate the letter. Does not erase the player's local draft or independently retained backups. No Live Wall exists in F5.5.
+      responses:
+        '200': { $ref: '#/components/responses/Receipt' }
+        '404': { $ref: '#/components/responses/NotFound' }
+        '429': { $ref: '#/components/responses/RateLimited' }
+  /auth/token:
+    post:
+      summary: Authenticate an active CLI-provisioned staff account
+      description: Bearer API foundation only. Future browser Admin should use a separately designed session/CSRF flow, not store this token in localStorage.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [email, password]
+              properties:
+                email: { type: string, format: email, maxLength: 254 }
+                password: { type: string, format: password, maxLength: 72, description: Maximum 72 UTF-8 bytes }
+      responses:
+        '200':
+          description: One-time plaintext token response; only a hash is stored
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [token_type, access_token, expires_at]
+                properties:
+                  token_type: { const: Bearer }
+                  access_token: { type: string }
+                  expires_at: { type: string, format: date-time }
+        '401': { description: Generic invalid credentials, also used for disabled or missing accounts }
+        '400': { $ref: '#/components/responses/InvalidJson' }
+        '413': { $ref: '#/components/responses/TooLarge' }
+        '415': { $ref: '#/components/responses/UnsupportedMedia' }
+        '422': { description: Invalid request fields }
+        '429': { $ref: '#/components/responses/RateLimited' }
+    delete:
+      summary: Revoke the current staff token
+      security: [{ staffBearer: [] }]
+      responses:
+        '200': { description: Logged out }
+        '401': { description: Invalid or expired token }
+        '403': { description: Inactive account or missing staff identity ability }
+        '429': { $ref: '#/components/responses/RateLimited' }
+  /auth/me:
+    get:
+      summary: Read staff ID, name and current role
+      security: [{ staffBearer: [] }]
+      responses:
+        '200': { description: Minimal staff identity, no password/token/email }
+        '401': { description: Invalid or expired token }
+        '403': { description: Inactive account or missing staff identity ability }
+        '429': { $ref: '#/components/responses/RateLimited' }
+components:
+  securitySchemes:
+    staffBearer: { type: http, scheme: bearer }
+  parameters:
+    ReceiptToken:
+      name: X-Receipt-Token
+      in: header
+      required: true
+      description: Cryptographically random 32 bytes, encoded as 64 lowercase hex characters. A bearer secret, never a URL parameter or analytics field.
+      schema: { type: string, pattern: '^[0-9a-f]{64}$' }
+  schemas:
+    SubmissionInput:
+      type: object
+      additionalProperties: false
+      required: [recipient, message, consent]
+      properties:
+        recipient: { type: string, minLength: 1, maxLength: 60 }
+        message: { type: string, minLength: 1, maxLength: 500, description: Plain text, NFC-normalized, never render as HTML }
+        display_name: { type: [string, 'null'], maxLength: 40 }
+        consent:
+          type: object
+          additionalProperties: false
+          required: [accepted, version]
+          properties:
+            accepted: { const: true }
+            version: { const: public-wall-v1 }
+    ReceiptEnvelope:
+      type: object
+      required: [data]
+      properties:
+        data:
+          type: object
+          additionalProperties: false
+          required: [id, status, submitted_at, withdrawn_at]
+          properties:
+            id: { type: string, format: uuid }
+            status: { enum: [pending, approved, rejected, hidden, withdrawn] }
+            submitted_at: { type: string, format: date-time }
+            withdrawn_at: { type: [string, 'null'], format: date-time }
+  responses:
+    Receipt:
+      description: Minimal receipt, no submitted text or secrets; Cache-Control no-store
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/ReceiptEnvelope' }
+    NotFound:
+      description: Unknown submission or invalid/missing receipt, deliberately indistinguishable
+    RateLimited:
+      description: Limit reached; honor Retry-After without generating new keys
+      headers:
+        Retry-After: { schema: { type: integer }, description: Seconds before retry }
+    InvalidJson: { description: Expected one valid JSON object }
+    TooLarge: { description: Request body exceeds 8192 bytes }
+    UnsupportedMedia: { description: POST requires application/json }

@@ -1,0 +1,22 @@
+{
+  "started": "2026-11-17T02:40:16.101Z",
+  "build": "c09aab3d4c4a0b6aadcae750a138c489f049edfccf5ff0e0275003d63a7ae4de",
+  "runs": [
+    {
+      "name": "e2e",
+      "command": "node node_modules/@playwright/test/cli.js test --config=playwright.g2f.config.ts --reporter=list,json",
+      "started": "2026-11-17T02:40:16.103Z",
+      "exitCode": 0,
+      "finished": "2026-11-17T03:13:46.164Z"
+    },
+    {
+      "name": "menu",
+      "command": "node node_modules/@playwright/test/cli.js test --config=playwright.g2f.config.ts --reporter=list,json",
+      "started": "2026-11-17T03:13:46.165Z",
+      "exitCode": 0,
+      "finished": "2026-11-17T03:14:12.949Z"
+    }
+  ],
+  "finished": "2026-11-17T03:14:12.950Z",
+  "buildUnchanged": true
+}

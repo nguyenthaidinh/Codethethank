@@ -1,0 +1,1019 @@
+import * as T from "three";
+import { openingExteriorOpacity, sampleOpeningCamera } from "./OpeningCamera";
+import { TERMINAL_FONT, terminalColor } from "./terminalStyle";
+import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+import { RGBELoader } from "three/addons/loaders/RGBELoader.js";
+import { mergeGeometries } from "three/addons/utils/BufferGeometryUtils.js";
+import { RoundedBoxGeometry } from "three/addons/geometries/RoundedBoxGeometry.js";
+import { buildGrandArchitecture } from "./GrandArchitecture";
+import type { ChapterBeat } from "../chapter/director";
+import { FutureFallback } from "./FutureFallback";
+import {
+  channels,
+  OPENING_TIMING,
+  originAudit,
+  futurePlace,
+  type Channel,
+  type FuturePlace,
+} from "./direction";
+type Vec = [number, number, number];
+/** Opening-only world. City assets never load on a classroom/later checkpoint. */
+export class FutureWorld {
+  signal = { x: 0, y: 0, focused: false };
+  anchors: Record<string, { x: number; y: number }> = {};
+  private renderer: T.WebGLRenderer | null = null;
+  private fallback: FutureFallback | null = null;
+  private scene = new T.Scene();
+  private camera = new T.PerspectiveCamera(48, 1, 0.2, 900);
+  private city = new T.Group();
+  private exterior = new T.Group();
+  private inside = new T.Group();
+  private eye = new T.Vector3(265, 145, 390);
+  private at = new T.Vector3(0, 55, -65);
+  private look = new T.Vector2();
+  private targetEye = new T.Vector3();
+  private targetAt = new T.Vector3();
+  private instanceTransform = new T.Object3D();
+  private exteriorFade: {
+    material: T.Material;
+    opacity: number;
+    depthWrite: boolean;
+  }[] = [];
+  private pointer = new T.Vector2();
+  private w = 1280;
+  private h = 720;
+  private closed = false;
+  private phase: FuturePlace = "city";
+  private found: Channel[] = [];
+  private selected: Channel | null = null;
+  private geometries = new Set<T.BufferGeometry>();
+  private materials = new Set<T.Material>();
+  private textures = new Set<T.Texture>();
+  private batches = new Map<
+    string,
+    { material: T.Material; parent: T.Group; list: T.BufferGeometry[] }
+  >();
+  private assetErrors: string[] = [];
+  private loaded: string[] = [];
+  private loom!: T.InstancedMesh;
+  private traffic!: T.InstancedMesh;
+  private grand!: ReturnType<typeof buildGrandArchitecture>;
+  private glyph!: T.Mesh;
+  private terminalCanvas = document.createElement("canvas");
+  private terminalTexture: T.CanvasTexture | null = null;
+  private terminalMesh: T.Mesh | null = null;
+  private terminalKey = "";
+  private core = new T.Group();
+  private coreCanvas = document.createElement("canvas");
+  private coreTexture: T.CanvasTexture | null = null;
+  private researchScreen: T.MeshBasicMaterial | null = null;
+  private coreTick = -1;
+  private pmrem: T.WebGLRenderTarget | null = null;
+  private quality = 1;
+  private samples: number[] = [];
+  private frame = 0;
+  private software = false;
+  private constrained = false;
+  private lastBeat: ChapterBeat = "OPENING_CINEMATIC";
+  private first = true;
+  private loading: Promise<void>;
+  private settled = false;
+  private view: "core" | "atrium" = "core";
+  private drawCalls = 0;
+  private triangles = 0;
+  get ready() {
+    return !!this.fallback || this.settled;
+  }
+  lookPlace(view: "core" | "atrium") {
+    this.view = view;
+    this.fallback?.lookPlace(view);
+  }
+  constructor(private canvas: HTMLCanvasElement) {
+    const context = canvas.getContext("webgl2", {
+      antialias: true,
+      alpha: false,
+      powerPreference: "high-performance",
+    });
+    if (!context) {
+      this.fallback = new FutureFallback(canvas);
+      this.loading = Promise.resolve();
+      return;
+    }
+    this.renderer = new T.WebGLRenderer({
+      canvas,
+      context,
+      antialias: true,
+      alpha: false,
+    });
+    const debug = context.getExtension("WEBGL_debug_renderer_info");
+    this.software =
+      !!debug &&
+      /swiftshader|llvmpipe|softpipe|software/i.test(
+        String(context.getParameter(debug.UNMASKED_RENDERER_WEBGL)),
+      );
+    this.renderer.outputColorSpace = T.SRGBColorSpace;
+    this.renderer.toneMapping = T.ACESFilmicToneMapping;
+    this.renderer.toneMappingExposure = 1.0;
+    // Direct output applies ACES/sRGB once and avoids the costly float-target
+    // FXAA path on software WebGL. Context MSAA supplies edge antialiasing.
+    this.renderer.shadowMap.enabled = false;
+    this.scene.background = new T.Color("#15344a");
+    this.scene.fog = new T.FogExp2("#355165", 0.0012);
+    this.scene.add(new T.HemisphereLight("#b1c9db", "#101e2c", 0.5));
+    const key = new T.DirectionalLight("#d8ebf4", 2.2);
+    key.position.set(-35, 70, 40);
+    this.scene.add(key);
+    const rim = new T.DirectionalLight("#9bc6dc", 0.85);
+    rim.position.set(30, 18, -50);
+    this.scene.add(rim);
+    this.scene.add(this.city, this.exterior, this.inside);
+    this.buildArchitecture();
+    this.buildCore();
+    this.flush();
+    this.loading = this.loadAssets()
+      .then(async () => {
+        if (this.closed || !this.renderer) return;
+        if (this.software) this.useSoftwareLighting();
+        this.prepareExteriorFade();
+        // Prepare materials before the dolly reaches the interior. Otherwise
+        // its first visible frame can synchronously compile a new GPU program.
+        try {
+          await this.renderer.compileAsync(this.scene, this.camera);
+          if (this.closed || !this.renderer) return;
+          for (const texture of this.textures)
+            this.renderer.initTexture(texture);
+        } catch {
+          // Shader warmup is optional; context-loss fallback remains playable.
+        }
+      })
+      .finally(() => {
+        if (!this.closed) this.settled = true;
+      });
+    canvas.addEventListener("webglcontextlost", this.lost);
+  }
+  private lost = (e: Event) => {
+    e.preventDefault();
+    if (this.closed) return;
+    const replacement = document.createElement("canvas");
+    replacement.className = this.canvas.className;
+    replacement.setAttribute(
+      "aria-label",
+      "Trụ sở AION 2046 · đồ họa tương thích",
+    );
+    this.canvas.replaceWith(replacement);
+    this.canvas = replacement;
+    this.renderer?.dispose();
+    this.renderer = null;
+    this.fallback = new FutureFallback(replacement);
+    this.fallback.resize(this.w, this.h);
+  };
+  private prepareExteriorFade() {
+    // Exterior and atrium share authored materials. Clone only the outside
+    // instances so the entrance dissolve cannot dim the room or its lighting.
+    const clones = new Map<T.Material, T.Material>();
+    const clone = (original: T.Material) => {
+      const existing = clones.get(original);
+      if (existing) return existing;
+      const material = original.clone();
+      material.transparent = true;
+      clones.set(original, material);
+      this.materials.add(material);
+      this.exteriorFade.push({
+        material,
+        opacity: original.opacity,
+        depthWrite: original.depthWrite,
+      });
+      return material;
+    };
+    for (const group of [this.city, this.exterior])
+      group.traverse((object) => {
+        if (object instanceof T.Mesh)
+          object.material = Array.isArray(object.material)
+            ? object.material.map(clone)
+            : clone(object.material);
+      });
+  }
+  private useSoftwareLighting() {
+    // Keep the same assets/composition on CPU WebGL, but use vertex lighting.
+    // The regular GPU path retains PBR, material maps and image-based lighting.
+    const converted = new Map<T.Material, T.Material>();
+    const convert = (source: T.Material) => {
+      if (!(source instanceof T.MeshStandardMaterial)) return source;
+      if (converted.has(source)) return converted.get(source)!;
+      const material = new T.MeshLambertMaterial({
+        color: source.color,
+        map: source.map,
+        emissive: source.emissive,
+        emissiveIntensity: source.emissiveIntensity,
+        transparent: source.transparent,
+        opacity: source.opacity,
+        side: source.side,
+        depthWrite: source.depthWrite,
+      });
+      converted.set(source, material);
+      this.materials.add(material);
+      return material;
+    };
+    this.scene.traverse((object) => {
+      if (object instanceof T.Mesh)
+        object.material = Array.isArray(object.material)
+          ? object.material.map(convert)
+          : convert(object.material);
+    });
+  }
+  private mat(color: string, metalness = 0, roughness = 0.5, emissive = false) {
+    const m = new T.MeshStandardMaterial({
+      color,
+      metalness,
+      roughness,
+      ...(emissive ? { emissive: color, emissiveIntensity: 0.8 } : {}),
+    });
+    this.materials.add(m);
+    return m;
+  }
+  private part(
+    g: T.BufferGeometry,
+    m: T.Material,
+    pos: Vec,
+    scale?: Vec,
+    rotation?: Vec,
+    parent = this.inside,
+    batch = true,
+  ) {
+    this.geometries.add(g);
+    const mesh = new T.Mesh(g, m);
+    mesh.position.set(...pos);
+    if (scale) mesh.scale.set(...scale);
+    if (rotation) mesh.rotation.set(...rotation);
+    if (batch) {
+      mesh.updateMatrix();
+      const copy = g.clone().applyMatrix4(mesh.matrix);
+      const key = m.uuid + parent.uuid;
+      const entry = this.batches.get(key) ?? { material: m, parent, list: [] };
+      entry.list.push(copy);
+      this.batches.set(key, entry);
+    } else parent.add(mesh);
+    return mesh;
+  }
+  private box(
+    m: T.Material,
+    pos: Vec,
+    size: Vec,
+    parent = this.inside,
+    r = 0,
+    batch = true,
+  ) {
+    return this.part(
+      r ? new RoundedBoxGeometry(...size, 1, r) : new T.BoxGeometry(...size),
+      m,
+      pos,
+      undefined,
+      undefined,
+      parent,
+      batch,
+    );
+  }
+  private flush() {
+    for (const { material, parent, list } of this.batches.values()) {
+      const copies = list.map((g) => (g.index ? g.toNonIndexed() : g));
+      const merged = mergeGeometries(copies);
+      if (merged) {
+        this.geometries.add(merged);
+        parent.add(new T.Mesh(merged, material));
+      }
+      new Set([...list, ...copies]).forEach((g) => g.dispose());
+    }
+    this.batches.clear();
+  }
+  private label(text: string, sub: string, width: number, height: number) {
+    const c = document.createElement("canvas");
+    c.width = 1024;
+    c.height = 256;
+    const x = c.getContext("2d")!;
+    x.fillStyle = "#102534";
+    x.fillRect(0, 0, 1024, 256);
+    x.fillStyle = "#e1ebed";
+    x.textAlign = "center";
+    x.font = "bold 100px Arial";
+    x.fillText(text, 512, 128);
+    x.fillStyle = "#8dbbc9";
+    x.font = "24px Arial";
+    x.fillText(sub, 512, 195);
+    const texture = new T.CanvasTexture(c);
+    texture.colorSpace = T.SRGBColorSpace;
+    this.textures.add(texture);
+    const mat = new T.MeshBasicMaterial({ map: texture });
+    this.materials.add(mat);
+    const g = new T.PlaneGeometry(width, height);
+    this.geometries.add(g);
+    return new T.Mesh(g, mat);
+  }
+  private arch(
+    width: number,
+    height: number,
+    thickness: number,
+    depth: number,
+  ) {
+    const s = new T.Shape(),
+      w = width / 2;
+    s.moveTo(-w, 0);
+    s.lineTo(-w, height - w);
+    s.quadraticCurveTo(-w, height, 0, height);
+    s.quadraticCurveTo(w, height, w, height - w);
+    s.lineTo(w, 0);
+    s.lineTo(w - thickness, 0);
+    s.lineTo(w - thickness, height - w);
+    s.quadraticCurveTo(
+      w - thickness,
+      height - thickness,
+      0,
+      height - thickness,
+    );
+    s.quadraticCurveTo(
+      -w + thickness,
+      height - thickness,
+      -w + thickness,
+      height - w,
+    );
+    s.lineTo(-w + thickness, 0);
+    s.closePath();
+    return new T.ExtrudeGeometry(s, {
+      depth,
+      bevelEnabled: true,
+      bevelSegments: 2,
+      steps: 1,
+      bevelSize: 0.15,
+      bevelThickness: 0.15,
+      curveSegments: 18,
+    });
+  }
+  private buildArchitecture() {
+    this.grand = buildGrandArchitecture({
+      inside: this.inside,
+      exterior: this.exterior,
+      city: this.city,
+      mat: this.mat.bind(this),
+      box: this.box.bind(this),
+      part: this.part.bind(this),
+      label: this.label.bind(this),
+      arch: this.arch.bind(this),
+      ownMaterial: (m) => this.materials.add(m),
+      ownGeometry: (g) => this.geometries.add(g),
+    });
+    this.researchScreen = this.grand.screen;
+    this.traffic = this.grand.traffic;
+    const sky = document.createElement("canvas");
+    sky.width = 16;
+    sky.height = 512;
+    const c = sky.getContext("2d")!,
+      gradient = c.createLinearGradient(0, 0, 0, 512);
+    gradient.addColorStop(0, "#071522");
+    gradient.addColorStop(0.65, "#294c63");
+    gradient.addColorStop(1, "#6a8c9b");
+    c.fillStyle = gradient;
+    c.fillRect(0, 0, 16, 512);
+    const texture = new T.CanvasTexture(sky);
+    texture.colorSpace = T.SRGBColorSpace;
+    this.textures.add(texture);
+    this.scene.background = texture;
+  }
+  private buildCore() {
+    const silver = this.mat("#678899", 0.7, 0.25),
+      dark = this.mat("#0b1d2d", 0.5, 0.3),
+      cyan = this.mat("#a9dae1", 0.1, 0.4, true),
+      amber = this.mat("#dbb781", 0.2, 0.5, true);
+    this.core.position.set(0, 0, -22);
+    this.inside.add(this.core);
+    const glow = new T.PointLight("#9ed6e4", 30, 14, 2);
+    glow.position.set(0, 3, 1.5);
+    this.core.add(glow);
+    const plinth = new T.CylinderGeometry(5.5, 6, 0.6, 64);
+    this.part(
+      plinth,
+      dark,
+      [0, 0.3, 0],
+      undefined,
+      undefined,
+      this.core,
+      false,
+    );
+    const rim = new T.TorusGeometry(5.45, 0.045, 4, 96);
+    this.part(
+      rim,
+      cyan,
+      [0, 0.62, 0],
+      undefined,
+      [Math.PI / 2, 0, 0],
+      this.core,
+      false,
+    );
+    for (const x of [-4.8, 4.8]) {
+      this.box(silver, [x, 4, 0], [0.25, 7, 0.45], this.core, 0.08);
+      this.box(cyan, [x, 4, 0.24], [0.04, 6, 0.02], this.core);
+    }
+    // THE LOOM: 72 addressable compute leaves; response follows a selected data path.
+    const leaf = new T.BoxGeometry(1.55, 0.065, 1.3);
+    this.geometries.add(leaf);
+    this.loom = new T.InstancedMesh(leaf, silver, 72);
+    this.loom.instanceMatrix.setUsage(T.DynamicDrawUsage);
+    this.core.add(this.loom);
+    this.box(silver, [0, 7.65, 0], [10, 0.25, 2.4], this.core, 0.1);
+    this.coreCanvas.width = 1024;
+    this.coreCanvas.height = 512;
+    this.coreTexture = new T.CanvasTexture(this.coreCanvas);
+    this.coreTexture.colorSpace = T.SRGBColorSpace;
+    if (this.researchScreen) {
+      this.researchScreen.map = this.coreTexture;
+      this.researchScreen.needsUpdate = true;
+    }
+    this.textures.add(this.coreTexture);
+    const mm = new T.MeshBasicMaterial({ map: this.coreTexture });
+    this.materials.add(mm);
+    const surface = this.part(
+      new T.PlaneGeometry(9, 4.5),
+      mm,
+      [0, 4.1, -1.3],
+      undefined,
+      undefined,
+      this.core,
+      false,
+    );
+    surface.name = "live-science-surface";
+    this.box(dark, [0, 1.3, -15.5], [5, 0.25, 2], this.inside, 0.14);
+    this.box(silver, [0, 0.7, -15.5], [0.9, 1.3, 0.65]);
+    this.terminalCanvas.width = 1280;
+    this.terminalCanvas.height = 640;
+    this.terminalTexture = new T.CanvasTexture(this.terminalCanvas);
+    this.terminalTexture.colorSpace = T.SRGBColorSpace;
+    this.textures.add(this.terminalTexture);
+    const terminalMat = new T.MeshBasicMaterial({ map: this.terminalTexture });
+    this.materials.add(terminalMat);
+    this.terminalMesh = this.part(
+      new T.PlaneGeometry(5, 2.5),
+      terminalMat,
+      [0, 2.4, -15.6],
+      undefined,
+      undefined,
+      this.inside,
+      false,
+    );
+    this.glyph = this.part(
+      new T.TorusGeometry(0.11, 0.025, 6, 24),
+      amber,
+      [0, 2.4, -15.53],
+      undefined,
+      undefined,
+      this.inside,
+      false,
+    );
+  }
+  private async loadAssets() {
+    const loader = new GLTFLoader(),
+      root = import.meta.env.BASE_URL + "future/";
+    const names = [
+      "building-skyscraper-a",
+      "building-skyscraper-b",
+      "building-skyscraper-c",
+      "building-a",
+      "building-b",
+    ];
+    const models = names.map(async (name, index) => {
+      try {
+        const gltf = await loader.loadAsync(root + "city/" + name + ".glb");
+        if (this.closed) {
+          this.disposeObject(gltf.scene);
+          return;
+        }
+        const bounds = new T.Box3().setFromObject(gltf.scene),
+          size = bounds.getSize(new T.Vector3());
+        gltf.scene.updateMatrixWorld(true);
+        const meshes: T.Mesh[] = [];
+        gltf.scene.traverse((o) => {
+          if (o instanceof T.Mesh) meshes.push(o);
+        });
+        for (const mesh of meshes) {
+          const g = mesh.geometry.clone().applyMatrix4(mesh.matrixWorld);
+          this.geometries.add(g);
+          const materials = Array.isArray(mesh.material)
+            ? mesh.material
+            : [mesh.material];
+          materials.forEach((m) => {
+            if (m instanceof T.MeshStandardMaterial) {
+              m.color.set("#7d98b0");
+              m.metalness = 0.25;
+              m.roughness = 0.5;
+            }
+            this.materials.add(m);
+            Object.values(m).forEach((v) => {
+              if (v instanceof T.Texture) this.textures.add(v);
+            });
+          });
+          const instances = new T.InstancedMesh(g, mesh.material, 36);
+          const dummy = new T.Object3D();
+          for (let i = 0; i < 36; i++) {
+            const side = i % 2 ? 1 : -1,
+              ring = Math.floor(i / 12),
+              x = side * (112 + index * 27 + ring * 75),
+              z = -430 + (Math.floor(i / 2) % 6) * 130 + index * 11;
+            const height = 28 + ((i * 17 + index * 13) % 80),
+              scale = height / Math.max(size.y, 0.1);
+            dummy.position.set(x, 0, z);
+            dummy.scale.set(scale, scale, scale);
+            dummy.rotation.y = ((i % 4) * Math.PI) / 2;
+            dummy.updateMatrix();
+            instances.setMatrixAt(i, dummy.matrix);
+          }
+          this.city.add(instances);
+        }
+        this.loaded.push(name);
+      } catch {
+        this.assetErrors.push(name);
+      }
+    });
+    const textures = async () => {
+      try {
+        const textureLoader = new T.TextureLoader();
+        const maps = await Promise.all(
+          ["diff", "rough", "nor_gl"].map((k) =>
+            textureLoader.loadAsync(
+              root + "materials/floor_tiles_06_" + k + ".jpg",
+            ),
+          ),
+        );
+        if (this.closed) {
+          maps.forEach((m) => m.dispose());
+          return;
+        }
+        maps.forEach((m) => {
+          m.wrapS = m.wrapT = T.RepeatWrapping;
+          m.repeat.set(10, 15);
+          m.anisotropy = 2;
+          this.textures.add(m);
+        });
+        maps[0].colorSpace = T.SRGBColorSpace;
+        const floor = this.inside.getObjectByName(
+          "licensed-tile-floor",
+        ) as T.Mesh<T.BoxGeometry, T.MeshStandardMaterial>;
+        floor.material.map = maps[0];
+        floor.material.roughnessMap = maps[1];
+        floor.material.normalMap = maps[2];
+        floor.material.normalScale.set(0.15, 0.15);
+        floor.material.needsUpdate = true;
+        this.loaded.push("floor_tiles_06");
+      } catch {
+        this.assetErrors.push("floor_tiles_06");
+      }
+    };
+    const lighting = async () => {
+      try {
+        const image = await new RGBELoader().loadAsync(
+          root + "lighting/studio_small_09.hdr",
+        );
+        if (this.closed || !this.renderer) {
+          image.dispose();
+          return;
+        }
+        if (this.software) {
+          image.dispose();
+          this.loaded.push("studio_small_09");
+          return;
+        }
+        const generator = new T.PMREMGenerator(this.renderer);
+        this.pmrem = generator.fromEquirectangular(image);
+        image.dispose();
+        generator.dispose();
+        this.scene.environment = this.pmrem.texture;
+        this.scene.environmentIntensity = 0.55;
+        this.loaded.push("studio_small_09");
+      } catch {
+        this.assetErrors.push("studio_small_09");
+      }
+    };
+    await Promise.all([...models, textures(), lighting()]);
+  }
+  private disposeObject(root: T.Object3D) {
+    root.traverse((o) => {
+      if (o instanceof T.Mesh) {
+        o.geometry.dispose();
+        (Array.isArray(o.material) ? o.material : [o.material]).forEach((m) => {
+          Object.values(m).forEach((v) => {
+            if (v instanceof T.Texture) v.dispose();
+          });
+          m.dispose();
+        });
+      }
+    });
+  }
+  private resizeTarget() {
+    const scale = Math.min(this.quality, 1440 / this.w);
+    this.renderer?.setSize(
+      Math.round(this.w * scale),
+      Math.round(this.h * scale),
+      false,
+    );
+  }
+  resize(w: number, h: number) {
+    this.w = w;
+    this.h = h;
+    this.fallback?.resize(w, h);
+    this.renderer?.setPixelRatio(1);
+    this.quality = this.software
+      ? this.constrained
+        ? w / h < 0.85
+          ? 0.45
+          : 0.5
+        : w / h < 0.85
+          ? 0.65
+          : 0.75
+      : this.constrained
+        ? w / h < 0.85
+          ? 0.6
+          : 0.75
+        : w / h < 0.85
+          ? 0.75
+          : 1;
+    this.terminalMesh?.scale.set(
+      w / h < 0.85 ? 0.46 : 1,
+      w / h < 0.85 ? 1.2 : 1,
+      1,
+    );
+    if (this.terminalMesh)
+      this.terminalMesh.position.y = w / h < 0.85 ? 2.8 : 2.4;
+    this.terminalKey = "";
+    this.resizeTarget();
+    this.camera.aspect = w / h;
+    this.camera.updateProjectionMatrix();
+  }
+  observe(x: number, y: number) {
+    this.pointer.set(T.MathUtils.clamp(x, -1, 1), T.MathUtils.clamp(y, -1, 1));
+  }
+  focusSignal(v: boolean) {
+    this.signal.focused = v;
+    this.fallback?.focusSignal(v);
+  }
+  setInvestigation(found: Channel[], selected: Channel | null = null) {
+    this.found = found;
+    this.selected = selected;
+    this.fallback?.setInvestigation(found, selected);
+  }
+  private drawTerminal(beat: ChapterBeat, time: number) {
+    const idle = beat === "OPENING_CINEMATIC" && time < OPENING_TIMING.anomaly;
+    const portrait = this.w / this.h < 0.85;
+    const key = JSON.stringify([
+      beat,
+      this.found,
+      this.selected,
+      idle,
+      portrait,
+    ]);
+    if (key === this.terminalKey || !this.terminalTexture) return;
+    this.terminalKey = key;
+    const w = portrait ? 720 : 1280,
+      h = portrait ? 1024 : 640;
+    this.terminalCanvas.width = w;
+    this.terminalCanvas.height = h;
+    const x = this.terminalCanvas.getContext("2d")!;
+    x.fillStyle = "#071522";
+    x.fillRect(0, 0, w, h);
+    x.strokeStyle = "#658493";
+    x.lineWidth = 2;
+    x.strokeRect(18, 18, w - 36, h - 36);
+    const left = portrait ? 46 : 65;
+    let y = portrait ? 72 : 65;
+    const write = (
+      text: string,
+      size: number,
+      color = "#c9dce2",
+      gap = 1.4,
+      code = false,
+    ) => {
+      x.fillStyle = color;
+      x.font = `${size}px ${code ? TERMINAL_FONT : "Arial"}`;
+      let line = "";
+      for (const word of text.split(" ")) {
+        if (x.measureText(line + word).width > w - left * 2) {
+          x.fillText(line.trim(), left, y);
+          y += size * gap;
+          line = "";
+        }
+        line += word + " ";
+      }
+      if (line) {
+        x.fillText(line.trim(), left, y);
+        y += size * gap;
+      }
+    };
+    write(
+      idle ? "AION NEXUS / LIVE RESEARCH" : originAudit.heading,
+      portrait ? 22 : 21,
+      "#89b3c4",
+    );
+    y += portrait ? 35 : 12;
+    write(
+      idle ? "A CONTINUOUS FRONTIER" : originAudit.title,
+      portrait ? 38 : 44,
+      idle ? "#dcebef" : "#e7c496",
+    );
+    if (idle) {
+      y += 35;
+      write("Khám phá những giới hạn chưa được biết đến.", portrait ? 31 : 29);
+      write(
+        "Mô phỏng · kiểm chứng · mở ra khả năng mới.",
+        portrait ? 28 : 26,
+        "#8eb3c5",
+      );
+    } else {
+      y += portrait ? 24 : 9;
+      write(
+        this.selected ? channels[this.selected].title : originAudit.status,
+        portrait ? 29 : 25,
+        this.selected ? "#aad4df" : terminalColor(originAudit.status),
+        1.4,
+        true,
+      );
+      y += portrait ? 18 : 8;
+      const lines = this.selected
+        ? channels[this.selected].lines
+        : originAudit.lines;
+      for (const line of lines) {
+        write("> " + line, portrait ? 28 : 27, terminalColor(line), 1.4, true);
+        y += portrait ? 12 : 5;
+      }
+    }
+    if (!idle) {
+      const foot = portrait ? 875 : 518;
+      for (const [i, ch] of (["source", "limit"] as Channel[]).entries()) {
+        const xx = left + i * (portrait ? 330 : 600);
+        x.fillStyle = this.found.includes(ch) ? "#b2dcd2" : "#7e9fad";
+        x.font = `${portrait ? 22 : 24}px Arial`;
+        x.fillText(
+          (this.found.includes(ch) ? "✓ " : "○ ") +
+            (ch === "source" ? "NGUYÊN TẮC" : "NGUỒN GỐC"),
+          xx,
+          foot,
+        );
+      }
+      if (this.found.length === 2) {
+        x.fillStyle = "#e6c492";
+        x.font = `${portrait ? 23 : 25}px Arial`;
+        x.fillText("TRUY NGUỒN / TƯ LIỆU NĂM 2026", left, portrait ? 970 : 590);
+      }
+    }
+    this.terminalTexture.needsUpdate = true;
+  }
+  private drawCore(elapsed: number, reduced: boolean) {
+    const tick = reduced ? 0 : Math.floor(elapsed * 5);
+    if (tick === this.coreTick || !this.coreTexture) return;
+    this.coreTick = tick;
+    const c = this.coreCanvas.getContext("2d")!;
+    c.fillStyle = "#0b2232";
+    c.fillRect(0, 0, 1024, 512);
+    c.strokeStyle = "#5ba1b3";
+    c.lineWidth = 2;
+    for (let i = 0; i < 5; i++) {
+      c.beginPath();
+      for (let j = 0; j < 100; j++) {
+        const x = 60 + j * 9,
+          y = 130 + i * 56 + Math.sin(j * 0.11 + tick * 0.08 + i) * 20;
+        if (j) c.lineTo(x, y);
+        else c.moveTo(x, y);
+      }
+      c.stroke();
+    }
+    c.fillStyle = "#b7d6e0";
+    c.font = "22px Arial";
+    c.fillText("AION NEXUS / PROBLEM SPACE", 55, 55);
+    c.font = "18px Arial";
+    c.fillText("EXPLORE     /     SIMULATE     /     VERIFY", 55, 465);
+    this.coreTexture.needsUpdate = true;
+  }
+  render(
+    beat: ChapterBeat,
+    t: number,
+    dt: number,
+    elapsed: number,
+    reduced: boolean,
+  ) {
+    this.phase = futurePlace(beat, t);
+    if (this.fallback) {
+      this.fallback.render(beat, t, dt, elapsed, reduced);
+      this.signal = this.fallback.signal;
+      this.anchors = this.fallback.anchors;
+      return;
+    }
+    if (!this.renderer || this.closed) return;
+    if (!this.settled) {
+      this.renderer.clear();
+      return;
+    }
+    let eye: Vec = [4, 3.2, -10],
+      at: Vec = [0, 4, -21];
+    if (beat === "OPENING_CINEMATIC") {
+      const time = reduced
+        ? t < OPENING_TIMING.atrium
+          ? 9
+          : t < OPENING_TIMING.nexus
+            ? 25
+            : t < OPENING_TIMING.anomaly
+              ? 40
+              : 56
+        : t;
+      ({ eye, at } = sampleOpeningCamera(time));
+    } else if (beat !== "PLAYER_CONTROL_ENABLED") {
+      eye = [0, 2.9, beat === "MEMORY_TRANSITION" ? -13.8 : -11.2];
+      at = [0, 2.55, -15.6];
+    } else if (this.view === "atrium") {
+      eye = [-15, 14, 24];
+      at = [-29, 20, -30];
+    }
+    const blend = this.first || reduced ? 1 : 1 - Math.exp(-dt * 2.4);
+    this.first = false;
+    this.targetEye.set(...eye);
+    this.targetAt.set(...at);
+    // The authored path is already eased. Follow it directly during playback
+    // rather than adding frame-rate-dependent lag to position and gaze.
+    const cameraBlend = beat === "OPENING_CINEMATIC" ? 1 : blend;
+    this.eye.lerp(this.targetEye, cameraBlend);
+    this.at.lerp(this.targetAt, cameraBlend);
+    this.look.lerp(reduced ? new T.Vector2() : this.pointer, blend);
+    this.camera.position.copy(this.eye);
+    this.camera.position.x += reduced ? 0 : this.look.x * 0.16;
+    this.camera.position.y += reduced ? 0 : this.look.y * 0.08;
+    this.camera.lookAt(this.at);
+    const fov = this.w / this.h < 0.85 ? 65 : 48;
+    if (this.camera.fov !== fov) {
+      this.camera.fov = fov;
+      this.camera.updateProjectionMatrix();
+    }
+    // The exterior tower shell overlaps the interior Nexus. Dissolve it over
+    // the entrance approach instead of popping the entire shell out of view.
+    const opacity =
+      beat === "OPENING_CINEMATIC" ? openingExteriorOpacity(this.eye.z) : 0;
+    for (const entry of this.exteriorFade) {
+      entry.material.opacity = entry.opacity * opacity;
+      entry.material.depthWrite = opacity >= 1 && entry.depthWrite;
+    }
+    const outside = opacity > 0;
+    this.exterior.visible = outside;
+    this.city.visible = outside;
+    this.inside.visible = true;
+    const d = this.instanceTransform;
+    for (let i = 0; i < 72; i++) {
+      const row = Math.floor(i / 4),
+        col = i % 4,
+        spread =
+          this.selected === "limit"
+            ? 0.25
+            : this.selected === "source"
+              ? -0.25
+              : 0;
+      d.position.set(
+        (col - 1.5) * 1.8 +
+          Math.sin(row * 0.12 + (reduced ? 0 : elapsed * 0.28)) * 0.22,
+        1.15 + row * 0.34,
+        0,
+      );
+      d.rotation.set(
+        0,
+        (reduced ? 0 : Math.sin(elapsed * 0.25 + row * 0.17) * 0.12) + spread,
+        0,
+      );
+      d.updateMatrix();
+      this.loom.setMatrixAt(i, d.matrix);
+    }
+    this.loom.instanceMatrix.needsUpdate = true;
+    for (let i = 0; i < 34; i++) {
+      d.position.set(
+        i % 2 ? 108 : -108,
+        0.2,
+        ((i * 29 + (reduced ? 0 : elapsed * 12)) % 700) - 350,
+      );
+      d.rotation.set(0, 0, 0);
+      d.updateMatrix();
+      this.traffic.setMatrixAt(i, d.matrix);
+    }
+    this.traffic.instanceMatrix.needsUpdate = true;
+    this.glyph.visible =
+      beat === "PLAYER_CONTROL_ENABLED" ||
+      (beat === "OPENING_CINEMATIC" && t >= OPENING_TIMING.anomaly);
+    (this.glyph.material as T.MeshStandardMaterial).emissiveIntensity = this
+      .signal.focused
+      ? 1.6
+      : 0.8;
+    this.glyph.scale.setScalar(reduced ? 1 : 1 + Math.sin(elapsed * 2) * 0.08);
+    for (let i = 0; i < 144; i++) {
+      const row = Math.floor(i / 6),
+        col = i % 6,
+        angle =
+          (col * Math.PI) / 3 + row * 0.075 + (reduced ? 0 : elapsed * 0.035),
+        radius = 5.8 + Math.sin(row * 0.23) * 1.7;
+      d.position.set(
+        Math.cos(angle) * radius,
+        3.6 + row * 1.13,
+        Math.sin(angle) * radius,
+      );
+      d.rotation.set(
+        0,
+        angle +
+          (this.selected === "source"
+            ? -0.12
+            : this.selected === "limit"
+              ? 0.12
+              : 0),
+        0,
+      );
+      d.updateMatrix();
+      this.grand.leaves.setMatrixAt(i, d.matrix);
+    }
+    this.grand.leaves.instanceMatrix.needsUpdate = true;
+    this.grand.lift.position.y = reduced
+      ? 16
+      : 16 + Math.sin(elapsed * 0.12) * 15;
+    this.grand.statuses.forEach((node, i) => {
+      node.visible =
+        beat !== "OPENING_CINEMATIC" || t >= OPENING_TIMING.nexus + i * 1.7;
+    });
+    this.drawTerminal(beat, t);
+    this.drawCore(elapsed, reduced);
+    this.renderer.render(this.scene, this.camera);
+    this.drawCalls = this.renderer.info.render.calls;
+    this.triangles = this.renderer.info.render.triangles;
+    const project = (point: Vec) => {
+      const v = new T.Vector3(...point).project(this.camera);
+      return { x: ((v.x + 1) * this.w) / 2, y: ((1 - v.y) * this.h) / 2 };
+    };
+    this.signal = { ...project([0, 2.6, -15.5]), focused: this.signal.focused };
+    const portrait = this.w / this.h < 0.85;
+    this.anchors = {
+      source: project([portrait ? -0.62 : -1.2, portrait ? 2 : 1.8, -15.5]),
+      limit: project([portrait ? 0.62 : 1.2, portrait ? 2 : 1.8, -15.5]),
+      open: project([0, portrait ? 1.25 : 1.2, -15.5]),
+      research: project([-28, 12, 3]),
+    };
+    this.lastBeat = beat;
+  }
+  adaptQuality(raw: number) {
+    if (this.closed || this.fallback || !this.ready) return;
+    this.frame++;
+    if (this.frame > 20 && this.frame < 80) this.samples.push(raw);
+    if (this.frame === 80) {
+      const sorted = this.samples.sort((a, b) => a - b);
+      if (sorted[Math.floor(sorted.length / 2)] > 0.035) {
+        this.constrained = true;
+        this.quality = this.software
+          ? this.w / this.h < 0.85
+            ? 0.45
+            : 0.5
+          : this.w / this.h < 0.85
+            ? 0.6
+            : 0.75;
+        this.resizeTarget();
+      }
+    }
+  }
+  snapshot() {
+    return (
+      this.fallback?.snapshot() ?? {
+        renderer: "aion-future-webgl",
+        place: this.phase,
+        landmark: "aion-citadel-v2",
+        historicalAnalysis: this.phase === "anomaly" ? originAudit : null,
+        nexusLeaves: 144,
+        atriumLevels: 5,
+        view: this.view,
+        camera: this.camera.position.toArray(),
+        signal: this.signal,
+        drawCalls: this.drawCalls,
+        triangles: this.triangles,
+        antialias: this.renderer?.getContext().getContextAttributes()
+          ?.antialias,
+        output: "direct-aces-srgb",
+        lighting: this.software ? "software-vertex-lighting" : "gpu-pbr-ibl",
+        resources: this.renderer?.info.memory,
+        quality: this.quality,
+        qualitySettled: this.frame >= 80,
+        assets: [...this.loaded],
+        assetErrors: [...this.assetErrors],
+        investigated: [...this.found],
+        selected: this.selected,
+        ready: this.ready,
+        assetsComplete: this.loaded.length >= 7,
+        beat: this.lastBeat,
+      }
+    );
+  }
+  dispose() {
+    if (this.closed) return;
+    this.closed = true;
+    this.canvas.removeEventListener("webglcontextlost", this.lost);
+    this.fallback?.dispose();
+    this.geometries.forEach((g) => g.dispose());
+    this.materials.forEach((m) => m.dispose());
+    this.textures.forEach((t) => t.dispose());
+    this.pmrem?.dispose();
+    this.scene.clear();
+    this.renderer?.dispose();
+    this.renderer?.forceContextLoss();
+    void this.loading;
+  }
+}

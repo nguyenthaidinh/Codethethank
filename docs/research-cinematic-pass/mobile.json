@@ -1,0 +1,115 @@
+{
+  "result": "PASS",
+  "errors": [],
+  "flow": "2029 desk → open notebook → 2035",
+  "state": {
+    "beat": "NEXT_SCENE_READY",
+    "time": 2.7666,
+    "evidence": [
+      "clock",
+      "notebook",
+      "laptop"
+    ],
+    "verdict": {
+      "version": 1,
+      "narrativeRevision": 4,
+      "phase": "chapter02",
+      "found": [
+        "presentation",
+        "notes",
+        "data"
+      ],
+      "selected": "an",
+      "tested": [
+        "student07",
+        "an"
+      ],
+      "linked": [
+        "presentation",
+        "notes"
+      ],
+      "carried": null,
+      "stayed": {
+        "version": 1,
+        "narrativeRevision": 4,
+        "phase": "next",
+        "line": 0,
+        "read": [
+          "outcome",
+          "support"
+        ],
+        "page": "support",
+        "written": true,
+        "seen": [],
+        "nextInspected": true
+      },
+      "ripple": {
+        "version": 1,
+        "phase": "years",
+        "questions": [
+          "prediction",
+          "opportunity"
+        ],
+        "milestones": 1,
+        "memories": [],
+        "selected": null,
+        "elapsed": 0,
+        "played": []
+      }
+    },
+    "stayed": {
+      "version": 1,
+      "narrativeRevision": 4,
+      "phase": "next",
+      "line": 0,
+      "read": [
+        "outcome",
+        "support"
+      ],
+      "page": "support",
+      "written": true,
+      "seen": [],
+      "nextInspected": true
+    },
+    "ripple": {
+      "version": 1,
+      "phase": "years",
+      "questions": [
+        "prediction",
+        "opportunity"
+      ],
+      "milestones": 1,
+      "memories": [],
+      "selected": null,
+      "elapsed": 0,
+      "played": []
+    },
+    "finale": null,
+    "followedDoor": false,
+    "world": {
+      "era": 2035,
+      "camera": [
+        3.6536157652555126,
+        2.05,
+        -0.15
+      ],
+      "chair": [
+        2.3,
+        0,
+        0.6
+      ],
+      "teacher": [
+        1.1,
+        0,
+        0.2
+      ],
+      "focus": "years",
+      "notebook": true,
+      "motif": "chair.the-one-who-stayed",
+      "drawCalls": 69,
+      "resolution": 1
+    },
+    "voice": null,
+    "audio": null
+  }
+}

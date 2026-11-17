@@ -1,0 +1,13 @@
+﻿{
+    "current":  "gameplay",
+    "status":  "failed",
+    "completed":  [
+                      "typecheck",
+                      "lint",
+                      "unit",
+                      "build",
+                      "hero"
+                  ],
+    "exitCode":  -1,
+    "updated":  "2026-11-16T21:53:46.9948897+07:00"
+}

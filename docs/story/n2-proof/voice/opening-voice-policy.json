@@ -1,0 +1,245 @@
+{
+  "requests": [
+    "http://127.0.0.1:4173/voice/vi/8a5e58a6.mp3",
+    "http://127.0.0.1:4173/voice/vi/5cfc21a5.mp3",
+    "http://127.0.0.1:4173/voice/vi/d1556f7c.mp3",
+    "http://127.0.0.1:4173/voice/vi/5a05af21.mp3",
+    "http://127.0.0.1:4173/voice/vi/06ee22c7.mp3",
+    "http://127.0.0.1:4173/voice/vi/3e3918f2.mp3",
+    "http://127.0.0.1:4173/voice/vi/8815e952.mp3"
+  ],
+  "state": {
+    "beat": "CLASSROOM_EXPLORATION",
+    "time": 0.7999999999999999,
+    "evidence": [
+      "clock"
+    ],
+    "verdict": null,
+    "stayed": null,
+    "ripple": null,
+    "finale": null,
+    "followedDoor": false,
+    "world": {
+      "school": {
+        "name": "Trường Đại học Tây Nguyên",
+        "logoLoaded": true
+      },
+      "camera": [
+        3.4177091519848433,
+        2.1571460742092716,
+        0.9441033611707232
+      ],
+      "shot": null,
+      "teacherBodyY": 0.88,
+      "portraits": {
+        "an": {
+          "x": -96.67677660083129,
+          "y": 507.5793256391729,
+          "visible": false
+        },
+        "teacher": {
+          "x": 1413.1154847885089,
+          "y": 153.31156907226853,
+          "visible": false
+        }
+      },
+      "laptopLid": [
+        {
+          "x": 113.34545977396772,
+          "y": 527.4027553917041
+        },
+        {
+          "x": 241.65198486882184,
+          "y": 568.6586047152425
+        },
+        {
+          "x": 249.2951459527518,
+          "y": 407.89534479711534
+        },
+        {
+          "x": 119.57349061609683,
+          "y": 389.00092315170303
+        }
+      ],
+      "target": [
+        0.7831528731021782,
+        1.6755355258135811,
+        -3.0457582218009294
+      ],
+      "fov": 45.128760390454836,
+      "artDirection": "paper-rain",
+      "characterArt": "sculpted-narrative-v1",
+      "anHand": [
+        -0.6396678789924233,
+        0.9178045124130223,
+        -0.5382739404322828
+      ],
+      "focus": "clock",
+      "teacher": [
+        2.7,
+        0,
+        6.2
+      ],
+      "teacherVisible": false,
+      "anHead": 0.1,
+      "anFeetY": [
+        0.003519415650667268,
+        0.003519415650667268
+      ],
+      "teacherFeetY": [
+        0.03749999999999998,
+        0.03749999999999998
+      ],
+      "notebookPage": null,
+      "notebookPosition": [
+        1.25,
+        1.047,
+        -0.15
+      ],
+      "pageTurn": 1,
+      "chair": [
+        2.3,
+        0,
+        0.6
+      ],
+      "drawCalls": 66,
+      "triangles": 33022,
+      "shadowRefreshed": false,
+      "resources": {
+        "geometries": 106,
+        "textures": 21,
+        "programs": 13,
+        "renderTarget": [
+          1280,
+          720
+        ],
+        "samples": 0,
+        "output": [
+          1280,
+          720
+        ],
+        "shadowMap": [
+          1024,
+          1024
+        ]
+      },
+      "resolution": 1
+    },
+    "voice": {
+      "status": "off",
+      "clip": null,
+      "started": 9,
+      "completed": 7,
+      "busy": false
+    },
+    "audio": {
+      "context": "running",
+      "events": [
+        {
+          "cue": "aion.space.city",
+          "time": 0
+        },
+        {
+          "cue": "aion.space.city",
+          "time": 2.4506666666666668
+        },
+        {
+          "cue": "aion.space.headquarters",
+          "time": 13.741333333333333
+        },
+        {
+          "cue": "aion-motif",
+          "time": 28.741333333333333
+        },
+        {
+          "cue": "aion-overtone",
+          "time": 28.741333333333333
+        },
+        {
+          "cue": "aion.space.core",
+          "time": 28.741333333333333
+        },
+        {
+          "cue": "signal",
+          "time": 43.74133333333333
+        },
+        {
+          "cue": "aion.space.anomaly",
+          "time": 43.74133333333333
+        },
+        {
+          "cue": "focus",
+          "time": 57.992
+        },
+        {
+          "cue": "focus",
+          "time": 57.992
+        },
+        {
+          "cue": "select",
+          "time": 57.992
+        },
+        {
+          "cue": "aion.inspect.source",
+          "time": 61.352
+        },
+        {
+          "cue": "aion.inspect.limit",
+          "time": 61.48
+        },
+        {
+          "cue": "memory",
+          "time": 61.64
+        },
+        {
+          "cue": "bell",
+          "time": 66.65066666666667
+        },
+        {
+          "cue": "step",
+          "time": 68.152
+        },
+        {
+          "cue": "step",
+          "time": 68.85066666666667
+        },
+        {
+          "cue": "focus.window",
+          "time": 69.66133333333333
+        },
+        {
+          "cue": "focus.wide",
+          "time": 69.66133333333333
+        },
+        {
+          "cue": "focus.window",
+          "time": 69.66133333333333
+        },
+        {
+          "cue": "focus.wide",
+          "time": 73.17066666666666
+        },
+        {
+          "cue": "clock",
+          "time": 76.92
+        },
+        {
+          "cue": "focus.clock",
+          "time": 76.92
+        }
+      ],
+      "mix": {
+        "rain": 0.14,
+        "fan": 0.045,
+        "ambience": 1,
+        "music": 0
+      },
+      "buses": {
+        "music": 0,
+        "effects": 0.6499999761581421,
+        "ambience": 0.6499999761581421
+      }
+    }
+  },
+  "errors": []
+}

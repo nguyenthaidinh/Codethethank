@@ -1,0 +1,20 @@
+﻿{
+    "current":  "complete",
+    "build":  "BF77A4C21DAA7F720ACF6190375E18AED7B35021BB47ACB2DF9FFA05132C427F",
+    "exitCode":  0,
+    "completed":  [
+                      "v4-focus-resume",
+                      "finale",
+                      "full-game",
+                      "chapter00",
+                      "legacy-input-mobile",
+                      "ripple",
+                      "stayed",
+                      "verdict",
+                      "legacy",
+                      "menu"
+                  ],
+    "updated":  "2026-11-16T14:41:17.9634075+07:00",
+    "mode":  "Gate1",
+    "status":  "passed"
+}

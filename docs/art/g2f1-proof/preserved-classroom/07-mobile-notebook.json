@@ -1,0 +1,126 @@
+{
+  "beat": "NEXT_SCENE_READY",
+  "time": 3.1053000000014856,
+  "evidence": [
+    "clock",
+    "notebook",
+    "laptop"
+  ],
+  "verdict": {
+    "version": 1,
+    "phase": "chapter02",
+    "found": [
+      "presentation",
+      "notes",
+      "data"
+    ],
+    "selected": "an",
+    "tested": [
+      "mai",
+      "an"
+    ],
+    "linked": [
+      "presentation",
+      "notes"
+    ],
+    "carried": null,
+    "stayed": {
+      "version": 1,
+      "phase": "notebook",
+      "line": 0,
+      "read": [
+        "outcome"
+      ],
+      "page": "outcome",
+      "written": false,
+      "seen": [],
+      "nextInspected": false
+    }
+  },
+  "stayed": {
+    "version": 1,
+    "phase": "notebook",
+    "line": 0,
+    "read": [
+      "outcome"
+    ],
+    "page": "outcome",
+    "written": false,
+    "seen": [],
+    "nextInspected": false
+  },
+  "ripple": null,
+  "finale": null,
+  "followedDoor": false,
+  "world": {
+    "camera": [
+      0.5,
+      2.7,
+      1.15
+    ],
+    "target": [
+      0.65,
+      1.047,
+      -0.1
+    ],
+    "fov": 65,
+    "artDirection": "paper-rain",
+    "characterArt": "sculpted-narrative-v1",
+    "anHand": [
+      -0.6396642535777709,
+      0.9177854799415225,
+      -0.5381906972558167
+    ],
+    "focus": "book",
+    "teacher": [
+      1.1,
+      0,
+      0.05
+    ],
+    "teacherVisible": true,
+    "anHead": 0.1,
+    "anFeetY": [
+      0,
+      0
+    ],
+    "teacherFeetY": [
+      0,
+      0
+    ],
+    "notebookPage": "outcome",
+    "notebookPosition": [
+      0.75,
+      1.047,
+      -0.1
+    ],
+    "pageTurn": 1,
+    "chair": [
+      1.1,
+      0,
+      0.25
+    ],
+    "drawCalls": 77,
+    "triangles": 57022,
+    "shadowRefreshed": false,
+    "resources": {
+      "geometries": 120,
+      "textures": 16,
+      "programs": 11,
+      "renderTarget": [
+        390,
+        844
+      ],
+      "samples": 0,
+      "output": [
+        390,
+        844
+      ],
+      "shadowMap": [
+        1024,
+        1024
+      ]
+    },
+    "resolution": 1
+  },
+  "audio": null
+}

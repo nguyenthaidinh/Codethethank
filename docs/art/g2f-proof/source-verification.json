@@ -1,0 +1,90 @@
+{
+  "protectedFilesCompared": 77,
+  "changedExistingFiles": [
+    "src/chapter/ChapterAudio.ts",
+    "src/chapter/ChapterGame.tsx"
+  ],
+  "unexpectedChanges": [],
+  "sourceAndAssetHashes": {
+    "src/future/direction.ts": {
+      "sha256": "084e29224cd46429478302752ca616301d56ef7674da80455f79ff54bc125633",
+      "bytes": 2506
+    },
+    "src/future/future.css": {
+      "sha256": "588719cbbb6a46e07797b9fc2a63270a730e87850ee07b20ae12dcf2af9153b8",
+      "bytes": 2407
+    },
+    "src/future/FutureFallback.ts": {
+      "sha256": "464a7230e6faff14c32f33ca3be6d54c880f6a4a2b0032b49ab8cb8fe56caa2b",
+      "bytes": 6011
+    },
+    "src/future/FutureWorld.ts": {
+      "sha256": "622ce349d55e7fdb5de5d1ff8059e77665acc2169c26e5a49816c14981a9aeae",
+      "bytes": 38628
+    },
+    "src/future/inspection.ts": {
+      "sha256": "d2d07ba5bdd2546c37a2bd5fd881c81816d27a4f005f2d6746cf0dc0494ae8bd",
+      "bytes": 458
+    },
+    "public/future/KENNEY-LICENSE.txt": {
+      "sha256": "c38cee408d022e57e44e49f1cd655c2fe0dc881a07b881276b795215cdc0de69",
+      "bytes": 708
+    },
+    "public/future/city/building-a.glb": {
+      "sha256": "5cf220f90ee3f21e7abe38055ca409a48aa8ef1d5ffab6e2deb99e5a5e1ed5e0",
+      "bytes": 108936
+    },
+    "public/future/city/building-b.glb": {
+      "sha256": "3b5d3ac0799c024781d92bb15971d42f4f8e380554dc5cf6a40c2f07d948947a",
+      "bytes": 106408
+    },
+    "public/future/city/building-skyscraper-a.glb": {
+      "sha256": "d8339bbb75944ff91d1ec9a70ec6dead71bd98b94a42d3dd0fc1f3b107ddbe85",
+      "bytes": 111336
+    },
+    "public/future/city/building-skyscraper-b.glb": {
+      "sha256": "3a383e8a0a8819023d30b2aee1c6f40fa6bc28990227a306a86e531f36c6b8d5",
+      "bytes": 138480
+    },
+    "public/future/city/building-skyscraper-c.glb": {
+      "sha256": "e73c357554f7561fedb8c1cbecf9d7163ba09ada264d661c59a0f0a180e0185f",
+      "bytes": 149524
+    },
+    "public/future/city/low-detail-building-a.glb": {
+      "sha256": "c3986108805f0aa7e27e566f5052cb5e8d478417e267779e55ade583ea809a0a",
+      "bytes": 14340
+    },
+    "public/future/city/low-detail-building-b.glb": {
+      "sha256": "ef2ab63731c38a469df7f993c26b0e8137746f90ac20ed9485d61f48aa50fbdb",
+      "bytes": 16336
+    },
+    "public/future/lighting/studio_small_09.hdr": {
+      "sha256": "e7cfda5f4e98e623db12b8bfd0184e048488e4855d9c83e2751fb44a32e80c45",
+      "bytes": 1615248
+    },
+    "public/future/materials/floor_tiles_06_diff.jpg": {
+      "sha256": "ac159ca6072e30dd9d5c65e2d6eae7bb55a7dc9f06e6d141e9119390563511c2",
+      "bytes": 356257
+    },
+    "public/future/materials/floor_tiles_06_nor_gl.jpg": {
+      "sha256": "efaff964d5688dd52ea3b876d5dac63ffee76d8d7270e30c11c81095246d5fdd",
+      "bytes": 121299
+    },
+    "public/future/materials/floor_tiles_06_rough.jpg": {
+      "sha256": "9c1996177892f220bcfdbc44675d0cd404482cfa80b1c577c7bcc100637ef8b6",
+      "bytes": 114013
+    },
+    "public/future/city/Textures/colormap.png": {
+      "sha256": "191bec3889aaaca5018380038fecc129ebb5c2182879a099b7b538b3fa050b5d",
+      "bytes": 11002
+    },
+    "src/chapter/ChapterGame.tsx": {
+      "sha256": "fe195296fb33f0ebbfc5d25b4c3fda772b863f9f282547e10e1b353b67acb632",
+      "bytes": 41369
+    },
+    "src/chapter/ChapterAudio.ts": {
+      "sha256": "9b65533cb30aa62586cd97ee99b88e8720519ee6c1038eed85d8c64e9b34e387",
+      "bytes": 6983
+    }
+  }
+}

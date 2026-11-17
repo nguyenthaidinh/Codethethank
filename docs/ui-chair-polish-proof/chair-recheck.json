@@ -1,0 +1,321 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\Dự Án NTD\\Codethethank\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config=playwright.chair-review.config.ts",
+      "cinematic-chair.spec.ts",
+      "--reporter=list,json"
+    ],
+    "configFile": "F:\\Dự Án NTD\\Codethethank\\playwright.chair-review.config.ts",
+    "rootDir": "F:/Dự Án NTD/Codethethank/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "F:/Dự Án NTD/Codethethank/test-results/chair-polish",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "F:/Dự Án NTD/Codethethank/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "cinematic*.spec.ts"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "F:\\Dự Án NTD\\Codethethank\\test-results\\chair-polish",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e",
+        "snapshotDir": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "cinematic*.spec.ts",
+        "timeout": 90000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4191",
+          "headless": true,
+          "trace": "retain-on-failure",
+          "launchOptions": {
+            "args": [
+              "--use-angle=d3d11"
+            ]
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.1",
+    "workers": 1,
+    "webServer": {
+      "command": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4191 --strictPort --outDir dist-chair-review",
+      "url": "http://127.0.0.1:4191",
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "cinematic-chair.spec.ts",
+      "file": "cinematic-chair.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Chair: insert, visible sit and quiet two-shot desktop",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 16198,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"chair.\u001b[7ms\u001b[27mit\"\u001b[39m\nReceived: \u001b[31m\"chair.i\u001b[7mnser\u001b[27mt\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"chair.\u001b[7ms\u001b[27mit\"\u001b[39m\nReceived: \u001b[31m\"chair.i\u001b[7mnser\u001b[27mt\"\u001b[39m\n    at F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-chair.spec.ts:135:33",
+                    "location": {
+                      "file": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-chair.spec.ts",
+                      "column": 33,
+                      "line": 135
+                    },
+                    "snippet": " \u001b[90m 133 |\u001b[39m     \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m sample(\u001b[32m\"sit\"\u001b[39m)\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m 134 |\u001b[39m     \u001b[36mconst\u001b[39m sitting \u001b[33m=\u001b[39m (\u001b[36mawait\u001b[39m sample(\u001b[32m\"sit\"\u001b[39m))\u001b[33m!\u001b[39m\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 135 |\u001b[39m     expect(sitting\u001b[33m.\u001b[39mworld\u001b[33m!\u001b[39m\u001b[33m.\u001b[39mshot)\u001b[33m.\u001b[39mtoBe(\n \u001b[90m     |\u001b[39m                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 136 |\u001b[39m       fallback \u001b[33m?\u001b[39m \u001b[32m\"conversation.master\"\u001b[39m \u001b[33m:\u001b[39m \u001b[32m\"chair.sit\"\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 137 |\u001b[39m     )\u001b[33m;\u001b[39m\n \u001b[90m 138 |\u001b[39m     \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m sample(\u001b[32m\"seated\"\u001b[39m)\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-chair.spec.ts",
+                        "column": 33,
+                        "line": 135
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"chair.\u001b[7ms\u001b[27mit\"\u001b[39m\nReceived: \u001b[31m\"chair.i\u001b[7mnser\u001b[27mt\"\u001b[39m\n\n  133 |     await expect.poll(() => sample(\"sit\"), { timeout: 15000 }).toBeTruthy();\n  134 |     const sitting = (await sample(\"sit\"))!;\n> 135 |     expect(sitting.world!.shot).toBe(\n      |                                 ^\n  136 |       fallback ? \"conversation.master\" : \"chair.sit\",\n  137 |     );\n  138 |     await expect.poll(() => sample(\"seated\"), { timeout: 15000 }).toBeTruthy();\n    at F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-chair.spec.ts:135:33"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T09:15:46.560Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "F:\\Dự Án NTD\\Codethethank\\test-results\\chair-polish\\cinematic-chair-Chair-inse-1541a--and-quiet-two-shot-desktop\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "F:\\Dự Án NTD\\Codethethank\\test-results\\chair-polish\\cinematic-chair-Chair-inse-1541a--and-quiet-two-shot-desktop\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-chair.spec.ts",
+                    "column": 33,
+                    "line": 135
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "690f76986346603fad4e-2b086a8f8122572be062",
+          "file": "cinematic-chair.spec.ts",
+          "line": 45,
+          "column": 3
+        },
+        {
+          "title": "Chair: insert, visible sit and quiet two-shot mobile",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 12341,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"chair.\u001b[7ms\u001b[27mit\"\u001b[39m\nReceived: \u001b[31m\"chair.i\u001b[7mnser\u001b[27mt\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"chair.\u001b[7ms\u001b[27mit\"\u001b[39m\nReceived: \u001b[31m\"chair.i\u001b[7mnser\u001b[27mt\"\u001b[39m\n    at F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-chair.spec.ts:135:33",
+                    "location": {
+                      "file": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-chair.spec.ts",
+                      "column": 33,
+                      "line": 135
+                    },
+                    "snippet": " \u001b[90m 133 |\u001b[39m     \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m sample(\u001b[32m\"sit\"\u001b[39m)\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m 134 |\u001b[39m     \u001b[36mconst\u001b[39m sitting \u001b[33m=\u001b[39m (\u001b[36mawait\u001b[39m sample(\u001b[32m\"sit\"\u001b[39m))\u001b[33m!\u001b[39m\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 135 |\u001b[39m     expect(sitting\u001b[33m.\u001b[39mworld\u001b[33m!\u001b[39m\u001b[33m.\u001b[39mshot)\u001b[33m.\u001b[39mtoBe(\n \u001b[90m     |\u001b[39m                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 136 |\u001b[39m       fallback \u001b[33m?\u001b[39m \u001b[32m\"conversation.master\"\u001b[39m \u001b[33m:\u001b[39m \u001b[32m\"chair.sit\"\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 137 |\u001b[39m     )\u001b[33m;\u001b[39m\n \u001b[90m 138 |\u001b[39m     \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m sample(\u001b[32m\"seated\"\u001b[39m)\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-chair.spec.ts",
+                        "column": 33,
+                        "line": 135
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"chair.\u001b[7ms\u001b[27mit\"\u001b[39m\nReceived: \u001b[31m\"chair.i\u001b[7mnser\u001b[27mt\"\u001b[39m\n\n  133 |     await expect.poll(() => sample(\"sit\"), { timeout: 15000 }).toBeTruthy();\n  134 |     const sitting = (await sample(\"sit\"))!;\n> 135 |     expect(sitting.world!.shot).toBe(\n      |                                 ^\n  136 |       fallback ? \"conversation.master\" : \"chair.sit\",\n  137 |     );\n  138 |     await expect.poll(() => sample(\"seated\"), { timeout: 15000 }).toBeTruthy();\n    at F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-chair.spec.ts:135:33"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T09:16:15.309Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "F:\\Dự Án NTD\\Codethethank\\test-results\\chair-polish\\cinematic-chair-Chair-inse-c7350-t-and-quiet-two-shot-mobile\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "F:\\Dự Án NTD\\Codethethank\\test-results\\chair-polish\\cinematic-chair-Chair-inse-c7350-t-and-quiet-two-shot-mobile\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-chair.spec.ts",
+                    "column": 33,
+                    "line": 135
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "690f76986346603fad4e-e9c16509902bda427e10",
+          "file": "cinematic-chair.spec.ts",
+          "line": 45,
+          "column": 3
+        },
+        {
+          "title": "Chair: insert, visible sit and quiet two-shot canvas",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 11054,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"c\u001b[7monversation.mast\u001b[27mer\"\u001b[39m\nReceived: \u001b[31m\"c\u001b[7mhair.ins\u001b[27mer\u001b[7mt\u001b[27m\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"c\u001b[7monversation.mast\u001b[27mer\"\u001b[39m\nReceived: \u001b[31m\"c\u001b[7mhair.ins\u001b[27mer\u001b[7mt\u001b[27m\"\u001b[39m\n    at F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-chair.spec.ts:135:33",
+                    "location": {
+                      "file": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-chair.spec.ts",
+                      "column": 33,
+                      "line": 135
+                    },
+                    "snippet": " \u001b[90m 133 |\u001b[39m                     s\u001b[33m.\u001b[39mtime \u001b[33m>=\u001b[39m \u001b[35m4.6\u001b[39m \u001b[33m&&\u001b[39m\n \u001b[90m 134 |\u001b[39m                     s\u001b[33m.\u001b[39mtime \u001b[33m<\u001b[39m \u001b[35m6\u001b[39m)\u001b[33m,\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 135 |\u001b[39m           )\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 136 |\u001b[39m         }\u001b[33m,\u001b[39m\n \u001b[90m 137 |\u001b[39m         { kind\u001b[33m,\u001b[39m fallback }\u001b[33m,\u001b[39m\n \u001b[90m 138 |\u001b[39m       )\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-chair.spec.ts",
+                        "column": 33,
+                        "line": 135
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"c\u001b[7monversation.mast\u001b[27mer\"\u001b[39m\nReceived: \u001b[31m\"c\u001b[7mhair.ins\u001b[27mer\u001b[7mt\u001b[27m\"\u001b[39m\n\n  133 |                     s.time >= 4.6 &&\n  134 |                     s.time < 6),\n> 135 |           );\n      |             ^\n  136 |         },\n  137 |         { kind, fallback },\n  138 |       );\n    at F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-chair.spec.ts:135:33"
+                    },
+                    {
+                      "message": "Error: browserContext._wrapApiCall: file data stream has unexpected number of bytes"
+                    },
+                    {
+                      "message": "Error: End of central directory record signature not found. Either not a zip file, or file is truncated."
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T09:16:49.567Z",
+                  "annotations": [],
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-chair.spec.ts",
+                    "column": 33,
+                    "line": 135
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "690f76986346603fad4e-8b4f55dc50035138d32a",
+          "file": "cinematic-chair.spec.ts",
+          "line": 45,
+          "column": 3
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-17T09:15:39.182Z",
+    "duration": 92987.917,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 3,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "count": 50,
+  "changed": [
+    "src\\cinematic\\ClassroomCinematography.ts",
+    "src\\cinematic\\FallbackWorld.ts",
+    "src\\cinematic\\WorldRenderer.ts"
+  ]
+}

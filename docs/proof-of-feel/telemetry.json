@@ -1,0 +1,38 @@
+{
+  "scope": "Latest desktop proof run after doorway camera correction; excerpt of browser telemetry",
+  "beat": "complete",
+  "selected": true,
+  "observed": [
+    "window",
+    "laptop",
+    "notebook"
+  ],
+  "fps": 9.54942623864016,
+  "renderScale": 0.9,
+  "worldDrawCalls": 102,
+  "teacher": [
+    1.1,
+    0,
+    0.2
+  ],
+  "chair": [
+    1.1,
+    0,
+    0.25
+  ],
+  "audioContext": "running",
+  "chairCueCount": 1,
+  "verdictCueCount": 1,
+  "audioTimeSeconds": {
+    "windowFocus": 5.472,
+    "laptopFocus": 10.890666666666666,
+    "teacherEntry": 19.72,
+    "chairDrag": 25.410666666666668,
+    "profileGate": 35.101333333333336,
+    "evaluate": 38.08,
+    "verdict": 39.832,
+    "response": 43.89066666666667,
+    "paper": 49.93066666666667,
+    "complete": 59.050666666666665
+  }
+}

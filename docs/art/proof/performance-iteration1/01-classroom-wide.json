@@ -1,0 +1,126 @@
+{
+  "beat": "CLASSROOM_EXPLORATION",
+  "time": 3.5499000000000014,
+  "evidence": [],
+  "verdict": null,
+  "stayed": null,
+  "ripple": null,
+  "finale": null,
+  "followedDoor": false,
+  "world": {
+    "camera": [
+      4.455,
+      2.775,
+      4.4
+    ],
+    "target": [
+      -0.5,
+      1.05,
+      -1.4
+    ],
+    "fov": 54,
+    "artDirection": "stylized",
+    "focus": "wide",
+    "teacher": [
+      2.7,
+      0,
+      6.2
+    ],
+    "teacherVisible": false,
+    "anHead": 0.1,
+    "notebookPage": null,
+    "notebookPosition": [
+      1.25,
+      1.047,
+      -0.15
+    ],
+    "pageTurn": 1,
+    "chair": [
+      2.3,
+      0,
+      0.6
+    ],
+    "drawCalls": 107,
+    "triangles": 28414,
+    "shadowRefreshed": false,
+    "resources": {
+      "geometries": 111,
+      "textures": 16,
+      "programs": 12,
+      "renderTarget": [
+        832,
+        468
+      ],
+      "samples": 2,
+      "output": [
+        1280,
+        720
+      ],
+      "shadowMap": [
+        1024,
+        1024
+      ]
+    },
+    "resolution": 0.65
+  },
+  "audio": {
+    "context": "running",
+    "events": [
+      {
+        "cue": "focus",
+        "time": 4.16
+      },
+      {
+        "cue": "focus",
+        "time": 4.16
+      },
+      {
+        "cue": "select",
+        "time": 4.16
+      },
+      {
+        "cue": "memory",
+        "time": 6.12
+      },
+      {
+        "cue": "bell",
+        "time": 11.12
+      },
+      {
+        "cue": "step",
+        "time": 12.632
+      },
+      {
+        "cue": "step",
+        "time": 13.32
+      },
+      {
+        "cue": "focus.window",
+        "time": 14.141333333333334
+      },
+      {
+        "cue": "focus.wide",
+        "time": 14.141333333333334
+      },
+      {
+        "cue": "focus.window",
+        "time": 14.141333333333334
+      },
+      {
+        "cue": "focus.wide",
+        "time": 18.24
+      }
+    ],
+    "mix": {
+      "rain": 0.14,
+      "fan": 0.045,
+      "ambience": 1,
+      "music": 0
+    },
+    "buses": {
+      "music": 0,
+      "effects": 0.6499999761581421,
+      "ambience": 0.6499999761581421
+    }
+  }
+}

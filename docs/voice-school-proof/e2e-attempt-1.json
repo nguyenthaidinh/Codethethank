@@ -1,0 +1,385 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\Dự Án NTD\\Codethethank\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config=playwright.g2f.config.ts",
+      "cinematic-voice-school.spec.ts",
+      "--reporter=list,json"
+    ],
+    "configFile": "F:\\Dự Án NTD\\Codethethank\\playwright.g2f.config.ts",
+    "rootDir": "F:/Dự Án NTD/Codethethank/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "F:/Dự Án NTD/Codethethank/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "F:/Dự Án NTD/Codethethank/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "cinematic*.spec.ts"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "F:\\Dự Án NTD\\Codethethank\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e",
+        "snapshotDir": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "cinematic*.spec.ts",
+        "timeout": 90000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4173",
+          "headless": true,
+          "trace": "retain-on-failure",
+          "launchOptions": {
+            "args": [
+              "--use-angle=d3d11"
+            ]
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run preview -- --port 4173",
+      "url": "http://127.0.0.1:4173",
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "cinematic-voice-school.spec.ts",
+      "file": "cinematic-voice-school.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Vietnamese voice: user gesture, shared pause, separate captions, mute and interrupted clips",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 10553,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"suspended\"\u001b[39m\nReceived: \u001b[31m\"running\"\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"suspended\"\u001b[39m\nReceived: \u001b[31m\"running\"\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-voice-school.spec.ts:45:6",
+                    "location": {
+                      "file": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-voice-school.spec.ts",
+                      "column": 6,
+                      "line": 45
+                    },
+                    "snippet": " \u001b[90m 43 |\u001b[39m   \u001b[36mawait\u001b[39m expect\n \u001b[90m 44 |\u001b[39m     \u001b[33m.\u001b[39mpoll(\u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m (\u001b[36mawait\u001b[39m state(page))\u001b[33m.\u001b[39maudio\u001b[33m?.\u001b[39mcontext)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 45 |\u001b[39m     \u001b[33m.\u001b[39mtoBe(\u001b[32m\"suspended\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 46 |\u001b[39m   \u001b[36mconst\u001b[39m paused \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m state(page)\u001b[33m;\u001b[39m\n \u001b[90m 47 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m700\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 48 |\u001b[39m   expect((\u001b[36mawait\u001b[39m state(page))\u001b[33m.\u001b[39mvoice\u001b[33m.\u001b[39mstarted)\u001b[33m.\u001b[39mtoBe(paused\u001b[33m.\u001b[39mvoice\u001b[33m.\u001b[39mstarted)\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-voice-school.spec.ts",
+                        "column": 6,
+                        "line": 45
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"suspended\"\u001b[39m\nReceived: \u001b[31m\"running\"\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  43 |   await expect\n  44 |     .poll(async () => (await state(page)).audio?.context)\n> 45 |     .toBe(\"suspended\");\n     |      ^\n  46 |   const paused = await state(page);\n  47 |   await page.waitForTimeout(700);\n  48 |   expect((await state(page)).voice.started).toBe(paused.voice.started);\n    at F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-voice-school.spec.ts:45:6"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T04:17:25.296Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "F:\\Dự Án NTD\\Codethethank\\test-results\\cinematic-voice-school-Vie-fc30d--mute-and-interrupted-clips\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "F:\\Dự Án NTD\\Codethethank\\test-results\\cinematic-voice-school-Vie-fc30d--mute-and-interrupted-clips\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-voice-school.spec.ts",
+                    "column": 6,
+                    "line": 45
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d1e47a4e95b10e1c7796-2c4a5d5682921bb852da",
+          "file": "cinematic-voice-school.spec.ts",
+          "line": 26,
+          "column": 1
+        },
+        {
+          "title": "School logo and dialogue: desktop WebGL",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 45477,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mundefined\u001b[39m\n\nCall Log:\n- Timeout 45000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mundefined\u001b[39m\n\nCall Log:\n- Timeout 45000ms exceeded while waiting on the predicate\n    at F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-voice-school.spec.ts:124:8",
+                    "location": {
+                      "file": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-voice-school.spec.ts",
+                      "column": 8,
+                      "line": 124
+                    },
+                    "snippet": " \u001b[90m 122 |\u001b[39m         timeout\u001b[33m:\u001b[39m \u001b[35m45000\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 123 |\u001b[39m       })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 124 |\u001b[39m       \u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 125 |\u001b[39m     expect((\u001b[36mawait\u001b[39m state(page))\u001b[33m.\u001b[39mworld\u001b[33m.\u001b[39mschool\u001b[33m.\u001b[39mname)\u001b[33m.\u001b[39mtoBe(\n \u001b[90m 126 |\u001b[39m       \u001b[32m\"Trường Đại học Tây Nguyên\"\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 127 |\u001b[39m     )\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-voice-school.spec.ts",
+                        "column": 8,
+                        "line": 124
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mundefined\u001b[39m\n\nCall Log:\n- Timeout 45000ms exceeded while waiting on the predicate\n\n  122 |         timeout: 45000,\n  123 |       })\n> 124 |       .toBe(true);\n      |        ^\n  125 |     expect((await state(page)).world.school.name).toBe(\n  126 |       \"Trường Đại học Tây Nguyên\",\n  127 |     );\n    at F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-voice-school.spec.ts:124:8"
+                    },
+                    {
+                      "message": "Error: browserContext._wrapApiCall: file data stream has unexpected number of bytes"
+                    },
+                    {
+                      "message": "Error: End of central directory record signature not found. Either not a zip file, or file is truncated."
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T04:17:37.999Z",
+                  "annotations": [],
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-voice-school.spec.ts",
+                    "column": 8,
+                    "line": 124
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d1e47a4e95b10e1c7796-4a5c6d4f63135f835cd5",
+          "file": "cinematic-voice-school.spec.ts",
+          "line": 86,
+          "column": 3
+        },
+        {
+          "title": "School logo and dialogue: touch Canvas reduced motion",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 46565,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mundefined\u001b[39m\n\nCall Log:\n- Timeout 45000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mundefined\u001b[39m\n\nCall Log:\n- Timeout 45000ms exceeded while waiting on the predicate\n    at F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-voice-school.spec.ts:124:8",
+                    "location": {
+                      "file": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-voice-school.spec.ts",
+                      "column": 8,
+                      "line": 124
+                    },
+                    "snippet": " \u001b[90m 122 |\u001b[39m     page\u001b[33m.\u001b[39mon(\u001b[32m\"pageerror\"\u001b[39m\u001b[33m,\u001b[39m (e) \u001b[33m=>\u001b[39m errors\u001b[33m.\u001b[39mpush(e\u001b[33m.\u001b[39mmessage))\u001b[33m;\u001b[39m\n \u001b[90m 123 |\u001b[39m     \u001b[36mif\u001b[39m (mobile)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 124 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39maddInitScript(() \u001b[33m=>\u001b[39m {\n \u001b[90m     |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 125 |\u001b[39m         \u001b[36mconst\u001b[39m original \u001b[33m=\u001b[39m \u001b[33mHTMLCanvasElement\u001b[39m\u001b[33m.\u001b[39mprototype\u001b[33m.\u001b[39mgetContext\u001b[33m;\u001b[39m\n \u001b[90m 126 |\u001b[39m         \u001b[33mHTMLCanvasElement\u001b[39m\u001b[33m.\u001b[39mprototype\u001b[33m.\u001b[39mgetContext \u001b[33m=\u001b[39m \u001b[36mfunction\u001b[39m (\n \u001b[90m 127 |\u001b[39m           \u001b[36mthis\u001b[39m\u001b[33m:\u001b[39m \u001b[33mHTMLCanvasElement\u001b[39m\u001b[33m,\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-voice-school.spec.ts",
+                        "column": 8,
+                        "line": 124
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mundefined\u001b[39m\n\nCall Log:\n- Timeout 45000ms exceeded while waiting on the predicate\n\n  122 |     page.on(\"pageerror\", (e) => errors.push(e.message));\n  123 |     if (mobile)\n> 124 |       await page.addInitScript(() => {\n      |        ^\n  125 |         const original = HTMLCanvasElement.prototype.getContext;\n  126 |         HTMLCanvasElement.prototype.getContext = function (\n  127 |           this: HTMLCanvasElement,\n    at F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-voice-school.spec.ts:124:8"
+                    },
+                    {
+                      "message": "Error: browserContext._wrapApiCall: file data stream has unexpected number of bytes"
+                    },
+                    {
+                      "message": "Error: End of central directory record signature not found. Either not a zip file, or file is truncated."
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T04:18:33.571Z",
+                  "annotations": [],
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-voice-school.spec.ts",
+                    "column": 8,
+                    "line": 124
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d1e47a4e95b10e1c7796-acd7802a3134f74eedba",
+          "file": "cinematic-voice-school.spec.ts",
+          "line": 86,
+          "column": 3
+        },
+        {
+          "title": "Missing voice clips fail to subtitles without blocking teacher scene",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 48043,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.chapter')\nExpected: \u001b[32m\"discussion\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\nTimeout:  45000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('.chapter') with timeout 45000ms\u001b[22m\n\u001b[2m  - waiting for locator('.chapter')\u001b[22m\n\u001b[2m    84 × locator resolved to <div data-finale=\"\" data-ripple=\"\" data-focus=\"laptop\" data-completed=\"false\" data-verdict=\"investigate\" data-chapter=\"NEXT_SCENE_READY\" data-evidence=\"clock,notebook,laptop\" class=\"cinematic chapter  in-classroom narrative-room\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"null\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.chapter')\nExpected: \u001b[32m\"discussion\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\nTimeout:  45000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('.chapter') with timeout 45000ms\u001b[22m\n\u001b[2m  - waiting for locator('.chapter')\u001b[22m\n\u001b[2m    84 × locator resolved to <div data-finale=\"\" data-ripple=\"\" data-focus=\"laptop\" data-completed=\"false\" data-verdict=\"investigate\" data-chapter=\"NEXT_SCENE_READY\" data-evidence=\"clock,notebook,laptop\" class=\"cinematic chapter  in-classroom narrative-room\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"null\"\u001b[22m\n\n    at F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-voice-school.spec.ts:193:42",
+                    "location": {
+                      "file": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-voice-school.spec.ts",
+                      "column": 42,
+                      "line": 193
+                    },
+                    "snippet": " \u001b[90m 191 |\u001b[39m     \u001b[33m...\u001b[39mclassroom\u001b[33m,\u001b[39m\n \u001b[90m 192 |\u001b[39m     chapter\u001b[33m:\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 193 |\u001b[39m       \u001b[33m...\u001b[39mclassroom\u001b[33m.\u001b[39mchapter\u001b[33m,\u001b[39m\n \u001b[90m     |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 194 |\u001b[39m       beat\u001b[33m:\u001b[39m \u001b[32m\"NEXT_SCENE_READY\"\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 195 |\u001b[39m       evidence\u001b[33m:\u001b[39m [\u001b[32m\"clock\"\u001b[39m\u001b[33m,\u001b[39m \u001b[32m\"notebook\"\u001b[39m\u001b[33m,\u001b[39m \u001b[32m\"laptop\"\u001b[39m]\u001b[33m,\u001b[39m\n \u001b[90m 196 |\u001b[39m       verdict\u001b[33m:\u001b[39m {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-voice-school.spec.ts",
+                        "column": 42,
+                        "line": 193
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.chapter')\nExpected: \u001b[32m\"discussion\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\nTimeout:  45000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('.chapter') with timeout 45000ms\u001b[22m\n\u001b[2m  - waiting for locator('.chapter')\u001b[22m\n\u001b[2m    84 × locator resolved to <div data-finale=\"\" data-ripple=\"\" data-focus=\"laptop\" data-completed=\"false\" data-verdict=\"investigate\" data-chapter=\"NEXT_SCENE_READY\" data-evidence=\"clock,notebook,laptop\" class=\"cinematic chapter  in-classroom narrative-room\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"null\"\u001b[22m\n\n\n  191 |     ...classroom,\n  192 |     chapter: {\n> 193 |       ...classroom.chapter,\n      |                            ^\n  194 |       beat: \"NEXT_SCENE_READY\",\n  195 |       evidence: [\"clock\", \"notebook\", \"laptop\"],\n  196 |       verdict: {\n    at F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-voice-school.spec.ts:193:42"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T04:19:25.283Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "F:\\Dự Án NTD\\Codethethank\\test-results\\cinematic-voice-school-Mis-1246c-hout-blocking-teacher-scene\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "F:\\Dự Án NTD\\Codethethank\\test-results\\cinematic-voice-school-Mis-1246c-hout-blocking-teacher-scene\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "F:\\Dự Án NTD\\Codethethank\\tests\\e2e\\cinematic-voice-school.spec.ts",
+                    "column": 42,
+                    "line": 193
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d1e47a4e95b10e1c7796-3179699cb9f6425e17af",
+          "file": "cinematic-voice-school.spec.ts",
+          "line": 165,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-17T04:17:23.863Z",
+    "duration": 170935.544,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}

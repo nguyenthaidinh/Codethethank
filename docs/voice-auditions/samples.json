@@ -1,0 +1,23 @@
+{
+  "text": "Năm hai nghìn không trăm bốn mươi sáu. Có những bài học không nằm trong sách vở. Hành trình của chúng ta bắt đầu từ một buổi chiều rất đỗi bình thường.",
+  "rate": "+10%",
+  "voices": [
+    [
+      "01-nam-minh",
+      "vi-VN-NamMinhNeural"
+    ],
+    [
+      "02-andrew",
+      "en-US-AndrewMultilingualNeural"
+    ],
+    [
+      "03-brian",
+      "en-US-BrianMultilingualNeural"
+    ],
+    [
+      "04-hoai-my",
+      "vi-VN-HoaiMyNeural"
+    ]
+  ],
+  "scope": "Auditions only; not integrated into game."
+}

@@ -1,0 +1,858 @@
+{
+  "model": "vi_VN-vais1000-medium",
+  "modelSHA256": "ec7c89e2c85f4d1edc24b6120c18aaf1bda614f06b511567eb9c7c0de15e2dab",
+  "engine": "piper-tts 1.8.0 (offline build only)",
+  "modelSource": "https://huggingface.co/rhasspy/piper-voices/tree/main/vi/vi_VN/vais1000/medium",
+  "modelCardDatasetLicense": "CC-BY-4.0",
+  "lines": [
+    {
+      "key": "63053050",
+      "text": "hai nghìn không trăm hai mươi chín · THỬ NGHIỆM 07.",
+      "caption": "2029 · THỬ NGHIỆM 07. [Cùng một cuốn sổ, trong một căn phòng khác.]",
+      "seconds": 2.461315,
+      "bytes": 20524,
+      "sha256": "7f771073b36d612e06696bbdfa1ba8ba7ee5ffb43628f6a957fac0d5e0b24784"
+    },
+    {
+      "key": "68399504",
+      "text": "Hôm nay, cả thế giới biết đến công nghệ mà người ấy tạo ra.",
+      "caption": "AION: Hôm nay, cả thế giới biết đến công nghệ mà người ấy tạo ra.",
+      "seconds": 2.983764,
+      "bytes": 24703,
+      "sha256": "14d7cdc4a54ae1580e2d7901631967fabc3a1340d14e71bb0cfac576a836f1bf"
+    },
+    {
+      "key": "8a5e58a6",
+      "text": "Năm hai nghìn không trăm bốn mươi sáu. Nhân loại bước vào kỷ nguyên mà những giới hạn của tri thức liên tục được viết lại.",
+      "caption": "Năm 2046. Nhân loại bước vào kỷ nguyên mà những giới hạn của tri thức liên tục được viết lại.",
+      "seconds": 5.28254,
+      "bytes": 43093,
+      "sha256": "53b82abdfe118b6df9423cd2fa65c6b65a798b125c8730a67ae29f61aedcea55"
+    },
+    {
+      "key": "6f440f85",
+      "text": "Quan sát nguồn sáng bên phải. Chạm để tập trung vào tín hiệu.",
+      "caption": "Quan sát nguồn sáng bên phải. Chạm để tập trung vào tín hiệu.",
+      "seconds": 2.716735,
+      "bytes": 22404,
+      "sha256": "383527ddc2b1ac8aaa1ca8f9e22f103a92c4502eea65b105ebdf283574a77ec1"
+    },
+    {
+      "key": "b00c251f",
+      "text": "Một dự đoán từng được đưa ra. Một tương lai đã diễn ra rất khác. Hãy cùng tôi đối chiếu.",
+      "caption": "AION: Một dự đoán từng được đưa ra. Một tương lai đã diễn ra rất khác. Hãy cùng tôi đối chiếu.",
+      "seconds": 3.877732,
+      "bytes": 31808,
+      "sha256": "9aa44fcac2843ed40c9e26777da89ad9413762bc146541eb2e55fe442e41ab64"
+    },
+    {
+      "key": "4db66f6f",
+      "text": "Một hồ sơ từ mô hình thử nghiệm năm hai nghìn không trăm hai mươi sáu. Kết quả vẫn còn đó. Điều xảy ra sau đó đang bị khóa.",
+      "caption": "Một hồ sơ từ mô hình thử nghiệm năm 2026. Kết quả vẫn còn đó. Điều xảy ra sau đó đang bị khóa.",
+      "seconds": 6.106848,
+      "bytes": 49572,
+      "sha256": "e594f17a1280cea77ff7bc1b9ac3b6aac5313222a911248a6b0d581560180311"
+    },
+    {
+      "key": "696ebbbb",
+      "text": "Hai luồng dữ liệu, một sự kiện chưa được giải thích. Chạm dự đoán ban đầu và kết quả về sau để điều tra.",
+      "caption": "AION: Hai luồng dữ liệu, một sự kiện chưa được giải thích. Chạm dự đoán ban đầu và kết quả về sau để điều tra.",
+      "seconds": 4.94585,
+      "bytes": 40377,
+      "sha256": "01484e61e718d70f24c61ce8383c5ca2cfb64232eb89256069fb9810003175c7"
+    },
+    {
+      "key": "7b29f1d9",
+      "text": "Kết quả đánh giá khi ấy phù hợp với mục tiêu mà mô hình được giao.",
+      "caption": "AION: Kết quả đánh giá khi ấy phù hợp với mục tiêu mà mô hình được giao.",
+      "seconds": 3.076644,
+      "bytes": 25330,
+      "sha256": "c643aaaeede223fd22d33b863a4ad1304b5efdc32d9ecb371bcce9d2576e411a"
+    },
+    {
+      "key": "6b412ffb",
+      "text": "Nhưng những gì xảy ra sau đó… vượt xa dự đoán ban đầu.",
+      "caption": "AION: Nhưng những gì xảy ra sau đó… vượt xa dự đoán ban đầu.",
+      "seconds": 2.716735,
+      "bytes": 22404,
+      "sha256": "33d8b41b284a11b892a14ed61db7c13d0bb46b30bd647c7ffa9183ece26476b9"
+    },
+    {
+      "key": "86b5c3f4",
+      "text": "Phòng thực hành Trường Đại học Tây Nguyên · hai nghìn không trăm hai mươi sáu · mười bảy giờ không năm phút. An vẫn ngồi trước laptop.",
+      "caption": "Phòng thực hành Trường Đại học Tây Nguyên · 2026 · 17:05. An vẫn ngồi trước laptop.",
+      "seconds": 5.32898,
+      "bytes": 43302,
+      "sha256": "10f1f9c12b7319c4b5339253069293361d23043dc2863081fb3fb1cde7863079"
+    },
+    {
+      "key": "95b00d21",
+      "text": "Em đã tối ưu theo dữ liệu. Em tưởng nó công bằng.",
+      "caption": "Em đã tối ưu theo dữ liệu. Em tưởng nó công bằng.",
+      "seconds": 2.275556,
+      "bytes": 19061,
+      "sha256": "8b7c55f55c1401b6b35fdafda98bff9d2295b228b35e9ec6fe8fd130a6d5a8bf"
+    },
+    {
+      "key": "13fa98c6",
+      "text": "Nếu người khó khăn nhất bị loại ngay từ đầu…",
+      "caption": "Nếu người khó khăn nhất bị loại ngay từ đầu…",
+      "seconds": 1.962086,
+      "bytes": 16553,
+      "sha256": "13702caa8b545a928ac2db152ace5c9f58fec2894e3e05dea64c18d0acda4d23"
+    },
+    {
+      "key": "4865ed9e",
+      "text": "Em đang muốn chọn người dễ thành công nhất,",
+      "caption": "Em đang muốn chọn người dễ thành công nhất,",
+      "seconds": 1.962086,
+      "bytes": 16553,
+      "sha256": "5db13c759ce7a040de6e5835396854394163cc862c0171af215273ccf31c18c4"
+    },
+    {
+      "key": "58a259d3",
+      "text": "Mình thử một hồ sơ nữa nhé. Chính em.",
+      "caption": "Mình thử một hồ sơ nữa nhé. Chính em.",
+      "seconds": 1.822766,
+      "bytes": 15299,
+      "sha256": "8ba315995f0f2a1f23cc628d4db16d73477a05c05bdfb1de82d99cd845cadf9e"
+    },
+    {
+      "key": "9d3800f9",
+      "text": "Với những gì em đã nhập, kết quả đó có thể hợp lý.",
+      "caption": "Với những gì em đã nhập, kết quả đó có thể hợp lý.",
+      "seconds": 2.589025,
+      "bytes": 21568,
+      "sha256": "5ab1ea7d5fb56e167b4094caeb027394c3f4867f46fdf555be6e801a52dca217"
+    },
+    {
+      "key": "4dba20ed",
+      "text": "Cô không thể hứa em sẽ thành công.",
+      "caption": "Cô không thể hứa em sẽ thành công.",
+      "seconds": 1.451247,
+      "bytes": 12373,
+      "sha256": "ff98fcef7d5748dc97679d340ea2504cd24e70ce33c19619e9a14690964c00a7"
+    },
+    {
+      "key": "7cb2d509",
+      "text": "Người dùng cần được giúp điều gì?",
+      "caption": "Người dùng cần được giúp điều gì?",
+      "seconds": 1.381587,
+      "bytes": 11746,
+      "sha256": "df8186122a1a433c6b3ece7b698550d6218cd013c217aeb5a7e7fa42b564d5a2"
+    },
+    {
+      "key": "0633a1cb",
+      "text": "Ba dấu vết còn trên bàn: bản thuyết trình, sổ thiết kế và dữ liệu thử nghiệm.",
+      "caption": "Ba dấu vết còn trên bàn: bản thuyết trình, sổ thiết kế và dữ liệu thử nghiệm.",
+      "seconds": 3.900952,
+      "bytes": 32017,
+      "sha256": "257a8d9c9b94bf4bb91f00e69c31b0bb9f867b373b3a0463d601609437ee7855"
+    },
+    {
+      "key": "8d4d9792",
+      "text": "Nếu những người khó cải thiện nhất luôn bị xếp cuối, ai sẽ giúp họ có cơ hội tiến bộ?",
+      "caption": "Nếu những người khó cải thiện nhất luôn bị xếp cuối, ai sẽ giúp họ có cơ hội tiến bộ?",
+      "seconds": 4.272472,
+      "bytes": 34943,
+      "sha256": "c4f8078cd6a6341fcc02c7e9ebd4010abcb604aa9354c1a0853ef49c7bf4193c"
+    },
+    {
+      "key": "ac50c460",
+      "text": "An tối ưu hiệu quả phân bổ suất hỗ trợ theo mức cải thiện dự đoán. Nhu cầu chưa được dùng để quyết định.",
+      "caption": "An tối ưu hiệu quả phân bổ suất hỗ trợ theo mức cải thiện dự đoán. Nhu cầu chưa được dùng để quyết định.",
+      "seconds": 4.725261,
+      "bytes": 38496,
+      "sha256": "6ac6dac6b7fe469843a31acb8cea1cbc60d619e11bb2739c341c8536ca9e5ba9"
+    },
+    {
+      "key": "771d3ec6",
+      "text": "Chỉ có tiến bộ trước đây và mức học đều. Hoàn cảnh, nỗ lực gần đây và nhu cầu hỗ trợ chưa được ghi nhận.",
+      "caption": "Chỉ có tiến bộ trước đây và mức học đều. Hoàn cảnh, nỗ lực gần đây và nhu cầu hỗ trợ chưa được ghi nhận.",
+      "seconds": 5.05034,
+      "bytes": 41213,
+      "sha256": "a42ab9888d2136f2005035e6ae397fe1aaf552301bd3191b0fcd9adc4cda8fa0"
+    },
+    {
+      "key": "5a61cca2",
+      "text": "Dữ liệu giả lập trong thế giới game. Chọn hồ sơ, xem yếu tố được dùng rồi chạy thử.",
+      "caption": "Dữ liệu giả lập trong thế giới game. Chọn hồ sơ, xem yếu tố được dùng rồi chạy thử.",
+      "seconds": 4.202812,
+      "bytes": 34316,
+      "sha256": "993b383cf1fac98f5492fb22dfa8f74b86da4df0f41815f1f5849ff118aafae3"
+    },
+    {
+      "key": "dc483eac",
+      "text": "MAI: dự đoán +18 điểm, ngưỡng ưu tiên +12. Được ưu tiên hỗ trợ. Nhu cầu hỗ trợ chưa được dùng trong quyết định.",
+      "caption": "MAI: dự đoán +18 điểm, ngưỡng ưu tiên +12. Được ưu tiên hỗ trợ. Nhu cầu hỗ trợ chưa được dùng trong quyết định.",
+      "seconds": 6.292608,
+      "bytes": 51035,
+      "sha256": "4347d8a619cdc6cca7ea170b105e5d4263e8e8742c94598233c923480ba83b40"
+    },
+    {
+      "key": "3f77c8e8",
+      "text": "MINH: dự đoán +7 điểm, ngưỡng ưu tiên +12. Không được ưu tiên hỗ trợ. Nhu cầu hỗ trợ chưa được dùng trong quyết định.",
+      "caption": "MINH: dự đoán +7 điểm, ngưỡng ưu tiên +12. Không được ưu tiên hỗ trợ. Nhu cầu hỗ trợ chưa được dùng trong quyết định.",
+      "seconds": 6.013968,
+      "bytes": 48945,
+      "sha256": "c493c09cb3006d9da18f465e734b0043f32995a434897e6dad0c78dcd21a4577"
+    },
+    {
+      "key": "ec1c9940",
+      "text": "dự đoán +5 điểm, ngưỡng ưu tiên +12. Không được ưu tiên hỗ trợ. Nhu cầu hỗ trợ chưa được dùng trong quyết định.",
+      "caption": "AN: dự đoán +5 điểm, ngưỡng ưu tiên +12. Không được ưu tiên hỗ trợ. Nhu cầu hỗ trợ chưa được dùng trong quyết định.",
+      "seconds": 5.712109,
+      "bytes": 46437,
+      "sha256": "44e59803ea80d085665164c57c5975dccd76eba9a155601ee4d0c06300c90706"
+    },
+    {
+      "key": "e1c24306",
+      "text": "Đối chiếu vật chứng với kết quả trên laptop. Dự đoán đang bỏ sót điều gì?",
+      "caption": "Đối chiếu vật chứng với kết quả trên laptop. Dự đoán đang bỏ sót điều gì?",
+      "seconds": 3.413333,
+      "bytes": 28047,
+      "sha256": "641d21a475ccde097c021b42eea358bbf310e6d8ed8c78c6a0c991ec40e87c9d"
+    },
+    {
+      "key": "591919e3",
+      "text": "Vật chứng này đã được đối chiếu. Chọn một vật chứng khác để mở thêm góc nhìn.",
+      "caption": "Vật chứng này đã được đối chiếu. Chọn một vật chứng khác để mở thêm góc nhìn.",
+      "seconds": 3.587483,
+      "bytes": 29510,
+      "sha256": "d108619c7782af0107c8361e0a9302fc77aa498f98369b4c30294f28a3b6932f"
+    },
+    {
+      "key": "092d5011",
+      "text": "Dự đoán cải thiện thấp , chuyển thành, không ưu tiên. Nhưng người đó vẫn có thể cần hỗ trợ nhiều nhất.",
+      "caption": "Dự đoán cải thiện thấp → không ưu tiên. Nhưng người đó vẫn có thể cần hỗ trợ nhiều nhất.",
+      "seconds": 4.551111,
+      "bytes": 37242,
+      "sha256": "c85663e0178f571c4e257903ed518812b20a3a8f3a3e630ec9b35247d8bc6c37"
+    },
+    {
+      "key": "005923b0",
+      "text": "Mục tiêu đang chọn kết quả dễ đạt. Nó chưa trả lời nên hỗ trợ người gặp khó khăn bằng cách nào.",
+      "caption": "Mục tiêu đang chọn kết quả dễ đạt. Nó chưa trả lời nên hỗ trợ người gặp khó khăn bằng cách nào.",
+      "seconds": 4.562721,
+      "bytes": 37242,
+      "sha256": "da951dc6efaf888ce79bd113b38faeac618f5772a0d22e1aeb4617f992c57a52"
+    },
+    {
+      "key": "da31b3aa",
+      "text": "Dữ liệu thiếu hoàn cảnh và nỗ lực. Kết quả mô hình không mô tả đầy đủ An, càng không chốt tương lai.",
+      "caption": "Dữ liệu thiếu hoàn cảnh và nỗ lực. Kết quả mô hình không mô tả đầy đủ An, càng không chốt tương lai.",
+      "seconds": 4.527891,
+      "bytes": 37033,
+      "sha256": "1a68d9b13a6590f7b0cfb291ff3ef7847d92d11290a304b62c393b247b866e2b"
+    },
+    {
+      "key": "f76dbc2c",
+      "text": "Buổi trình bày làm em buồn lắm sao?",
+      "caption": "Cô Vân: “Buổi trình bày làm em buồn lắm sao?”",
+      "seconds": 1.706667,
+      "bytes": 14463,
+      "sha256": "3a29379c3a1e28207600cce9fdaa0855f4a8c67c897e252564d94ec814914e3c"
+    },
+    {
+      "key": "66a13f94",
+      "text": "Em nghĩ mình làm tốt. Nhưng câu hỏi cuối cùng… em không trả lời được.",
+      "caption": "An: “Em nghĩ mình làm tốt. Nhưng câu hỏi cuối cùng… em không trả lời được.”",
+      "seconds": 3.065034,
+      "bytes": 25330,
+      "sha256": "4f2f5b26fb5c015cf34af46b3750d639f2376a5aadca27a566b9d0195ffa8754"
+    },
+    {
+      "key": "3d156f70",
+      "text": "Em muốn chương trình giúp ai?",
+      "caption": "Cô Vân: “Em muốn chương trình giúp ai?”",
+      "seconds": 1.253878,
+      "bytes": 10701,
+      "sha256": "811d41019b081f9cc75777aa823ea86bd4684f1b88af7bf29a0dea93eda83ecf"
+    },
+    {
+      "key": "d022fd02",
+      "text": "Những người được dự đoán là sẽ tiến bộ nhiều nhất.",
+      "caption": "An: “Những người được dự đoán là sẽ tiến bộ nhiều nhất.”",
+      "seconds": 2.124626,
+      "bytes": 17807,
+      "sha256": "e24ed7fcf16da85f20c047463f6204a005832bc5fd028599e6c454227e8bc7d4"
+    },
+    {
+      "key": "61839bc5",
+      "text": "Thế còn những người đang cần giúp đỡ, nhưng không có đủ dữ liệu để dự đoán?",
+      "caption": "Cô Vân: “Thế còn những người đang cần giúp đỡ, nhưng không có đủ dữ liệu để dự đoán?”",
+      "seconds": 3.448163,
+      "bytes": 28256,
+      "sha256": "0f3be1e24aabfe299919f5d09eca396fedf66c8642f4280c1cad41899c055712"
+    },
+    {
+      "key": "83c27f0c",
+      "text": "Họ có thể không được chọn.",
+      "caption": "An: “Họ có thể không được chọn.”",
+      "seconds": 1.033288,
+      "bytes": 9030,
+      "sha256": "8e4c3c73fd5044bcb2a704fd9ef8c2e23f6ca0623ffe5c22a383bf11b3bccfd3"
+    },
+    {
+      "key": "d6da2660",
+      "text": "Vậy em nghĩ mình cần xem lại điều gì?",
+      "caption": "Cô Vân: “Vậy em nghĩ mình cần xem lại điều gì?”",
+      "seconds": 1.880816,
+      "bytes": 15717,
+      "sha256": "9213e96afd3badf771a3720a5e9d01603cb4b12bfb9d0d242665413c5b16a3ab"
+    },
+    {
+      "key": "ef5f2459",
+      "text": "Nếu sau này em lại thất bại thì sao, cô?",
+      "caption": "An: “Nếu sau này em lại thất bại thì sao, cô?”",
+      "seconds": 2.089796,
+      "bytes": 17389,
+      "sha256": "8f2d3dd65e2eebf314526bcbe8930bf368da9bb50d509fc7f4e2ebf81eac450b"
+    },
+    {
+      "key": "f923f97d",
+      "text": "Cô không biết ngày mai em sẽ làm được đến đâu.",
+      "caption": "Cô Vân: “Cô không biết ngày mai em sẽ làm được đến đâu.”",
+      "seconds": 2.043356,
+      "bytes": 17180,
+      "sha256": "9dc49372bb195c2f668fd85643739f5bd3a2becf3eb29422b50991b26ebfb30f"
+    },
+    {
+      "key": "e88dd23d",
+      "text": "Nhưng mình đâu cần biết chắc kết quả mới có thể bắt đầu lại.",
+      "caption": "Cô Vân: “Nhưng mình đâu cần biết chắc kết quả mới có thể bắt đầu lại.”",
+      "seconds": 2.716735,
+      "bytes": 22404,
+      "sha256": "b634d86f57652d54b50d6fd436e1d203ee0e4bcd0221a0bda575c453ff4677f0"
+    },
+    {
+      "key": "6572cd51",
+      "text": "Làm sao để không bỏ lại người đang cần cơ hội?",
+      "caption": "Làm sao để không bỏ lại người đang cần cơ hội?",
+      "seconds": 2.414875,
+      "bytes": 20106,
+      "sha256": "aa133119d93fa53fc2d65258b899b3001c5fd4046201833291ab4340e20affb3"
+    },
+    {
+      "key": "c316f7b9",
+      "text": "Tối đa hóa cải thiện dự kiến. Chọn nơi mô hình dự đoán sẽ tạo ra nhiều tiến bộ nhất.",
+      "caption": "Tối đa hóa cải thiện dự kiến. Chọn nơi mô hình dự đoán sẽ tạo ra nhiều tiến bộ nhất.",
+      "seconds": 4.144762,
+      "bytes": 33898,
+      "sha256": "54fd7dcb81a28fedd2bf3f6889f108de0eee8e7b37bf63ea65b78d6e0a0761f9"
+    },
+    {
+      "key": "f540d384",
+      "text": "Ai thực sự đang cần hỗ trợ? Có người cần cơ hội, dù dữ liệu chưa cho phép dự đoán.",
+      "caption": "Ai thực sự đang cần hỗ trợ? Có người cần cơ hội, dù dữ liệu chưa cho phép dự đoán.",
+      "seconds": 4.005442,
+      "bytes": 32853,
+      "sha256": "e3f2e1decd5253ad177033ece0e60bf0297f5c2b3a8e84539c4331449b151090"
+    },
+    {
+      "key": "b477404e",
+      "text": "An cầm bút. Bạn đang khôi phục một dòng trong ký ức, không thay đổi quá khứ.",
+      "caption": "An cầm bút. Bạn đang khôi phục một dòng trong ký ức, không thay đổi quá khứ.",
+      "seconds": 3.575873,
+      "bytes": 29301,
+      "sha256": "bdd19cd1a622a9d35bab5266f522ada5c148229a0b380960799943208f80fe3a"
+    },
+    {
+      "key": "1b194bc1",
+      "text": "Ai dễ tiến bộ nhất? Làm sao để không bỏ lại người còn cần cơ hội? Chạm hai dấu bút để nối lại suy nghĩ.",
+      "caption": "Ai dễ tiến bộ nhất? Làm sao để không bỏ lại người còn cần cơ hội? Chạm hai dấu bút để nối lại suy nghĩ.",
+      "seconds": 5.15483,
+      "bytes": 42048,
+      "sha256": "755c02c2be847b606879e2f5163ae673ea2560d68e3cb587030e7acb8ecc5c0a"
+    },
+    {
+      "key": "49c57caf",
+      "text": "Hai câu hỏi được nối. Khôi phục nguyên tắc đầu ra mà An đã chọn.",
+      "caption": "Hai câu hỏi được nối. Khôi phục nguyên tắc đầu ra mà An đã chọn.",
+      "seconds": 2.914104,
+      "bytes": 24076,
+      "sha256": "303f100f683d30667b5f9755f7ae6b4e23204d670cfbc6faa3ddd1a3662ec590"
+    },
+    {
+      "key": "42c22f49",
+      "text": "phán quyết cuối cùng , chuyển thành, bước hỗ trợ tiếp theo",
+      "caption": "FINAL JUDGMENT → NEXT SUPPORT STEP",
+      "seconds": 2.600635,
+      "bytes": 21568,
+      "sha256": "cfc01573e3f687fce9c5bf2c9e2ca8a59b3a1a6b63dd93bed76d9d4f1dde8711"
+    },
+    {
+      "key": "7a3687b5",
+      "text": "hai nghìn không trăm ba mươi lăm · BẢN THIẾT KẾ NHÓM.",
+      "caption": "2035 · BẢN THIẾT KẾ NHÓM. [Cùng một cuốn sổ, trong một căn phòng khác.]",
+      "seconds": 2.600635,
+      "bytes": 21568,
+      "sha256": "983696ec730cffe41ad46a11a18160f9c0bb8e53580a312d97813f85a32af286"
+    },
+    {
+      "key": "e94960b3",
+      "text": "hai nghìn không trăm bốn mươi lăm · Ai-on · KIỂM THỬ.",
+      "caption": "2045 · AION · KIỂM THỬ. [Cùng một cuốn sổ, trong một căn phòng khác.]",
+      "seconds": 2.345215,
+      "bytes": 19479,
+      "sha256": "74249d18263b3dd140d2910628581061210281ebc09d66b7c849e4b0423a1b4e"
+    },
+    {
+      "key": "1d4563f5",
+      "text": "hai nghìn không trăm hai mươi chín. Một thử nghiệm nữa không đạt. An ghi lại giới hạn, rồi thử một cách hỗ trợ khác.",
+      "caption": "2029. Một thử nghiệm nữa không đạt. An ghi lại giới hạn, rồi thử một cách hỗ trợ khác.",
+      "seconds": 5.07356,
+      "bytes": 41421,
+      "sha256": "8008fbefcd8fd4647561bc172078582b012c6dd7373d3b21374a4252cf3fa5ed"
+    },
+    {
+      "key": "dfdc3a38",
+      "text": "hai nghìn không trăm ba mươi lăm. Cùng một nhóm nghiên cứu, An phát triển hệ thống có năng lực rộng hơn. Nguyên tắc được đem ra kiểm tra, không chỉ viết vào sổ.",
+      "caption": "2035. Cùng một nhóm nghiên cứu, An phát triển hệ thống có năng lực rộng hơn. Nguyên tắc được đem ra kiểm tra, không chỉ viết vào sổ.",
+      "seconds": 7.140136,
+      "bytes": 57931,
+      "sha256": "f08f2ad6f9d448c1ed65ba4d3ea014b1ce793ada51a34808c20db5f866674890"
+    },
+    {
+      "key": "f9e9d68f",
+      "text": "hai nghìn không trăm bốn mươi lăm. Dự án Ai-on chuẩn bị ra mắt toàn cầu. Nhóm tiếp tục thử giới hạn và giữ quyền xem xét của con người.",
+      "caption": "2045. Dự án AION chuẩn bị ra mắt toàn cầu. Nhóm tiếp tục thử giới hạn và giữ quyền xem xét của con người.",
+      "seconds": 6.420317,
+      "bytes": 52079,
+      "sha256": "94a9b82f37ba5553fe1bf6a062af2fe1d7c92d081cfe1a981c96ae512cf2d14c"
+    },
+    {
+      "key": "73b4b3a5",
+      "text": "hai nghìn không trăm bốn mươi sáu. Ai-on — trí tuệ nhân tạo đa năng số 1 thế giới trong thế giới hư cấu này.",
+      "caption": "2046. AION — AI đa năng số 1 thế giới trong thế giới hư cấu này.",
+      "seconds": 5.01551,
+      "bytes": 40795,
+      "sha256": "8d3506d92dc6414e079fed49d98e4bb654fdb0ff80707494d1c3e7d9d607fe92"
+    },
+    {
+      "key": "2b490391",
+      "text": "Hai mươi năm trước, hệ thống thử nghiệm đã không ưu tiên người này được hỗ trợ.",
+      "caption": "AION: Hai mươi năm trước, hệ thống thử nghiệm đã không ưu tiên người này được hỗ trợ.",
+      "seconds": 3.482993,
+      "bytes": 28674,
+      "sha256": "2281fb32b4d8ef55418b8fddd21cf6c944426386cd03acb1e21656316637f467"
+    },
+    {
+      "key": "ce2e8c0e",
+      "text": "An, nhà sáng lập Ai-on",
+      "caption": "AN — FOUNDER OF AION",
+      "seconds": 1.230658,
+      "bytes": 10701,
+      "sha256": "7293a1715d809b628c4dd5af7591dd0065e899148aeb09d2b46cbeb2f9648124"
+    },
+    {
+      "key": "3c2851ed",
+      "text": "Em đã thử rất nhiều lần rồi.",
+      "caption": "Nhà nghiên cứu: “Em đã thử rất nhiều lần rồi.”",
+      "seconds": 1.428027,
+      "bytes": 12164,
+      "sha256": "85a62397216f960b2b8fd3d0335a2d50a2d08b1a9c4f7719c57acd6572ddb6f8"
+    },
+    {
+      "key": "fade40be",
+      "text": "Vậy thì chúng ta xem lại từ đầu.",
+      "caption": "An: “Vậy thì chúng ta xem lại từ đầu.”",
+      "seconds": 1.486077,
+      "bytes": 12582,
+      "sha256": "02b392a2df42289751e72c349125b7a1217b4153e51b298820a4ee88d6f335c0"
+    },
+    {
+      "key": "532bdd85",
+      "text": "Ba dấu vết: một kết quả, một người đã ở lại, một lựa chọn trong công nghệ. Chạm để nối lại ký ức.",
+      "caption": "Ba dấu vết: một kết quả, một người đã ở lại, một lựa chọn trong công nghệ. Chạm để nối lại ký ức.",
+      "seconds": 5.06195,
+      "bytes": 41213,
+      "sha256": "bfebb5eea690a2b2f2199298fddf147eb71140b8e698d9723cf676794d7d7ebb"
+    },
+    {
+      "key": "bc6e90f6",
+      "text": "hai nghìn không trăm hai mươi sáu: không được đề xuất. Một ước tính theo mục tiêu cũ, không phải tương lai cuối cùng của An.",
+      "caption": "2026: NOT RECOMMENDED. Một ước tính theo mục tiêu cũ, không phải tương lai cuối cùng của An.",
+      "seconds": 5.421859,
+      "bytes": 44138,
+      "sha256": "0cff22639c2ef63e730dfde0cabc8b9b1327efb8cb0a3e60a27c1ffd11cf05d5"
+    },
+    {
+      "key": "cc2e54d4",
+      "text": "Cô Vân không biết trước kết quả. Cô chọn ngồi lại, để An còn cơ hội thử tiếp.",
+      "caption": "Cô Vân không biết trước kết quả. Cô chọn ngồi lại, để An còn cơ hội thử tiếp.",
+      "seconds": 3.587483,
+      "bytes": 29510,
+      "sha256": "63e5afa097aab9670b28c6f5e3a97aa212dd0a9415e57f5d3f85822f0ddfff62"
+    },
+    {
+      "key": "faef4210",
+      "text": "An mang lựa chọn ấy vào công nghệ: giải thích giới hạn, xét nhu cầu và mở đường cho con người xem lại.",
+      "caption": "An mang lựa chọn ấy vào công nghệ: giải thích giới hạn, xét nhu cầu và mở đường cho con người xem lại.",
+      "seconds": 4.771701,
+      "bytes": 38914,
+      "sha256": "fe294cb5d558c969ce6f861805172b3404517152461785bdae0073e7e2bebae3"
+    },
+    {
+      "key": "663d3297",
+      "text": "Tôi có thể dự đoán nhiều kết quả.",
+      "caption": "AION: Tôi có thể dự đoán nhiều kết quả.",
+      "seconds": 1.509297,
+      "bytes": 12791,
+      "sha256": "4bbe31abdec70f6ab222d1d38098566e84383af71ef3ba091dbcd01793cc6d09"
+    },
+    {
+      "key": "67b17d7e",
+      "text": "hai nghìn không trăm hai mươi sáu. Một ước tính theo mục tiêu cũ, không phải tương lai của một người.",
+      "caption": "2026. Một ước tính theo mục tiêu cũ, không phải tương lai của một người.",
+      "seconds": 4.388571,
+      "bytes": 35779,
+      "sha256": "2b52d1a1a1e7abfff665195e7213ea702f3a483534e5f9f0a48f8dcfd417463f"
+    },
+    {
+      "key": "3e471707",
+      "text": "Cô Vân chọn ngồi lại, khi chưa biết An sẽ đi được đến đâu.",
+      "caption": "Cô Vân chọn ngồi lại, khi chưa biết An sẽ đi được đến đâu.",
+      "seconds": 2.681905,
+      "bytes": 22195,
+      "sha256": "9e6fe02781aed84912b8453918d29a0b6414c89c1ea29ebebb429f5b20f148ec"
+    },
+    {
+      "key": "a101fa1d",
+      "text": "bước hỗ trợ tiếp theo. Giữ lời giải thích và cơ hội để con người xem lại.",
+      "caption": "NEXT SUPPORT STEP. Giữ lời giải thích và cơ hội để con người xem lại.",
+      "seconds": 3.517823,
+      "bytes": 28883,
+      "sha256": "f9ff01d13983d7bfd42c9718e1ff01109b0f877c034c2260f49bd932ce6604fc"
+    },
+    {
+      "key": "9bdc1169",
+      "text": "Hai mươi năm trước, một hệ thống đã dự đoán rằng An không nên được ưu tiên hỗ trợ.",
+      "caption": "AION: Hai mươi năm trước, một hệ thống đã dự đoán rằng An không nên được ưu tiên hỗ trợ.",
+      "seconds": 3.935782,
+      "bytes": 32226,
+      "sha256": "8d8bc4dd2fcfee28c4c60aae06684bd3ae8e908df4587dce9facc50b25d86990"
+    },
+    {
+      "key": "76b2b284",
+      "text": "Còn bạn?",
+      "caption": "AION: Còn bạn?",
+      "seconds": 0.371519,
+      "bytes": 3805,
+      "sha256": "122dc36844f36bfdfc194380c2f9b9a32c9e4b650419d9d5674ac9d786186de1"
+    },
+    {
+      "key": "ec90ab18",
+      "text": "Một lời cảm ơn có thể bắt đầu bằng vài chữ. Bạn cũng có thể giữ khoảnh khắc này trong im lặng.",
+      "caption": "Một lời cảm ơn có thể bắt đầu bằng vài chữ. Bạn cũng có thể giữ khoảnh khắc này trong im lặng.",
+      "seconds": 4.063492,
+      "bytes": 33271,
+      "sha256": "a2fbce9dc74244f7860a20ce704baa722555c98efd2c22e199adc5ce92f138da"
+    },
+    {
+      "key": "5abbb30f",
+      "text": "Có những bài học không được viết thành lời.",
+      "caption": "Có những bài học không được viết thành lời.",
+      "seconds": 1.695057,
+      "bytes": 14254,
+      "sha256": "09e180e107782aa3dcb1dcaa4776fdc6e89f75504ee752b327debf989741569d"
+    },
+    {
+      "key": "46357cc9",
+      "text": "…thì chương trình này đang giúp ai?",
+      "caption": "…thì chương trình này đang giúp ai?",
+      "seconds": 1.346757,
+      "bytes": 11537,
+      "sha256": "f7e2781284a32cc7fff35bdee1f297990a61e59dcf27fb28eb8810b8696070fc"
+    },
+    {
+      "key": "68ad23fd",
+      "text": "…Nó loại cả em.",
+      "caption": "…Nó loại cả em.",
+      "seconds": 0.882358,
+      "bytes": 7776,
+      "sha256": "c33ccd0194587a0872203a9e5700e1fafaec2054db17fb3a8ab21c303bf478ee"
+    },
+    {
+      "key": "6d2f4655",
+      "text": "Ngay cả hệ thống của mình... cũng không chọn mình.",
+      "caption": "An : « Ngay cả hệ thống của mình... cũng không chọn mình. »",
+      "seconds": 2.031746,
+      "bytes": 16971,
+      "sha256": "6069636fd0d6dc886700da6048cf1197fc82a0088276cccf397ebc19b050a2c2"
+    },
+    {
+      "key": "bf555579",
+      "text": "Mọi người đã về. Một màn hình vẫn sáng.",
+      "caption": "Mọi người đã về. Một màn hình vẫn sáng.",
+      "seconds": 1.904036,
+      "bytes": 15926,
+      "sha256": "15b0c25e2655c24e38dad036b08ce9bf2c69c964ad29d41d0770602509e5f563"
+    },
+    {
+      "key": "ac9ac8d9",
+      "text": "hay muốn giúp người cần một cơ hội nhất?",
+      "caption": "hay muốn giúp người cần một cơ hội nhất?",
+      "seconds": 1.695057,
+      "bytes": 14254,
+      "sha256": "70cd2eccfae038c1f0262fb44b59729d9048aa71b7775b39a188a64566489b6e"
+    },
+    {
+      "key": "dadc15bf",
+      "text": "Nhưng dữ liệu của hôm nay đâu kể hết được ngày mai.",
+      "caption": "Nhưng dữ liệu của hôm nay đâu kể hết được ngày mai.",
+      "seconds": 2.275556,
+      "bytes": 19061,
+      "sha256": "05b5b3386f7daa65993aabca6b3762e3d33344017442b8da10829093e5e54feb"
+    },
+    {
+      "key": "1bd21272",
+      "text": "Nhưng cô thấy em còn muốn tìm cách làm tốt hơn.",
+      "caption": "Nhưng cô thấy em còn muốn tìm cách làm tốt hơn.",
+      "seconds": 2.147846,
+      "bytes": 18016,
+      "sha256": "009de66dfa9621c9f1cf2b126b994590681ca1b56c26f13849279b807a2c7659"
+    },
+    {
+      "key": "b455d3d6",
+      "text": "Dự đoán vẫn hữu ích. Cần xét cả nhu cầu, giải thích và cơ hội để con người xem lại.",
+      "caption": "Dự đoán vẫn hữu ích. Cần xét cả nhu cầu, giải thích và cơ hội để con người xem lại.",
+      "seconds": 4.133152,
+      "bytes": 33898,
+      "sha256": "a2cda4eeefa79531c0104f6a1c183bb815e1d21c20f508f6de0a76b7714c6648"
+    },
+    {
+      "key": "fcdd62cc",
+      "text": "Trong hành trình của mình, ai là người bạn muốn gửi lời cảm ơn?",
+      "caption": "AION: Trong hành trình của mình, ai là người bạn muốn gửi lời cảm ơn?",
+      "seconds": 2.821224,
+      "bytes": 23240,
+      "sha256": "84a697d3d0bfe675632da7938c4f8c68236b8897209d1f787f9021c81a9cc360"
+    },
+    {
+      "key": "74ec7b3c",
+      "text": "Tan học rồi. Sao em vẫn ngồi đây?",
+      "caption": "Tan học rồi. Sao em vẫn ngồi đây?",
+      "seconds": 1.590567,
+      "bytes": 13418,
+      "sha256": "7123693f060dd20b53acab852f946fee52c48adb842dda212f58e83d495ac145"
+    },
+    {
+      "key": "481d8157",
+      "text": "An, em vẫn chưa về à?",
+      "caption": "Cô Vân: “An, em vẫn chưa về à?”",
+      "seconds": 1.207438,
+      "bytes": 10493,
+      "sha256": "41ef5c427dc47ef9216ce0cc3c9db88a22b60e9de73bab8040fc21e44a087055"
+    },
+    {
+      "key": "840dae64",
+      "text": "Từ nghiên cứu khoa học đến y tế và giáo dục: những con người cùng làm việc với Ai-on.",
+      "caption": "Từ nghiên cứu khoa học đến y tế và giáo dục: những con người cùng làm việc với AION.",
+      "seconds": 4.086712,
+      "bytes": 33480,
+      "sha256": "145106c9481a416cec0e4e293c8d6cae18ea72ddc15e7b80d58745bbf3742bf5"
+    },
+    {
+      "key": "496de0f4",
+      "text": "Nhưng dự đoán không phải là quyền quyết định con người sẽ trở thành ai.",
+      "caption": "AION: Nhưng dự đoán không phải là quyền quyết định con người sẽ trở thành ai.",
+      "seconds": 2.983764,
+      "bytes": 24703,
+      "sha256": "d15a225720221e5e3a25c855d94af43548d52c09ce2b480699f9d7e5bc20e83d"
+    },
+    {
+      "key": "51b5a6d7",
+      "text": "Global Intelligence Summit · hai nghìn không trăm bốn mươi sáu",
+      "caption": "Global Intelligence Summit · 2046",
+      "seconds": 2.438095,
+      "bytes": 20315,
+      "sha256": "0af150b93a34306dc84a71bd498728c4ccf2b1b2e8650219be6010b64e72a5cd"
+    },
+    {
+      "key": "3d1ddc12",
+      "text": "Nó dự báo kết quả từ các biến đã ghi nhận. Nó không ghi lại toàn bộ hoàn cảnh của người này.",
+      "caption": "AION: Nó dự báo kết quả từ các biến đã ghi nhận. Nó không ghi lại toàn bộ hoàn cảnh của người này.",
+      "seconds": 4.423401,
+      "bytes": 36197,
+      "sha256": "6c6843234c42b6bc54497d2b2934fcba0540dedcd2d650963cc3542e1f22934c"
+    },
+    {
+      "key": "7039c3e8",
+      "text": "Có một điều đã thay đổi tương lai của người này. Tư liệu còn lại chưa đủ để xác định đó là gì.",
+      "caption": "AION: Có một điều đã thay đổi tương lai của người này. Tư liệu còn lại chưa đủ để xác định đó là gì.",
+      "seconds": 4.330522,
+      "bytes": 35361,
+      "sha256": "fa99aa1a19921947df7aa101977df0c9cb46df36876b3a75e5ba30cad352fb57"
+    },
+    {
+      "key": "b3b0bdd7",
+      "text": "Đây là quyết định không ưu tiên hỗ trợ của mô hình, không phải phán quyết về An.",
+      "caption": "Đây là quyết định không ưu tiên hỗ trợ của mô hình, không phải phán quyết về An.",
+      "seconds": 3.552653,
+      "bytes": 29092,
+      "sha256": "66e9828ea6c44d5622f05ae9daac8b85aa1e192f3d1a2bc17a2d6e4a8ad84a45"
+    },
+    {
+      "key": "bbbccd77",
+      "text": "Người đó chính là An. Sinh viên năm hai nghìn không trăm hai mươi sáu là người đã sáng tạo ra tôi.",
+      "caption": "AION: Người đó chính là An. Sinh viên năm 2026 là người đã sáng tạo ra tôi.",
+      "seconds": 4.423401,
+      "bytes": 36197,
+      "sha256": "4b53b110f260e9a37cd2eca7d3c0daaeb1af202fff59c9154675ae73c9afef36"
+    },
+    {
+      "key": "566fa110",
+      "text": "Nhưng chúng vẫn tiếp tục được trao đi.",
+      "caption": "Nhưng chúng vẫn tiếp tục được trao đi.",
+      "seconds": 1.544127,
+      "bytes": 13209,
+      "sha256": "490c634efb1a9541e67457cf623926ffb0fb44b3ff4fa089e5b78009d91e56a3"
+    },
+    {
+      "key": "5cfc21a5",
+      "text": "Những câu hỏi từng nằm ngoài tầm với… giờ mở ra những hướng đi mới.",
+      "caption": "Những câu hỏi từng nằm ngoài tầm với… giờ mở ra những hướng đi mới.",
+      "seconds": 3.065034,
+      "bytes": 25330,
+      "sha256": "0a7f7cb9ddf72ece7607ca2164767659062ae290ac12aa65129cc9afa444c87a"
+    },
+    {
+      "key": "a4bce824",
+      "text": "Nếu em muốn thử lại, cô ngồi đây cùng em.",
+      "caption": "Nếu em muốn thử lại, cô ngồi đây cùng em.",
+      "seconds": 2.136236,
+      "bytes": 17807,
+      "sha256": "9486a1ca287812427fe12410ddc5a36ce99d97842663d1b2aafc725757d6758e"
+    },
+    {
+      "key": "4ee3c9a4",
+      "text": "Dạ… em đang xem lại chương trình.",
+      "caption": "An: “Dạ… em đang xem lại chương trình.”",
+      "seconds": 1.300317,
+      "bytes": 11119,
+      "sha256": "083839bfd07490b59bec70b390401eb00a7085e048fc375895c07126fab7bb02"
+    },
+    {
+      "key": "e1d8e847",
+      "text": "Nhưng dự đoán ấy không quyết định con người An trở thành.",
+      "caption": "AION: Nhưng dự đoán ấy không quyết định con người An trở thành.",
+      "seconds": 2.507755,
+      "bytes": 20733,
+      "sha256": "157cc7451cb2a986dd4f24481433389886d276367f68e236b59434b0e9158243"
+    },
+    {
+      "key": "254fd898",
+      "text": "Giữa kết quả đánh giá và tương lai của người này… vẫn còn một khoảng trống. Hãy tìm điều đã bị bỏ qua.",
+      "caption": "AION: Giữa kết quả đánh giá và tương lai của người này… vẫn còn một khoảng trống. Hãy tìm điều đã bị bỏ qua.",
+      "seconds": 4.760091,
+      "bytes": 38914,
+      "sha256": "63971960b06922bdd1eaf5b6c5a5cf3a155e279d672f2564bd98b248c59670a8"
+    },
+    {
+      "key": "be0417ea",
+      "text": "Ai-on — trí tuệ nhân tạo đa năng số 1 thế giới năm hai nghìn không trăm bốn mươi sáu.",
+      "caption": "AION — trí tuệ nhân tạo đa năng số 1 thế giới năm 2046.",
+      "seconds": 4.005442,
+      "bytes": 32853,
+      "sha256": "b581badcbb8b723e033595a9c7d83da9e8edd1d8f053ab81ceaee3953011fd64"
+    },
+    {
+      "key": "ab5dff6f",
+      "text": "Điều An mang theo không chỉ là kiến thức.",
+      "caption": "AION: Điều An mang theo không chỉ là kiến thức.",
+      "seconds": 1.648617,
+      "bytes": 14045,
+      "sha256": "397a9267572e9143ba175d4f442242004a7149c7a3509ceb674041966443e7b3"
+    },
+    {
+      "key": "d1556f7c",
+      "text": "Từ những khám phá khoa học tưởng chừng bất khả thi, đến việc dự báo các cuộc khủng hoảng trước khi chúng xảy ra…",
+      "caption": "Từ những khám phá khoa học tưởng chừng bất khả thi, đến việc dự báo các cuộc khủng hoảng trước khi chúng xảy ra…",
+      "seconds": 5.02712,
+      "bytes": 41004,
+      "sha256": "783e9130121451a226311f2591337fd4db3e0567f101bc497da0da8b9a23a320"
+    },
+    {
+      "key": "971aa45f",
+      "text": "Đó còn là cách một người đã đối xử với mình khi mình gặp khó khăn.",
+      "caption": "AION: Đó còn là cách một người đã đối xử với mình khi mình gặp khó khăn.",
+      "seconds": 3.250794,
+      "bytes": 26793,
+      "sha256": "31f7089b792d7c05ddd49591c5fe46289179d8bc6dcfbfb6857382c5b473226a"
+    },
+    {
+      "key": "533765a3",
+      "text": "Có một kết quả mà tôi muốn cùng bạn xem lại.",
+      "caption": "AION: Có một kết quả mà tôi muốn cùng bạn xem lại.",
+      "seconds": 2.136236,
+      "bytes": 17807,
+      "sha256": "c88d59ce2a1b70700c9ba28e03864389958d3ec2b28eb15eaa049dae1913db4f"
+    },
+    {
+      "key": "5a05af21",
+      "text": "Một trí tuệ đã mở ra những khả năng mà thế giới chưa từng có.",
+      "caption": "Một trí tuệ đã mở ra những khả năng mà thế giới chưa từng có.",
+      "seconds": 3.053424,
+      "bytes": 25121,
+      "sha256": "ef088feccb3dc00b7bdd8b98e3cc39cb2d99c527286fed826c4889eba73ab4a8"
+    },
+    {
+      "key": "06ee22c7",
+      "text": "Ai-on. Trí tuệ nhân tạo đa năng tiên tiến nhất thế giới.",
+      "caption": "AION. Trí tuệ nhân tạo đa năng tiên tiến nhất thế giới.",
+      "seconds": 2.484535,
+      "bytes": 20733,
+      "sha256": "8a5a3df8939475a65a2d2f03540736b9c809d481160aca2e6e1b61ba2ecf6b7f"
+    },
+    {
+      "key": "3e3918f2",
+      "text": "Thành tựu làm thay đổi cách nhân loại khám phá, sáng tạo và định hình tương lai.",
+      "caption": "Thành tựu làm thay đổi cách nhân loại khám phá, sáng tạo và định hình tương lai.",
+      "seconds": 3.808073,
+      "bytes": 31181,
+      "sha256": "70ebdc9d68690596e05d042451007f1c4088ef14d21ad3767f001bc87e28f8fc"
+    },
+    {
+      "key": "8815e952",
+      "text": "Nhưng ngay cả Ai-on… vẫn có một câu hỏi chưa tìm được lời giải.",
+      "caption": "Nhưng ngay cả AION… vẫn có một câu hỏi chưa tìm được lời giải.",
+      "seconds": 2.879274,
+      "bytes": 23867,
+      "sha256": "54d194126762d4d2d6285043dc3bdd840b0e4267e90809bb090cb040172901f0"
+    },
+    {
+      "key": "ff7e8a1c",
+      "text": "Từ những dữ liệu còn lại, tôi đã tái dựng các khả năng có thể kiểm chứng. Nhưng lời giải vẫn chưa đầy đủ.",
+      "caption": "Từ những dữ liệu còn lại, tôi đã tái dựng các khả năng có thể kiểm chứng. Nhưng lời giải vẫn chưa đầy đủ.",
+      "seconds": 4.748481,
+      "bytes": 38705,
+      "sha256": "c367052a11f5f4cb9e51ab09b291cb3009646fa95557e5b310791d5b50f38b4a"
+    },
+    {
+      "key": "da920776",
+      "text": "mười bảy giờ không năm phút — sau giờ học. Một màn hình vẫn sáng.",
+      "caption": "17:05 — sau giờ học. Một màn hình vẫn sáng.",
+      "seconds": 2.856054,
+      "bytes": 23658,
+      "sha256": "7ccd653d28b80e05e2ad07a42d04a85b075d8f5c5e96b7e0eeeb047e35b9cdc4"
+    },
+    {
+      "key": "3b133476",
+      "text": "Phản biện: nếu loại người có kết quả thấp, chương trình hỗ trợ sẽ giúp ai? Số suất có hạn — nhưng ai đang cần chúng nhất?",
+      "caption": "Phản biện: nếu loại người có kết quả thấp, chương trình hỗ trợ sẽ giúp ai? Số suất có hạn — nhưng ai đang cần chúng nhất?",
+      "seconds": 5.398639,
+      "bytes": 43929,
+      "sha256": "44f6ce23fef097557a90772faae931a7d1d791a8a51f80ac873784e3f2561a84"
+    },
+    {
+      "key": "b8c9eca9",
+      "text": "Mô hình thử nghiệm do An viết. Mục tiêu: ưu tiên mức cải thiện học tập dự đoán cao. Nhu cầu hỗ trợ chưa được dùng để quyết định.",
+      "caption": "Mô hình thử nghiệm do An viết. Mục tiêu: ưu tiên mức cải thiện học tập dự đoán cao. Nhu cầu hỗ trợ chưa được dùng để quyết định.",
+      "seconds": 5.793379,
+      "bytes": 47064,
+      "sha256": "d6e1a142efc9683c0e4d04ae47201163ac908ed5b36f5d0c795504050489c4a8"
+    }
+  ],
+  "buildSeconds": 4.070980072021484
+}

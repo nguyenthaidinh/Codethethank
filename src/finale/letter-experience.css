@@ -1,0 +1,338 @@
+/* F5.3 opaque monitor workspace. Scoped to this component, no global UI overrides. */
+.letter-experience {
+  position: absolute;
+  z-index: 7;
+  inset: 9% max(4%, calc((100% - 1080px) / 2)) 7%;
+  display: flex;
+  flex-direction: column;
+  background: var(--finale-midnight, #0b1422);
+  color: var(--finale-ivory, #f0eee8);
+  border: 1px solid #344c5e;
+  box-shadow: 0 24px 80px #0008;
+  font:
+    14px/1.55 Arial,
+    sans-serif;
+}
+.gratitude-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 22px 28px 18px;
+  border-bottom: 1px solid #24384a;
+}
+.gratitude-kicker {
+  font:
+    10px/1.5 Arial,
+    sans-serif;
+  letter-spacing: 0.15em;
+  color: #72b7c9;
+}
+.gratitude-header h1 {
+  font:
+    400 clamp(20px, 2vw, 28px)/1.3 Arial, "Segoe UI", sans-serif;
+  margin: 8px 0 0;
+}
+.gratitude-private {
+  font-size: 11px;
+  white-space: nowrap;
+  color: #b2c0c8;
+}
+.gratitude-layout {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+}
+.gratitude-form {
+  padding: 22px 28px;
+  min-width: 0;
+}
+.gratitude-form > label {
+  display: block;
+  margin: 12px 0 6px;
+}
+.gratitude-form > label:first-child {
+  margin-top: 0;
+}
+.letter-experience small {
+  font:
+    11px/1.6 Arial,
+    sans-serif;
+  color: #aebec8;
+}
+.gratitude-form :is(input:not([type="radio"], [type="checkbox"]), textarea) {
+  width: 100%;
+  display: block;
+  background: #12202e;
+  border: 1px solid #344c5e;
+  color: #f0eee8;
+  padding: 10px 12px;
+  font:
+    16px/1.6 Arial, "Segoe UI", sans-serif;
+  border-radius: 2px;
+}
+.gratitude-form textarea {
+  resize: vertical;
+  min-height: 150px;
+  max-height: 35dvh;
+}
+.letter-experience ::placeholder {
+  color: #92a3b0;
+  opacity: 1;
+}
+.letter-experience button {
+  font:
+    12px/1.4 Arial,
+    sans-serif;
+  padding: 10px 14px;
+  min-height: 44px;
+  background: transparent;
+  color: #e0e7e9;
+  border: 1px solid #344c5e;
+  cursor: pointer;
+}
+.letter-experience button:disabled {
+  opacity: 0.48;
+  cursor: default;
+}
+.letter-experience :is(button, input, textarea):focus-visible {
+  outline: 2px solid #72b7c9;
+  outline-offset: 3px;
+}
+.gratitude-prompts,
+.gratitude-draft-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 10px 0;
+}
+.gratitude-audience {
+  border: 0;
+  border-top: 1px solid #24384a;
+  padding: 16px 0 0;
+  margin: 22px 0 14px;
+}
+.gratitude-audience legend {
+  padding: 0 8px 0 0;
+  font-size: 12px;
+}
+.gratitude-audience label,
+.gratitude-check {
+  display: flex !important;
+  align-items: flex-start;
+  gap: 9px;
+  min-height: 36px;
+  font-size: 12px;
+}
+.letter-experience input:is([type="radio"], [type="checkbox"]) {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  accent-color: #72b7c9;
+  margin: 2px 0 0;
+}
+.gratitude-audience p {
+  font-size: 12px;
+  color: #aebec8;
+  margin: 8px 0;
+}
+.gratitude-preview {
+  padding: 38px 32px;
+  min-width: 0;
+  background: linear-gradient(155deg, #172b3a, #101c29 70%);
+  border-left: 1px solid #24384a;
+  overflow-wrap: anywhere;
+}
+.gratitude-preview h2 {
+  font:
+    400 26px/1.4 Arial, "Segoe UI", sans-serif;
+  margin: 32px 0 20px;
+  color: #f0eee8;
+}
+.gratitude-message {
+  font:
+    19px/1.9 Arial, "Segoe UI", sans-serif;
+  white-space: pre-wrap;
+  min-height: 150px;
+}
+.gratitude-signature {
+  font:
+    italic 17px/1.6 Arial, "Segoe UI", sans-serif;
+  margin: 30px 0;
+  color: #d5a76b;
+}
+.gratitude-preview small {
+  display: block;
+  border-top: 1px solid #344c5e;
+  padding-top: 18px;
+}
+.gratitude-footer {
+  padding: 14px 28px;
+  border-top: 1px solid #24384a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+.gratitude-footer > div {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.letter-experience .gratitude-primary {
+  background: #72b7c9;
+  color: #0b1422;
+  border-color: #72b7c9;
+}
+.gratitude-tabs {
+  display: none;
+}
+.gratitude-confirmation {
+  padding: 32px;
+  min-width: 0;
+}
+.gratitude-confirmation h2 {
+  font:
+    24px/1.4 Arial, "Segoe UI", sans-serif;
+  margin: 0 0 20px;
+}
+.gratitude-confirmation p {
+  font-size: 13px;
+  color: #c2cdd4;
+}
+.gratitude-confirmation > button {
+  display: block;
+  margin: 14px 0;
+}
+.is-review .gratitude-preview {
+  border-left: 0;
+  border-right: 1px solid #24384a;
+}
+@media (max-width: 700px) {
+  .letter-experience {
+    inset: 70px 0 0;
+    border-left: 0;
+    border-right: 0;
+    max-height: calc(100dvh - 70px);
+    box-shadow: none;
+  }
+  .gratitude-header {
+    padding: 14px 18px;
+    gap: 8px;
+  }
+  .gratitude-header h1 {
+    font-size: 20px;
+  }
+  .gratitude-private {
+    display: none;
+  }
+  .gratitude-tabs {
+    display: flex;
+    gap: 8px;
+    padding: 10px 18px;
+    border-bottom: 1px solid #24384a;
+  }
+  .gratitude-tabs button[aria-pressed="true"] {
+    border-color: #72b7c9;
+    color: #72b7c9;
+  }
+  .gratitude-layout {
+    display: block;
+  }
+  .gratitude-layout[data-tab="edit"] .gratitude-preview {
+    display: none;
+  }
+  .gratitude-layout[data-tab="preview"] .gratitude-form {
+    display: none;
+  }
+  .gratitude-form,
+  .gratitude-preview,
+  .gratitude-confirmation {
+    padding: 20px 18px;
+    border: 0;
+  }
+  .is-review .gratitude-layout .gratitude-preview {
+    display: block;
+    border-right: 0;
+    border-bottom: 1px solid #24384a;
+  }
+  .gratitude-preview h2 {
+    font-size: 24px;
+    margin-top: 22px;
+  }
+  .gratitude-message {
+    font-size: 18px;
+  }
+  .gratitude-footer {
+    padding: 10px 14px max(12px, env(safe-area-inset-bottom));
+    display: block;
+  }
+  .gratitude-footer > small {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 10px;
+  }
+  .gratitude-footer > div {
+    justify-content: space-between;
+  }
+  .gratitude-footer button {
+    padding: 10px;
+  }
+}
+@media (max-height: 520px) {
+  .letter-experience {
+    top: 55px;
+    bottom: 0;
+  }
+  .gratitude-header {
+    padding: 8px 16px;
+  }
+  .gratitude-header h1 {
+    font-size: 18px;
+  }
+  .gratitude-kicker {
+    font-size: 9px;
+  }
+  .gratitude-footer {
+    padding: 8px 14px;
+  }
+}
+.chapter[data-finale="letter"] .letter-experience {
+  animation: gratitude-arrive 1.9s ease both;
+}
+@keyframes gratitude-arrive {
+  0%,
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.motion-reduced .letter-experience {
+  animation: none !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .chapter[data-finale="letter"] .letter-experience {
+    animation: none;
+  }
+}
+
+/* Keep the desktop live preview visible while the longer form scrolls. */
+@media (min-width: 701px) {
+  .gratitude-layout {
+    overflow: hidden;
+  }
+  .gratitude-form,
+  .gratitude-preview,
+  .gratitude-confirmation {
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+  }
+}

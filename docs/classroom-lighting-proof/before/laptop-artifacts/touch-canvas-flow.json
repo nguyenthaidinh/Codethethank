@@ -1,0 +1,6117 @@
+{
+  "final": {
+    "beat": "NEXT_SCENE_READY",
+    "time": 0.3333999999999978,
+    "evidence": [
+      "laptop"
+    ],
+    "verdict": {
+      "narrativeRevision": 4,
+      "version": 1,
+      "phase": "connect",
+      "found": [
+        "notes",
+        "data",
+        "presentation"
+      ],
+      "selected": "an",
+      "tested": [
+        "student07",
+        "an"
+      ],
+      "linked": [],
+      "carried": null
+    },
+    "stayed": null,
+    "ripple": null,
+    "finale": null,
+    "followedDoor": false,
+    "world": {
+      "school": {
+        "name": "Trường Đại học Tây Nguyên",
+        "logoLoaded": true
+      },
+      "camera": [
+        640,
+        360,
+        1
+      ],
+      "shot": null,
+      "focus": "wide",
+      "teacher": [],
+      "chair": [],
+      "drawCalls": 1,
+      "triangles": 0
+    },
+    "voice": null,
+    "audio": null
+  },
+  "paints": [
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "STUDENT 07 / NOT RECOMMENDED",
+      "color": "#c6d4b9",
+      "font": "35px Arial"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "16px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    },
+    {
+      "text": "NOT RECOMMENDED",
+      "color": "#ff6b75",
+      "font": "bold 55px monospace"
+    }
+  ],
+  "errors": []
+}

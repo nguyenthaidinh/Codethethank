@@ -1,0 +1,69 @@
+﻿import type { FinaleSave } from "../finale/state";
+import type { Letter } from "../finale/letter";
+import { RippleWorld } from "../ripple/RippleWorld";
+import type { RippleSave } from "../ripple/state";
+import * as T from "three";
+import { mergeGeometries } from "three/addons/utils/BufferGeometryUtils.js";
+import type { Beat, Focus, SliceSave, Caption } from "./director";
+import { drawOverlay } from "./overlay";
+import { drawEvaluation } from "../verdict/screen";
+import type { VerdictSave } from "../verdict/state";
+import type { StaySave } from "../stayed/state";
+import { drawNotebook } from "../stayed/Notebook";
+import { CHAIR_MOTIF } from "./motifs";
+
+type XYZ = [number, number, number];
+interface Rig {
+  root: T.Group;
+  body: T.Group;
+  head: T.Group;
+  arms: T.Group[];
+  legs: T.Group[];
+  shins: T.Group[];
+}
+export interface PropPosition {
+  id: Focus;
+  x: number;
+  y: number;
+  visible: boolean;
+}
+const smooth = (v: number) => {
+  const x = T.MathUtils.clamp(v, 0, 1);
+  return x * x * (3 - 2 * x);
+};
+const cameras: Record<Focus, { eye: XYZ; at: XYZ; fov: number }> = {
+  book: { eye: [1.4, 2.5, 0.25], at: [0.6, 1.06, -1.12], fov: 43 },
+  teacher: { eye: [3.5, 1.8, -1.7], at: [1.9, 1.4, 0.7], fov: 43 },
+  chair_insert: {
+    eye: CHAIR_MOTIF.eye,
+    at: CHAIR_MOTIF.at,
+    fov: CHAIR_MOTIF.fov,
+  },
+  notes: { eye: [2.5, 2.4, 0], at: [1.28, 1.06, -1.35], fov: 39 },
+  an: { eye: [1.8, 1.65, -3.1], at: [-0.35, 1.25, 0.15], fov: 40 },
+  clock: { eye: [2.45, 2.65, -3.8], at: [2.45, 2.65, -6.7], fov: 40 },
+  door: { eye: [0.8, 2.15, 7.2], at: [-0.4, 1.1, -1.9], fov: 55 },
+  wide: { eye: [4.5, 2.8, 4.4], at: [-0.5, 1.05, -1.4], fov: 54 },
+  window: { eye: [-0.7, 2.1, 1.9], at: [-5.7, 2, -2.4], fov: 53 },
+  laptop: { eye: [0.25, 1.82, 0.15], at: [-0.45, 1.35, -1.47], fov: 40 },
+  notebook: { eye: [2.2, 2.1, 0.25], at: [0.7, 1.05, -1.15], fov: 43 },
+  chair: { eye: [3.8, 1.7, 2.8], at: [0.7, 0.85, 0.2], fov: 50 },
+  profile: { eye: [1.9, 2.3, 0.75], at: [0.35, 1.15, -1.05], fov: 45 },
+  faces: { eye: [-2.8, 1.65, -3], at: [0.3, 1.15, 0.1], fov: 49 },
+  paper: { eye: [1.9, 2.15, 0.15], at: [0.72, 1.02, -0.9], fov: 40 },
+};
+export class WorldRenderer {
+  renderer: T.WebGLRenderer;
+  scene = new T.Scene();
+  camera = new T.PerspectiveCamera(54, 1, 0.08, 70);
+  private target = new T.Vector3();
+  private eye = new T.Vector3();
+  private targetEye = new T.Vector3();
+  private targetAt = new T.Vector3();
+  private goalFov = 54;
+  private cameraFrom = new T.Vector3();
+  private targetFrom = new T.Vector3();
+  private fovFrom = 54;
+  private cameraProgress = 1;
+  private materials = new Map<string, T.MeshLambertMaterial>();
+  private geometries: T.BufferGeometry[] = [];

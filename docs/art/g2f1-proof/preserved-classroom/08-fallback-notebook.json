@@ -1,0 +1,68 @@
+{
+  "beat": "NEXT_SCENE_READY",
+  "time": 2.289299999999625,
+  "evidence": [
+    "clock",
+    "notebook",
+    "laptop"
+  ],
+  "verdict": {
+    "version": 1,
+    "phase": "chapter02",
+    "found": [
+      "presentation",
+      "notes",
+      "data"
+    ],
+    "selected": "an",
+    "tested": [
+      "mai",
+      "an"
+    ],
+    "linked": [
+      "presentation",
+      "notes"
+    ],
+    "carried": null,
+    "stayed": {
+      "version": 1,
+      "phase": "notebook",
+      "line": 0,
+      "read": [
+        "outcome"
+      ],
+      "page": "outcome",
+      "written": false,
+      "seen": [],
+      "nextInspected": false
+    }
+  },
+  "stayed": {
+    "version": 1,
+    "phase": "notebook",
+    "line": 0,
+    "read": [
+      "outcome"
+    ],
+    "page": "outcome",
+    "written": false,
+    "seen": [],
+    "nextInspected": false
+  },
+  "ripple": null,
+  "finale": null,
+  "followedDoor": false,
+  "world": {
+    "camera": [
+      0,
+      0,
+      0
+    ],
+    "focus": "book",
+    "teacher": [],
+    "chair": [],
+    "drawCalls": 1,
+    "triangles": 0
+  },
+  "audio": null
+}

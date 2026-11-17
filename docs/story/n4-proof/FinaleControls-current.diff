@@ -1,0 +1,169 @@
+--- before/src/finale/FinaleControls.tsx
++++ src/finale/FinaleControls.tsx
+@@ -1,7 +1,7 @@
+ ﻿import { useEffect, useRef, useState } from "react";
+ import type { FinaleSave, FinaleAction } from "./state";
+-import { MAX_MESSAGE, MAX_RECIPIENT, type Letter } from "./letter";
+-import { prompts } from "./story";
++import type { Letter } from "./letter";
++import { LetterExperience } from "./LetterExperience";
+ import "./finale.css";
+ import "./player-room.css";
+ export function FinaleControls({
+@@ -24,13 +24,8 @@
+   onReplay: () => void;
+ }) {
+   const [credits, setCredits] = useState(false);
+-  const compose = useRef(false);
+-  const first = useRef<HTMLInputElement>(null);
+   const modal = useRef<HTMLDivElement>(null);
+   const backFocus = useRef<HTMLElement | null>(null);
+-  useEffect(() => {
+-    if (s.phase === "letter") first.current?.focus();
+-  }, [s.phase]);
+   useEffect(() => {
+     if (!credits) return;
+     backFocus.current = document.activeElement as HTMLElement;
+@@ -42,19 +37,6 @@
+     : letter.local
+       ? "Chưa có bản lưu trên thiết bị · Chỉ giữ trong phiên này."
+       : "Chỉ giữ trong phiên này · Chưa công khai.";
+-  const input = (key: "recipient" | "message") => ({
+-    onCompositionStart: () => {
+-      compose.current = true;
+-    },
+-    onCompositionEnd: (
+-      e: React.CompositionEvent<HTMLInputElement | HTMLTextAreaElement>,
+-    ) => {
+-      compose.current = false;
+-      update({ ...letter, [key]: e.currentTarget.value });
+-    },
+-    onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
+-      update({ ...letter, [key]: e.currentTarget.value }, compose.current),
+-  });
+   return (
+     <>
+       {s.phase === "memory" && (
+@@ -104,93 +86,16 @@
+           </div>
+         </>
+       )}
+-      {s.phase === "letter" && (
+-        <section className="letter-paper" aria-label="Lời cảm ơn riêng tư">
+-          <span className="paper-date">20:11 · Một lời tri ân ngày 20/11</span>
+-          <label htmlFor="recipient">
+-            Gửi đến <small>(tùy chọn)</small>
+-          </label>
+-          <input
+-            ref={first}
+-            id="recipient"
+-            value={letter.recipient}
+-            {...input("recipient")}
+-            autoComplete="off"
+-            placeholder="Một người đã ngồi lại cùng bạn…"
+-            aria-describedby="letter-status"
+-          />
+-          <label htmlFor="gratitude">
+-            Lời muốn nói <small>(tùy chọn)</small>
+-          </label>
+-          <textarea
+-            id="gratitude"
+-            value={letter.message}
+-            {...input("message")}
+-            rows={5}
+-            placeholder="Cảm ơn vì…"
+-            aria-describedby="letter-limit letter-status"
+-          />
+-          <small id="letter-limit">
+-            {Array.from(letter.message).length}/{MAX_MESSAGE} chữ · Tên tối đa{" "}
+-            {MAX_RECIPIENT} chữ
+-          </small>
+-          <div className="letter-prompts" aria-label="Gợi ý lời cảm ơn">
+-            {prompts.map((p, i) => (
+-              <button key={p} onClick={() => update({ ...letter, message: p })}>
+-                Gợi ý {i + 1}
+-              </button>
+-            ))}
+-          </div>
+-          <label className="letter-local">
+-            <input
+-              type="checkbox"
+-              checked={letter.local}
+-              onChange={(e) => update({ ...letter, local: e.target.checked })}
+-            />
+-            Lưu riêng bản nháp trên thiết bị này
+-          </label>
+-          <small id="letter-status" role="status">
+-            {status}
+-          </small>
+-          <div className="paper-actions">
+-            <button
+-              onClick={() => {
+-                if (!compose.current) act({ type: "review" });
+-              }}
+-            >
+-              Đọc lại lời cảm ơn
+-            </button>
+-            <button onClick={() => act({ type: "skip" })}>
+-              Bỏ qua lời nhắn
+-            </button>
+-          </div>
+-          <button className="quiet-link" onClick={erase}>
+-            Xóa nội dung đã lưu
+-          </button>
+-        </section>
+-      )}
+-      {s.phase === "review" && (
+-        <section
+-          className="letter-paper letter-review"
+-          aria-label="Đọc lại trước khi tạo sao"
+-        >
+-          <span className="paper-date">Lời cảm ơn của bạn</span>
+-          <p>
+-            {letter.recipient
+-              ? `Gửi ${letter.recipient}`
+-              : "Gửi một người đã giúp tôi tiếp tục"}
+-          </p>
+-          <p className="letter-text">
+-            {letter.message || "Một lời cảm ơn được giữ trong im lặng."}
+-          </p>
+-          <small>{status}</small>
+-          <div className="paper-actions">
+-            <button onClick={() => act({ type: "edit" })}>Sửa lời nhắn</button>
+-            <button onClick={() => act({ type: "commit" })}>
+-              Tạo ngôi sao riêng tư
+-            </button>
+-          </div>
+-        </section>
++      {(s.phase === "letter" || s.phase === "review") && (
++        <LetterExperience
++          key={s.phase}
++          phase={s.phase}
++          letter={letter}
++          update={update}
++          persisted={persisted}
++          erase={erase}
++          act={act}
++        />
+       )}
+       {s.phase === "galaxy" && (
+         <>
+@@ -217,6 +122,9 @@
+                   ? "Bạn đã chọn không viết lời nhắn cá nhân."
+                   : letter.message || "Không có nội dung cá nhân được lưu."}
+               </p>
++              {s.choice === "letter" && letter.displayName && (
++                <p className="letter-signature">— {letter.displayName}</p>
++              )}
+               <small>
+                 {s.choice === "skip"
+                   ? "Không tạo lời nhắn · Chưa công khai."
+@@ -242,7 +150,7 @@
+       )}
+       {s.phase === "ending" && (
+         <div className="ending-title">
+-          <p>Có những bài học vẫn tiếp tục được trao đi.</p>
++          <p>Có những bài học không được viết thành lời.</p>
+           <h1>
+             THE UNWRITTEN
+             <br />

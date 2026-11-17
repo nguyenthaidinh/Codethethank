@@ -1,0 +1,850 @@
+{
+  "caveat": "Headless host observations, not real-device FPS, GPU time or allocated GPU bytes. Baseline triangles=2 was the overlay quad and is invalid for geometry comparison.",
+  "bundleBytes": {
+    "before": 606622,
+    "after": 638427,
+    "difference": 31805
+  },
+  "frameIntervalsMs": {
+    "baseline": {
+      "median": 49.900000000001455,
+      "p90": 50,
+      "samples": 47
+    },
+    "after": {
+      "median": 100,
+      "p90": 100.09999999999854,
+      "samples": 47
+    }
+  },
+  "warmWide": {
+    "baseline": {
+      "median": 49.899999999999636,
+      "p90": 50,
+      "world": {
+        "camera": [
+          4.5,
+          2.8,
+          4.4
+        ],
+        "focus": "wide",
+        "teacher": [
+          2.7,
+          0,
+          6.2
+        ],
+        "teacherVisible": false,
+        "anHead": 0.1,
+        "notebookPage": null,
+        "notebookPosition": [
+          1.25,
+          1.047,
+          -0.15
+        ],
+        "pageTurn": 1,
+        "chair": [
+          2.3,
+          0,
+          0.6
+        ],
+        "drawCalls": 82,
+        "triangles": 2,
+        "resolution": 0.9
+      },
+      "audioContext": "running"
+    },
+    "after": {
+      "median": 66.70000000000073,
+      "p90": 83.39999999999964,
+      "world": {
+        "camera": [
+          4.5,
+          2.8,
+          4.4
+        ],
+        "target": [
+          -0.5,
+          1.05,
+          -1.4
+        ],
+        "fov": 54,
+        "artDirection": "stylized",
+        "focus": "wide",
+        "teacher": [
+          2.7,
+          0,
+          6.2
+        ],
+        "teacherVisible": false,
+        "anHead": 0.1,
+        "anFeetY": [
+          0.003002411157441931,
+          0.003002411157441931
+        ],
+        "teacherFeetY": [
+          0.03749999999999998,
+          0.03749999999999998
+        ],
+        "notebookPage": null,
+        "notebookPosition": [
+          1.25,
+          1.047,
+          -0.15
+        ],
+        "pageTurn": 1,
+        "chair": [
+          2.3,
+          0,
+          0.6
+        ],
+        "drawCalls": 107,
+        "triangles": 28414,
+        "shadowRefreshed": false,
+        "resources": {
+          "geometries": 111,
+          "textures": 15,
+          "programs": 10,
+          "renderTarget": [
+            832,
+            468
+          ],
+          "samples": 0,
+          "output": [
+            1280,
+            720
+          ],
+          "shadowMap": [
+            1024,
+            1024
+          ]
+        },
+        "resolution": 0.65
+      },
+      "audioContext": "running"
+    }
+  },
+  "captures": [
+    {
+      "name": "01-classroom-wide",
+      "pair": "01-classroom-wide",
+      "before": {
+        "camera": [
+          4.455,
+          2.775,
+          4.4
+        ],
+        "focus": "wide",
+        "teacher": [
+          2.7,
+          0,
+          6.2
+        ],
+        "teacherVisible": false,
+        "anHead": 0.1,
+        "notebookPage": null,
+        "notebookPosition": [
+          1.25,
+          1.047,
+          -0.15
+        ],
+        "pageTurn": 1,
+        "chair": [
+          2.3,
+          0,
+          0.6
+        ],
+        "drawCalls": 82,
+        "triangles": 2,
+        "resolution": 0.9
+      },
+      "after": {
+        "camera": [
+          4.455,
+          2.775,
+          4.4
+        ],
+        "target": [
+          -0.5,
+          1.05,
+          -1.4
+        ],
+        "fov": 54,
+        "artDirection": "stylized",
+        "focus": "wide",
+        "teacher": [
+          2.7,
+          0,
+          6.2
+        ],
+        "teacherVisible": false,
+        "anHead": 0.1,
+        "anFeetY": [
+          0.0027574621250827658,
+          0.0027574621250827658
+        ],
+        "teacherFeetY": [
+          0.03749999999999998,
+          0.03749999999999998
+        ],
+        "notebookPage": null,
+        "notebookPosition": [
+          1.25,
+          1.047,
+          -0.15
+        ],
+        "pageTurn": 1,
+        "chair": [
+          2.3,
+          0,
+          0.6
+        ],
+        "drawCalls": 107,
+        "triangles": 28414,
+        "shadowRefreshed": false,
+        "resources": {
+          "geometries": 111,
+          "textures": 15,
+          "programs": 10,
+          "renderTarget": [
+            1088,
+            612
+          ],
+          "samples": 0,
+          "output": [
+            1280,
+            720
+          ],
+          "shadowMap": [
+            1024,
+            1024
+          ]
+        },
+        "resolution": 0.85
+      },
+      "cameraDelta": 0
+    },
+    {
+      "name": "02-rain-window",
+      "pair": "02-rain-window",
+      "before": {
+        "camera": [
+          -0.7450000000000002,
+          2.075,
+          1.9
+        ],
+        "focus": "window",
+        "teacher": [
+          2.7,
+          0,
+          6.2
+        ],
+        "teacherVisible": false,
+        "anHead": 0.1,
+        "notebookPage": null,
+        "notebookPosition": [
+          1.25,
+          1.047,
+          -0.15
+        ],
+        "pageTurn": 1,
+        "chair": [
+          2.3,
+          0,
+          0.6
+        ],
+        "drawCalls": 38,
+        "triangles": 2,
+        "resolution": 0.9
+      },
+      "after": {
+        "camera": [
+          -0.7450000000000002,
+          2.075,
+          1.9
+        ],
+        "target": [
+          -5.7,
+          2,
+          -2.4
+        ],
+        "fov": 53,
+        "artDirection": "stylized",
+        "focus": "window",
+        "teacher": [
+          2.7,
+          0,
+          6.2
+        ],
+        "teacherVisible": false,
+        "anHead": 0.1,
+        "anFeetY": [
+          -0.00398599119779719,
+          -0.00398599119779719
+        ],
+        "teacherFeetY": [
+          0.03749999999999998,
+          0.03749999999999998
+        ],
+        "notebookPage": null,
+        "notebookPosition": [
+          1.25,
+          1.047,
+          -0.15
+        ],
+        "pageTurn": 1,
+        "chair": [
+          2.3,
+          0,
+          0.6
+        ],
+        "drawCalls": 38,
+        "triangles": 20886,
+        "shadowRefreshed": false,
+        "resources": {
+          "geometries": 111,
+          "textures": 15,
+          "programs": 10,
+          "renderTarget": [
+            1088,
+            612
+          ],
+          "samples": 0,
+          "output": [
+            1280,
+            720
+          ],
+          "shadowMap": [
+            1024,
+            1024
+          ]
+        },
+        "resolution": 0.85
+      },
+      "cameraDelta": 0
+    },
+    {
+      "name": "03-an-workspace",
+      "pair": "03-an-workspace",
+      "before": {
+        "camera": [
+          0.20500000000000002,
+          1.7950000000000002,
+          0.15000000000000036
+        ],
+        "focus": "laptop",
+        "teacher": [
+          2.7,
+          0,
+          6.2
+        ],
+        "teacherVisible": false,
+        "anHead": 0.1,
+        "notebookPage": null,
+        "notebookPosition": [
+          1.25,
+          1.047,
+          -0.15
+        ],
+        "pageTurn": 1,
+        "chair": [
+          2.3,
+          0,
+          0.6
+        ],
+        "drawCalls": 45,
+        "triangles": 2,
+        "resolution": 0.9
+      },
+      "after": {
+        "camera": [
+          0.20500000000000002,
+          1.7950000000000002,
+          0.15000000000000036
+        ],
+        "target": [
+          -0.45,
+          1.35,
+          -1.47
+        ],
+        "fov": 40,
+        "artDirection": "stylized",
+        "focus": "laptop",
+        "teacher": [
+          2.7,
+          0,
+          6.2
+        ],
+        "teacherVisible": false,
+        "anHead": 0.1,
+        "anFeetY": [
+          -0.001876069066657604,
+          -0.001876069066657604
+        ],
+        "teacherFeetY": [
+          0.03749999999999998,
+          0.03749999999999998
+        ],
+        "notebookPage": null,
+        "notebookPosition": [
+          1.25,
+          1.047,
+          -0.15
+        ],
+        "pageTurn": 1,
+        "chair": [
+          2.3,
+          0,
+          0.6
+        ],
+        "drawCalls": 53,
+        "triangles": 24404,
+        "shadowRefreshed": false,
+        "resources": {
+          "geometries": 111,
+          "textures": 15,
+          "programs": 10,
+          "renderTarget": [
+            1088,
+            612
+          ],
+          "samples": 0,
+          "output": [
+            1280,
+            720
+          ],
+          "shadowMap": [
+            1024,
+            1024
+          ]
+        },
+        "resolution": 0.85
+      },
+      "cameraDelta": 0
+    },
+    {
+      "name": "04-teacher-entrance",
+      "pair": "04-teacher-entrance-matched",
+      "before": {
+        "camera": [
+          3.5,
+          1.8,
+          -1.7
+        ],
+        "focus": "teacher",
+        "teacher": [
+          1.9,
+          0,
+          0.7
+        ],
+        "teacherVisible": true,
+        "anHead": 0.25,
+        "notebookPage": null,
+        "notebookPosition": [
+          1.25,
+          1.047,
+          -0.15
+        ],
+        "pageTurn": 1,
+        "chair": [
+          2.3,
+          0,
+          0.6
+        ],
+        "drawCalls": 71,
+        "triangles": 2,
+        "resolution": 0.9
+      },
+      "after": {
+        "camera": [
+          3.5,
+          1.8,
+          -1.7
+        ],
+        "target": [
+          1.9,
+          1.4,
+          0.7
+        ],
+        "fov": 43,
+        "artDirection": "stylized",
+        "focus": "teacher",
+        "teacher": [
+          1.9,
+          0,
+          0.7
+        ],
+        "teacherVisible": true,
+        "anHead": 0.25,
+        "anFeetY": [
+          -1.1102230246251565e-16,
+          -1.1102230246251565e-16
+        ],
+        "teacherFeetY": [
+          0,
+          0
+        ],
+        "notebookPage": null,
+        "notebookPosition": [
+          1.25,
+          1.047,
+          -0.15
+        ],
+        "pageTurn": 1,
+        "chair": [
+          2.3,
+          0,
+          0.6
+        ],
+        "drawCalls": 211,
+        "triangles": 58654,
+        "shadowRefreshed": true,
+        "resources": {
+          "geometries": 139,
+          "textures": 9,
+          "programs": 9,
+          "renderTarget": [
+            960,
+            540
+          ],
+          "samples": 0,
+          "output": [
+            1280,
+            720
+          ],
+          "shadowMap": [
+            1024,
+            1024
+          ]
+        },
+        "resolution": 0.75
+      },
+      "cameraDelta": 0
+    },
+    {
+      "name": "05-chair-cinematic",
+      "pair": "05-chair-cinematic-matched",
+      "before": {
+        "camera": [
+          2.9,
+          0.48,
+          1.65
+        ],
+        "focus": "chair_insert",
+        "teacher": [
+          1.0999999999999999,
+          0,
+          0.19999999999999996
+        ],
+        "teacherVisible": true,
+        "anHead": 0.1,
+        "notebookPage": null,
+        "notebookPosition": [
+          1.25,
+          1.047,
+          -0.15
+        ],
+        "pageTurn": 1,
+        "chair": [
+          1.1,
+          0,
+          0.25
+        ],
+        "drawCalls": 85,
+        "triangles": 2,
+        "resolution": 0.9
+      },
+      "after": {
+        "camera": [
+          2.9,
+          0.48,
+          1.65
+        ],
+        "target": [
+          1.5,
+          0.28,
+          0.35
+        ],
+        "fov": 43,
+        "artDirection": "stylized",
+        "focus": "chair_insert",
+        "teacher": [
+          1.0999999999999999,
+          0,
+          0.19999999999999996
+        ],
+        "teacherVisible": true,
+        "anHead": 0.1,
+        "anFeetY": [
+          -1.1102230246251565e-16,
+          -1.1102230246251565e-16
+        ],
+        "teacherFeetY": [
+          -1.1102230246251565e-16,
+          -1.1102230246251565e-16
+        ],
+        "notebookPage": null,
+        "notebookPosition": [
+          1.25,
+          1.047,
+          -0.15
+        ],
+        "pageTurn": 1,
+        "chair": [
+          1.1,
+          0,
+          0.25
+        ],
+        "drawCalls": 116,
+        "triangles": 29966,
+        "shadowRefreshed": false,
+        "resources": {
+          "geometries": 142,
+          "textures": 13,
+          "programs": 9,
+          "renderTarget": [
+            960,
+            540
+          ],
+          "samples": 0,
+          "output": [
+            1280,
+            720
+          ],
+          "shadowMap": [
+            1024,
+            1024
+          ]
+        },
+        "resolution": 0.75
+      },
+      "cameraDelta": 0
+    },
+    {
+      "name": "06-notebook",
+      "pair": "06-notebook",
+      "before": {
+        "camera": [
+          1.4,
+          2.5103340276082355,
+          0.25
+        ],
+        "focus": "book",
+        "teacher": [
+          1.1,
+          0,
+          0.2
+        ],
+        "teacherVisible": true,
+        "anHead": 0.1,
+        "notebookPage": "outcome",
+        "notebookPosition": [
+          0.75,
+          1.047,
+          -0.1
+        ],
+        "pageTurn": 1,
+        "chair": [
+          1.1,
+          0,
+          0.25
+        ],
+        "drawCalls": 56,
+        "triangles": 2,
+        "resolution": 0.9
+      },
+      "after": {
+        "camera": [
+          1.4,
+          2.5103340276082355,
+          0.25
+        ],
+        "target": [
+          0.6,
+          1.06,
+          -1.12
+        ],
+        "fov": 43,
+        "artDirection": "stylized",
+        "focus": "book",
+        "teacher": [
+          1.1,
+          0,
+          0.2
+        ],
+        "teacherVisible": true,
+        "anHead": 0.1,
+        "anFeetY": [
+          -0.0011880946559461592,
+          -0.0011880946559461592
+        ],
+        "teacherFeetY": [
+          -1.1102230246251565e-16,
+          -1.1102230246251565e-16
+        ],
+        "notebookPage": "outcome",
+        "notebookPosition": [
+          0.75,
+          1.047,
+          -0.1
+        ],
+        "pageTurn": 1,
+        "chair": [
+          1.1,
+          0,
+          0.25
+        ],
+        "drawCalls": 78,
+        "triangles": 26492,
+        "shadowRefreshed": false,
+        "resources": {
+          "geometries": 148,
+          "textures": 17,
+          "programs": 11,
+          "renderTarget": [
+            1088,
+            612
+          ],
+          "samples": 0,
+          "output": [
+            1280,
+            720
+          ],
+          "shadowMap": [
+            1024,
+            1024
+          ]
+        },
+        "resolution": 0.85
+      },
+      "cameraDelta": 0
+    },
+    {
+      "name": "07-mobile-notebook",
+      "pair": "07-mobile-notebook",
+      "before": {
+        "camera": [
+          1.4,
+          2.5,
+          0.25
+        ],
+        "focus": "book",
+        "teacher": [
+          1.1,
+          0,
+          0.2
+        ],
+        "teacherVisible": true,
+        "anHead": 0.1,
+        "notebookPage": "outcome",
+        "notebookPosition": [
+          0.75,
+          1.047,
+          -0.1
+        ],
+        "pageTurn": 1,
+        "chair": [
+          1.1,
+          0,
+          0.25
+        ],
+        "drawCalls": 53,
+        "triangles": 2,
+        "resolution": 0.9
+      },
+      "after": {
+        "camera": [
+          1.4,
+          2.5,
+          0.25
+        ],
+        "target": [
+          0.6,
+          1.06,
+          -1.12
+        ],
+        "fov": 65,
+        "artDirection": "stylized",
+        "focus": "book",
+        "teacher": [
+          1.1,
+          0,
+          0.2
+        ],
+        "teacherVisible": true,
+        "anHead": 0.1,
+        "anFeetY": [
+          -1.1102230246251565e-16,
+          -1.1102230246251565e-16
+        ],
+        "teacherFeetY": [
+          -1.1102230246251565e-16,
+          -1.1102230246251565e-16
+        ],
+        "notebookPage": "outcome",
+        "notebookPosition": [
+          0.75,
+          1.047,
+          -0.1
+        ],
+        "pageTurn": 1,
+        "chair": [
+          1.1,
+          0,
+          0.25
+        ],
+        "drawCalls": 58,
+        "triangles": 22966,
+        "shadowRefreshed": false,
+        "resources": {
+          "geometries": 134,
+          "textures": 13,
+          "programs": 9,
+          "renderTarget": [
+            332,
+            717
+          ],
+          "samples": 0,
+          "output": [
+            390,
+            844
+          ],
+          "shadowMap": [
+            1024,
+            1024
+          ]
+        },
+        "resolution": 0.85
+      },
+      "cameraDelta": 0
+    },
+    {
+      "name": "08-fallback-notebook",
+      "pair": "08-fallback-notebook",
+      "before": {
+        "camera": [
+          0,
+          0,
+          0
+        ],
+        "focus": "book",
+        "teacher": [],
+        "chair": [],
+        "drawCalls": 1,
+        "triangles": 0
+      },
+      "after": {
+        "camera": [
+          0,
+          0,
+          0
+        ],
+        "focus": "book",
+        "teacher": [],
+        "chair": [],
+        "drawCalls": 1,
+        "triangles": 0
+      },
+      "cameraDelta": 0
+    }
+  ]
+}

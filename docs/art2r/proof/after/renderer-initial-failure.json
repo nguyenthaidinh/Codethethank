@@ -1,0 +1,101 @@
+{
+  "world": {
+    "camera": [
+      3.4,
+      1.95,
+      3.3
+    ],
+    "target": [
+      -0.04999999999999982,
+      1.2,
+      -0.95
+    ],
+    "fov": 50,
+    "artDirection": "paper-rain",
+    "characterArt": "sculpted-narrative-v1",
+    "anHand": [
+      -0.6396663133316696,
+      0.917796321087886,
+      -0.5382376065416705
+    ],
+    "focus": "wide",
+    "teacher": [
+      2.7,
+      0,
+      6.2
+    ],
+    "teacherVisible": false,
+    "anHead": 0.1,
+    "anFeetY": [
+      0.001986629297883069,
+      0.001986629297883069
+    ],
+    "teacherFeetY": [
+      0.03749999999999998,
+      0.03749999999999998
+    ],
+    "notebookPage": null,
+    "notebookPosition": [
+      1.25,
+      1.047,
+      -0.15
+    ],
+    "pageTurn": 1,
+    "chair": [
+      2.3,
+      0,
+      0.6
+    ],
+    "drawCalls": 97,
+    "triangles": 60326,
+    "shadowRefreshed": false,
+    "resources": {
+      "geometries": 103,
+      "textures": 18,
+      "programs": 13,
+      "renderTarget": [
+        1024,
+        576
+      ],
+      "samples": 0,
+      "output": [
+        1280,
+        720
+      ],
+      "shadowMap": [
+        1024,
+        1024
+      ]
+    },
+    "resolution": 0.8
+  },
+  "intervalsMs": [
+    166.69999999999982,
+    183.30000000000018,
+    150,
+    149.89999999999964,
+    166.69999999999982,
+    150,
+    149.90000000000055,
+    150.09999999999945,
+    166.60000000000036,
+    166.69999999999982,
+    150,
+    166.60000000000036,
+    166.80000000000018,
+    166.59999999999945,
+    183.30000000000018,
+    183.29999999999927,
+    166.70000000000073,
+    183.39999999999964,
+    166.60000000000036,
+    166.60000000000036,
+    200.10000000000036,
+    183.1999999999989,
+    200.10000000000036,
+    133.20000000000073
+  ],
+  "errors": [
+    "THREE.BufferGeometryUtils: .mergeGeometries() failed with geometry at index 1. All geometries must have compatible attributes; make sure \"uv\" attribute exists among all geometries, or in none of them."
+  ]
+}

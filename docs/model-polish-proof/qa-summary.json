@@ -1,0 +1,35 @@
+{
+  "typecheck": "PASS",
+  "lint": "PASS",
+  "build": "PASS",
+  "unit": {
+    "passed": 72,
+    "total": 72
+  },
+  "initialRegression": {
+    "startTime": "2026-11-17T10:32:16.129Z",
+    "duration": 477134.218,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "finalRerun": {
+    "startTime": "2026-11-17T10:42:24.095Z",
+    "duration": 163703.727,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  },
+  "isolatedDesktop": {
+    "startTime": "2026-11-17T10:45:47.568Z",
+    "duration": 30890.668,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "physicalMobileTested": false,
+  "artApproval": "Pending Product Owner review"
+}
