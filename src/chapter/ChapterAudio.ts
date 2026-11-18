@@ -58,16 +58,6 @@ export class ChapterAudio extends AudioDirector {
       o.start();
       this.oscillators.push(o);
     }
-    for (const hz of [130.81, 196]) {
-      const o = c.createOscillator(),
-        g = c.createGain();
-      o.frequency.value = hz;
-      g.gain.value = 0.04;
-      o.connect(g);
-      g.connect(this.music);
-      o.start();
-      this.oscillators.push(o);
-    }
     this.environment(0);
   }
   override apply(s: SliceSave, paused = false) {
@@ -81,7 +71,7 @@ export class ChapterAudio extends AudioDirector {
       0.15,
     );
     this.music.gain.setTargetAtTime(
-      s.music ? this.mix.music * this.levels.music * this.voiceDuck : 0,
+      s.music ? this.mix.music * (this.levels.music || 0.55) * this.voiceDuck : 0,
       t,
       0.15,
     );
@@ -102,7 +92,7 @@ export class ChapterAudio extends AudioDirector {
     this.rain.gain.setTargetAtTime(silence ? 0 : school * 0.2, t, 0.6);
     this.fan.gain.setTargetAtTime(silence ? 0 : school * 0.035, t, 0.6);
     this.mix.ambience = silence ? 0 : 1;
-    this.mix.music = silence ? 0 : 0.1 * (1 - school);
+    this.mix.music = silence ? 0 : 0.42 - 0.12 * school;
     if (this.chapterSettings) this.apply(this.chapterSettings);
   }
   signalFocus(focused: boolean) {
@@ -132,11 +122,11 @@ export class ChapterAudio extends AudioDirector {
     );
     this.mix.music =
       place === "city"
-        ? 0.035
+        ? 0.48
         : place === "headquarters"
-          ? 0.075
+          ? 0.42
           : place === "core"
-            ? 0.16
+            ? 0.32
             : 0;
     if (this.chapterSettings) this.apply(this.chapterSettings);
     this.events.push({ cue: "aion.space." + place, time: t });
@@ -167,7 +157,7 @@ export class ChapterAudio extends AudioDirector {
     this.mix.ambience = ["chair", "notebook", "unwritten"].includes(phase)
       ? 1
       : 0.7;
-    this.mix.music = ["written", "closing", "next"].includes(phase) ? 0.13 : 0;
+    this.mix.music = ["chair", "unwritten"].includes(phase) ? 0.045 : 0.26;
     const soft = phase === "closing" || phase === "next";
     this.mix.rain = soft ? 0.07 : 0.14;
     this.rain.gain.setTargetAtTime(
@@ -188,18 +178,8 @@ export class ChapterAudio extends AudioDirector {
     );
     this.mix.ambience =
       phase === "align" ? 0.2 : phase === "reveal" ? 0.45 : 0.7;
-    this.mix.music = [
-      "chair",
-      "echo",
-      "align",
-      "approach",
-      "record",
-      "sketch",
-      "years",
-    ].includes(phase)
-      ? 0
-      : 0.06;
-    if (phase === "milestone") this.mix.music = 0.03 + milestones * 0.015;
+    this.mix.music = ["chair", "echo", "align"].includes(phase) ? 0.04 : 0.36;
+    if (phase === "milestone") this.mix.music = 0.28 + milestones * 0.025;
     if (this.chapterSettings) this.apply(this.chapterSettings);
   }
   finaleMix(phase: FinalePhase) {
@@ -213,7 +193,7 @@ export class ChapterAudio extends AudioDirector {
       : 0;
     this.rain.gain.setTargetAtTime(this.mix.rain, t, 1.5);
     this.mix.ambience = phase === "transform" ? 0.22 : 0.5;
-    this.mix.music = sky ? 0.05 : 0.015;
+    this.mix.music = phase === "ending" ? 0 : sky ? 0.28 : 0.16;
     if (this.chapterSettings) this.apply(this.chapterSettings);
   }
   endingCue() {

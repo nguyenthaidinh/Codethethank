@@ -23,6 +23,7 @@ import {
   type SliceAction,
   type SliceSave,
 } from "./director";
+import { PlaybackControls } from "./PlaybackControls";
 import "./cinematic.css";
 
 const durations: Partial<Record<Beat, number>> = {
@@ -462,18 +463,16 @@ export default function CinematicGame({
             <span>17:05</span>
             <small>PHÒNG THỰC HÀNH · 2026</small>
           </div>
-          <div className="minimal-controls">
-            <button
-              aria-label={s.muted ? "Bật âm thanh" : "Tắt âm thanh"}
-              title={s.muted ? "Bật âm thanh" : "Tắt âm thanh"}
-              onClick={() => void toggleMute()}
-            >
-              {s.muted ? "♪̸" : "♪"}
-            </button>
-            <button aria-label="Tạm dừng" onClick={() => setPaused(true)}>
-              Ⅱ
-            </button>
-          </div>
+          <PlaybackControls
+            muted={s.muted}
+            music={s.music}
+            onSound={toggleMute}
+            onMusic={() => {
+              act({ type: "settings", value: { music: s.muted || !s.music } });
+              if (s.muted || !audio.current) void toggleMute();
+            }}
+            onPause={() => setPaused(true)}
+          />
           {active.map((id) => (
             <button
               key={id}
@@ -639,7 +638,7 @@ export default function CinematicGame({
                     })
                   }
                 />{" "}
-                Nhạc thưa
+                Nhạc lo-fi
               </label>
               <label>
                 <input

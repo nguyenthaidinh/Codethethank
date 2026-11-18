@@ -32,7 +32,7 @@ export function prepareLaunch(
       preferences.reduced ||
       matchMedia("(prefers-reduced-motion: reduce)").matches,
     volume: 0.8,
-    music: preferences.music > 0,
+    music: preferences.music > 0 && (save?.music ?? true),
     sfx: preferences.effects > 0,
   };
 }

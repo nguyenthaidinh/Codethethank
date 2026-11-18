@@ -1,3 +1,4 @@
+import lofiUrl from "./audio/after-class-lofi.mp3?url";
 import type { Beat, Focus, SliceSave } from "./director";
 import { CHAIR_MOTIF } from "./motifs";
 export type Foley =
@@ -23,6 +24,9 @@ export class AudioDirector {
   fan: GainNode;
   rainPan: StereoPannerNode;
   private sources: AudioScheduledSourceNode[] = [];
+  private scoreLoad?: Promise<void>;
+  private scoreFailed = false;
+  private scoreAbort = new AbortController();
   private chairBuffer: AudioBuffer;
   private voiceActive = false;
   private voicePaused = false;
@@ -36,7 +40,7 @@ export class AudioDirector {
   }
   private settings: SliceSave | null = null;
   events: { cue: string; time: number }[] = [];
-  mix = { rain: 0, fan: 0, ambience: 1, music: 0 };
+  mix = { rain: 0, fan: 0, ambience: 1, music: 0.38 };
   constructor() {
     this.context = new AudioContext();
     const c = this.context;
@@ -113,8 +117,30 @@ export class AudioDirector {
     }
     return b;
   }
+  private startScore() {
+    if (this.scoreLoad || this.scoreAbort.signal.aborted) return;
+    this.scoreLoad = (async () => {
+      const response = await fetch(lofiUrl, { signal: this.scoreAbort.signal });
+      if (!response.ok) throw new Error("Unable to load the game score");
+      const buffer = await this.context.decodeAudioData(await response.arrayBuffer());
+      if (this.scoreAbort.signal.aborted) return;
+      const source = this.context.createBufferSource();
+      source.buffer = buffer;
+      source.loop = true;
+      source.connect(this.music);
+      source.start();
+      this.sources.push(source);
+    })().catch(() => {
+      this.scoreFailed = true;
+    });
+  }
   async unlock() {
+    if (this.scoreFailed) {
+      this.scoreLoad = undefined;
+      this.scoreFailed = false;
+    }
     await this.context.resume();
+    if (this.settings?.music && !this.settings.muted) this.startScore();
   }
   playChairMotif() {
     this.events.push({ cue: CHAIR_MOTIF.id, time: this.context.currentTime });
@@ -124,6 +150,7 @@ export class AudioDirector {
     this.settings = s;
     this.voicePaused = paused;
     const t = this.context.currentTime;
+    if (s.music && !s.muted && !paused) this.startScore();
     this.master.gain.setTargetAtTime(s.muted || paused ? 0 : s.volume, t, 0.12);
     this.foley.gain.setTargetAtTime(s.sfx ? 1 : 0, t, 0.1);
     this.ambience.gain.setTargetAtTime(s.sfx ? this.mix.ambience : 0, t, 0.15);
@@ -154,7 +181,7 @@ export class AudioDirector {
         : beat === "response" || beat === "invitation"
           ? 0.6
           : 1;
-    this.mix.music = beat === "paper" ? 0.13 : 0;
+    this.mix.music = beat === "verdict" ? 0 : ["chair", "invitation"].includes(beat) ? 0.045 : 0.38;
     if (this.settings) this.apply(this.settings);
     if (beat === "paper") {
       this.tone(261.63, 3, 0.12, this.music);
@@ -267,6 +294,7 @@ export class AudioDirector {
     else await this.context.resume();
   }
   dispose() {
+    this.scoreAbort.abort();
     for (const source of this.sources) source.stop();
     void this.context.close();
   }

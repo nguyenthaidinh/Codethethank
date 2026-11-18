@@ -1,7 +1,8 @@
 import { useNarration } from "../speech/useNarration";
 import { openingNarration } from "../speech/policy";
 import { aionCue } from "../speech/aion2046";
-import { Subtitle, SoundIcon, PauseIcon } from "../cinematic/SceneChrome";
+import { PlaybackControls } from "../cinematic/PlaybackControls";
+import { Subtitle } from "../cinematic/SceneChrome";
 import { chairMemoryGrade } from "../cinematic/ChairMatchCut";
 import { FinaleControls } from "../finale/FinaleControls";
 import { finaleDurations, type FinaleAction } from "../finale/state";
@@ -1033,17 +1034,20 @@ function ChapterStage({
         aria-hidden="true"
       />
       <div className="chapter-letterbox" aria-hidden="true" />
-      <div className="minimal-controls">
-        <button
-          aria-label={settings.muted ? "Bật âm thanh" : "Tắt âm thanh"}
-          onClick={() => void toggleSound()}
-        >
-          <SoundIcon muted={settings.muted} />
-        </button>
-        <button aria-label="Tạm dừng" onClick={() => setPaused(true)}>
-          <PauseIcon />
-        </button>
-      </div>
+      <PlaybackControls
+        muted={settings.muted}
+        music={settings.music}
+        onSound={toggleSound}
+        onMusic={() => {
+          setSettings((p) => ({ ...p, music: p.muted || !p.music }));
+          if (settings.muted) void toggleSound();
+          else if (!settings.music && audio.current)
+            void audio.current
+              .unlock()
+              .catch(() => setStatus("Chạm nút âm thanh để mở lại tiếng."));
+        }}
+        onPause={() => setPaused(true)}
+      />
       {!paused && s.beat === "OPENING_CINEMATIC" && (
         <button
           className="chapter-skip"
@@ -1313,7 +1317,7 @@ function ChapterStage({
                 ["captions", "Phụ đề"],
                 ["voice", "Giọng dẫn và AION"],
                 ["reduced", "Giảm chuyển động"],
-                ["music", "Nhạc"],
+                ["music", "Nhạc lo-fi"],
                 ["sfx", "Âm môi trường và đồ vật"],
               ] as const
             ).map(([key, label]) => (

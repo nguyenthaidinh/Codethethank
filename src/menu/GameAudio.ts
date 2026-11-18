@@ -22,7 +22,7 @@ export class GameAudio extends AudioDirector {
     );
     this.music.gain.setTargetAtTime(
       state.music
-        ? this.mix.music * this.preferences.music * this.voiceDuck
+        ? this.mix.music * (this.preferences.music || 0.55) * this.voiceDuck
         : 0,
       t,
       0.15,
