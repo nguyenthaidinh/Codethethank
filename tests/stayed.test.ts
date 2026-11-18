@@ -1,6 +1,31 @@
 ﻿import { describe, it, expect } from "vitest";
-import { freshStay, readStay, stayReducer } from "../src/stayed/state";
+import { cueKey, freshStay, readStay, stayReducer, type StaySave } from "../src/stayed/state";
 describe("stayed checkpoints and meaningful actions", () => {
+  const skipDialogue = (s: StaySave) => stayReducer(s, { type: "skip-dialogue", cue: cueKey(s) });
+  it("stops at each unanswered reply and resumes at the same prompt", () => {
+    let s: StaySave = { ...freshStay, interactive: true, phase: "question" };
+    for (const [line, reply] of [[2, "context"], [9, "belief"]] as const) {
+      const before = s;
+      s = skipDialogue(s);
+      expect(s.line).toBe(line);
+      expect(s.seen).toEqual([]);
+      expect(readStay(s)).toEqual(s);
+      expect(skipDialogue(s)).toBe(s);
+      expect(stayReducer(s, { type: "skip-dialogue", cue: cueKey(before) })).toBe(s);
+      s = stayReducer(s, { type: "reply", id: reply });
+    }
+    s = skipDialogue(s);
+    expect(s).toMatchObject({ phase: "notebook", read: [], written: false });
+    expect(skipDialogue(s)).toBe(s);
+  });
+  it("preserves the chair scene and leaves the notebook stroke to the player", () => {
+    const chair = skipDialogue(freshStay);
+    expect(chair.phase).toBe("chair");
+    expect(skipDialogue(chair)).toBe(chair);
+    const pen = skipDialogue({ ...freshStay, phase: "second_chance", read: ["outcome", "support"] });
+    expect(pen).toMatchObject({ phase: "unwritten", written: false });
+    expect(skipDialogue(pen)).toBe(pen);
+  });
   it("requires both notes and writes once", () => {
     const s = { ...freshStay, phase: "notebook" as const };
     expect(stayReducer(s, { type: "finish-notes" })).toBe(s);

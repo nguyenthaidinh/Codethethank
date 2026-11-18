@@ -44,16 +44,29 @@ const phases: StayPhase[] = [
   "next",
 ];
 export const cueKey = (s: StaySave) => `${s.phase}.${s.line}`;
+export const isSpokenScene = (phase: StayPhase) =>
+  phase === "discussion" || phase === "question" || phase === "second_chance";
 export type StayAction =
   | { type: "reply"; id: ReplyId }
   | { type: "advance"; cue?: string }
   | { type: "skip" }
+  | { type: "skip-dialogue"; cue: string }
   | { type: "read"; id: NoteId }
   | { type: "finish-notes" }
   | { type: "write" }
   | { type: "inspect-next" }
   | { type: "replay" };
 export function stayReducer(s: StaySave, a: StayAction): StaySave {
+  if (a.type === "skip-dialogue") {
+    const lines = stayLines[s.phase];
+    if (!isSpokenScene(s.phase) || !lines || a.cue !== cueKey(s) || stayChoice(s))
+      return s;
+    for (let line = s.line + 1; line < lines.length; line++) {
+      const next = { ...s, line };
+      if (stayChoice(next)) return next;
+    }
+    return { ...s, phase: phases[phases.indexOf(s.phase) + 1], line: 0 };
+  }
   if (a.type === "reply") {
     const choice = stayChoice(s);
     if (!choice || !choice.options.some((option) => option.id === a.id))

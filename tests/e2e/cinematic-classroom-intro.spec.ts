@@ -200,10 +200,10 @@ for (const mode of ["desktop", "mobile", "fallback"] as const) {
       "không biết mình sai ở đâu nữa",
     );
     await page.getByRole("button", { name: "Tiếp lời", exact: false }).click();
-    await expect(page.locator(".subtitle")).toContainText("Cứ kể cô nghe đã");
+    await expect(page.locator(".subtitle")).toContainText("Em đang thử làm gì vậy?");
     await page.reload();
     await page.getByRole("button", { name: "Tiếp tục", exact: true }).click();
-    await expect(page.locator(".subtitle")).toContainText("Cứ kể cô nghe đã");
+    await expect(page.locator(".subtitle")).toContainText("Em đang thử làm gì vậy?");
     expect((await state(page)).stayed.responses["discussion.0"]).toBe("doubt");
     for (let steps = 0; steps < 24; steps++) {
       const s = (await state(page)).stayed;

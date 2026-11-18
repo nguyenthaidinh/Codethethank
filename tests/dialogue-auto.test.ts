@@ -9,7 +9,7 @@ describe("automatic dialogue with an optional next button", () => {
     const answered = step(pending, { type: "reply", id: "doubt" });
     expect(stayAutoDelay(answered)).toBe(5);
     const response = step(answered, { type: "advance", cue: cueKey(answered) });
-    expect(stayLine(response)?.text).toContain("Cứ kể cô nghe đã");
+    expect(stayLine(response)?.text).toContain("Em đang thử làm gì vậy?");
     expect(stayAutoDelay(response)).toBe(5);
     expect(stayAutoDelay({ ...freshStay, phase: "question", line: 1 })).toBe(
       10,

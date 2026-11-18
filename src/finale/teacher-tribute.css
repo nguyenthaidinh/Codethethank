@@ -6,7 +6,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: max(24px, 5vh) 20px 24px;
+  padding: max(18px, 4svh) 20px 24px;
+  overflow: clip;
   background: radial-gradient(
     ellipse at 50% 100%,
     #20455a,
@@ -138,8 +139,14 @@
   .game-teacher-tribute > header {
     max-width: 90%;
   }
+  .game-teacher-tribute {
+    padding-bottom: calc(72px + env(safe-area-inset-bottom));
+  }
   .game-teacher-tribute > footer {
-    max-width: 60%;
+    max-width: 100%;
+  }
+  .game-teacher-tribute .game-tribute-window {
+    width: 100%;
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -168,6 +175,7 @@
     serif;
 }
 .game-teacher-tribute header p {
+  margin: 0 0 12px;
   font:
     clamp(14px, 1.3vw, 21px)/1.6 Arial,
     "Segoe UI",
@@ -177,31 +185,64 @@
   flex: 1;
   min-height: 0;
   width: min(680px, 100%);
-  overflow: hidden;
+  container-type: size;
+  overflow: clip;
   mask-image: linear-gradient(transparent, black 12%, black 86%, transparent);
 }
-.game-tribute-roll {
-  animation: game-teacher-roll 57s linear both;
-  padding-top: 25vh;
-}
-.game-tribute-roll p {
+.game-tribute-roll ul {
+  padding: 0;
   margin: 0;
-  padding: 16px 8px;
+  list-style: none;
+}
+.game-tribute-roll li,
+.game-tribute-last {
+  margin: 0;
   font:
-    400 clamp(23px, 2.5vw, 42px)/1.5 LessonSerif,
+    400 clamp(20px, 2.45vw, 38px)/1.4 LessonSerif,
     Georgia,
     serif;
   text-shadow: 0 2px 12px #081425;
 }
-.game-tribute-roll .game-tribute-last {
+.game-tribute-roll li {
+  padding: clamp(8px, 1.5svh, 16px) 8px;
+}
+.game-tribute-last {
   color: #e1b97b;
-  padding: 40px 0 20vh;
   font-size: clamp(19px, 2vw, 30px);
+}
+.game-teacher-tribute:not([data-roll="still"]) .game-tribute-last {
+  min-height: 100cqh;
+  display: grid;
+  place-items: center;
+}
+.game-teacher-tribute:not([data-roll="still"]) .game-tribute-roll {
+  animation: game-teacher-roll 44s linear both
+    var(--tribute-roll-state, running);
+}
+.game-teacher-tribute[data-roll="paused"] {
+  --tribute-roll-state: paused;
+}
+.game-teacher-tribute[data-roll="still"] .game-tribute-window {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  mask-image: none;
+}
+.game-teacher-tribute[data-roll="still"] .game-tribute-last {
+  padding: 20px 0;
 }
 .game-teacher-tribute footer {
   flex: none;
   font-size: 12px;
   color: #b3c8d4;
+}
+.game-tribute-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+.game-tribute-controls button {
+  min-height: 44px;
 }
 .game-teacher-tribute button {
   padding: 12px 22px;
@@ -216,19 +257,16 @@
 }
 @keyframes game-teacher-roll {
   from {
-    transform: translateY(0);
+    transform: translateY(42cqh);
   }
   to {
-    transform: translateY(calc(-100% + 22vh));
+    transform: translateY(calc(100cqh - 100%));
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .game-tribute-roll {
-    animation: none;
-    padding-top: 0;
-  }
-  .game-tribute-window {
-    overflow-y: auto;
-    mask-image: none;
+  /* An explicit press may play the names even when the default view is still. */
+  .game-teacher-tribute:not([data-roll="still"]) .game-tribute-roll {
+    animation: game-teacher-roll 44s linear both
+      var(--tribute-roll-state, running) !important;
   }
 }

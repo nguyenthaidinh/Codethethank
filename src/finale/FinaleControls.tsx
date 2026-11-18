@@ -111,7 +111,7 @@ export function FinaleControls({
       )}
       {s.phase === "ending" && (
         <EndingScreen reducedMotion={reducedMotion}>
-          <TeacherTribute />
+          <TeacherTribute reducedMotion={reducedMotion} />
           <button onClick={onMenu}>Trở về menu</button>
           <button onClick={onReplay}>Chơi lại</button>
           <button onClick={() => act({ type: "inspect" })}>

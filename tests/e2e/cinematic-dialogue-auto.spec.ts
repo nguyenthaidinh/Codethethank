@@ -107,7 +107,7 @@ for (const fallback of [false, true]) {
         `${fallback ? "mobile" : "desktop"}-automatic-dialogue.png`,
       ),
     });
-    await expect(page.locator(".subtitle")).toContainText("Cứ kể cô nghe đã", {
+    await expect(page.locator(".subtitle")).toContainText("Em đang thử làm gì vậy?", {
       timeout: 4000,
     });
     expect((await read(page)).stayed.line).toBe(1);
@@ -259,4 +259,24 @@ test("mobile teacher opens the handle before walking into the room", async ({
   ).toBeVisible({ timeout: 12000 });
   expect(errors).toEqual([]);
   await page.goto("about:blank");
+});
+
+test("dialogue skip stops at both replies and the notebook on a first playthrough", async ({ page }) => {
+  await page.setViewportSize({ width: 375, height: 812 });
+  await start(page, false, true, { ...freshStay, interactive: true, phase: "question" });
+  const skip = page.getByRole("button", { name: "Bỏ qua hội thoại", exact: true });
+  const button = (name: string) => page.getByRole("button", { name, exact: true });
+  await skip.focus();
+  await page.keyboard.press("Enter");
+  await expect(skip).toHaveCount(0);
+  await button("Dữ liệu chưa kể hết hoàn cảnh của bạn ấy.").click();
+  await skip.click();
+  await expect(skip).toHaveCount(0);
+  await page.reload();
+  await button("Tiếp tục").click();
+  await button("Em sẽ tìm dữ kiện còn thiếu trước.").click();
+  await skip.click();
+  await expect(button("Xem ghi chú về kết quả")).toBeVisible();
+  await expect(button("Xem ghi chú về nhu cầu")).toBeVisible();
+  await expect(skip).toHaveCount(0);
 });

@@ -193,7 +193,7 @@ export const replyMoments = {
         label: "Em không biết mình đang sai ở đâu.",
         text: "An: “Em thử đi thử lại rồi… mà vẫn không được. Em không biết mình sai ở đâu nữa, cô ạ.”",
         response:
-          "Cô Vân: “Em vẫn còn thất vọng à? Cứ kể cô nghe đã. Rồi cô với em cùng xem lại nhé.”",
+          "Cô Vân: “Ừ, mình cứ từ từ. Em đang thử làm gì vậy? Kể cô nghe, rồi mình cùng xem lại nhé.”",
       },
     ],
   },

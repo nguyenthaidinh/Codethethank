@@ -93,7 +93,7 @@ describe("An's replies", () => {
     expect(stayLine(s)?.text).toContain("không biết mình sai ở đâu nữa");
     expect(readStay(s)?.responses).toEqual({ "discussion.0": "doubt" });
     s = stayReducer(s, { type: "advance" });
-    expect(stayLine(s)?.text).toContain("Cứ kể cô nghe đã");
+    expect(stayLine(s)?.text).toContain("Em đang thử làm gì vậy?");
     expect(
       readStay({ ...s, responses: { "question.999": "doubt" } }),
     ).toBeUndefined();

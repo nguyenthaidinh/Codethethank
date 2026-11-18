@@ -206,6 +206,7 @@ for (const mobile of [false, true])
     expect(errors).toEqual([]);
     await click("Xem lại ký ức");
     await phase("discussion");
-    await click("Bỏ qua đoạn đã xem");
+    await click("Bỏ qua hội thoại");
+    await phase("chair");
     await ctx.close();
   });

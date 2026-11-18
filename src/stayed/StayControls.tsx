@@ -1,5 +1,5 @@
 import { useRef, type CSSProperties } from "react";
-import { cueKey, type StaySave, type StayAction } from "./state";
+import { cueKey, isSpokenScene, type StaySave, type StayAction } from "./state";
 import {
   notes,
   stayLines,
@@ -43,7 +43,7 @@ export function StayControls({
       )}
       {lines &&
         !choice &&
-        ["discussion", "question", "second_chance"].includes(s.phase) && (
+        isSpokenScene(s.phase) && (
           <div className="dialogue-playback">
             {delay !== null && (
               <span className="dialogue-auto-note" aria-hidden="true">
@@ -66,7 +66,16 @@ export function StayControls({
             </button>
           </div>
         )}
-      {lines && s.seen.includes(cueKey(s)) && (
+      {isSpokenScene(s.phase) && !choice && (
+        <button
+          type="button"
+          className="chapter-skip"
+          onClick={() => act({ type: "skip-dialogue", cue: cueKey(s) })}
+        >
+          Bỏ qua hội thoại
+        </button>
+      )}
+      {!isSpokenScene(s.phase) && lines && s.seen.includes(cueKey(s)) && (
         <button className="chapter-skip" onClick={() => act({ type: "skip" })}>
           Bỏ qua đoạn đã xem
         </button>

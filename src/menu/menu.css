@@ -481,6 +481,12 @@ body,
   color: #a9b2b7;
   line-height: 1.8;
 }
+.menu-dialog .menu-about-dedication {
+  border-left: 1px solid #d3bd8680;
+  padding-left: 14px;
+  color: #eadab7;
+  font-family: LessonSerif, Georgia, serif;
+}
 .menu-setting {
   display: block;
   margin: 22px 0;

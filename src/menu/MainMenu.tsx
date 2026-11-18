@@ -114,6 +114,11 @@ export default function MainMenu({
       setError("Chưa tải được phân cảnh. Kiểm tra kết nối rồi thử lại.");
     }
   };
+  const startJourney = () => {
+    audio.current?.cue("click");
+    if (checkpoint) setDialog("restart");
+    else void launch(false);
+  };
   const reduced = preferences.reduced || systemReduced;
   const low =
     preferences.quality === "low" ||
@@ -165,11 +170,7 @@ export default function MainMenu({
             icon="play"
             onPointerEnter={hover}
             onFocus={hover}
-            onClick={() => {
-              audio.current?.cue("click");
-              if (checkpoint) setDialog("restart");
-              else void launch(false);
-            }}
+            onClick={startJourney}
           >
             Bắt đầu hành trình
           </MenuButton>
@@ -232,21 +233,25 @@ export default function MainMenu({
         />
       )}
       {dialog === "about" && (
-        <MenuDialog title="Những điều ở lại." onClose={() => setDialog(null)}>
+        <MenuDialog
+          eyebrow="20/11 · NGÀY NHÀ GIÁO VIỆT NAM"
+          title="Có người đã ở lại."
+          onClose={() => setDialog(null)}
+        >
           <p>
-            Một câu chuyện tương tác về người thầy, cơ hội và những bài học
-            không nằm trong sách vở.
+            Một buổi chiều năm 2026, khi An còn loay hoay trước một phép thử
+            thất bại, cô Vân kéo ghế ngồi xuống bên cậu. Hai mươi năm sau,
+            cuốn sổ trên bàn vẫn giữ dấu vết của buổi trò chuyện ấy.
           </p>
-          <p>
-            Từ một buổi chiều năm 2026 đến khung cửa nhìn ra thành phố năm 2046.
-            Có những điều nhỏ bé theo ta đi rất xa.
+          <p className="menu-about-dedication">
+            Xin gửi câu chuyện này đến những thầy cô đã kiên nhẫn lắng nghe
+            và cho chúng ta cơ hội thử lại, ngay cả khi ta đã muốn bỏ cuộc.
           </p>
           <p className="menu-dialog-note">
-            Dùng chuột hoặc chạm để khám phá. Tab và Enter để chọn. Esc để tạm
-            dừng trong câu chuyện.
+            Nhấp hoặc chạm để khám phá. Dùng Tab và Enter để chọn, Esc để tạm dừng.
           </p>
-          <button className="menu-dialog-done" onClick={() => setDialog(null)}>
-            Trở về khung cửa
+          <button className="menu-dialog-done" onClick={startJourney}>
+            Bắt đầu hành trình
           </button>
         </MenuDialog>
       )}

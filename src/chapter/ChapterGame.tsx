@@ -877,7 +877,13 @@ function ChapterStage({
     if (paused || !rip) return;
     lastAction.current = elapsed.current;
     setHintVisible(false);
-    if (action.type !== "lab2035" || (action.action.type !== "tick" && !(action.action.type === "code" && action.action.action.type === "tick")))
+    if (
+      action.type !== "lab2035" ||
+      (action.action.type !== "tick" &&
+        !(
+          action.action.type === "code" && action.action.action.type === "tick"
+        ))
+    )
       audio.current?.cue(
         action.type === "question" ||
           action.type === "object" ||

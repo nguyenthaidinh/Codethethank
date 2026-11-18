@@ -140,10 +140,12 @@ export function LanguageSelector() {
 
 export function MenuDialog({
   title,
+  eyebrow = "THE UNWRITTEN LESSON",
   onClose,
   children,
 }: {
   title: string;
+  eyebrow?: string;
   onClose: () => void;
   children: ReactNode;
 }) {
@@ -173,7 +175,7 @@ export function MenuDialog({
       <div className="menu-dialog-inner">
         <div className="menu-dialog-heading">
           <div>
-            <span className="menu-eyebrow">THE UNWRITTEN LESSON</span>
+            <span className="menu-eyebrow">{eyebrow}</span>
             <h2 id="menu-dialog-title">{title}</h2>
           </div>
           <button
