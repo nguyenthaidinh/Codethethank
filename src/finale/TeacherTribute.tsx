@@ -2,22 +2,7 @@ import { createPortal } from "react-dom";
 import { useEffect, useRef, useState } from "react";
 import "./teacher-tribute.css";
 import { TributeCelebration } from "./TributeCelebration";
-
-const teachers = [
-  "Cô Như",
-  "Cô Giang",
-  "Cô Trang",
-  "Thầy Thảo",
-  "Thầy Thắng",
-  "Thầy Xuân Thắng",
-  "Thầy Thọ",
-  "Thầy Hải",
-  "Thầy Thuận",
-  "Thầy Cương",
-  "Cô Hương",
-  "Thầy Tuấn",
-  "Thầy Tuấn",
-];
+import teachers from "../../backend/resources/tribute-teachers.json";
 
 /** Local ending presentation. Does not read or mutate saves or private letters. */
 export function TeacherTribute() {
@@ -79,8 +64,8 @@ export function TeacherTribute() {
       </header>
       <div className="game-tribute-window" aria-label="Danh sách thầy cô">
         <div className="game-tribute-roll">
-          {teachers.map((name, index) => (
-            <p key={index}>{name}</p>
+          {teachers.map(({ id, name }) => (
+            <p key={id}>{name}</p>
           ))}
           <p className="game-tribute-last">
             Những điều thầy cô dạy

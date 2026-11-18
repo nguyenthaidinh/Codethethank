@@ -19,9 +19,25 @@ class TributeTest extends TestCase
     public function test_roster_preserves_teacher_order_duplicates_and_group_order(): void
     {
         $rows = app(TributeService::class)->roster("Mai\nMai", "An\nBình");
-        $this->assertCount(17, $rows);
-        $this->assertSame(['Cô Như', 'Cô Giang', 'Cô Trang', 'Thầy Thảo', 'Thầy Thắng', 'Thầy Xuân Thắng', 'Thầy Thọ', 'Thầy Hải', 'Thầy Thuận', 'Thầy Cương', 'Cô Hương', 'Thầy Tuấn', 'Thầy Tuấn', 'Mai', 'Mai', 'An', 'Bình'], array_column($rows, 'name'));
-        $this->assertCount(17, array_unique(array_column($rows, 'id')));
+        $this->assertCount(18, $rows);
+        $this->assertSame([
+            'Cô Nguyễn Thị Như',
+            'Cô Trương Thị Hương Giang',
+            'Cô Hồ Thị Phượng',
+            'Cô Phan Thị Đài Trang',
+            'Thầy Trương Hải',
+            'Thầy Phạm Văn Thuận',
+            'Thầy Nguyễn Đức Thắng',
+            'Thầy Từ Ngọc Thảo',
+            'Thầy Nguyễn Quốc Cương',
+            'Thầy Trần Xuân Thắng',
+            'Thầy Phan Xuân Thọ',
+            'Cô Nguyễn Lan Hương',
+            'Thầy Lê Quốc Tuấn',
+            'Thầy Nguyễn Văn Quốc Tuấn',
+            'Mai', 'Mai', 'An', 'Bình',
+        ], array_column($rows, 'name'));
+        $this->assertCount(18, array_unique(array_column($rows, 'id')));
     }
 
     public function test_tribute_is_finite_snapshot_and_emergency_blank_cancels_it(): void
@@ -31,7 +47,7 @@ class TributeTest extends TestCase
         $wall->command($actor, 'resume', WallState::findOrFail(1)->revision);
         app(TributeService::class)->start($actor, WallState::findOrFail(1)->revision, '', '', 8);
         $snapshot = $wall->snapshot();
-        $this->assertCount(13, $snapshot['tribute']['rows']);
+        $this->assertCount(14, $snapshot['tribute']['rows']);
         $this->travel(10)->minutes();
         $this->assertSame($snapshot['tribute'], $wall->snapshot()['tribute']);
         $wall->command($actor, 'blank', 0);

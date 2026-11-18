@@ -15,13 +15,14 @@ class TributeService
     public function roster(string $additional, string $players): array
     {
         $rows = array_map(fn ($teacher) => [...$teacher, 'group' => 'Kính gửi thầy cô'], config('tribute.teachers'));
+        $maxRows = count($rows) + 1000;
         foreach (['Những người đồng hành' => $additional, 'Cảm ơn bạn đã chơi' => $players] as $group => $text) {
             foreach (preg_split('/\R/u', $text) as $name) {
                 $name = preg_replace('/\s+/u', ' ', trim($name));
                 if ($name === '') {
                     continue;
                 }
-                if (mb_strlen($name) > 80 || count($rows) >= 1013) {
+                if (mb_strlen($name) > 80 || count($rows) >= $maxRows) {
                     throw ValidationException::withMessages(['additional' => 'Mỗi tên tối đa 80 ký tự; tối đa 1.000 tên bổ sung và người chơi.']);
                 }
                 $rows[] = ['id' => 'guest-'.count($rows), 'name' => $name, 'group' => $group];
