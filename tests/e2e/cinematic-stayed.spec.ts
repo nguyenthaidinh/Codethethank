@@ -208,5 +208,6 @@ for (const mobile of [false, true])
     await phase("discussion");
     await click("Bỏ qua hội thoại");
     await phase("chair");
+    await click("Tiếp tục chơi");
     await ctx.close();
   });

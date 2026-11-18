@@ -1,4 +1,5 @@
 import { useRef, type CSSProperties } from "react";
+import type { PlaybackSpeed } from "../cinematic/PlaybackControls";
 import { cueKey, isSpokenScene, type StaySave, type StayAction } from "./state";
 import {
   notes,
@@ -13,16 +14,21 @@ export function StayControls({
   act,
   hint,
   time = 0,
+  speed,
+  onSkip,
 }: {
   s: StaySave;
   act: (a: StayAction) => void;
   hint: boolean;
   time?: number;
+  speed: PlaybackSpeed;
+  onSkip: () => void;
 }) {
   const start = useRef<number | null>(null);
   const lines = stayLines[s.phase];
   const choice = stayChoice(s);
   const delay = stayAutoDelay(s);
+  const playingDialogue = isSpokenScene(s.phase) && !choice && delay !== null;
   return (
     <>
       {choice && (
@@ -41,42 +47,47 @@ export function StayControls({
           </div>
         </section>
       )}
-      {lines &&
-        !choice &&
-        isSpokenScene(s.phase) && (
-          <div className="dialogue-playback">
-            {delay !== null && (
-              <span className="dialogue-auto-note" aria-hidden="true">
-                Tự chuyển sau {Math.max(1, Math.ceil(delay - time))}s
-              </span>
-            )}
-            <button
-              className="dialogue-advance"
-              aria-label="Tiếp lời"
-              title="Hội thoại tự chuyển. Bấm hoặc nhấn Enter để tiếp ngay."
-              style={
-                {
-                  "--dialogue-progress": `${delay === null ? 0 : Math.min(1, time / delay) * 100}%`,
-                } as CSSProperties
-              }
-              onClick={() => act({ type: "advance", cue: cueKey(s) })}
-            >
-              Tiếp lời <span aria-hidden="true">↵</span>
-              <span className="dialogue-progress" aria-hidden="true" />
-            </button>
-          </div>
-        )}
-      {isSpokenScene(s.phase) && !choice && (
-        <button
-          type="button"
-          className="chapter-skip"
-          onClick={() => act({ type: "skip-dialogue", cue: cueKey(s) })}
+      {playingDialogue && (
+        <div
+          className="dialogue-playback"
+          role="group"
+          aria-label="Điều khiển hội thoại"
         >
-          Bỏ qua hội thoại
-        </button>
+          <span className="dialogue-auto-note" aria-hidden="true">
+            Tự chuyển sau {Math.max(1, Math.ceil((delay - time) / speed))}s
+          </span>
+          <button
+            type="button"
+            className="dialogue-skip"
+            aria-label="Bỏ qua hội thoại"
+            onClick={() => {
+              act({ type: "skip-dialogue", cue: cueKey(s) });
+              onSkip();
+            }}
+          >
+            Bỏ qua
+          </button>
+          <button
+            className="dialogue-advance"
+            aria-label="Tiếp lời"
+            title="Hội thoại tự chuyển. Bấm hoặc nhấn Enter để tiếp ngay."
+            style={
+              {
+                "--dialogue-progress": `${Math.min(1, time / delay) * 100}%`,
+              } as CSSProperties
+            }
+            onClick={() => act({ type: "advance", cue: cueKey(s) })}
+          >
+            Tiếp lời <span aria-hidden="true">↵</span>
+            <span className="dialogue-progress" aria-hidden="true" />
+          </button>
+        </div>
       )}
       {!isSpokenScene(s.phase) && lines && s.seen.includes(cueKey(s)) && (
-        <button className="chapter-skip" onClick={() => act({ type: "skip" })}>
+        <button
+          className="chapter-skip dialogue-replay-skip"
+          onClick={() => act({ type: "skip" })}
+        >
           Bỏ qua đoạn đã xem
         </button>
       )}

@@ -107,9 +107,12 @@ for (const fallback of [false, true]) {
         `${fallback ? "mobile" : "desktop"}-automatic-dialogue.png`,
       ),
     });
-    await expect(page.locator(".subtitle")).toContainText("Em đang thử làm gì vậy?", {
-      timeout: 4000,
-    });
+    await expect(page.locator(".subtitle")).toContainText(
+      "Em đang thử làm gì vậy?",
+      {
+        timeout: 4000,
+      },
+    );
     expect((await read(page)).stayed.line).toBe(1);
     await page.getByRole("button", { name: "Tiếp lời", exact: true }).click();
     await expect(page.locator(".subtitle")).toContainText(
@@ -261,14 +264,29 @@ test("mobile teacher opens the handle before walking into the room", async ({
   await page.goto("about:blank");
 });
 
-test("dialogue skip stops at both replies and the notebook on a first playthrough", async ({ page }) => {
+test("dialogue skip stops at both replies and the notebook on a first playthrough", async ({
+  page,
+}) => {
   await page.setViewportSize({ width: 375, height: 812 });
-  await start(page, false, true, { ...freshStay, interactive: true, phase: "question" });
-  const skip = page.getByRole("button", { name: "Bỏ qua hội thoại", exact: true });
-  const button = (name: string) => page.getByRole("button", { name, exact: true });
+  await start(page, false, true, {
+    ...freshStay,
+    interactive: true,
+    phase: "question",
+  });
+  const skip = page.getByRole("button", {
+    name: "Bỏ qua hội thoại",
+    exact: true,
+  });
+  const button = (name: string) =>
+    page.getByRole("button", { name, exact: true });
   await skip.focus();
   await page.keyboard.press("Enter");
   await expect(skip).toHaveCount(0);
+  const guide = page.getByRole("dialog", { name: "Tóm tắt câu chuyện" });
+  await expect(
+    guide.getByRole("heading", { name: "Hướng dẫn chơi" }),
+  ).toBeVisible();
+  await button("Tiếp tục chơi").click();
   await button("Dữ liệu chưa kể hết hoàn cảnh của bạn ấy.").click();
   await skip.click();
   await expect(skip).toHaveCount(0);
@@ -276,7 +294,37 @@ test("dialogue skip stops at both replies and the notebook on a first playthroug
   await button("Tiếp tục").click();
   await button("Em sẽ tìm dữ kiện còn thiếu trước.").click();
   await skip.click();
+  await expect(guide).toContainText("Chạm «02 · Nhu cầu»");
+  await button("Tiếp tục chơi").click();
   await expect(button("Xem ghi chú về kết quả")).toBeVisible();
   await expect(button("Xem ghi chú về nhu cầu")).toBeVisible();
   await expect(skip).toHaveCount(0);
+});
+
+test("dialogue speed and manual guide control the current line", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1280, height: 720 });
+  await start(page, false, true, { ...freshStay, phase: "question" });
+  const rate = (speed: number) =>
+    page.getByRole("button", { name: `×${speed}`, exact: true });
+  await rate(2).click();
+  await expect(rate(2)).toHaveAttribute("aria-pressed", "true");
+  await rate(3).click();
+  await expect(rate(3)).toHaveAttribute("aria-pressed", "true");
+  await page.getByRole("button", { name: "Tóm tắt & hướng dẫn" }).click();
+  const progress = await page
+    .locator(".dialogue-advance")
+    .getAttribute("style");
+  await page.waitForTimeout(1200);
+  await expect(page.locator(".dialogue-advance")).toHaveAttribute(
+    "style",
+    progress!,
+  );
+  await page.keyboard.press("Escape");
+  await expect(page.getByRole("dialog")).toHaveCount(0);
+  await expect(page.locator(".subtitle")).toContainText(
+    "Dữ liệu ghi bạn làm bài chưa đều",
+    { timeout: 5000 },
+  );
 });

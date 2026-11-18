@@ -1,10 +1,40 @@
 import { expect, test } from "@playwright/test";
+import { freshChapter } from "../../src/chapter/director";
+import { freshSlice, SLICE_KEY } from "../../src/cinematic/director";
 
 declare global {
   interface Window {
     scoreBus?: GainNode;
   }
 }
+
+test("global speed advances a scene outside dialogue and guide tracks the chapter", async ({ page }) => {
+  await page.addInitScript(({ key, save }) => {
+    if (!localStorage.getItem(key)) localStorage.setItem(key, JSON.stringify(save));
+  }, {
+    key: SLICE_KEY,
+    save: {
+      ...freshSlice,
+      beat: "explore",
+      chapter: { ...freshChapter, beat: "MEMORY_TRANSITION", signal: true },
+    },
+  });
+  await page.goto("/");
+  const button = (name: string) => page.getByRole("button", { name, exact: true });
+  await button("Tiếp tục").click();
+  await button("×3").click();
+  const stage = page.locator(".chapter");
+  await expect(stage).toHaveAttribute("data-chapter", "CLASSROOM_ESTABLISHING", { timeout: 6000 });
+  await expect(button("×3")).toHaveAttribute("aria-pressed", "true");
+  await button("Tóm tắt & hướng dẫn").click();
+  const guide = page.getByRole("dialog", { name: "Tóm tắt câu chuyện" });
+  await expect(guide).toContainText("bàn máy tính");
+  await guide.getByText("Điều khiển chung").click();
+  await expect(guide.getByText(/dùng Tab/)).toBeVisible();
+  await button("Tiếp tục chơi").click();
+  await button("×1").click();
+  await expect(button("×1")).toHaveAttribute("aria-pressed", "true");
+});
 
 for (const touch of [false, true]) {
   test.describe(touch ? "Touch playback controls" : "Desktop playback controls", () => {

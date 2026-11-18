@@ -25,6 +25,24 @@
   color: #c2b9a5;
   text-shadow: 0 1px 4px #081720;
 }
+.dialogue-skip {
+  min-height: 44px;
+  padding: 6px 10px;
+  border: 1px solid #a88c5855;
+  border-radius: 3px;
+  background: #142c3cc7;
+  color: #f1e5ce;
+  font: 13px/1.2 system-ui, sans-serif;
+}
+.dialogue-playback button:focus-visible,
+.game-guide button:focus-visible {
+  outline: 2px solid #e1c599;
+  outline-offset: 3px;
+}
+.chapter .dialogue-replay-skip {
+  top: auto;
+  bottom: max(22px, env(safe-area-inset-bottom));
+}
 .dialogue-playback .dialogue-advance {
   position: relative;
   right: auto !important;
@@ -43,12 +61,18 @@
 }
 @media (max-width: 600px) {
   .dialogue-playback {
-    right: 16px;
+    right: max(12px, env(safe-area-inset-right));
     bottom: max(22px, env(safe-area-inset-bottom));
-    gap: 10px;
+    gap: 6px;
   }
   .dialogue-auto-note {
-    font-size: 10px;
+    display: none;
+  }
+}
+@media (max-width: 420px) {
+  .chapter.narrative-room[data-ripple=""] .dialogue-playback .dialogue-advance {
+    min-width: 0;
+    padding-inline: 10px;
   }
 }
 .dialogue-choices {

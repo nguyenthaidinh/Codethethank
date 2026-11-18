@@ -23,7 +23,8 @@ import {
   type SliceAction,
   type SliceSave,
 } from "./director";
-import { PlaybackControls } from "./PlaybackControls";
+import { GameGuide } from "./GameGuide";
+import { PlaybackControls, type PlaybackSpeed } from "./PlaybackControls";
 import "./cinematic.css";
 
 const durations: Partial<Record<Beat, number>> = {
@@ -61,6 +62,8 @@ export default function CinematicGame({
       return freshSlice;
     }
   });
+  const [speed, setSpeed] = useState<PlaybackSpeed>(1);
+  const [guideOpen, setGuideOpen] = useState(false);
   const [started, setStarted] = useState(false),
     [paused, setPaused] = useState(false),
     [time, setTime] = useState(0),
@@ -88,6 +91,9 @@ export default function CinematicGame({
     position = useRef<PropPosition[]>([]),
     loop = useRef(0),
     dtSamples = useRef<number[]>([]);
+  const speedRef = useRef(speed);
+  speedRef.current = speed;
+  const playbackPaused = paused || guideOpen;
   const caption = captionFor(s, time, total.current - lastInteraction.current);
   const voice = useNarration(
     null,
@@ -99,7 +105,7 @@ export default function CinematicGame({
   const recordMode = new URLSearchParams(location.search).has("record");
   state.current = s;
   running.current = started;
-  pausedRef.current = paused;
+  pausedRef.current = playbackPaused;
   const act = (a: SliceAction) => {
     lastInteraction.current = total.current;
     setHint(false);
@@ -112,8 +118,8 @@ export default function CinematicGame({
     } catch {
       setStorage(false);
     }
-    audio.current?.apply(s, paused);
-  }, [s, paused]);
+    audio.current?.apply(s, playbackPaused);
+  }, [s, playbackPaused]);
   useLayoutEffect(() => {
     clock.current = 0;
     setTime(0);
@@ -166,7 +172,8 @@ export default function CinematicGame({
     const tick = (now: number) => {
       const raw = (now - last) / 1000;
       last = now;
-      const dt = Math.min(raw, 0.25);
+      const step = raw * speedRef.current;
+      const dt = Math.min(step, 0.25);
       const current = state.current;
       if (running.current && !pausedRef.current) {
         const currentLine =
@@ -178,13 +185,13 @@ export default function CinematicGame({
         const nextLine =
           captionFor(
             current,
-            clock.current + raw,
+            clock.current + step,
             total.current - lastInteraction.current + raw,
           )?.text ?? null;
         if (!(
           currentLine !== nextLine && voice.player.current?.busyFor(currentLine)
         ))
-          clock.current += raw;
+          clock.current += step;
         total.current += raw;
         dtSamples.current.push(raw);
         if (dtSamples.current.length > 180) dtSamples.current.shift();
@@ -311,13 +318,13 @@ export default function CinematicGame({
   useEffect(() => {
     if (audio.current)
       void audio.current
-        .pause(paused)
+        .pause(playbackPaused)
         .catch(() =>
           setAudioError(
             "Âm thanh đang bị trình duyệt chặn. Bấm nút âm thanh để thử lại.",
           ),
         );
-  }, [paused]);
+  }, [playbackPaused]);
   const start = async (sound: boolean) => {
     const next = { ...s, muted: !sound };
     dispatch({ type: "settings", value: { muted: !sound } });
@@ -472,7 +479,21 @@ export default function CinematicGame({
               if (s.muted || !audio.current) void toggleMute();
             }}
             onPause={() => setPaused(true)}
+            speed={speed}
+            onSpeed={setSpeed}
+            onGuide={() => setGuideOpen(true)}
           />
+          {guideOpen && (
+            <GameGuide
+              recap="Bạn đang xem lại buổi thực hành của An vào một chiều mưa năm 2026."
+              steps={[
+                "Chạm vào laptop và bản báo cáo để đọc hai vật chứng quanh bàn.",
+                "Khi xuất hiện hồ sơ An, chọn hồ sơ rồi chạy đánh giá trên laptop.",
+                "Đọc kết quả và theo dõi những vật chứng tiếp theo được gợi sáng.",
+              ]}
+              onClose={() => setGuideOpen(false)}
+            />
+          )}
           {active.map((id) => (
             <button
               key={id}

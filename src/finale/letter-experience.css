@@ -316,6 +316,12 @@
 .chapter[data-finale="letter"] .letter-experience {
   animation: gratitude-arrive 1.9s ease both;
 }
+@media (max-width: 480px) {
+  .chapter .letter-experience {
+    top: 110px;
+    max-height: calc(100dvh - 110px);
+  }
+}
 @keyframes gratitude-arrive {
   0%,
   70% {

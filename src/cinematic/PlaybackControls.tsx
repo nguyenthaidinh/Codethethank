@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { PauseIcon, SoundIcon } from "./SceneChrome";
 
+const playbackSpeeds = [1, 2, 3] as const;
+export type PlaybackSpeed = (typeof playbackSpeeds)[number];
+
 type FullscreenDocument = Document & {
   webkitFullscreenElement?: Element;
   webkitExitFullscreen?: () => void;
@@ -25,12 +28,18 @@ export function PlaybackControls({
   onSound,
   onMusic,
   onPause,
+  speed,
+  onSpeed,
+  onGuide,
 }: {
   muted: boolean;
   music: boolean;
   onSound: () => void;
   onMusic: () => void;
   onPause: () => void;
+  speed: PlaybackSpeed;
+  onSpeed: (speed: PlaybackSpeed) => void;
+  onGuide: () => void;
 }) {
   const [expanded, setExpanded] = useState(() => Boolean(fullscreenElement()));
   const [notice, setNotice] = useState("");
@@ -143,6 +152,32 @@ export function PlaybackControls({
       >
         <PauseIcon />
       </button>
+      <div className="playback-options">
+        <div
+          className="playback-rates"
+          role="group"
+          aria-label="Tốc độ trò chơi"
+        >
+          {playbackSpeeds.map((rate) => (
+            <button
+              key={rate}
+              type="button"
+              aria-pressed={rate === speed}
+              onClick={() => onSpeed(rate)}
+            >
+              ×{rate}
+            </button>
+          ))}
+        </div>
+        <button
+          type="button"
+          aria-haspopup="dialog"
+          aria-label="Tóm tắt & hướng dẫn"
+          onClick={onGuide}
+        >
+          Hướng dẫn
+        </button>
+      </div>
       {notice && (
         <span className="playback-notice" role="status">
           {notice}

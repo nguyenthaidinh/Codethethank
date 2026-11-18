@@ -1,7 +1,9 @@
 import { useNarration } from "../speech/useNarration";
 import { openingNarration } from "../speech/policy";
 import { aionCue } from "../speech/aion2046";
-import { PlaybackControls } from "../cinematic/PlaybackControls";
+import { GameGuide } from "../cinematic/GameGuide";
+import { chapterGuide } from "./chapterGuide";
+import { PlaybackControls, type PlaybackSpeed } from "../cinematic/PlaybackControls";
 import { Subtitle } from "../cinematic/SceneChrome";
 import { chairMemoryGrade } from "../cinematic/ChairMatchCut";
 import { FinaleControls } from "../finale/FinaleControls";
@@ -83,7 +85,7 @@ import {
   verdictHint,
 } from "../verdict/story";
 import { VerdictControls } from "../verdict/VerdictControls";
-import { freshStay, cueKey, type StayAction } from "../stayed/state";
+import { freshStay, cueKey, isSpokenScene, type StayAction } from "../stayed/state";
 import { stayAutoDelay } from "../stayed/story";
 import { StayControls } from "../stayed/StayControls";
 
@@ -146,6 +148,8 @@ function ChapterStage({
   followDoorRef.current = followedDoor;
   const [inspection, setInspection] = useState<EvidenceId | null>(null);
   const [hintVisible, setHintVisible] = useState(false);
+  const [speed, setSpeed] = useState<PlaybackSpeed>(1);
+  const [guideOpen, setGuideOpen] = useState(false);
   const lastAction = useRef(0);
   const [settings, setSettings] = useState({
     ...initialSave,
@@ -178,8 +182,15 @@ function ChapterStage({
     frame = useRef(0),
     buttons = useRef(new Map<string, HTMLButtonElement>()),
     focusSignal = useRef(false);
-  const current = useRef({ s, settings, focus, paused, letter });
-  current.current = { s, settings, focus, paused, letter };
+  const current = useRef({ s, settings, focus, paused, letter, speed });
+  current.current = {
+    s,
+    settings,
+    focus,
+    paused: paused || guideOpen,
+    letter,
+    speed,
+  };
   const [futureFound, setFutureFound] = useState<Channel[]>(() => {
     if (initialSave.chapter?.beat !== "SIGNAL_INVESTIGATION") return [];
     try {
@@ -238,13 +249,14 @@ function ChapterStage({
     if (!initialSave.muted) void ensureAudio();
     return () => audio.current?.dispose();
   }, []);
+  const playbackPaused = paused || guideOpen;
   useEffect(() => {
-    audio.current?.apply(settings, paused);
+    audio.current?.apply(settings, playbackPaused);
     if (audio.current)
       void audio.current
-        .pause(paused)
+        .pause(playbackPaused)
         .catch(() => setStatus("Chạm nút âm thanh để mở lại tiếng."));
-  }, [settings, paused]);
+  }, [settings, playbackPaused]);
   useEffect(() => {
     try {
       localStorage.setItem(
@@ -350,7 +362,7 @@ function ChapterStage({
         chapter.verdict?.phase === "chapter02" &&
         !chapter.verdict.ripple &&
         stay &&
-        ["discussion", "question", "second_chance"].includes(stay.phase)
+        isSpokenScene(stay.phase)
       ) {
         e.preventDefault();
         dispatch({
@@ -450,8 +462,10 @@ function ChapterStage({
         settings: prefs,
         focus: f,
         paused: stop,
+        speed: rate,
       } = current.current;
-      const dt = stop ? 0 : Math.min(raw, 0.25);
+      const step = raw * rate;
+      const dt = stop ? 0 : Math.min(step, 0.25);
       const openingWait =
         state.beat === "OPENING_CINEMATIC" &&
         (!future.current?.ready ||
@@ -464,7 +478,7 @@ function ChapterStage({
         (!isClassroomIntro(state.beat) || room.current)
       ) {
         const changed =
-          captionAt.current(clock.current + raw) !==
+          captionAt.current(clock.current + step) !==
           captionAt.current(clock.current);
         if (!(
           changed &&
@@ -475,7 +489,7 @@ function ChapterStage({
               ? (state.verdict?.ripple ?? null)
               : null,
             clock.current,
-            raw,
+            step,
             prefs.reduced,
           );
         elapsed.current += raw;
@@ -953,13 +967,14 @@ function ChapterStage({
     spokenCaption,
     audio.current,
     settings.voice !== false && !settings.muted && spokenCaption !== null,
-    paused,
+    playbackPaused,
     settings.voice !== false,
     aion
       ? { file: aion.file, offset: sceneTime - aion.start }
       : s.beat === "OPENING_CINEMATIC"
         ? time
         : undefined,
+    speed,
   );
   const black =
     s.beat === "OPENING_CINEMATIC"
@@ -1053,7 +1068,16 @@ function ChapterStage({
               .catch(() => setStatus("Chạm nút âm thanh để mở lại tiếng."));
         }}
         onPause={() => setPaused(true)}
+        speed={speed}
+        onSpeed={setSpeed}
+        onGuide={() => setGuideOpen(true)}
       />
+      {guideOpen && (
+        <GameGuide
+          {...chapterGuide(s, futureView, futureFound.length)}
+          onClose={() => setGuideOpen(false)}
+        />
+      )}
       {!paused && s.beat === "OPENING_CINEMATIC" && (
         <button
           className="chapter-skip"
@@ -1076,7 +1100,14 @@ function ChapterStage({
         />
       )}
       {!paused && st && !rip && (
-        <StayControls s={st} act={stayAct} hint={hintVisible} time={time} />
+        <StayControls
+          s={st}
+          act={stayAct}
+          hint={hintVisible}
+          time={time}
+          speed={speed}
+          onSkip={() => setGuideOpen(true)}
+        />
       )}
       {!paused && rip && !fin && (
         <RippleControls

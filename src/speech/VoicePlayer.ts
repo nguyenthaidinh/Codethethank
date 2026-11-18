@@ -17,6 +17,7 @@ export class VoicePlayer {
   private status: Status = "idle";
   private started = 0;
   private completed = 0;
+  private rate = 1;
   private trackTime: number | undefined;
   constructor(
     private audio: AudioDirector,
@@ -44,6 +45,7 @@ export class VoicePlayer {
     enabled: boolean,
     paused: boolean,
     position?: VoicePosition,
+    rate = 1,
   ) {
     const clip = typeof position === "object" ? position : undefined;
     this.trackTime =
@@ -56,6 +58,10 @@ export class VoicePlayer {
             : speechKey(text)))
         : "";
     if (this.closed) return;
+    if (this.rate !== rate) {
+      this.rate = rate;
+      if (this.source) this.source.playbackRate.value = rate;
+    }
     if (!enabled) {
       if (this.key || this.status !== "off") this.cancel();
       this.key = "";
@@ -108,6 +114,7 @@ export class VoicePlayer {
         }
         const source = this.audio.context.createBufferSource();
         source.buffer = buffer;
+        if (this.rate !== 1) source.playbackRate.value = this.rate;
         source.connect(this.audio.dialogue);
         this.source = source;
         source.onended = () => {

@@ -9,6 +9,7 @@ export function useNarration(
   paused: boolean,
   preference: boolean,
   position?: VoicePosition,
+  rate = 1,
 ) {
   const player = useRef<VoicePlayer | null>(null);
   const [status, setStatus] = useState("idle");
@@ -34,7 +35,7 @@ export function useNarration(
     };
   }, [audio]);
   useEffect(() => {
-    player.current?.update(caption, enabled, paused, position);
-  }, [audio, caption, enabled, paused, position]);
+    player.current?.update(caption, enabled, paused, position, rate);
+  }, [audio, caption, enabled, paused, position, rate]);
   return { player, status };
 }
