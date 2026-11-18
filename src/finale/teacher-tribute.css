@@ -26,6 +26,20 @@
   overflow: hidden;
   z-index: -1;
 }
+.game-tribute-campus {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  opacity: 0.4;
+  mask-image: linear-gradient(transparent 18%, #000 80%);
+}
+.game-tribute-campus img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 70% center;
+}
 .game-tribute-wish {
   position: absolute;
   top: 0;
@@ -141,7 +155,7 @@
   flex: none;
 }
 .game-teacher-tribute header span {
-  color: #91d9e1;
+  color: #e9c994;
   font: 10px/1.5 sans-serif;
   letter-spacing: 0.2em;
 }
@@ -149,9 +163,9 @@
   margin: 12px 0;
   color: #e1b97b;
   font:
-    italic 400 clamp(32px, 5vw, 72px)/1.2 Arial,
-    "Segoe UI",
-    sans-serif;
+    400 clamp(32px, 5vw, 72px)/1.12 LessonSerif,
+    Georgia,
+    serif;
 }
 .game-teacher-tribute header p {
   font:
@@ -174,9 +188,10 @@
   margin: 0;
   padding: 16px 8px;
   font:
-    400 clamp(23px, 2.5vw, 42px)/1.5 Arial,
-    "Segoe UI",
-    sans-serif;
+    400 clamp(23px, 2.5vw, 42px)/1.5 LessonSerif,
+    Georgia,
+    serif;
+  text-shadow: 0 2px 12px #081425;
 }
 .game-tribute-roll .game-tribute-last {
   color: #e1b97b;
@@ -190,10 +205,14 @@
 }
 .game-teacher-tribute button {
   padding: 12px 22px;
-  border: 1px solid #91d9e166;
-  background: #0c2035;
+  border: 1px solid #e6c39080;
+  border-radius: 4px;
+  background: #0b192be8;
   color: #f1eee3;
   cursor: pointer;
+}
+.game-teacher-tribute button:hover {
+  border-color: #f1d6a6;
 }
 @keyframes game-teacher-roll {
   from {

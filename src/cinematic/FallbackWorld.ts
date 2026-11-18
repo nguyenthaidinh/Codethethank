@@ -1,5 +1,6 @@
 import { drawFinaleFallback } from "../finale/Fallback";
 import { CHAIR_MOTIF } from "./motifs";
+import { chairEase } from "./ChairMatchCut";
 import { TERMINAL_ALERT } from "../future/terminalStyle";
 import type { FinaleSave } from "../finale/state";
 import type { Letter } from "../finale/letter";
@@ -152,7 +153,10 @@ export class FallbackWorld {
     }
     this.cinematicShot = shot;
     const blend = s.reduced ? 1 : 1 - Math.exp(-dt * 4);
-    if (
+    if (this.ripple?.phase === "echo") {
+      const drag = s.reduced ? 1 : chairEase(t / CHAIR_MOTIF.dragSeconds);
+      this.camera = { x: 857.5 - 60 * drag, y: 550, zoom: 1.36 };
+    } else if (
       this.evaluation?.flow === "screen-first" &&
       this.evaluation.phase === "teacher_enter"
     ) {
@@ -325,7 +329,9 @@ export class FallbackWorld {
     x.fillStyle = "#365247";
     const drag =
       this.stayed?.phase === "chair"
-        ? Math.min(t / 1.25, 1)
+        ? this.ripple?.phase === "echo"
+          ? chairEase(t / CHAIR_MOTIF.dragSeconds)
+          : Math.min(t / 1.25, 1)
         : this.stayed && this.stayed.phase !== "discussion"
           ? 1
           : 0;

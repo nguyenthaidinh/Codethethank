@@ -1,4 +1,5 @@
 import { durations, type RippleSave } from "./state";
+import { chairMemoryGrade } from "../cinematic/ChairMatchCut";
 
 export const timeChapters = [
   {
@@ -47,7 +48,8 @@ export function rippleClockStep(
 ) {
   const cinematic =
     s &&
-    (["change", "milestone", "world"].includes(s.phase) ||
+    (["change", "milestone", "world", "echo"].includes(s.phase) ||
+      (s.phase === "chair" && chairMemoryGrade(time) > 0) ||
       rippleTimePassage(s, time, reduced) !== null);
   return cinematic ? Math.min(raw, 0.15) : raw;
 }

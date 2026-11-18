@@ -57,13 +57,12 @@ export function FutureResearchHUD({
         <div className="future2046-brand">
           <span aria-hidden="true">Λ</span>
           <div>
-            AION<small>RESEARCH INSTITUTE</small>
+            AION<small>VIỆN NGHIÊN CỨU</small>
           </div>
         </div>
         <div className="future2046-location">
           <i />
           <span>2046</span>
-          <small>HUMAN REVIEW</small>
         </div>
       </header>
       {overview && (
@@ -81,24 +80,19 @@ export function FutureResearchHUD({
             <p>
               Giữa những điều đã đổi thay,
               <br />
-              cuốn sổ năm ấy vẫn được giữ gìn.
+              cuốn sổ năm ấy vẫn còn trên bàn.
             </p>
           </div>
           {s.phase === "record" && (
             <article className="future2046-archive">
               <div className="future2046-archive-top">
                 <span>TƯ LIỆU GỐC</span>
-                <small>01 / 03</small>
               </div>
               <div className="future2046-archive-body">
                 <ArchiveIcon />
                 <div>
                   <h3>Dấu vết từ cuốn sổ</h3>
-                  <p>
-                    Hồ sơ nhà sáng lập được lưu
-                    <br />
-                    cùng trang viết đầu tiên.
-                  </p>
+                  <p>Mở trang viết đầu tiên để tìm nguồn gốc của nguyên tắc.</p>
                 </div>
               </div>
               <div
@@ -114,9 +108,7 @@ export function FutureResearchHUD({
                 aria-label="Đối chiếu hồ sơ nhà sáng lập"
                 onClick={() => act({ type: "record" })}
               >
-                <span>
-                  Đối chiếu hồ sơ<small>Theo dấu bài học đầu tiên</small>
-                </span>
+                <span>Đối chiếu hồ sơ</span>
                 <span aria-hidden="true">↗</span>
               </button>
             </article>
@@ -147,11 +139,6 @@ export function FutureResearchHUD({
           <h2>
             Một nét bút.<em>Hai mươi năm.</em>
           </h2>
-          <p>
-            Những dấu vết được giữ lại
-            <br />
-            đang nối về cùng một người.
-          </p>
           <ol>
             {[
               ["Hồ sơ đánh giá", "Năm 2026", 1.2],
@@ -193,11 +180,6 @@ export function FutureResearchHUD({
           <h2>
             An<span>FOUNDER OF AION</span>
           </h2>
-          <p>
-            Từ buổi chiều năm 2026,
-            <br />
-            đến những điều được viết tiếp.
-          </p>
           <div className="future2046-founder-date">
             <span>2026</span>
             <i />
@@ -212,7 +194,7 @@ export function FutureResearchHUD({
             <small>{s.memories.length} / 3 dấu vết</small>
           </div>
           <div className="future-memory-objects">
-            {(Object.keys(memories) as MemoryId[]).map((id, i) => (
+            {(Object.keys(memories) as MemoryId[]).map((id) => (
               <button
                 key={id}
                 aria-label={memories[id].label}
@@ -220,7 +202,6 @@ export function FutureResearchHUD({
                 onClick={() => act({ type: "memory", id })}
               >
                 <div className="future-memory-item-head">
-                  <small>0{i + 1}</small>
                   <span aria-hidden="true">
                     {s.memories.includes(id) ? "✓" : "↗"}
                   </span>
@@ -249,11 +230,6 @@ export function FutureResearchHUD({
           )}
         </div>
       )}
-      <div className="future2046-chapter-mark" aria-hidden="true">
-        <span>THE RIPPLE</span>
-        <i />
-        <small>04 / 04</small>
-      </div>
     </section>
   );
 }

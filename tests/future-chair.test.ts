@@ -5,6 +5,11 @@ import { futureFounderPose } from "../src/ripple/FutureChairPerformance";
 import { freshRipple, durations } from "../src/ripple/state";
 import { rippleCaption } from "../src/ripple/story";
 import { CHAIR_MOTIF } from "../src/cinematic/motifs";
+import {
+  chairMatchShot,
+  chairMemoryGrade,
+  chairReturnHold,
+} from "../src/cinematic/ChairMatchCut";
 
 describe("2046 chair scene", () => {
   it("grounds the decision to stay in an incomplete human-review case", () => {
@@ -28,14 +33,49 @@ describe("2046 chair scene", () => {
       false,
       false,
     )!;
-    expect(shot.eye).toEqual(CHAIR_MOTIF.eye);
-    expect(shot.at).toEqual(CHAIR_MOTIF.at);
+    expect(shot).toEqual(chairMatchShot(0, false));
     expect(durations).toMatchObject({
       approach: 7,
       echo: 6,
       chair: 6,
       reflection: 4,
     });
+  });
+  for (const aspect of [1440 / 900, 390 / 844]) {
+    it(`keeps the chair anchored across the cut at aspect ${aspect.toFixed(2)}`, () => {
+      const project = (
+        shot: ReturnType<typeof chairMatchShot>,
+        center: [number, number, number],
+      ) => {
+        const camera = new T.PerspectiveCamera(shot.fov, aspect, 0.08, 65);
+        camera.position.set(...shot.eye);
+        camera.lookAt(new T.Vector3(...shot.at));
+        camera.updateMatrixWorld(true);
+        const point = new T.Vector3(...center);
+        point.y = 0.48;
+        return point.project(camera);
+      };
+      const portrait = aspect < 0.8;
+      const echo = project(chairMatchShot(1, portrait), CHAIR_MOTIF.to);
+      const returning = project(
+        futureConversationShot(
+          { ...freshRipple, phase: "chair" },
+          0,
+          portrait,
+          false,
+        )!,
+        CHAIR_MOTIF.from,
+      );
+      expect(echo.distanceTo(returning)).toBeLessThan(0.0001);
+      expect(Math.abs(returning.x)).toBeLessThan(0.3);
+      expect(Math.abs(returning.y)).toBeLessThan(0.3);
+    });
+  }
+  it("reintroduces color throughout the chair pull", () => {
+    expect(chairMemoryGrade(0)).toBe(1);
+    expect(chairMemoryGrade(chairReturnHold / 2)).toBeGreaterThan(0);
+    expect(chairMemoryGrade(chairReturnHold / 2)).toBeLessThan(1);
+    expect(chairMemoryGrade(chairReturnHold + 0.3)).toBe(0);
   });
   it("does not teleport the founder at the approach/pull/seated boundaries", () => {
     const approach = futureFounderPose("approach", 7),

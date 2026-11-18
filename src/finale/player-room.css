@@ -5,6 +5,9 @@
   --finale-cyan: #72b7c9;
   --finale-amber: #d5a76b;
   --finale-ivory: #f0eee8;
+  --finale-gold: #efd39f;
+  --finale-gold-line: #dec08d56;
+  --finale-serif: LessonSerif, Georgia, serif;
 }
 .player-room-monitor {
   position: absolute;
@@ -26,14 +29,18 @@
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
-  font: 12px Arial;
-  padding: 8px 12px;
-  background: var(--finale-midnight);
-  border-bottom: 1px solid var(--finale-cyan);
+  font:
+    500 12px/1.5 "Segoe UI",
+    sans-serif;
+  padding: 9px 15px;
+  background: #0a1422ee;
+  color: var(--finale-gold);
+  border: 1px solid var(--finale-gold-line);
+  border-radius: 3px;
 }
 .player-room-monitor:hover,
 .player-room-monitor:focus-visible {
-  outline: 2px solid var(--finale-cyan);
+  outline: 2px solid var(--finale-gold);
   outline-offset: 5px;
   background: #72b7c90a;
 }
@@ -49,12 +56,12 @@
 .player-room-caption > span {
   font: 10px Arial;
   letter-spacing: 0.18em;
-  color: var(--finale-cyan);
+  color: var(--finale-gold);
 }
-.player-room-caption p {
-  font:
-    clamp(15px, 1.7vw, 23px) Arial, "Segoe UI", sans-serif;
-  max-width: 280px;
+.player-room-caption h2 {
+  font: 400 clamp(24px, 3.2vw, 54px)/1.12 var(--finale-serif);
+  margin: 11px 0 0;
+  max-width: 340px;
 }
 .player-room-actions {
   bottom: 15%;
@@ -63,8 +70,24 @@
 .player-room-actions button {
   background: var(--finale-midnight);
   color: var(--finale-ivory);
-  border-color: var(--finale-steel);
+  border-color: var(--finale-gold-line);
+  border-radius: 4px;
   font-size: 12px;
+}
+.player-room-actions button:first-child {
+  background: var(--finale-gold);
+  color: #1c222a;
+  border-color: var(--finale-gold);
+  font-weight: 600;
+}
+.player-room-actions button:hover,
+.player-room-monitor:hover > span {
+  border-color: var(--finale-gold);
+}
+.chapter[data-finale="paper"] .subtitle p {
+  font-size: clamp(14px, 1.45vw, 19px);
+  line-height: 1.5;
+  text-wrap: pretty;
 }
 /* Existing private editor is only given an integration surface; no F5.3 fields or sharing. */
 .chapter[data-finale="letter"] .letter-paper,
@@ -117,9 +140,9 @@
     right: 7%;
     text-align: center;
   }
-  .player-room-caption p {
+  .player-room-caption h2 {
     max-width: none;
-    font-size: 17px;
+    font-size: 29px;
   }
   .player-room-actions {
     bottom: 18%;
@@ -132,5 +155,16 @@
     max-height: 78svh;
     top: 10%;
     padding: 18px;
+  }
+}
+@media (max-height: 500px) {
+  .player-room-caption h2 {
+    font-size: 25px;
+  }
+  .player-room-caption {
+    top: 13%;
+  }
+  .player-room-actions {
+    bottom: 21%;
   }
 }

@@ -1,6 +1,8 @@
 import { useNarration } from "../speech/useNarration";
 import { openingNarration } from "../speech/policy";
+import { aionCue } from "../speech/aion2046";
 import { Subtitle, SoundIcon, PauseIcon } from "../cinematic/SceneChrome";
+import { chairMemoryGrade } from "../cinematic/ChairMatchCut";
 import { FinaleControls } from "../finale/FinaleControls";
 import { finaleDurations, type FinaleAction } from "../finale/state";
 import { finaleCaption } from "../finale/story";
@@ -14,7 +16,11 @@ import {
 } from "../finale/letter";
 import { RippleControls } from "../ripple/RippleControls";
 import { rippleTimePassage, rippleClockStep } from "../ripple/timePassage";
-import { durations, type RippleAction } from "../ripple/state";
+import {
+  durations,
+  type RippleAction,
+  type RipplePhase,
+} from "../ripple/state";
 import { rippleCaption } from "../ripple/story";
 import {
   useEffect,
@@ -22,6 +28,7 @@ import {
   useReducer,
   useRef,
   useState,
+  type CSSProperties,
 } from "react";
 import CinematicGame from "../cinematic/CinematicGame";
 import {
@@ -162,6 +169,7 @@ function ChapterStage({
     room = useRef<WorldRenderer | FallbackWorld | null>(null),
     audio = useRef<ChapterAudio | null>(null);
   const captionAt = useRef<(at: number) => string | null>(() => null);
+  const rippleClockPhase = useRef<RipplePhase | null>(null);
   const clock = useRef(isClassroomIntro(s.beat) ? (s.introElapsed ?? 0) : 0),
     clockBeat = useRef<string | null>(null),
     elapsed = useRef(0),
@@ -306,6 +314,7 @@ function ChapterStage({
   }, [st?.phase, st?.line, st?.responses]);
   useLayoutEffect(() => {
     if (!rip) return;
+    rippleClockPhase.current = rip.phase;
     clock.current = rip.elapsed;
     cues.current.clear();
     setTime(rip.elapsed);
@@ -486,7 +495,6 @@ function ChapterStage({
           "chapter02",
           "stay.advance",
           "stay.notes",
-          "ripple.advance",
           "finale.advance",
         ].includes(id);
         if (speechTransition && voice.player.current?.busy) return;
@@ -921,20 +929,30 @@ function ChapterStage({
                 futureFound.length === 2,
               ) ?? chapterCaption(s.beat, at));
   captionAt.current = resolveCaption;
-  const caption = resolveCaption(time);
+  // A newly selected phase must not inherit the previous phase's render time.
+  const sceneTime =
+    rip && rippleClockPhase.current !== rip.phase ? rip.elapsed : time;
+  const caption = resolveCaption(sceneTime);
   const timePassage =
-    rip && !fin ? rippleTimePassage(rip, time, settings.reduced) : null;
-  const spokenCaption =
-    s.beat === "OPENING_CINEMATIC" && !future.current?.ready
-      ? null
-      : openingNarration(s.beat, time);
+    rip && !fin ? rippleTimePassage(rip, sceneTime, settings.reduced) : null;
+  const aion =
+    rip && !fin && !timePassage ? aionCue(rip.phase, sceneTime) : undefined;
+  const spokenCaption = aion
+    ? caption
+    : future.current?.ready
+      ? openingNarration(s.beat, time)
+      : null;
   const voice = useNarration(
     spokenCaption,
     audio.current,
     settings.voice !== false && !settings.muted && spokenCaption !== null,
     paused,
     settings.voice !== false,
-    s.beat === "OPENING_CINEMATIC" ? time : undefined,
+    aion
+      ? { file: aion.file, offset: sceneTime - aion.start }
+      : s.beat === "OPENING_CINEMATIC"
+        ? time
+        : undefined,
   );
   const black =
     s.beat === "OPENING_CINEMATIC"
@@ -958,6 +976,11 @@ function ChapterStage({
       data-finale={fin?.phase ?? ""}
       data-completed={fin?.completed ?? false}
       data-ripple={rip?.phase ?? ""}
+      style={
+        rip?.phase === "chair"
+          ? ({ "--chair-memory": chairMemoryGrade(sceneTime) } as CSSProperties)
+          : undefined
+      }
       data-chapter={s.beat}
       data-verdict={v?.phase}
       data-stayed={st?.phase}
@@ -1288,7 +1311,7 @@ function ChapterStage({
             {(
               [
                 ["captions", "Phụ đề"],
-                ["voice", "Giọng dẫn mở đầu"],
+                ["voice", "Giọng dẫn và AION"],
                 ["reduced", "Giảm chuyển động"],
                 ["music", "Nhạc"],
                 ["sfx", "Âm môi trường và đồ vật"],

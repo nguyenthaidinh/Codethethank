@@ -1,7 +1,7 @@
 import type { ChapterBeat } from "../chapter/director";
 import { narration } from "../future/direction";
 
-/** Only the opening narrator is audible. All character dialogue stays subtitled. */
+/** Select the opening narrator independently of the later AION cues. */
 export function openingNarration(
   beat: ChapterBeat,
   time: number,

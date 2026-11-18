@@ -43,7 +43,7 @@ export function RevealControls({
   return (
     <>
       <p className="reveal-topline">
-        THE FINAL GIFT <span>Không gian tri ân của riêng bạn</span>
+        {s.choice === "skip" ? "Một bài học còn sáng" : "Lời tri ân của bạn"}
       </p>
       <section
         className="reveal-screen-copy"
@@ -59,7 +59,9 @@ export function RevealControls({
           }
         }}
       >
-        <span className="reveal-kicker">20 / 11 · MỘT LỜI TRI ÂN</span>
+        <span className="reveal-kicker">
+          {s.choice === "skip" ? "KÝ ỨC" : "NGÔI SAO RIÊNG TƯ"}
+        </span>
         <h2>{content.recipient}</h2>
         <p className="reveal-message">{pages[index]}</p>
         {content.signature && (
@@ -101,7 +103,10 @@ export function RevealControls({
             <button onClick={erase}>Xóa nội dung đã lưu</button>
           )
         )}
-        <button onClick={() => act({ type: "finish" })}>
+        <button
+          className="reveal-continue"
+          onClick={() => act({ type: "finish" })}
+        >
           {s.completed ? "Trở lại kết thúc" : "Đi tiếp cùng ánh sáng"}
         </button>
       </div>
@@ -112,8 +117,7 @@ export function RevealControls({
         </details>
       )}
       <p className="galaxy-truth">
-        Không gian cá nhân · Không phải bài đăng cộng đồng. Các sao xa là cảnh
-        nền.
+        Không gian cá nhân · Không phải bài đăng cộng đồng.
       </p>
     </>
   );

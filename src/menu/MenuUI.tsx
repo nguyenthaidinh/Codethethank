@@ -229,7 +229,7 @@ export function SettingsModal({
         [
           { key: "muted", label: "Tắt âm thanh" },
           { key: "captions", label: "Hiển thị phụ đề" },
-          { key: "voice", label: "Giọng dẫn mở đầu" },
+          { key: "voice", label: "Giọng dẫn và AION" },
           { key: "reduced", label: "Giảm chuyển động" },
         ] as const
       ).map(({ key, label }) => (

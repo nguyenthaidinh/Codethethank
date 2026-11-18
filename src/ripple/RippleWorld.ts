@@ -9,6 +9,7 @@ import { ResearchDesk2029 } from "./ResearchDesk2029";
 import { ResearchStudio } from "./ResearchStudio";
 import { ResearchLighting, researchShot } from "./ResearchCinematography";
 import { FutureStudio2046 } from "./FutureStudio2046";
+import { futureReflectionShot, isFutureReflection } from "./FutureReflection";
 import {
   futureArrivalCue,
   futureArrivalShot,
@@ -326,7 +327,8 @@ export class RippleWorld {
     const journal2029 = this.era === 2029;
     const research =
       this.era === 2029 || this.era === 2035 || this.era === 2045;
-    const future = this.era === 2046 && !this.finale;
+    const reflection = isFutureReflection(this.finale) ? this.finale : null;
+    const future = this.era === 2046 && (!this.finale || reflection !== null);
     if (future && !this.futureStudio) {
       this.futureStudio = new FutureStudio2046();
       this.scene.add(this.futureStudio.root);
@@ -609,8 +611,16 @@ export class RippleWorld {
         futureArchiveShot(s.phase, t, aspect < 0.8, reduced))
       : null;
     if (authoredShot) ({ eye, at, fov } = authoredShot);
-    const shot =
-      s.phase === "reconstruct"
+    if (reflection)
+      ({ eye, at, fov } = futureReflectionShot(
+        reflection,
+        t,
+        aspect < 0.8,
+        reduced,
+      ));
+    const shot = reflection
+      ? `finale.${reflection.phase}.${reflection.memoryFocus ?? "wide"}`
+      : s.phase === "reconstruct"
         ? `${s.phase}.${s.selected}`
         : s.phase === "reveal"
           ? `reveal.${t < 4 ? "record" : "an"}`
@@ -621,11 +631,6 @@ export class RippleWorld {
       this.fromEye.copy(this.camera.position);
       this.fromAt.copy(this.at);
       this.fromFov = this.camera.fov;
-      if (s.phase === "chair") {
-        this.fromEye.set(...eye);
-        this.fromAt.set(...at);
-        this.fromFov = fov;
-      }
     }
     this.progress = Math.min(1, this.progress + dt / 1.5);
     this.eye.set(...eye);
@@ -636,17 +641,19 @@ export class RippleWorld {
       s.phase !== "chair" &&
       !research &&
       !conversationShot &&
-      !authoredShot
+      !authoredShot &&
+      !reflection
     )
       this.eye.sub(this.target).multiplyScalar(1.4).add(this.target);
     this.camera.aspect = aspect;
-    const cameraBlend = reduced || authoredShot ? 1 : ease(this.progress);
+    const cameraBlend =
+      reduced || authoredShot || s.phase === "chair" ? 1 : ease(this.progress);
     this.camera.fov = T.MathUtils.lerp(this.fromFov, fov, cameraBlend);
     this.camera.position.lerpVectors(this.fromEye, this.eye, cameraBlend);
     this.at.lerpVectors(this.fromAt, this.target, cameraBlend);
     this.camera.lookAt(this.at);
     this.camera.updateProjectionMatrix();
-    if (this.finale && this.letter) {
+    if (this.finale && this.letter && !reflection) {
       this.finaleVisual ??= new FinaleVisual(this.scene, this.blank);
       this.finaleVisual.update(
         this.finale,

@@ -49,18 +49,20 @@ export function drawPlayerRoomFallback(
   x.fillRect(-92, 145, 184, 13);
   x.fillStyle = "#101a26";
   x.fillRect(-245, -200, 490, 285);
-  x.fillStyle = "#0B1422";
+  const screenGlow = x.createLinearGradient(-231, -186, 170, 71);
+  screenGlow.addColorStop(0, "#24364b");
+  screenGlow.addColorStop(1, "#0b1422");
+  x.fillStyle = screenGlow;
   x.fillRect(-231, -186, 462, 257);
   if (!close) {
-    x.fillStyle = "#72B7C9";
+    x.fillStyle = "#efd39f";
     x.font = "13px Arial";
     x.fillText("THE UNWRITTEN LESSON", -195, -150);
     x.fillStyle = "#F0EEE8";
-    x.font = "28px Arial";
-    x.fillText("Một lời chưa nói.", -195, -65);
-    x.fillStyle = "#72B7C9";
-    x.font = "16px Arial";
-    x.fillText("Chạm để bắt đầu", -65, 26);
+    x.font = "31px LessonSerif, Georgia, serif";
+    x.fillText("Viết lời cảm ơn", -195, -65);
+    x.strokeStyle = "#dec08d56";
+    x.strokeRect(-207, -169, 414, 220);
   }
   x.fillStyle = "#1b2b38";
   x.fillRect(-235, 190, 480, 100);

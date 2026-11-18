@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import type { AudioDirector } from "../cinematic/AudioDirector";
-import { VoicePlayer } from "./VoicePlayer";
+import { VoicePlayer, type VoicePosition } from "./VoicePlayer";
 import { PREFERENCES_KEY, readPreferences } from "../menu/preferences";
 export function useNarration(
   caption: string | null,
@@ -8,7 +8,7 @@ export function useNarration(
   enabled: boolean,
   paused: boolean,
   preference: boolean,
-  trackTime?: number,
+  position?: VoicePosition,
 ) {
   const player = useRef<VoicePlayer | null>(null);
   const [status, setStatus] = useState("idle");
@@ -34,7 +34,7 @@ export function useNarration(
     };
   }, [audio]);
   useEffect(() => {
-    player.current?.update(caption, enabled, paused, trackTime);
-  }, [audio, caption, enabled, paused, trackTime]);
+    player.current?.update(caption, enabled, paused, position);
+  }, [audio, caption, enabled, paused, position]);
   return { player, status };
 }

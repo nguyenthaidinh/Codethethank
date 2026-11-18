@@ -1,8 +1,10 @@
 import type { AudioDirector } from "../cinematic/AudioDirector";
 import catalog from "./catalog.json";
 import { speechText, speechKey } from "./text";
-import openingTrack from "./opening-track.json";
-type Entry = { file: string; seconds: number };
+import openingTrack from "./opening-track.json" with { type: "json" };
+type Entry = { file: string };
+/** A number follows the opening track. An authored clip uses its scene offset. */
+export type VoicePosition = number | { file: string; offset: number };
 type Status = "idle" | "loading" | "speaking" | "off" | "unavailable";
 /** Local, authored-line audio only. Never accepts a letter/name for synthesis. */
 export class VoicePlayer {
@@ -41,14 +43,17 @@ export class VoicePlayer {
     caption: string | null,
     enabled: boolean,
     paused: boolean,
-    trackTime?: number,
+    position?: VoicePosition,
   ) {
-    this.trackTime = trackTime;
+    const clip = typeof position === "object" ? position : undefined;
+    this.trackTime =
+      clip?.offset ?? (typeof position === "number" ? position : undefined);
     const text = speechText(caption),
       key = text
-        ? trackTime === undefined
-          ? speechKey(text)
-          : "opening-continuous"
+        ? (clip?.file ??
+          (typeof position === "number"
+            ? "opening-continuous"
+            : speechKey(text)))
         : "";
     if (this.closed) return;
     if (!enabled) {
@@ -66,9 +71,10 @@ export class VoicePlayer {
       return;
     }
     const entry =
-      key === "opening-continuous"
+      clip ??
+      (key === "opening-continuous"
         ? openingTrack
-        : (catalog as Record<string, Entry>)[key];
+        : (catalog as Record<string, Entry>)[key]);
     if (!entry) {
       this.state("unavailable");
       return;
@@ -95,8 +101,7 @@ export class VoicePlayer {
             this.cache.delete(this.cache.keys().next().value!);
         }
         if (this.closed || generation !== this.generation) return;
-        const offset =
-          key === "opening-continuous" ? Math.max(0, this.trackTime ?? 0) : 0;
+        const offset = Math.max(0, this.trackTime ?? 0);
         if (offset >= buffer.duration) {
           this.state("idle");
           return;
@@ -114,7 +119,7 @@ export class VoicePlayer {
           this.state("idle");
         };
         this.audio.setVoiceActive(true);
-        if (key === "opening-continuous") source.start(0, offset);
+        if (position !== undefined) source.start(0, offset);
         else source.start();
         this.started++;
         this.state("speaking");
@@ -129,7 +134,7 @@ export class VoicePlayer {
     })();
   }
   busyFor(caption: string | null) {
-    if (this.key === "opening-continuous") return false;
+    if (this.trackTime !== undefined) return false;
     return speechKey(speechText(caption)) === this.key && this.busy;
   }
   get busy() {

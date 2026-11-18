@@ -1,5 +1,6 @@
 ﻿import type { RippleSave, MemoryId } from "./state";
 import { complete2035, compared2035 } from "./experiment2035";
+import { aionCue } from "../speech/aion2046";
 export const milestones = [
   {
     year: 2029,
@@ -50,6 +51,8 @@ export const memories: Record<MemoryId, { label: string; text: string }> = {
   },
 };
 export function rippleCaption(s: RippleSave, t: number): string {
+  const cue = aionCue(s.phase, t);
+  if (cue) return `AION: ${cue.text}`;
   switch (s.phase) {
     case "sketch":
       return s.questions.length === 2
@@ -85,23 +88,11 @@ export function rippleCaption(s: RippleSave, t: number): string {
         return "2035. An cùng đồng đội ghi lại: cần xác minh hoàn cảnh trước khi quyết định hỗ trợ. REVIEW REQUIRED chưa có nghĩa là được chấp nhận.";
       return milestones[s.milestones].text;
     case "world":
-      return t < 4.1
-        ? ""
-        : t < 8.4
-          ? "2046. AION — trí tuệ nhân tạo đa năng số một thế giới."
-          : "Giữa những hệ thống tiên tiến ấy, một cuốn sổ từ năm 2026 vẫn được giữ lại.";
     case "record":
-      return ""; // The archive panel introduces the notebook and its unopened record.
     case "align":
-      return t < 4
-        ? "AION: Một bản đánh giá năm 2026. Một nét bút được giữ lại qua hai mươi năm."
-        : t < 5.5
-          ? "[Một khoảng lặng.]"
-          : "AION: Các dấu vết đã khớp. Danh tính sắp được mở.";
+      return "";
     case "reveal":
-      return t < 5
-        ? "AN — FOUNDER OF AION"
-        : "AION: Người đó chính là An. Sinh viên năm 2026 là người đã sáng tạo ra tôi.";
+      return t < 5 ? "AN — FOUNDER OF AION" : "";
     case "approach":
       return t < 3.2
         ? "Nhà nghiên cứu: “Hồ sơ này vẫn đang chờ HUMAN REVIEW.”"
@@ -109,7 +100,7 @@ export function rippleCaption(s: RippleSave, t: number): string {
           ? "Nhà nghiên cứu: “Còn thiếu thông tin... em có nên dừng lại không?”"
           : "[An nhìn hồ sơ, rồi nhìn chiếc ghế trống.]";
     case "echo":
-      return "[2026. Cô Vân kéo ghế. Cô ngồi lại bên An.]";
+      return "";
     case "chair":
       return t < 3.6
         ? "[An kéo ghế lại gần. Anh ngồi xuống.]"

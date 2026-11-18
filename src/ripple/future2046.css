@@ -242,6 +242,86 @@
   outline: 2px solid #ffdf9f;
   outline-offset: 5px;
 }
+
+/* 2046 uses the warm paper accents of the archive against the dark studio. */
+.future2046-header,
+.future-reflection-header {
+  font-variant-numeric: tabular-nums;
+}
+.future2046-brand > span {
+  color: #edcaa1;
+}
+.future2046-intro h2,
+.future2046-match h2 {
+  font-family: LessonSerif, Georgia, serif;
+  font-weight: 400;
+}
+.future2046-archive {
+  border-color: #d4bb8666;
+  background: linear-gradient(125deg, #172b36fa, #0b1c29f5);
+}
+.future2046-archive-body p {
+  max-width: 26ch;
+}
+.future2046 .future-memory-item-head {
+  justify-content: flex-end;
+}
+.future-reflection-header {
+  position: absolute;
+  z-index: 4;
+  top: max(24px, 6%);
+  left: 5%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #f1e6cd;
+  font:
+    500 12px/1.2 "Segoe UI",
+    sans-serif;
+  letter-spacing: 0.19em;
+  text-shadow: 0 2px 12px #07131e;
+  pointer-events: none;
+}
+.future-reflection-header span + span {
+  padding-left: 14px;
+  border-left: 1px solid #d4bb8680;
+  color: #dfc597;
+  font-size: 10px;
+}
+.chapter:has(.future2046, .future-reflection-header) .subtitle {
+  z-index: 5;
+  bottom: max(26px, 5%);
+  width: min(690px, 89vw);
+  padding: 12px clamp(13px, 2vw, 26px) 15px;
+  background: linear-gradient(105deg, #0b1724ed, #121e29ed);
+  border: 1px solid #d8c19732;
+  border-radius: 4px;
+  box-shadow: 0 12px 35px #0005;
+}
+.chapter:has(.future2046, .future-reflection-header) .subtitle p {
+  color: #f8f2e8;
+  font-size: clamp(14px, 1.5vw, 20px);
+  line-height: 1.45;
+  margin: 2px 0 0;
+  text-wrap: pretty;
+}
+.chapter:has(.future-reflection-header) .finale-memory {
+  bottom: 24%;
+  width: min(540px, 91%);
+}
+.chapter:has(.future-reflection-header) .finale-memory button {
+  background: #0d1e2de8;
+  color: #f2e8d2;
+  border: 1px solid #dfbd895e;
+  border-radius: 3px;
+}
+.chapter:has(.future-reflection-header) .finale-memory button:hover,
+.chapter:has(.future-reflection-header)
+  .finale-memory
+  button[aria-pressed="true"] {
+  background: #344554;
+  border-color: #e0ba80;
+}
 .future2046-arrival-track {
   position: absolute;
   bottom: 22%;

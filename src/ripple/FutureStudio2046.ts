@@ -17,10 +17,10 @@ export class FutureStudio2046 {
   private skylineMaterial: T.MeshBasicMaterial;
   private skylineDusk = new T.Color("#557487");
   private skylineDay = new T.Color("#b8cbd4");
-  private skylight = new T.PointLight("#ffd5a1", 10, 22, 2);
+  private skylight = new T.PointLight("#ffc28b", 10, 22, 2);
   constructor() {
-    this.box([20, 0.16, 22], [0, -0.08, -4], "#475e69");
-    this.box([6.8, 0.025, 5.7], [0.2, 0.016, -0.55], "#849ba1");
+    this.box([20, 0.16, 22], [0, -0.08, -4], "#293743");
+    this.box([6.8, 0.025, 5.7], [0.2, 0.016, -0.55], "#46545b");
     for (const x of [-3.25, 3.65])
       this.box([0.025, 0.016, 5.6], [x, 0.036, -0.55], "#b7d8dc", true);
     // Floor seams and luminous perimeter lines keep the room's scale legible.
@@ -52,6 +52,11 @@ export class FutureStudio2046 {
       this.box([0.025, 4.5, 0.025], [x - 0.08, 2.9, 6.7], "#b7d0d1", true);
     }
     this.box([19, 0.1, 0.12], [0, 1, 6.8], "#7898a4");
+    this.box([19, 0.23, 17], [0, 5.45, -1.6], "#263743");
+    for (const z of [-8, -4.5, -1, 2.5, 6]) {
+      this.box([18.8, 0.17, 0.45], [0, 5.28, z], "#32444f");
+      this.box([15, 0.02, 0.045], [0, 5.18, z], "#e6d2b2", true);
+    }
     this.resources.push(windowGeometry, windowMaterial);
     new T.TextureLoader().load(
       import.meta.env.BASE_URL + "menu/city-sunset.webp",
@@ -138,12 +143,15 @@ export class FutureStudio2046 {
       [-3.5, 2.9, -8.8],
     );
     // The desk keeps existing interaction coordinates and the original notebook.
-    this.box([3.2, 0.14, 1.9], [0.2, 1, -0.75], "#a9b8b8");
-    this.box([3.08, 0.025, 1.78], [0.2, 1.065, -0.75], "#253f50");
+    this.box([3.2, 0.14, 1.9], [0.2, 1, -0.75], "#a48362");
+    this.box([3.08, 0.025, 1.78], [0.2, 1.065, -0.75], "#75614f");
+    this.box([1.34, 0.008, 0.69], [-0.54, 1.082, -0.67], "#30404a");
     this.box([2.95, 0.015, 0.018], [0.2, 0.96, 0.21], "#b8dcd6", true);
     for (const x of [-1.14, 1.54])
       this.box([0.11, 1, 0.9], [x, 0.5, -0.75], "#3c5666");
     this.box([1.46, 0.91, 0.055], [-0.5, 1.58, -1.49], "#183344");
+    this.box([0.12, 0.34, 0.11], [-0.5, 1.275, -1.56], "#2e414e");
+    this.box([0.53, 0.023, 0.31], [-0.5, 1.09, -1.47], "#314450");
     this.box([1, 0.035, 0.36], [-0.5, 1.12, -0.5], "#172d3a");
     for (let row = 0; row < 4; row++)
       for (let col = 0; col < 13; col++)
@@ -152,7 +160,8 @@ export class FutureStudio2046 {
           [-0.94 + col * 0.07, 1.143, -0.62 + row * 0.072],
           "#a2b5b5",
         );
-    // Greenery and warm accent balance the cool equipment.
+    this.addContactShadows();
+    // The research chair stays at the established performance anchor.
     this.box([0.6, 0.12, 0.6], [-0.5, 0.61, 0.42], "#294350");
     this.box([0.58, 0.78, 0.12], [-0.5, 1.04, 0.74], "#2a4857");
     this.box([0.32, 0.16, 0.12], [-0.5, 1.51, 0.79], "#46616b");
@@ -180,6 +189,39 @@ export class FutureStudio2046 {
     this.root.add(this.skylight);
     this.batch();
     this.update(0, true);
+  }
+  private addContactShadows() {
+    const canvas = document.createElement("canvas");
+    canvas.width = canvas.height = 64;
+    const context = canvas.getContext("2d");
+    if (!context) return;
+    const fade = context.createRadialGradient(32, 32, 1, 32, 32, 32);
+    fade.addColorStop(0, "rgba(4,10,16,.58)");
+    fade.addColorStop(1, "rgba(4,10,16,0)");
+    context.fillStyle = fade;
+    context.fillRect(0, 0, 64, 64);
+    const texture = new T.CanvasTexture(canvas);
+    const geometry = new T.PlaneGeometry(1, 1);
+    const material = new T.MeshBasicMaterial({
+      map: texture,
+      transparent: true,
+      depthWrite: false,
+      polygonOffset: true,
+      polygonOffsetFactor: -1,
+      toneMapped: false,
+    });
+    this.resources.push(geometry, material, texture);
+    for (const [x, z, width, depth] of [
+      [0.2, -0.75, 4.3, 2.8],
+      [-0.5, 0.42, 1.45, 1.35],
+      [1.1, 0.25, 1.4, 1.35],
+    ]) {
+      const shadow = new T.Mesh(geometry, material);
+      shadow.position.set(x, 0.041, z);
+      shadow.rotation.x = -Math.PI / 2;
+      shadow.scale.set(width, depth, 1);
+      this.root.add(shadow);
+    }
   }
   update(
     time: number,

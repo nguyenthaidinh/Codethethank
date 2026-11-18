@@ -1,0 +1,96 @@
+/* The grade follows the game clock, including pause and resume. */
+.chapter[data-ripple="echo"] {
+  --chair-memory: 1;
+}
+.chapter:is([data-ripple="echo"], [data-ripple="chair"]) .chapter-room {
+  filter: grayscale(var(--chair-memory))
+    brightness(calc(1 - 0.28 * var(--chair-memory)))
+    contrast(calc(1 + 0.09 * var(--chair-memory)));
+}
+.chapter:is([data-ripple="echo"], [data-ripple="chair"])
+  .chapter-letterbox::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: var(--chair-memory);
+  background:
+    radial-gradient(ellipse at 54% 45%, transparent 36%, #09090985 100%),
+    linear-gradient(#08080870, transparent 28%, transparent 64%, #080808a0);
+}
+.chapter[data-ripple="chair"] .future2046-header {
+  opacity: calc(1 - var(--chair-memory));
+}
+.chair-memory-title {
+  position: absolute;
+  z-index: 4;
+  top: max(74px, 13%);
+  left: clamp(20px, 6vw, 110px);
+  padding-left: 15px;
+  border-left: 1px solid #dedbd296;
+  color: #f3f0e9;
+  text-shadow: 0 2px 14px #000;
+  pointer-events: none;
+  animation: chair-memory-title-in 0.5s ease-out both;
+}
+.chair-memory-title > span {
+  font:
+    500 11px/1.5 "Segoe UI",
+    sans-serif;
+  letter-spacing: 0.19em;
+}
+.chair-memory-title h2 {
+  font:
+    400 clamp(42px, 6vw, 90px)/1 LessonSerif,
+    Georgia,
+    serif;
+  margin: 5px 0 9px;
+}
+.chair-memory-title p {
+  margin: 0;
+  font:
+    12px/1.5 "Segoe UI",
+    sans-serif;
+  color: #dedbd2;
+}
+.chapter[data-ripple="echo"] .subtitle {
+  padding: 9px clamp(12px, 2vw, 22px) 13px;
+  border: 1px solid #e0ded32b;
+  border-radius: 3px;
+  background: #151515ed;
+}
+.chapter[data-ripple="echo"] .subtitle p {
+  margin: 2px 0 0;
+  color: #f3f0e9;
+  font-size: clamp(15px, 1.5vw, 21px);
+  line-height: 1.45;
+  text-wrap: pretty;
+}
+.chapter[data-ripple="echo"] .subtitle-speaker {
+  color: #d2d0c9;
+}
+@keyframes chair-memory-title-in {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.motion-reduced .chair-memory-title {
+  animation: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .chair-memory-title {
+    animation: none;
+  }
+}
+@media (max-width: 600px), (max-height: 500px) {
+  .chair-memory-title h2 {
+    font-size: clamp(38px, 10vw, 54px);
+  }
+  .chair-memory-title p {
+    font-size: 11px;
+  }
+}

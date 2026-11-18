@@ -1,5 +1,5 @@
 import * as T from "three";
-import { CHAIR_MOTIF } from "../cinematic/motifs";
+import { chairMatchShot, chairReturnHold } from "../cinematic/ChairMatchCut";
 import type { RippleSave } from "./state";
 import { futureArrivalCue } from "./FutureArrival";
 
@@ -29,15 +29,16 @@ export function futureConversationShot(
     };
   }
   if (s.phase === "chair") {
+    const insert = chairMatchShot(0, portrait);
     const end = together(portrait);
-    if (reduced) return end;
-    const arc = ease((time - 1.4) / 4.2);
-    const lift = ease((time - 1.4) / 1.8);
-    const eye = mix(CHAIR_MOTIF.eye, end.eye, arc);
-    const at = mix(CHAIR_MOTIF.at, end.at, arc);
-    eye[1] = T.MathUtils.lerp(CHAIR_MOTIF.eye[1], end.eye[1], lift);
-    at[1] = T.MathUtils.lerp(CHAIR_MOTIF.at[1], end.at[1], lift);
-    return { eye, at, fov: T.MathUtils.lerp(CHAIR_MOTIF.fov, end.fov, arc) };
+    if (reduced) return insert;
+    const arc = ease((time - chairReturnHold) / 4.2);
+    const lift = ease((time - chairReturnHold) / 1.8);
+    const eye = mix(insert.eye, end.eye, arc);
+    const at = mix(insert.at, end.at, arc);
+    eye[1] = T.MathUtils.lerp(insert.eye[1], end.eye[1], lift);
+    at[1] = T.MathUtils.lerp(insert.at[1], end.at[1], lift);
+    return { eye, at, fov: T.MathUtils.lerp(insert.fov, end.fov, arc) };
   }
   if (s.phase === "reflection" || (s.phase === "reconstruct" && !s.selected)) {
     const shot = together(portrait);
@@ -52,11 +53,11 @@ export function futureConversationShot(
 /** Exclusive to Ripple 2046: warm faces, cool separation, a quiet desk bounce. */
 export class FutureLighting2046 {
   readonly root = new T.Group();
-  private key = new T.DirectionalLight("#ffe0b7", 2.15);
-  private rim = new T.DirectionalLight("#9bc9df", 1.5);
+  private key = new T.DirectionalLight("#ffdab0", 2.15);
+  private rim = new T.DirectionalLight("#a7d4ed", 1.5);
   private bounce = new T.PointLight("#dfd5bb", 0.9, 4, 2);
   constructor() {
-    this.key.position.set(2.5, 3.6, -3.2);
+    this.key.position.set(2.8, 3.9, -2.6);
     this.key.target.position.set(0.45, 1.4, 0.3);
     this.rim.position.set(-2.5, 3.7, 3);
     this.rim.target.position.set(0.4, 1.35, 0.3);

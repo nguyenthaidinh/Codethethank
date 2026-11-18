@@ -82,7 +82,7 @@ export class CinematicReveal {
         "#182b3c",
       );
     box([8.7, 5.3, 0.4], [0, 0, -0.3], "#24384a", this.wall);
-    box([8.12, 4.72, 0.12], [0, 0, -0.03], "#72b7c9", this.wall);
+    box([8.12, 4.72, 0.12], [0, 0, -0.03], "#a48960", this.wall);
     box([8, 4.6, 0.08], [0, 0, 0.04], "#0b1422", this.wall);
     this.wall.position.set(0.2, 3.5, -11);
     this.root.add(this.wall);
@@ -142,7 +142,7 @@ export class CinematicReveal {
       this.path.getPoints(120),
     );
     const ribbonMat = new T.LineBasicMaterial({
-      color: "#72b7c9",
+      color: "#e6be85",
       transparent: true,
       opacity: 0.5,
       depthWrite: false,
@@ -153,7 +153,7 @@ export class CinematicReveal {
     this.resources.push(ribbonGeo, ribbonMat);
     const tubeGeo = new T.TubeGeometry(this.path, 96, 0.025, 6, false);
     const tubeMat = new T.MeshBasicMaterial({
-      color: "#72b7c9",
+      color: "#e5ad6e",
       transparent: true,
       opacity: 0.24,
       depthWrite: false,
@@ -187,7 +187,7 @@ export class CinematicReveal {
       blending: T.AdditiveBlending,
     });
     this.halo = new T.Sprite(haloMat);
-    this.halo.scale.setScalar(0.55);
+    this.halo.scale.setScalar(0.72);
     this.root.add(this.halo);
     this.resources.push(glowTex, haloMat);
     const starsGeo = new T.BufferGeometry(),
@@ -235,13 +235,16 @@ export class CinematicReveal {
     if (key === this.key) return;
     this.key = key;
     const x = this.canvas.getContext("2d")!;
-    x.fillStyle = "#0b1422";
+    const paperLight = x.createLinearGradient(0, 0, 1600, 920);
+    paperLight.addColorStop(0, "#182a3d");
+    paperLight.addColorStop(1, "#0b1422");
+    x.fillStyle = paperLight;
     x.fillRect(0, 0, 1600, 920);
-    x.fillStyle = "#72b7c9";
+    x.fillStyle = "#efd39f";
     x.font = "24px Arial";
     x.fillText("20 / 11  ·  LỜI TRI ÂN RIÊNG TƯ", 100, 95);
     const lines = (text: string, size: number, max: number) => {
-      x.font = `${size}px Arial`;
+      x.font = `${size}px LessonSerif, Georgia, serif`;
       const rows: string[] = [];
       let row = "";
       for (const c of graphemes(text)) {

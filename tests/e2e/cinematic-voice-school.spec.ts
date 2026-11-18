@@ -91,12 +91,12 @@ test("Opening narrator only: gesture, pause, separate subtitles, then no AION or
   const paused = await state(page);
   await page.waitForTimeout(500);
   expect((await state(page)).voice.started).toBe(paused.voice.started);
-  await page.getByLabel("Giọng dẫn mở đầu", { exact: true }).uncheck();
+  await page.getByLabel("Giọng dẫn và AION", { exact: true }).uncheck();
   await page.keyboard.press("Escape");
   await expect.poll(async () => (await state(page)).voice?.status).toBe("off");
   await expect(page.locator(".subtitle")).toBeVisible();
   await page.keyboard.press("Escape");
-  await page.getByLabel("Giọng dẫn mở đầu", { exact: true }).check();
+  await page.getByLabel("Giọng dẫn và AION", { exact: true }).check();
   await page.getByLabel("Phụ đề", { exact: true }).uncheck();
   await page.keyboard.press("Escape");
   await expect

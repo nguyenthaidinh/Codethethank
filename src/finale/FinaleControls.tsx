@@ -5,6 +5,7 @@ import type { FinaleSave, FinaleAction } from "./state";
 import type { Letter } from "./letter";
 import { LetterExperience } from "./LetterExperience";
 import { EndingScreen } from "./EndingScreen";
+import { isFutureReflection } from "../ripple/FutureReflection";
 import { EndingCredits } from "./EndingCredits";
 import "./finale.css";
 import "./player-room.css";
@@ -32,6 +33,15 @@ export function FinaleControls({
   const [credits, setCredits] = useState(false);
   return (
     <>
+      {isFutureReflection(s) && (
+        <header
+          className="future-reflection-header"
+          aria-label="Viện nghiên cứu AION, năm 2046"
+        >
+          <span>AION</span>
+          <span>2046</span>
+        </header>
+      )}
       {s.phase === "memory" && (
         <div className="finale-memory" aria-label="Ba vật thể trong ký ức cuối">
           <button
@@ -67,7 +77,7 @@ export function FinaleControls({
           </button>
           <div className="player-room-caption">
             <span>HIỆN TẠI · GÓC BÀN CỦA BẠN</span>
-            <p>Câu chuyện tiếp theo bắt đầu từ bạn.</p>
+            <h2>Một lời chưa nói.</h2>
           </div>
           <div className="finale-actions player-room-actions">
             <button onClick={() => act({ type: "write" })}>

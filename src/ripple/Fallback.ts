@@ -3,7 +3,18 @@ import { founderRevealed } from "./state";
 import { milestones } from "./story";
 import { results2035 } from "./experiment2035";
 import { CHAIR_MOTIF } from "../cinematic/motifs";
+import { chairEase, chairReturnHold } from "../cinematic/ChairMatchCut";
 import { futureArrivalCue } from "./FutureArrival";
+
+let skylineImage: HTMLImageElement | undefined;
+function futureSkyline() {
+  if (!skylineImage) {
+    skylineImage = new Image();
+    skylineImage.src = import.meta.env.BASE_URL + "menu/city-sunset.webp";
+  }
+  return skylineImage;
+}
+
 /** Canvas fallback keeps object/camera choreography when WebGL is unavailable. */
 export function drawRippleFallback(
   x: CanvasRenderingContext2D,
@@ -22,11 +33,20 @@ export function drawRippleFallback(
   x.fillRect(0, 0, w, h);
   x.save();
   const scale = Math.max(w / 1280, h / 900);
+  const chair = s.phase === "chair";
   x.translate(w / 2, h / 2);
-  x.scale(scale, scale);
-  x.translate(-640, -360);
-  const chair = s.phase === "chair",
-    close = ["record", "align", "milestone"].includes(s.phase);
+  if (chair) {
+    const portrait = w / h < 0.85;
+    const unit = portrait ? h / 900 : Math.min(w / 1280, h / 720);
+    const widen = reduced ? 0 : chairEase((t - chairReturnHold) / 2.6);
+    const zoom = unit * 1.36 + (scale - unit * 1.36) * widen;
+    x.scale(zoom, zoom);
+    x.translate(-(890 - 250 * widen), -(515 - 155 * widen));
+  } else {
+    x.scale(scale, scale);
+    x.translate(-640, -360);
+  }
+  const close = ["record", "align", "milestone"].includes(s.phase);
   if (
     era === 2046 &&
     ["world", "record", "align", "reveal"].includes(s.phase)
@@ -53,16 +73,33 @@ export function drawRippleFallback(
   skyline.addColorStop(1, "#627e85");
   x.fillStyle = future ? skyline : "#708b93";
   x.fillRect(70, 40, 1100, 360);
-  for (let i = 0; i < 14; i++) {
-    x.fillStyle = future
-      ? i % 2
-        ? "#27434f"
-        : "#365660"
-      : i % 2
-        ? "#334d5b"
-        : "#476570";
-    x.fillRect(80 + i * 78, 210 - (i % 4) * 35, 48, 190 + (i % 4) * 35);
-  }
+  const view = future ? futureSkyline() : undefined;
+  if (view?.complete && view.naturalWidth) {
+    const cropHeight = (view.naturalWidth * 360) / 1100;
+    x.drawImage(
+      view,
+      0,
+      (view.naturalHeight - cropHeight) * 0.48,
+      view.naturalWidth,
+      cropHeight,
+      70,
+      40,
+      1100,
+      360,
+    );
+    x.fillStyle = "rgba(8,18,30,.22)";
+    x.fillRect(70, 40, 1100, 360);
+  } else
+    for (let i = 0; i < 14; i++) {
+      x.fillStyle = future
+        ? i % 2
+          ? "#27434f"
+          : "#365660"
+        : i % 2
+          ? "#334d5b"
+          : "#476570";
+      x.fillRect(80 + i * 78, 210 - (i % 4) * 35, 48, 190 + (i % 4) * 35);
+    }
   x.strokeStyle = future ? "#65888e" : "#a1b4b2";
   x.lineWidth = future ? 3 : 6;
   for (let i = 0; i < 7; i++) {
@@ -71,7 +108,10 @@ export function drawRippleFallback(
     x.lineTo(90 + i * 170, 400);
     x.stroke();
   }
-  x.fillStyle = future ? "#1c323d" : "#344951";
+  const floor = x.createLinearGradient(0, 400, 0, 760);
+  floor.addColorStop(0, "#32434e");
+  floor.addColorStop(1, "#0e1f2b");
+  x.fillStyle = future ? floor : "#344951";
   x.beginPath();
   x.moveTo(0, 400);
   x.lineTo(1280, 400);
@@ -104,7 +144,7 @@ export function drawRippleFallback(
     x.stroke();
   }
   const p = chair
-    ? Math.min(1, Math.max(0, t - 0.1) / CHAIR_MOTIF.dragSeconds)
+    ? chairEase((t - 0.1) / CHAIR_MOTIF.dragSeconds)
     : ["reflection", "reconstruct", "principle", "finale"].includes(s.phase)
       ? 1
       : 0;
@@ -114,7 +154,10 @@ export function drawRippleFallback(
   x.fillRect(cx, 450, 80, 14);
   x.fillRect(cx + 4, 460, 8, 145);
   x.fillRect(cx + 67, 460, 8, 145);
-  x.fillStyle = future ? "#758b8c" : "#b7c4b7";
+  const deskSurface = x.createLinearGradient(350, 400, 700, 560);
+  deskSurface.addColorStop(0, "#a89172");
+  deskSurface.addColorStop(1, "#695745");
+  x.fillStyle = future ? deskSurface : "#b7c4b7";
   x.beginPath();
   x.moveTo(350, 400);
   x.lineTo(900, 400);

@@ -17,6 +17,9 @@ describe("Ripple time passage", () => {
     expect(rippleClockStep(null, 0, 2, false)).toBe(2);
     expect(
       rippleClockStep({ ...freshRipple, phase: "chair" }, 0, 2, false),
+    ).toBe(0.15);
+    expect(
+      rippleClockStep({ ...freshRipple, phase: "chair" }, 2, 2, false),
     ).toBe(2);
   });
   it("keeps the screen covered on both sides of every year change", () => {

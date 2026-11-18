@@ -1,0 +1,54 @@
+{
+  "world": [
+    {
+      "start": 4.2,
+      "end": 8.55,
+      "text": "Tôi là AION. Hai mươi năm đã trôi qua.",
+      "file": "voice/aion-2046/arrival.mp3"
+    },
+    {
+      "start": 8.55,
+      "end": 13,
+      "text": "Trên bàn, cuốn sổ năm ấy vẫn còn ở đó.",
+      "file": "voice/aion-2046/notebook.mp3"
+    }
+  ],
+  "record": [
+    {
+      "start": 0.35,
+      "end": 6.5,
+      "text": "Hãy mở hồ sơ bên cuốn sổ. Tôi sẽ đối chiếu các dấu vết.",
+      "file": "voice/aion-2046/archive.mp3"
+    }
+  ],
+  "align": [
+    {
+      "start": 0.3,
+      "end": 4.8,
+      "text": "Một bản đánh giá cũ. Và nét bút trong cuốn sổ.",
+      "file": "voice/aion-2046/compare.mp3"
+    },
+    {
+      "start": 5.8,
+      "end": 8,
+      "text": "Các dấu vết đã khớp.",
+      "file": "voice/aion-2046/match.mp3"
+    }
+  ],
+  "echo": [
+    {
+      "start": 0.3,
+      "end": 5.8,
+      "text": "Ngày xưa, cô Vân cũng kéo ghế và ngồi lại bên An.",
+      "file": "voice/aion-2046/chair-memory.mp3"
+    }
+  ],
+  "reveal": [
+    {
+      "start": 5,
+      "end": 12,
+      "text": "Người đó chính là An. Anh là người đã tạo ra tôi.",
+      "file": "voice/aion-2046/founder.mp3"
+    }
+  ]
+}

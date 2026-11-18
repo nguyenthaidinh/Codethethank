@@ -1,6 +1,7 @@
 ﻿import type { RippleSave, RippleAction } from "./state";
 import "./ripple.css";
 import "./timePassage.css";
+import "./chair-memory.css";
 import { ResearchEraHUD } from "./ResearchEraHUD";
 import { ResearchJournal2029 } from "./ResearchJournal2029";
 import { FutureResearchHUD, isFutureResearchPhase } from "./FutureResearchHUD";
@@ -31,6 +32,13 @@ export function RippleControls({
         inert={passage ? true : undefined}
         aria-hidden={passage ? true : undefined}
       >
+        {s.phase === "echo" && (
+          <header className="chair-memory-title">
+            <span>HỒI ỨC</span>
+            <h2>2026</h2>
+            <p>Phòng thực hành · Sau giờ học</p>
+          </header>
+        )}
         {isFutureResearchPhase(s) && (
           <FutureResearchHUD s={s} act={act} time={time} />
         )}

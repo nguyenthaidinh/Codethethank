@@ -111,7 +111,7 @@ export function EndingCredits({ onClose }: { onClose: () => void }) {
               >
                 Piper / VAIS-1000 — dữ liệu CC BY 4.0 ↗
               </a>
-              . Các cuộc trò chuyện được thể hiện qua phụ đề.
+              . Giọng AION năm 2046 sử dụng giọng tổng hợp tiếng Việt Nam Minh.
             </p>
             <p>
               Bản nháp chỉ lưu riêng khi bạn chọn. Chỉ thao tác gửi có xác nhận

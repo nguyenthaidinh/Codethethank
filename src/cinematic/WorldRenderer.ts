@@ -15,6 +15,7 @@ import type { VerdictSave } from "../verdict/state";
 import type { StaySave } from "../stayed/state";
 import { drawNotebook } from "../stayed/Notebook";
 import { CHAIR_MOTIF } from "./motifs";
+import { chairMatchShot } from "./ChairMatchCut";
 import { TERMINAL_ALERT } from "../future/terminalStyle";
 import {
   classroomShot,
@@ -962,15 +963,23 @@ export class WorldRenderer {
               this.width / this.height < 0.85,
               s.reduced,
             )
-          : !this.ripple
-            ? classroomShot(
-                this.stayed?.phase,
-                s.focus,
-                t,
-                this.width / this.height < 0.85,
-                s.reduced,
-              )
-            : null;
+          : this.ripple?.phase === "echo"
+            ? {
+                id: "chair.insert" as const,
+                ...chairMatchShot(
+                  s.reduced ? 1 : smooth(t / CHAIR_MOTIF.dragSeconds),
+                  this.width / this.height < 0.8,
+                ),
+              }
+            : !this.ripple
+              ? classroomShot(
+                  this.stayed?.phase,
+                  s.focus,
+                  t,
+                  this.width / this.height < 0.85,
+                  s.reduced,
+                )
+              : null;
     if (!shot && (s.focus !== this.focus || this.activeShot))
       this.focusOn(
         s.focus,

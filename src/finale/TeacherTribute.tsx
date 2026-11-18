@@ -52,6 +52,12 @@ export function TeacherTribute() {
         }
       }}
     >
+      <div className="game-tribute-campus" aria-hidden="true">
+        <img
+          src={`${import.meta.env.BASE_URL}ending/school-twilight.webp`}
+          alt=""
+        />
+      </div>
       <TributeCelebration />
       <header>
         <span>THE UNWRITTEN LESSON · 20 / 11</span>

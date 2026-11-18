@@ -66,7 +66,7 @@ describe("Vietnamese narration", () => {
       "Để thử lại.",
     );
   });
-  it("voices only the opening narrator, with no AION speech or past/finale dialogue", () => {
+  it("keeps the opening narrator within the opening cinematic", () => {
     expect(openingNarration("OPENING_CINEMATIC", 0)).toContain("2046");
     expect(
       openingNarration("OPENING_CINEMATIC", OPENING_TIMING.silent - 1),

@@ -16,7 +16,7 @@ function LetterPreview({ letter }: { letter: Letter }) {
       className="gratitude-preview"
       aria-label="Bản xem trước lời cảm ơn"
     >
-      <span className="gratitude-kicker">20 / 11 · MỘT LỜI TRI ÂN</span>
+      <span className="gratitude-kicker">BẢN XEM TRƯỚC</span>
       <h2>
         {letter.recipient ? `Gửi ${letter.recipient}` : "Gửi người đã ở lại"}
       </h2>
@@ -100,11 +100,8 @@ export function LetterExperience({
     >
       <header className="gratitude-header">
         <div>
-          <span className="gratitude-kicker">THE UNWRITTEN LESSON</span>
           <h1 ref={heading} tabIndex={-1}>
-            {reviewing
-              ? "Trước khi trao lời cảm ơn"
-              : "Có một lời, dành riêng cho thầy cô."}
+            {reviewing ? "Đọc lại lời cảm ơn" : "Viết lời cảm ơn"}
           </h1>
         </div>
         <span className="gratitude-private">Bản nháp cá nhân</span>

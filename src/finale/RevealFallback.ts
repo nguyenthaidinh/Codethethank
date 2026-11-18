@@ -69,7 +69,7 @@ export function drawRevealFallback(
   }
   x.fillStyle = "#24384a";
   x.fillRect(left - 12, top - 12, bw + 24, bh + 24);
-  x.strokeStyle = "#72b7c9";
+  x.strokeStyle = "#d8b57f99";
   x.strokeRect(left - 2, top - 2, bw + 4, bh + 4);
   x.fillStyle = "#0b1422";
   x.fillRect(left, top, bw, bh);
@@ -89,7 +89,7 @@ export function drawRevealFallback(
   if (s.phase !== "galaxy" && timing.textOpacity > 0) {
     const content = revealLetter(s, letter);
     x.globalAlpha = timing.textOpacity;
-    x.fillStyle = "#72b7c9";
+    x.fillStyle = "#efd39f";
     x.font = `${Math.max(10, bw * 0.018)}px Arial`;
     x.fillText(
       "20 / 11 · LỜI TRI ÂN RIÊNG TƯ",
@@ -98,9 +98,9 @@ export function drawRevealFallback(
       bw * 0.86,
     );
     x.fillStyle = "#f0eee8";
-    x.font = `${Math.max(17, bw * 0.036)}px Arial`;
+    x.font = `${Math.max(17, bw * 0.036)}px LessonSerif, Georgia, serif`;
     x.fillText(content.recipient, left + bw * 0.07, top + bh * 0.28, bw * 0.86);
-    x.font = `${Math.max(15, bw * 0.027)}px Arial`;
+    x.font = `${Math.max(15, bw * 0.027)}px LessonSerif, Georgia, serif`;
     const words = revealPages(content.message)[0];
     let line = "",
       y = top + bh * 0.44;
@@ -125,7 +125,7 @@ export function drawRevealFallback(
       startX + (endX - startX) * p + Math.sin(p * Math.PI * 2) * w * 0.12,
     py = startY + (endY - startY) * p;
   if (s.phase === "transform" && !reduced) {
-    x.strokeStyle = "#72b7c970";
+    x.strokeStyle = "#e8c48890";
     x.beginPath();
     x.moveTo(startX, startY);
     x.bezierCurveTo(w * 0.8, h * 0.4, w * 0.25, h * 0.2, px, py);
@@ -141,12 +141,13 @@ export function drawRevealFallback(
       );
     }
   }
-  const glow = x.createRadialGradient(px, py, 0, px, py, 24);
+  const glowRadius = 32;
+  const glow = x.createRadialGradient(px, py, 0, px, py, glowRadius);
   glow.addColorStop(0, "#f0eee8");
   glow.addColorStop(0.12, "#d5a76b");
   glow.addColorStop(1, "#d5a76b00");
   x.fillStyle = glow;
-  x.fillRect(px - 24, py - 24, 48, 48);
+  x.fillRect(px - glowRadius, py - glowRadius, glowRadius * 2, glowRadius * 2);
   if (timing.veil > 0) {
     x.fillStyle = `rgba(11,20,34,${timing.veil})`;
     x.fillRect(0, 0, w, h);
